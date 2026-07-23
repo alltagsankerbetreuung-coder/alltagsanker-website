@@ -73,6 +73,16 @@ header {
   color: var(--color-primary-dark);
 }
 
+.logo img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
 .logo span.icon {
   font-size: 1.6rem;
 }
@@ -350,6 +360,9 @@ footer a {
   .nav-wrap {
     flex-wrap: wrap;
     gap: 12px;
+  }
+  .logo img {
+    height: 44px;
   }
   nav ul {
     gap: 16px;
