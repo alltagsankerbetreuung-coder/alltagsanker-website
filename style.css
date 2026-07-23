@@ -74,7 +74,7 @@ header {
 }
 
 .logo img {
-  height: 56px;
+  height: 66px;
   width: auto;
   display: block;
 }
@@ -362,7 +362,7 @@ footer a {
     gap: 12px;
   }
   .logo img {
-    height: 44px;
+    height: 50px;
   }
   nav ul {
     gap: 16px;
