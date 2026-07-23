@@ -1,0 +1,52 @@
+<svg viewBox="0 0 560 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gepflegte Beinpflege: eine sanfte Rasur als Teil der Körperpflege">
+  <defs>
+    <linearGradient id="bgleg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef5f4"/>
+      <stop offset="1" stop-color="#fdfbf7"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4d6b8"/>
+      <stop offset="1" stop-color="#efc9a4"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="30" y="30" width="500" height="420" rx="40" fill="url(#bgleg)"/>
+
+  <!-- soft dots -->
+  <g fill="#1f6f78" opacity="0.08">
+    <circle cx="90" cy="90" r="9"/>
+    <circle cx="470" cy="110" r="12"/>
+    <circle cx="110" cy="390" r="10"/>
+    <circle cx="470" cy="380" r="8"/>
+  </g>
+
+  <!-- leg -->
+  <g>
+    <path d="M250 60 Q262 150 250 230 Q244 300 268 360 Q286 404 268 430 L214 430 Q236 400 218 356 Q198 300 206 230 Q214 150 202 60 Z"
+          fill="url(#skin)"/>
+    <path d="M250 60 Q262 150 250 230 Q244 300 268 360 Q286 404 268 430"
+          fill="none" stroke="#e3bd98" stroke-width="3" opacity="0.5"/>
+    <!-- shaved smooth stripe highlight -->
+    <path d="M230 90 Q238 170 228 250 Q222 320 244 390" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.35"/>
+  </g>
+
+  <!-- razor -->
+  <g transform="rotate(24 360 250)">
+    <!-- handle -->
+    <rect x="348" y="250" width="20" height="150" rx="10" fill="#1f6f78"/>
+    <rect x="352" y="258" width="12" height="120" rx="6" fill="#154f56" opacity="0.5"/>
+    <!-- neck -->
+    <rect x="352" y="228" width="12" height="30" rx="4" fill="#4a9aa2"/>
+    <!-- head -->
+    <rect x="326" y="200" width="64" height="30" rx="10" fill="#e8985e"/>
+    <rect x="330" y="222" width="56" height="8" rx="4" fill="#ffffff" opacity="0.7"/>
+    <rect x="330" y="196" width="56" height="8" rx="4" fill="#d9d9d9"/>
+  </g>
+
+  <!-- sparkles for freshness -->
+  <g fill="#e8985e">
+    <path d="M150 150 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4 z"/>
+    <path d="M420 300 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3 z" opacity="0.8"/>
+    <path d="M160 330 l2.5 7 7 2.5 -7 2.5 -2.5 7 -2.5 -7 -7 -2.5 7 -2.5 z" opacity="0.7"/>
+  </g>
+</svg>
