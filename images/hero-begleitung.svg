@@ -1,76 +1,194 @@
-<svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eine Betreuungsperson begleitet einen Senioren an der frischen Luft">
+<svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eine Betreuerin begleitet eine ältere Dame beim Spaziergang an der frischen Luft">
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f6efe4"/>
-      <stop offset="1" stop-color="#fdfbf7"/>
+    <linearGradient id="h-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d6ecec"/>
+      <stop offset="0.55" stop-color="#eef3ea"/>
+      <stop offset="1" stop-color="#f7efe1"/>
     </linearGradient>
-    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f2b880"/>
-      <stop offset="1" stop-color="#e8985e"/>
+    <radialGradient id="h-sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe8b0"/>
+      <stop offset="0.55" stop-color="#f7c877"/>
+      <stop offset="1" stop-color="#f3b45e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="h-hillFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe3df"/><stop offset="1" stop-color="#b7d5cf"/>
     </linearGradient>
+    <linearGradient id="h-hillMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9d0c4"/><stop offset="1" stop-color="#8fc0b2"/>
+    </linearGradient>
+    <linearGradient id="h-grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fc39a"/><stop offset="1" stop-color="#6fa87f"/>
+    </linearGradient>
+    <linearGradient id="h-foliage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8dc09f"/><stop offset="1" stop-color="#5f9a7f"/>
+    </linearGradient>
+    <linearGradient id="h-tealcoat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f8a92"/><stop offset="1" stop-color="#1a636b"/>
+    </linearGradient>
+    <linearGradient id="h-terra" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#efa66f"/><stop offset="1" stop-color="#dd8449"/>
+    </linearGradient>
+    <radialGradient id="h-skin" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#f6d3b2"/><stop offset="1" stop-color="#eab892"/>
+    </radialGradient>
+    <filter id="h-soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <clipPath id="h-circle"><circle cx="320" cy="260" r="250"/></clipPath>
   </defs>
 
-  <!-- background circle -->
-  <circle cx="320" cy="260" r="250" fill="url(#sky)"/>
+  <!-- scene inside soft circle -->
+  <g clip-path="url(#h-circle)">
+    <rect x="70" y="10" width="500" height="500" fill="url(#h-sky)"/>
 
-  <!-- sun -->
-  <circle cx="470" cy="150" r="58" fill="url(#sun)" opacity="0.9"/>
+    <!-- sun glow -->
+    <circle cx="452" cy="150" r="120" fill="url(#h-sun)"/>
+    <circle cx="452" cy="150" r="46" fill="#ffdf95"/>
 
-  <!-- back hills -->
-  <path d="M70 350 Q200 250 340 320 Q470 380 570 320 L570 470 L70 470 Z" fill="#d7e4e2"/>
-  <path d="M70 390 Q220 320 360 375 Q480 420 570 375 L570 470 L70 470 Z" fill="#bcd3d1"/>
+    <!-- clouds -->
+    <g fill="#ffffff" opacity="0.85">
+      <g>
+        <ellipse cx="180" cy="120" rx="42" ry="20"/>
+        <ellipse cx="210" cy="108" rx="30" ry="20"/>
+        <ellipse cx="150" cy="110" rx="26" ry="16"/>
+      </g>
+      <g opacity="0.8">
+        <ellipse cx="500" cy="90" rx="34" ry="15"/>
+        <ellipse cx="524" cy="80" rx="24" ry="15"/>
+      </g>
+    </g>
+    <!-- birds -->
+    <g stroke="#5c7c86" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.6">
+      <path d="M250 96 q7 -7 14 0 q7 -7 14 0"/>
+      <path d="M300 78 q5 -5 10 0 q5 -5 10 0"/>
+    </g>
 
-  <!-- ground -->
-  <path d="M60 430 Q320 400 580 430 L580 480 L60 480 Z" fill="#1f6f78" opacity="0.15"/>
+    <!-- distant hills -->
+    <path d="M70 330 Q200 258 340 300 Q470 340 570 300 L570 510 L70 510 Z" fill="url(#h-hillFar)"/>
+    <path d="M70 372 Q210 312 360 356 Q480 392 570 360 L570 510 L70 510 Z" fill="url(#h-hillMid)"/>
 
-  <!-- tree -->
-  <g>
-    <rect x="126" y="300" width="12" height="90" rx="6" fill="#9a7b5a"/>
-    <circle cx="132" cy="288" r="46" fill="#7fae9f"/>
-    <circle cx="104" cy="304" r="32" fill="#93bcae"/>
-    <circle cx="160" cy="304" r="32" fill="#93bcae"/>
-  </g>
+    <!-- ground -->
+    <path d="M70 410 Q320 372 570 410 L570 510 L70 510 Z" fill="url(#h-grass)"/>
+    <!-- path -->
+    <path d="M250 510 Q320 430 300 410 Q290 402 320 398 Q360 404 360 420 Q356 470 420 510 Z" fill="#e7d6b4" opacity="0.9"/>
+    <path d="M250 510 Q320 430 300 410" fill="none" stroke="#d9c39a" stroke-width="2" opacity="0.6"/>
 
-  <!-- caregiver (left figure) -->
-  <g>
-    <!-- legs -->
-    <rect x="300" y="378" width="17" height="70" rx="8" fill="#154f56"/>
-    <rect x="322" y="378" width="17" height="70" rx="8" fill="#1f6f78"/>
-    <!-- body -->
-    <path d="M296 300 Q320 288 344 300 L350 386 L290 386 Z" fill="#1f6f78"/>
-    <!-- arm reaching to companion -->
-    <path d="M344 322 Q384 330 408 350" stroke="#1f6f78" stroke-width="15" stroke-linecap="round" fill="none"/>
-    <!-- head -->
-    <circle cx="320" cy="268" r="27" fill="#f0c9a8"/>
-    <path d="M294 262 Q296 232 320 232 Q344 232 346 262 Q334 250 320 250 Q306 250 294 262 Z" fill="#6b4f3a"/>
-  </g>
+    <!-- tree left -->
+    <g>
+      <path d="M150 405 q-4 -60 0 -96" stroke="#8a6a49" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <path d="M150 350 q-16 -8 -26 -24 M152 340 q16 -10 30 -20" stroke="#8a6a49" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="150" cy="292" r="52" fill="url(#h-foliage)"/>
+      <circle cx="112" cy="312" r="34" fill="url(#h-foliage)"/>
+      <circle cx="188" cy="312" r="34" fill="url(#h-foliage)"/>
+      <circle cx="140" cy="278" r="30" fill="#a7d2b4" opacity="0.7"/>
+    </g>
 
-  <!-- senior (right figure) with cane -->
-  <g>
-    <!-- cane -->
-    <path d="M470 350 L470 452" stroke="#9a7b5a" stroke-width="8" stroke-linecap="round"/>
-    <path d="M470 350 Q462 344 456 350" stroke="#9a7b5a" stroke-width="8" stroke-linecap="round" fill="none"/>
-    <!-- legs -->
-    <rect x="410" y="382" width="17" height="66" rx="8" fill="#8a6f52"/>
-    <rect x="431" y="382" width="17" height="66" rx="8" fill="#a17f5d"/>
-    <!-- body -->
-    <path d="M404 306 Q430 294 456 306 L460 390 L400 390 Z" fill="#e8985e"/>
-    <!-- arm to cane -->
-    <path d="M452 328 Q468 336 470 352" stroke="#e8985e" stroke-width="14" stroke-linecap="round" fill="none"/>
-    <!-- head -->
-    <circle cx="430" cy="276" r="26" fill="#f0c9a8"/>
-    <path d="M405 272 Q408 246 430 246 Q452 246 455 272 Q443 262 430 262 Q417 262 405 272 Z" fill="#d9d9d9"/>
-  </g>
+    <!-- bushes -->
+    <g fill="url(#h-foliage)">
+      <ellipse cx="500" cy="404" rx="46" ry="30"/>
+      <ellipse cx="470" cy="410" rx="30" ry="22"/>
+      <ellipse cx="530" cy="410" rx="28" ry="20"/>
+    </g>
+    <!-- flowers -->
+    <g>
+      <g transform="translate(214 452)">
+        <line x1="0" y1="0" x2="0" y2="-16" stroke="#5f9a7f" stroke-width="2.5"/>
+        <circle cx="0" cy="-18" r="5" fill="#f2b6c6"/><circle cx="0" cy="-18" r="2" fill="#ffe08a"/>
+      </g>
+      <g transform="translate(232 460)">
+        <line x1="0" y1="0" x2="0" y2="-13" stroke="#5f9a7f" stroke-width="2.5"/>
+        <circle cx="0" cy="-15" r="4.5" fill="#f7d774"/><circle cx="0" cy="-15" r="2" fill="#e79a3c"/>
+      </g>
+      <g transform="translate(560 470)">
+        <line x1="0" y1="0" x2="0" y2="-15" stroke="#5f9a7f" stroke-width="2.5"/>
+        <circle cx="0" cy="-17" r="5" fill="#e7f2f0"/><circle cx="0" cy="-17" r="2" fill="#f7d774"/>
+      </g>
+    </g>
 
-  <!-- anchor emblem -->
-  <g transform="translate(210 120)" opacity="0.9">
-    <circle cx="0" cy="0" r="46" fill="#ffffff"/>
-    <circle cx="0" cy="0" r="46" fill="none" stroke="#1f6f78" stroke-width="3" opacity="0.4"/>
-    <g stroke="#1f6f78" stroke-width="6" stroke-linecap="round" fill="none">
-      <circle cx="0" cy="-20" r="7"/>
-      <line x1="0" y1="-13" x2="0" y2="24"/>
-      <line x1="-15" y1="-4" x2="15" y2="-4"/>
-      <path d="M-22 12 Q-22 30 0 30 Q22 30 22 12"/>
+    <!-- ground shadows -->
+    <ellipse cx="316" cy="470" rx="70" ry="14" fill="#3f7a6f" opacity="0.28" filter="url(#h-soft)"/>
+
+    <!-- ===== Caregiver (left) ===== -->
+    <g>
+      <!-- legs -->
+      <path d="M296 400 l-4 66 h16 l6 -64 Z" fill="#3a4a58"/>
+      <path d="M320 400 l4 66 h16 l-4 -66 Z" fill="#465767"/>
+      <!-- shoes -->
+      <path d="M288 466 q-6 6 4 8 h18 v-8 Z" fill="#2b3742"/>
+      <path d="M336 466 q6 6 -4 8 h-18 v-8 Z" fill="#2b3742"/>
+      <!-- tunic -->
+      <path d="M292 300 q28 -14 56 0 l10 96 q-38 12 -76 0 Z" fill="url(#h-tealcoat)"/>
+      <path d="M320 292 v104" stroke="#16545c" stroke-width="2" opacity="0.5"/>
+      <path d="M300 306 q20 22 40 0" fill="none" stroke="#16545c" stroke-width="2" opacity="0.4"/>
+      <!-- collar -->
+      <path d="M306 296 l14 12 l14 -12" fill="none" stroke="#eef6f5" stroke-width="4" stroke-linejoin="round"/>
+      <!-- near arm around senior -->
+      <path d="M344 322 q40 6 66 30" stroke="url(#h-tealcoat)" stroke-width="17" fill="none" stroke-linecap="round"/>
+      <circle cx="410" cy="352" r="9" fill="url(#h-skin)"/>
+      <!-- far arm -->
+      <path d="M300 320 q-16 20 -14 50" stroke="#1a636b" stroke-width="15" fill="none" stroke-linecap="round"/>
+      <circle cx="286" cy="372" r="8" fill="url(#h-skin)"/>
+      <!-- neck + head -->
+      <rect x="313" y="270" width="14" height="16" rx="6" fill="#eab892"/>
+      <circle cx="320" cy="256" r="28" fill="url(#h-skin)"/>
+      <!-- hair -->
+      <path d="M292 254 q-2 -34 28 -36 q30 2 28 36 q-6 -16 -16 -18 q4 10 -2 16 q-4 -14 -12 -16 q2 12 -6 16 q-8 -2 -12 -8 q-2 6 0 14 q-8 -4 -8 -8 Z" fill="#7a5636"/>
+      <path d="M348 250 q10 20 0 40 q10 -4 12 -18 q0 -16 -12 -22 Z" fill="#6b4a2f"/>
+      <!-- face -->
+      <circle cx="311" cy="256" r="2.4" fill="#41352b"/>
+      <circle cx="327" cy="256" r="2.4" fill="#41352b"/>
+      <path d="M307 250 q4 -3 8 -1 M323 249 q4 -2 8 1" stroke="#7a5636" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M314 262 q4 3 8 0" fill="none" stroke="#c98a63" stroke-width="1.6"/>
+      <path d="M312 268 q8 6 16 0" fill="none" stroke="#b5654f" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="305" cy="263" r="3.4" fill="#f2b39a" opacity="0.6"/>
+      <circle cx="333" cy="263" r="3.4" fill="#f2b39a" opacity="0.6"/>
+    </g>
+
+    <!-- ===== Senior lady (right) ===== -->
+    <g>
+      <!-- cane -->
+      <path d="M470 356 q-2 -8 -10 -8 q-8 0 -8 8" fill="none" stroke="#8a6a49" stroke-width="6" stroke-linecap="round"/>
+      <line x1="470" y1="356" x2="470" y2="466" stroke="#9a7b5a" stroke-width="7" stroke-linecap="round"/>
+      <ellipse cx="470" cy="470" rx="7" ry="3" fill="#6f573f"/>
+      <!-- legs -->
+      <path d="M414 400 l-3 62 h14 l4 -60 Z" fill="#7d6f8a"/>
+      <path d="M436 400 l3 62 h14 l-4 -60 Z" fill="#8a7c96"/>
+      <path d="M406 462 q-6 6 4 8 h16 v-8 Z" fill="#5a4d3f"/>
+      <path d="M448 462 q6 6 -4 8 h-16 v-8 Z" fill="#5a4d3f"/>
+      <!-- cardigan -->
+      <path d="M404 308 q26 -14 52 0 q6 44 4 92 q-30 12 -60 0 q-2 -48 4 -92 Z" fill="url(#h-terra)"/>
+      <path d="M430 300 q-4 50 -2 100" stroke="#cf7f45" stroke-width="2" opacity="0.55"/>
+      <path d="M410 322 q20 -6 40 0" fill="none" stroke="#cf7f45" stroke-width="2" opacity="0.4"/>
+      <!-- buttons -->
+      <circle cx="430" cy="334" r="2.2" fill="#a7602f"/><circle cx="430" cy="352" r="2.2" fill="#a7602f"/><circle cx="430" cy="370" r="2.2" fill="#a7602f"/>
+      <!-- arm to caregiver -->
+      <path d="M410 330 q-10 20 -8 44" stroke="#dd8449" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <circle cx="402" cy="376" r="7.5" fill="#eab892"/>
+      <!-- arm to cane -->
+      <path d="M452 330 q14 10 18 26" stroke="#dd8449" stroke-width="13" fill="none" stroke-linecap="round"/>
+      <circle cx="470" cy="358" r="7" fill="#eab892"/>
+      <!-- neck + head -->
+      <rect x="424" y="278" width="13" height="15" rx="6" fill="#eab892"/>
+      <circle cx="430" cy="266" r="26" fill="url(#h-skin)"/>
+      <!-- grey hair (bun) -->
+      <path d="M405 266 q-2 -32 25 -34 q27 2 25 34 q-6 -18 -25 -18 q-19 0 -25 18 Z" fill="#dcdcdc"/>
+      <path d="M405 266 q-6 -6 -6 -16 q2 -6 8 -4 M455 266 q6 -6 6 -16 q-2 -6 -8 -4" fill="#dcdcdc"/>
+      <circle cx="430" cy="238" r="9" fill="#e6e6e6"/>
+      <!-- glasses -->
+      <g stroke="#5a4d3f" stroke-width="1.8" fill="none">
+        <circle cx="421" cy="266" r="6.5"/><circle cx="439" cy="266" r="6.5"/>
+        <path d="M427.5 265 h5"/><path d="M414.5 264 l-5 -2 M445.5 264 l5 -2"/>
+      </g>
+      <!-- face -->
+      <circle cx="421" cy="266" r="2.2" fill="#41352b"/>
+      <circle cx="439" cy="266" r="2.2" fill="#41352b"/>
+      <path d="M425 274 q5 4 10 0" fill="none" stroke="#b5654f" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="415" cy="272" r="3.2" fill="#f2b39a" opacity="0.6"/>
+      <circle cx="445" cy="272" r="3.2" fill="#f2b39a" opacity="0.6"/>
     </g>
   </g>
+
+  <!-- circle rim -->
+  <circle cx="320" cy="260" r="250" fill="none" stroke="#ffffff" stroke-width="10"/>
+  <circle cx="320" cy="260" r="255" fill="none" stroke="#1f6f78" stroke-width="2" opacity="0.15"/>
 </svg>

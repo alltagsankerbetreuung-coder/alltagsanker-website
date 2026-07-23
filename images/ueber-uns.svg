@@ -1,44 +1,123 @@
-<svg viewBox="0 0 560 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zwei Hände reichen sich mit einem Herz für Vertrauen und Nähe">
+<svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Betreuerin und Seniorin sitzen bei einer Tasse Tee zusammen und unterhalten sich">
   <defs>
-    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#eef5f4"/>
-      <stop offset="1" stop-color="#fdfbf7"/>
+    <linearGradient id="u-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf3e6"/><stop offset="1" stop-color="#f3e7d2"/>
     </linearGradient>
+    <linearGradient id="u-win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe6b0"/><stop offset="1" stop-color="#ffd59a"/>
+    </linearGradient>
+    <linearGradient id="u-table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c39a6b"/><stop offset="1" stop-color="#a5794d"/>
+    </linearGradient>
+    <linearGradient id="u-teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f8a92"/><stop offset="1" stop-color="#1a636b"/></linearGradient>
+    <linearGradient id="u-terra" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#efa66f"/><stop offset="1" stop-color="#dd8449"/></linearGradient>
+    <radialGradient id="u-skin" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#f6d3b2"/><stop offset="1" stop-color="#eab892"/></radialGradient>
+    <radialGradient id="u-glow" cx="0.5" cy="0.4" r="0.6"><stop offset="0" stop-color="#fff3d6" stop-opacity="0.9"/><stop offset="1" stop-color="#fff3d6" stop-opacity="0"/></radialGradient>
+    <filter id="u-soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
   </defs>
 
-  <rect x="30" y="30" width="500" height="420" rx="40" fill="url(#bg2)"/>
+  <!-- wall -->
+  <rect x="0" y="0" width="560" height="460" fill="url(#u-wall)"/>
+  <!-- warm light glow -->
+  <ellipse cx="150" cy="150" rx="260" ry="220" fill="url(#u-glow)"/>
 
-  <!-- soft dots -->
-  <g fill="#1f6f78" opacity="0.08">
-    <circle cx="90" cy="90" r="9"/>
-    <circle cx="470" cy="120" r="12"/>
-    <circle cx="120" cy="380" r="10"/>
-    <circle cx="460" cy="370" r="8"/>
-  </g>
-
-  <!-- lower hand (caregiver) -->
+  <!-- window (left) -->
   <g>
-    <path d="M120 400 Q140 300 240 300 L300 300 Q330 300 330 330 Q330 356 300 356 L250 356 Q290 360 300 380 L300 400 Z"
-          fill="#f0c9a8"/>
-    <path d="M120 400 Q140 300 240 300 L300 300" fill="none" stroke="#e0b591" stroke-width="3" opacity="0.5"/>
-    <!-- sleeve -->
-    <path d="M96 402 Q100 372 148 366 L152 402 Z" fill="#1f6f78"/>
+    <rect x="46" y="48" width="150" height="150" rx="8" fill="#ffffff"/>
+    <rect x="54" y="56" width="134" height="134" rx="4" fill="url(#u-win)"/>
+    <circle cx="150" cy="92" r="22" fill="#fff4d2" opacity="0.9"/>
+    <path d="M60 150 q30 -26 60 -8 q30 16 60 -4 L188 190 L54 190 Z" fill="#ffcf8f" opacity="0.7"/>
+    <rect x="118" y="56" width="6" height="134" fill="#ffffff"/>
+    <rect x="54" y="118" width="134" height="6" fill="#ffffff"/>
+    <rect x="42" y="196" width="158" height="10" rx="3" fill="#efe0c6"/>
+  </g>
+  <!-- plant on sill -->
+  <g transform="translate(70 176)">
+    <path d="M-9 20 h30 l-4 -22 h-22 Z" fill="#c9773f"/>
+    <path d="M0 -2 q-16 -18 -6 -34 M6 -2 q4 -22 18 -30 M4 -2 q16 -14 12 -30" fill="none" stroke="#5f9a7f" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="-6" cy="-36" r="3" fill="#f2b6c6"/><circle cx="24" cy="-32" r="3" fill="#f7d774"/>
   </g>
 
-  <!-- upper hand (senior) -->
+  <!-- framed picture (right) -->
   <g>
-    <path d="M440 96 Q420 196 320 196 L262 196 Q232 196 232 166 Q232 140 262 140 L312 140 Q272 136 262 116 L262 96 Z"
-          fill="#f2d3b5"/>
-    <path d="M440 96 Q420 196 320 196 L262 196" fill="none" stroke="#e3bd98" stroke-width="3" opacity="0.5"/>
-    <!-- sleeve -->
-    <path d="M464 94 Q460 124 412 130 L408 94 Z" fill="#e8985e"/>
+    <rect x="392" y="70" width="120" height="96" rx="6" fill="#ffffff" stroke="#e2d3ba" stroke-width="6"/>
+    <rect x="404" y="82" width="96" height="72" rx="3" fill="#d7ece9"/>
+    <path d="M404 138 q28 -34 52 -10 q20 20 44 -2 v28 h-96 Z" fill="#9cc7bb"/>
+    <circle cx="424" cy="102" r="10" fill="#ffe0a0"/>
+  </g>
+  <!-- hanging plant (right) -->
+  <g transform="translate(470 176)">
+    <path d="M-6 0 h20 l-3 16 h-14 Z" fill="#7fae9f"/>
+    <path d="M-2 0 q-14 20 -8 34 M8 0 q14 18 8 34 M3 0 q0 24 0 34" fill="none" stroke="#5f9a7f" stroke-width="4" stroke-linecap="round"/>
   </g>
 
-  <!-- heart between hands -->
-  <g transform="translate(280 248)">
-    <path d="M0 20 C-26 -10 -58 8 -34 40 C-20 58 0 66 0 66 C0 66 20 58 34 40 C58 8 26 -10 0 20 Z"
-          fill="#e8985e"/>
-    <path d="M0 20 C-26 -10 -58 8 -34 40 C-20 58 0 66 0 66 C0 66 20 58 34 40 C58 8 26 -10 0 20 Z"
-          fill="#ffffff" opacity="0.12"/>
+  <!-- ===== two people behind table ===== -->
+  <!-- Caregiver (left) -->
+  <g>
+    <path d="M150 300 q56 -30 108 -2 l6 60 h-120 Z" fill="url(#u-teal)"/>
+    <path d="M182 292 l18 14 l18 -14" fill="none" stroke="#eef6f5" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="192" y="262" width="16" height="20" rx="7" fill="#eab892"/>
+    <circle cx="200" cy="244" r="30" fill="url(#u-skin)"/>
+    <path d="M170 244 q-2 -38 30 -39 q32 1 30 39 q-7 -19 -17 -20 q4 11 -3 18 q-5 -16 -13 -18 q3 13 -7 18 q-8 -3 -13 -9 q-3 7 0 15 q-7 -3 -8 -9 Z" fill="#7a5636"/>
+    <path d="M228 240 q11 20 0 42 q11 -5 13 -19 q0 -16 -13 -23 Z" fill="#6b4a2f"/>
+    <circle cx="191" cy="244" r="2.6" fill="#41352b"/><circle cx="209" cy="244" r="2.6" fill="#41352b"/>
+    <path d="M186 237 q5 -3 9 -1 M204 237 q5 -3 9 -1" stroke="#7a5636" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+    <path d="M193 252 q7 5 14 0" fill="none" stroke="#c98a63" stroke-width="1.7"/>
+    <path d="M191 258 q9 7 18 0" fill="none" stroke="#b5654f" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="183" cy="252" r="3.6" fill="#f2b39a" opacity="0.6"/><circle cx="217" cy="252" r="3.6" fill="#f2b39a" opacity="0.6"/>
+    <!-- hand resting near cup -->
+    <path d="M250 320 q16 6 22 20" stroke="url(#u-teal)" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <ellipse cx="274" cy="342" rx="9" ry="7" fill="url(#u-skin)"/>
+  </g>
+
+  <!-- Senior (right) -->
+  <g>
+    <path d="M312 302 q52 -28 100 -2 l6 58 h-112 Z" fill="url(#u-terra)"/>
+    <circle cx="360" cy="330" r="2.4" fill="#a7602f"/><circle cx="360" cy="346" r="2.4" fill="#a7602f"/>
+    <rect x="352" y="266" width="15" height="19" rx="7" fill="#eab892"/>
+    <circle cx="360" cy="248" r="29" fill="url(#u-skin)"/>
+    <path d="M331 248 q-2 -36 29 -37 q31 1 29 37 q-7 -20 -29 -20 q-22 0 -29 20 Z" fill="#dcdcdc"/>
+    <circle cx="360" cy="218" r="10" fill="#e6e6e6"/>
+    <g stroke="#5a4d3f" stroke-width="2" fill="none">
+      <circle cx="350" cy="248" r="7.5"/><circle cx="370" cy="248" r="7.5"/><path d="M357.5 247 h5"/><path d="M342.5 245 l-6 -2 M377.5 245 l6 -2"/>
+    </g>
+    <circle cx="350" cy="248" r="2.4" fill="#41352b"/><circle cx="370" cy="248" r="2.4" fill="#41352b"/>
+    <path d="M353 258 q7 5 14 0" fill="none" stroke="#b5654f" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="342" cy="255" r="3.4" fill="#f2b39a" opacity="0.6"/><circle cx="378" cy="255" r="3.4" fill="#f2b39a" opacity="0.6"/>
+    <!-- hand near cup -->
+    <path d="M316 322 q-14 6 -20 20" stroke="url(#u-terra)" stroke-width="15" fill="none" stroke-linecap="round"/>
+    <ellipse cx="294" cy="344" rx="9" ry="7" fill="url(#u-skin)"/>
+  </g>
+
+  <!-- ===== table + tea ===== -->
+  <ellipse cx="280" cy="360" rx="240" ry="20" fill="#3f2f1e" opacity="0.12" filter="url(#u-soft)"/>
+  <rect x="24" y="352" width="512" height="86" rx="14" fill="url(#u-table)"/>
+  <rect x="24" y="352" width="512" height="12" rx="6" fill="#d3ab7c"/>
+
+  <!-- teacup left -->
+  <g transform="translate(250 356)">
+    <path d="M-16 -14 q3 -3 6 0" stroke="#cbd6d6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="0" cy="16" rx="22" ry="6" fill="#ffffff"/>
+    <path d="M-18 0 h36 v6 a18 10 0 0 1 -36 0 Z" fill="#ffffff" stroke="#e3ddd0" stroke-width="1.5"/>
+    <path d="M18 2 q10 0 9 9 q-1 7 -9 6" fill="none" stroke="#e3ddd0" stroke-width="2.4"/>
+    <path d="M-14 -1 h28 v2 a14 4 0 0 1 -28 0 Z" fill="#a5794d" opacity="0.5"/>
+  </g>
+  <!-- teacup right -->
+  <g transform="translate(322 356)">
+    <path d="M14 -14 q-3 -3 -6 0" stroke="#cbd6d6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="0" cy="16" rx="22" ry="6" fill="#ffffff"/>
+    <path d="M-18 0 h36 v6 a18 10 0 0 1 -36 0 Z" fill="#ffffff" stroke="#e3ddd0" stroke-width="1.5"/>
+    <path d="M-27 8 q-10 0 -9 9 q1 7 9 6" fill="none" stroke="#e3ddd0" stroke-width="2.4" transform="translate(45 -6)"/>
+    <path d="M-14 -1 h28 v2 a14 4 0 0 1 -28 0 Z" fill="#a5794d" opacity="0.5"/>
+  </g>
+  <!-- small vase with flowers center -->
+  <g transform="translate(286 352)">
+    <path d="M-9 0 q-3 16 4 24 h10 q7 -8 4 -24 Z" fill="#e7f0ef"/>
+    <line x1="0" y1="0" x2="0" y2="-20" stroke="#5f9a7f" stroke-width="2.4"/>
+    <line x1="0" y1="-6" x2="-9" y2="-20" stroke="#5f9a7f" stroke-width="2.4"/>
+    <line x1="0" y1="-6" x2="9" y2="-20" stroke="#5f9a7f" stroke-width="2.4"/>
+    <circle cx="0" cy="-22" r="5" fill="#e2564f"/>
+    <circle cx="-10" cy="-21" r="4.5" fill="#f2b6c6"/>
+    <circle cx="10" cy="-21" r="4.5" fill="#f7d774"/>
   </g>
 </svg>

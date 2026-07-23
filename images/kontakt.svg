@@ -1,34 +1,54 @@
-<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nehmen Sie Kontakt auf – ein Briefumschlag mit Anker">
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nehmen Sie Kontakt auf – ein Briefumschlag mit Sprechblase und Anker">
   <defs>
-    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#eef5f4"/>
-      <stop offset="1" stop-color="#fdfbf7"/>
+    <linearGradient id="k-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef5f4"/><stop offset="1" stop-color="#fdfbf7"/>
     </linearGradient>
+    <linearGradient id="k-env" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a7d85"/><stop offset="1" stop-color="#175058"/>
+    </linearGradient>
+    <linearGradient id="k-flap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#238089"/><stop offset="1" stop-color="#1a636b"/>
+    </linearGradient>
+    <linearGradient id="k-bubble" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0a86f"/><stop offset="1" stop-color="#e2894a"/>
+    </linearGradient>
+    <filter id="k-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1f6f78" flood-opacity="0.22"/>
+    </filter>
   </defs>
 
-  <rect x="20" y="20" width="440" height="320" rx="34" fill="url(#bg4)"/>
+  <rect x="18" y="18" width="444" height="324" rx="34" fill="url(#k-bg)"/>
+  <!-- soft dots -->
+  <g fill="#1f6f78" opacity="0.07">
+    <circle cx="70" cy="70" r="10"/><circle cx="418" cy="90" r="14"/><circle cx="404" cy="300" r="9"/><circle cx="76" cy="300" r="7"/>
+  </g>
 
   <!-- chat bubble -->
-  <g transform="translate(300 70)">
-    <path d="M0 0 L120 0 Q140 0 140 20 L140 70 Q140 90 120 90 L40 90 L18 112 L22 90 L0 90 Q-20 90 -20 70 L-20 20 Q-20 0 0 0Z"
-          transform="translate(20 0)" fill="#e8985e" opacity="0.9"/>
+  <g filter="url(#k-shadow)">
+    <path d="M300 56 h120 q22 0 22 22 v50 q0 22 -22 22 h-78 l-24 24 l5 -24 h-23 q-22 0 -22 -22 v-50 q0 -22 22 -22 Z" fill="url(#k-bubble)"/>
     <g fill="#ffffff">
-      <circle cx="60" cy="45" r="7"/>
-      <circle cx="90" cy="45" r="7"/>
-      <circle cx="120" cy="45" r="7"/>
+      <circle cx="330" cy="103" r="8"/><circle cx="360" cy="103" r="8"/><circle cx="390" cy="103" r="8"/>
     </g>
   </g>
 
   <!-- envelope -->
-  <g transform="translate(90 150)">
-    <rect x="0" y="0" width="230" height="150" rx="16" fill="#1f6f78"/>
-    <path d="M0 16 L115 96 L230 16" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
-    <!-- anchor stamp -->
-    <g transform="translate(190 34)" stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9">
-      <circle cx="0" cy="-12" r="5"/>
-      <line x1="0" y1="-7" x2="0" y2="18"/>
-      <line x1="-11" y1="0" x2="11" y2="0"/>
-      <path d="M-16 8 Q-16 22 0 22 Q16 22 16 8"/>
+  <g filter="url(#k-shadow)">
+    <rect x="70" y="150" width="240" height="158" rx="18" fill="url(#k-env)"/>
+    <!-- inner flap shading -->
+    <path d="M70 168 L190 250 L310 168 L310 176 L190 260 L70 176 Z" fill="#0f3f46" opacity="0.4"/>
+    <path d="M70 166 L190 248 L310 166" fill="none" stroke="#eaf5f4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M70 308 L162 232 M310 308 L218 232" stroke="#0f3f46" stroke-width="4" opacity="0.3"/>
+  </g>
+
+  <!-- anchor seal -->
+  <g transform="translate(262 202)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" filter="url(#k-shadow)"/>
+    <g stroke="#1f6f78" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="0" cy="-13" r="5"/>
+      <line x1="0" y1="-8" x2="0" y2="18"/>
+      <line x1="-11" y1="-1" x2="11" y2="-1"/>
+      <path d="M-15 8 Q-15 22 0 22 Q15 22 15 8"/>
+      <line x1="-15" y1="8" x2="-20" y2="10"/><line x1="15" y1="8" x2="20" y2="10"/>
     </g>
   </g>
 </svg>
