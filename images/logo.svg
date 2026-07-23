@@ -1,0 +1,40 @@
+<svg viewBox="0 0 1010 214" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander">
+  <!-- ===== Emblem: Haus mit Herz und Anker ===== -->
+  <g fill="none" stroke="#1c4c88" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Dach -->
+    <path d="M130 20 L28 100 M130 20 L232 100"/>
+    <!-- Wände + geschwungener Boden -->
+    <path d="M40 100 L52 192 Q130 214 208 192 L220 100"/>
+  </g>
+
+  <!-- Herz -->
+  <path d="M130 70 C114 44 78 46 72 78 C67 104 100 128 130 156 C160 128 193 104 188 78 C182 46 146 44 130 70 Z"
+        fill="#e21f28"/>
+
+  <!-- Anker -->
+  <g fill="none" stroke="#1c4c88" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="130" cy="118" r="8" stroke-width="6"/>
+    <line x1="130" y1="127" x2="130" y2="184" stroke-width="9"/>
+    <line x1="107" y1="139" x2="153" y2="139" stroke-width="9"/>
+    <path d="M96 163 C99 186 116 197 130 197 C144 197 161 186 164 163" stroke-width="9"/>
+    <!-- Widerhaken links -->
+    <line x1="96" y1="163" x2="83" y2="167" stroke-width="8"/>
+    <line x1="96" y1="163" x2="102" y2="148" stroke-width="8"/>
+    <!-- Widerhaken rechts -->
+    <line x1="164" y1="163" x2="177" y2="167" stroke-width="8"/>
+    <line x1="164" y1="163" x2="158" y2="148" stroke-width="8"/>
+  </g>
+
+  <!-- ===== Schriftzug ===== -->
+  <text x="286" y="130" font-family="Georgia, 'Times New Roman', 'Playfair Display', serif"
+        font-size="112" font-weight="700" fill="#1c4c88" letter-spacing="1">Alltagsanker</text>
+
+  <!-- BETREUUNG mit flankierenden Linien -->
+  <g>
+    <text x="600" y="182" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="34" font-weight="600" fill="#6cb43f" letter-spacing="11">BETREUUNG</text>
+    <line x1="378" y1="173" x2="442" y2="173" stroke="#6cb43f" stroke-width="4" stroke-linecap="round"/>
+    <line x1="758" y1="173" x2="822" y2="173" stroke="#6cb43f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

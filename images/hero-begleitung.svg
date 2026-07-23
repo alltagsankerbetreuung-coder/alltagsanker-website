@@ -1,0 +1,76 @@
+<svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eine Betreuungsperson begleitet einen Senioren an der frischen Luft">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6efe4"/>
+      <stop offset="1" stop-color="#fdfbf7"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2b880"/>
+      <stop offset="1" stop-color="#e8985e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background circle -->
+  <circle cx="320" cy="260" r="250" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <circle cx="470" cy="150" r="58" fill="url(#sun)" opacity="0.9"/>
+
+  <!-- back hills -->
+  <path d="M70 350 Q200 250 340 320 Q470 380 570 320 L570 470 L70 470 Z" fill="#d7e4e2"/>
+  <path d="M70 390 Q220 320 360 375 Q480 420 570 375 L570 470 L70 470 Z" fill="#bcd3d1"/>
+
+  <!-- ground -->
+  <path d="M60 430 Q320 400 580 430 L580 480 L60 480 Z" fill="#1f6f78" opacity="0.15"/>
+
+  <!-- tree -->
+  <g>
+    <rect x="126" y="300" width="12" height="90" rx="6" fill="#9a7b5a"/>
+    <circle cx="132" cy="288" r="46" fill="#7fae9f"/>
+    <circle cx="104" cy="304" r="32" fill="#93bcae"/>
+    <circle cx="160" cy="304" r="32" fill="#93bcae"/>
+  </g>
+
+  <!-- caregiver (left figure) -->
+  <g>
+    <!-- legs -->
+    <rect x="300" y="378" width="17" height="70" rx="8" fill="#154f56"/>
+    <rect x="322" y="378" width="17" height="70" rx="8" fill="#1f6f78"/>
+    <!-- body -->
+    <path d="M296 300 Q320 288 344 300 L350 386 L290 386 Z" fill="#1f6f78"/>
+    <!-- arm reaching to companion -->
+    <path d="M344 322 Q384 330 408 350" stroke="#1f6f78" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <!-- head -->
+    <circle cx="320" cy="268" r="27" fill="#f0c9a8"/>
+    <path d="M294 262 Q296 232 320 232 Q344 232 346 262 Q334 250 320 250 Q306 250 294 262 Z" fill="#6b4f3a"/>
+  </g>
+
+  <!-- senior (right figure) with cane -->
+  <g>
+    <!-- cane -->
+    <path d="M470 350 L470 452" stroke="#9a7b5a" stroke-width="8" stroke-linecap="round"/>
+    <path d="M470 350 Q462 344 456 350" stroke="#9a7b5a" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <!-- legs -->
+    <rect x="410" y="382" width="17" height="66" rx="8" fill="#8a6f52"/>
+    <rect x="431" y="382" width="17" height="66" rx="8" fill="#a17f5d"/>
+    <!-- body -->
+    <path d="M404 306 Q430 294 456 306 L460 390 L400 390 Z" fill="#e8985e"/>
+    <!-- arm to cane -->
+    <path d="M452 328 Q468 336 470 352" stroke="#e8985e" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <!-- head -->
+    <circle cx="430" cy="276" r="26" fill="#f0c9a8"/>
+    <path d="M405 272 Q408 246 430 246 Q452 246 455 272 Q443 262 430 262 Q417 262 405 272 Z" fill="#d9d9d9"/>
+  </g>
+
+  <!-- anchor emblem -->
+  <g transform="translate(210 120)" opacity="0.9">
+    <circle cx="0" cy="0" r="46" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="46" fill="none" stroke="#1f6f78" stroke-width="3" opacity="0.4"/>
+    <g stroke="#1f6f78" stroke-width="6" stroke-linecap="round" fill="none">
+      <circle cx="0" cy="-20" r="7"/>
+      <line x1="0" y1="-13" x2="0" y2="24"/>
+      <line x1="-15" y1="-4" x2="15" y2="-4"/>
+      <path d="M-22 12 Q-22 30 0 30 Q22 30 22 12"/>
+    </g>
+  </g>
+</svg>
