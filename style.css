@@ -1,0 +1,299 @@
+/* Alltagsanker – Stylesheet */
+
+:root {
+  --color-primary: #1f6f78;
+  --color-primary-dark: #154f56;
+  --color-accent: #e8985e;
+  --color-bg: #faf7f2;
+  --color-bg-alt: #ffffff;
+  --color-text: #2b2b2b;
+  --color-text-light: #5a5a5a;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(31, 111, 120, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+header {
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.logo span.icon {
+  font-size: 1.6rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--color-primary);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #fff;
+  padding: 72px 24px;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #eaf3f3;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(232, 152, 94, 0.35);
+}
+
+.btn.secondary {
+  background: #fff;
+  color: var(--color-primary-dark);
+}
+
+/* Sections */
+section {
+  padding: 64px 24px;
+}
+
+section.alt {
+  background: var(--color-bg-alt);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-primary-dark);
+  margin-top: 0;
+}
+
+.section-intro {
+  max-width: 640px;
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  color: var(--color-primary-dark);
+  margin-top: 0;
+}
+
+.card .icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* Region tags */
+.regions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.region-tag {
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary-dark);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info .item {
+  margin-bottom: 22px;
+}
+
+.contact-info .item strong {
+  display: block;
+  color: var(--color-primary-dark);
+  font-size: 1.05rem;
+}
+
+form.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--color-bg-alt);
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+form.contact-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form.contact-form button {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.note {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+/* Footer */
+footer {
+  background: var(--color-primary-dark);
+  color: #eaf3f3;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .nav-wrap {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

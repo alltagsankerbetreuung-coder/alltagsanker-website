@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danke – Alltagsanker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <div class="logo"><span class="icon">⚓</span> Alltagsanker</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Vielen Dank!</h1>
+      <p>Ihre Nachricht ist bei uns angekommen. Wir melden uns in Kürze bei Ihnen.</p>
+      <a href="index.html" class="btn secondary">Zurück zur Startseite</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Alltagsanker – Alltagsbetreuung für Senioren</p>
+      <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
