@@ -4,22 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alltagsanker – Alltagsbetreuung für Senioren</title>
-  <meta name="description" content="Alltagsanker bietet einfühlsame Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Essen und Gelsenkirchen." />
+  <meta name="description" content="Einfühlsame Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Gelsenkirchen und im Essener Norden. Anerkanntes Angebot zur Unterstützung im Alltag – Abrechnung über die Pflegekasse möglich." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Alltagsanker" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Alltagsanker – Alltagsbetreuung für Senioren" />
+  <meta property="og:description" content="Einfühlsame Begleitung im Alltag in Bottrop, Gladbeck, Gelsenkirchen und im Essener Norden." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#1a6f78" />
   <link rel="icon" href="images/logo.png" />
   <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Alltagsanker – Alltagsbetreuung",
+    "description": "Anerkanntes Angebot zur Unterstützung im Alltag. Einfühlsame Alltagsbetreuung für Senior:innen: Begleitung, Einkäufe, Terminbegleitung, Haushalt und Unterstützung bei Papierkram.",
+    "image": "images/logo.png",
+    "email": "alltagsankerbetreuung@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Batenbrockstraße 66",
+      "postalCode": "46238",
+      "addressLocality": "Bottrop",
+      "addressRegion": "Nordrhein-Westfalen",
+      "addressCountry": "DE"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Bottrop" },
+      { "@type": "City", "name": "Gladbeck" },
+      { "@type": "City", "name": "Gelsenkirchen" },
+      { "@type": "City", "name": "Essen" }
+    ],
+    "knowsLanguage": "de",
+    "slogan": "Unterstützung. Vertrauen. Miteinander."
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header>
     <div class="nav-wrap">
-      <a class="logo" href="index.html"><img src="images/logo.png" alt="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
+      <a class="logo" href="index.html"><img src="images/logo.png" width="1001" height="711" alt="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
       <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnavigation"><span></span></button>
       <nav id="hauptnavigation" aria-label="Hauptnavigation">
         <ul>
-          <li><a href="index.html" class="active">Startseite</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Startseite</a></li>
           <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="leistungen.html">Leistungen</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -34,17 +67,17 @@
         <div class="hero-text">
           <span class="eyebrow"><span class="dot"></span> Persönliche Betreuung im Ruhrgebiet</span>
           <h1>Ein verlässlicher Anker im Alltag</h1>
-          <p>Alltagsanker begleitet Senior:innen in Bottrop, Gladbeck, Essen und Gelsenkirchen mit einfühlsamer, persönlicher Betreuung – damit der Alltag leichter und der Tag schöner wird.</p>
+          <p>Alltagsanker begleitet Senior:innen in Bottrop, Gladbeck, Gelsenkirchen und im Essener Norden mit einfühlsamer, persönlicher Betreuung – damit der Alltag leichter und der Tag schöner wird.</p>
           <div class="btn-row">
             <a href="kontakt.html" class="btn">Jetzt Kontakt aufnehmen <span class="arrow" aria-hidden="true">→</span></a>
             <a href="leistungen.html" class="btn secondary">Leistungen ansehen</a>
           </div>
         </div>
         <div class="hero-media">
-          <img src="images/hero-begleitung.svg" alt="Eine Betreuerin begleitet eine ältere Dame beim Spaziergang an der frischen Luft" />
+          <img src="images/hero-begleitung.svg" width="640" height="520" alt="Eine Betreuerin begleitet eine ältere Dame beim Spaziergang an der frischen Luft" />
         </div>
       </div>
-      <img class="hero-wave" src="images/welle.svg" alt="" aria-hidden="true" />
+      <img class="hero-wave" src="images/welle.svg" width="1440" height="120" alt="" aria-hidden="true" />
     </section>
 
     <section>
@@ -70,6 +103,21 @@
             <h3>Terminbegleitung</h3>
             <p>Sicher und verlässlich zu Arzt- oder anderen wichtigen Terminen.</p>
           </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">📄</div>
+            <h3>Papierkram &amp; Behörden</h3>
+            <p>Anträge, Formulare und Schriftverkehr mit Kranken- und Pflegekasse, Ärzten oder Ämtern.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">🏡</div>
+            <h3>Unterstützung im Haushalt</h3>
+            <p>Kleine Hilfen im Alltag – von Ordnung schaffen bis zu leichten Handreichungen.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">💬</div>
+            <h3>Ein offenes Ohr</h3>
+            <p>Zeit für Gespräche, Zuhören und ein vertrauensvolles Miteinander.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -84,11 +132,11 @@
           <div>
             <span class="kicker" style="color:#a8e08a;">Kostenübernahme</span>
             <h2>Ihre Betreuung zahlt in der Regel die Pflegekasse</h2>
-            <p>Alltagsanker ist ein nach Landesrecht anerkanntes Angebot zur Unterstützung im Alltag. Liegt ein Pflegegrad vor, rechnen wir über Ihre Pflegekasse ab – in der Regel übernimmt sie die Kosten für unsere Betreuung vollständig.</p>
+            <p>Alltagsanker ist ein nach Landesrecht anerkanntes Angebot zur Unterstützung im Alltag. Liegt ein Pflegegrad vor, rechnen wir direkt über Ihre Pflegekasse ab – dafür stehen je nach Anspruch verschiedene Wege offen. In der Regel übernimmt die Kasse die Kosten für unsere Betreuung vollständig.</p>
             <ul class="check-list">
               <li>In der Regel keine eigenen Kosten für Sie</li>
-              <li>Abrechnung direkt über Ihre Pflegekasse</li>
-              <li>Wir helfen Ihnen gerne bei den Formalitäten</li>
+              <li>Mehrere Abrechnungswege möglich – wir finden den passenden</li>
+              <li>Den Schriftverkehr mit der Kasse übernehmen wir für Sie</li>
             </ul>
             <p>Welche Möglichkeiten in Ihrem Fall bestehen, schauen wir gemeinsam an. Sprechen Sie uns einfach an – wir beraten Sie in Ruhe und unverbindlich.</p>
             <div class="btn-row">
@@ -104,14 +152,15 @@
         <div class="section-head reveal">
           <span class="kicker">Einsatzgebiet</span>
           <h2>In Ihrer Nähe für Sie da</h2>
-          <p class="section-intro">Wir sind in folgenden Städten für Sie unterwegs:</p>
+          <p class="section-intro">Unser Standort ist die Batenbrockstraße 66 in Bottrop. Von dort sind wir in diesen Städten für Sie unterwegs:</p>
         </div>
         <div class="regions reveal">
           <span class="region-tag">Bottrop</span>
           <span class="region-tag">Gladbeck</span>
-          <span class="region-tag">Essen</span>
           <span class="region-tag">Gelsenkirchen</span>
+          <span class="region-tag">Essen (Norden)</span>
         </div>
+        <p class="note reveal" style="margin-top:18px;">In Essen sind wir vor allem in den nördlichen Stadtteilen tätig. Wohnen Sie knapp außerhalb? Fragen Sie gerne trotzdem nach.</p>
       </div>
     </section>
 
@@ -127,7 +176,7 @@
             <summary>Was kostet die Betreuung?</summary>
             <div class="answer">
               <p>In der Regel übernimmt die Pflegekasse die Kosten vollständig. Alltagsanker ist ein nach Landesrecht anerkanntes Angebot zur Unterstützung im Alltag – liegt ein Pflegegrad vor, rechnen wir direkt über Ihre Pflegekasse ab. Für Sie entstehen dann normalerweise keine eigenen Kosten.</p>
-              <p>Je nach Situation kommen dafür unterschiedliche Leistungen infrage. Welche das in Ihrem Fall sind, klären wir gemeinsam mit Ihnen – melden Sie sich einfach, wir schauen es uns in Ruhe an.</p>
+              <p>Je nach Anspruch stehen dafür verschiedene Wege offen. Welcher in Ihrem Fall passt, klären wir gemeinsam mit Ihnen und übernehmen auch den Schriftverkehr mit der Kasse – melden Sie sich einfach, wir schauen es uns in Ruhe an.</p>
               <p>Wenn kein Pflegegrad vorliegt, rechnen wir privat ab. Den Stundensatz besprechen wir vorab offen mit Ihnen, damit es keine Überraschungen gibt.</p>
             </div>
           </details>
@@ -148,14 +197,15 @@
           <details>
             <summary>Wie oft und wie lange kommen Sie?</summary>
             <div class="answer">
-              <p>Ein Einsatz dauert bei uns <strong>mindestens zwei Stunden</strong>. So bleibt genug Zeit, ohne Hektik das zu erledigen, was ansteht – und auch noch für ein Gespräch.</p>
+              <p>Ein Einsatz dauert bei uns <strong>in der Regel zwei Stunden</strong>. So bleibt genug Zeit, ohne Hektik das zu erledigen, was ansteht – und auch noch für ein Gespräch.</p>
               <p>Wie oft wir kommen, stimmen wir gemeinsam ab: Manche möchten einmal pro Woche Gesellschaft, andere brauchen mehrmals wöchentlich Unterstützung. Die Termine passen wir an, wenn sich Ihre Situation ändert.</p>
             </div>
           </details>
           <details>
             <summary>Sind Sie auch in meiner Stadt tätig?</summary>
             <div class="answer">
-              <p>Wir sind in Bottrop, Gladbeck, Essen und Gelsenkirchen unterwegs. Wohnen Sie knapp außerhalb? Fragen Sie trotzdem gerne nach – oft finden wir eine Lösung.</p>
+              <p>Unser Standort ist die Batenbrockstraße 66 in Bottrop. Von dort sind wir in Bottrop, Gladbeck und Gelsenkirchen unterwegs, in Essen vor allem in den nördlichen Stadtteilen.</p>
+              <p>Wohnen Sie knapp außerhalb? Fragen Sie trotzdem gerne nach – oft finden wir eine Lösung.</p>
             </div>
           </details>
           <details>
@@ -163,6 +213,13 @@
             <div class="answer">
               <p>Nein. Wir sind für die Betreuung und den Alltag da – Gesellschaft, Begleitung, Einkäufe und Unterstützung im Haushalt.</p>
               <p>Medizinische oder körperbezogene Pflege übernimmt ein ambulanter Pflegedienst. Wir ergänzen diese Arbeit, ersetzen sie aber nicht.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Helfen Sie auch bei Anträgen und Papierkram?</summary>
+            <div class="answer">
+              <p>Ja. Formulare, Anträge und der Schriftverkehr mit Kranken- und Pflegekassen, Ärzten oder Ämtern gehören für viele zu den unangenehmsten Aufgaben – dabei unterstützen wir Sie.</p>
+              <p>Wir bringen langjährige Erfahrung aus der Pflege mit und wissen, worauf es bei solchen Schreiben ankommt.</p>
             </div>
           </details>
         </div>
@@ -178,7 +235,7 @@
           <a href="kontakt.html" class="btn">Kontakt aufnehmen <span class="arrow" aria-hidden="true">→</span></a>
         </div>
         <div class="split-media">
-          <img src="images/ueber-uns.svg" alt="Eine Betreuerin und eine Seniorin sitzen bei einer Tasse Tee zusammen" />
+          <img loading="lazy" decoding="async" src="images/ueber-uns.svg" width="560" height="460" alt="Eine Betreuerin und eine Seniorin sitzen bei einer Tasse Tee zusammen" />
         </div>
       </div>
     </section>
@@ -188,7 +245,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img class="footer-logo" src="images/logo.png" alt="Alltagsanker Betreuung" />
+          <img class="footer-logo" loading="lazy" decoding="async" src="images/logo.png" width="1001" height="711" alt="Alltagsanker Betreuung" />
           <p>Einfühlsame Alltagsbetreuung für Senior:innen – mit Zeit, Verlässlichkeit und einem offenen Ohr.</p>
         </div>
         <div>
@@ -204,8 +261,9 @@
           <h4>Kontakt</h4>
           <ul>
             <li><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></li>
-            <li>Bottrop · Gladbeck</li>
-            <li>Essen · Gelsenkirchen</li>
+            <li>Batenbrockstraße 66, 46238 Bottrop</li>
+            <li>Bottrop · Gladbeck · Gelsenkirchen</li>
+            <li>Essen (Norden)</li>
           </ul>
         </div>
       </div>

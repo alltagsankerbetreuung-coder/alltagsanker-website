@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leistungen – Alltagsanker</title>
-  <meta name="description" content="Alltagsbegleitung, Einkäufe, Terminbegleitung und Gesellschaft für Senioren – die Leistungen von Alltagsanker im Überblick." />
+  <meta name="description" content="Alltagsbegleitung, Einkäufe, Terminbegleitung, Haushalt und Hilfe bei Papierkram mit Kasse, Ärzten und Ämtern – die Leistungen von Alltagsanker im Überblick." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Alltagsanker" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Leistungen – Alltagsanker" />
+  <meta property="og:description" content="Alltagsbegleitung, Einkäufe, Terminbegleitung, Haushalt und Hilfe bei Papierkram." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#1a6f78" />
   <link rel="icon" href="images/logo.png" />
   <script>document.documentElement.classList.add("js");</script>
@@ -15,13 +22,13 @@
 
   <header>
     <div class="nav-wrap">
-      <a class="logo" href="index.html"><img src="images/logo.png" alt="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
+      <a class="logo" href="index.html"><img src="images/logo.png" width="1001" height="711" alt="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
       <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnavigation"><span></span></button>
       <nav id="hauptnavigation" aria-label="Hauptnavigation">
         <ul>
           <li><a href="index.html">Startseite</a></li>
           <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="leistungen.html" class="active">Leistungen</a></li>
+          <li><a href="leistungen.html" class="active" aria-current="page">Leistungen</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
@@ -40,10 +47,10 @@
           </div>
         </div>
         <div class="hero-media">
-          <img src="images/leistungen.svg" alt="Eine Betreuerin bringt einem älteren Herrn den Einkauf und begleitet ihn" />
+          <img src="images/leistungen.svg" width="600" height="480" alt="Eine Betreuerin bringt einem älteren Herrn den Einkauf und begleitet ihn" />
         </div>
       </div>
-      <img class="hero-wave" src="images/welle.svg" alt="" aria-hidden="true" />
+      <img class="hero-wave" src="images/welle.svg" width="1440" height="120" alt="" aria-hidden="true" />
     </section>
 
     <section>
@@ -51,7 +58,7 @@
         <div class="section-head reveal">
           <span class="kicker">Im Überblick</span>
           <h2>Womit wir Sie unterstützen</h2>
-          <p class="section-intro">Sie entscheiden, was Sie brauchen – wir stellen die Betreuung gemeinsam mit Ihnen zusammen. Ein Einsatz dauert dabei mindestens zwei Stunden, damit genug Zeit für alles bleibt.</p>
+          <p class="section-intro">Sie entscheiden, was Sie brauchen – wir stellen die Betreuung gemeinsam mit Ihnen zusammen. Ein Einsatz dauert dabei in der Regel zwei Stunden, damit genug Zeit für alles bleibt.</p>
         </div>
         <div class="grid">
           <div class="card reveal">
@@ -84,6 +91,11 @@
             <h3>Ein offenes Ohr</h3>
             <p>Zeit für Gespräche, Zuhören und ein vertrauensvolles Miteinander.</p>
           </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">📄</div>
+            <h3>Papierkram &amp; Behörden</h3>
+            <p>Anträge, Formulare und Schriftverkehr mit Kranken- und Pflegekasse, Ärzten oder Ämtern – wir behalten den Überblick und unterstützen Sie dabei.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -98,11 +110,11 @@
           <div>
             <span class="kicker" style="color:#a8e08a;">Kostenübernahme</span>
             <h2>Diese Leistungen zahlt in der Regel die Pflegekasse</h2>
-            <p>Alltagsanker ist ein nach Landesrecht anerkanntes Angebot zur Unterstützung im Alltag. Liegt ein Pflegegrad vor, rechnen wir über Ihre Pflegekasse ab – in der Regel übernimmt sie die Kosten vollständig.</p>
+            <p>Alltagsanker ist ein nach Landesrecht anerkanntes Angebot zur Unterstützung im Alltag. Liegt ein Pflegegrad vor, rechnen wir direkt über Ihre Pflegekasse ab – dafür stehen je nach Anspruch verschiedene Wege offen. In der Regel übernimmt die Kasse die Kosten vollständig.</p>
             <ul class="check-list">
               <li>In der Regel keine eigenen Kosten für Sie</li>
-              <li>Abrechnung direkt über Ihre Pflegekasse</li>
-              <li>Wir prüfen gemeinsam mit Ihnen, was möglich ist</li>
+              <li>Mehrere Abrechnungswege möglich – wir finden den passenden</li>
+              <li>Den Schriftverkehr mit der Kasse übernehmen wir für Sie</li>
             </ul>
             <div class="btn-row">
               <a href="kontakt.html" class="btn">Kostenübernahme klären <span class="arrow" aria-hidden="true">→</span></a>
@@ -117,14 +129,15 @@
         <div class="section-head reveal">
           <span class="kicker">Einsatzgebiet</span>
           <h2>Verfügbar in Ihrer Nähe</h2>
-          <p class="section-intro">Unsere Leistungen bieten wir in folgenden Städten an:</p>
+          <p class="section-intro">Von unserem Standort in Bottrop aus bieten wir unsere Leistungen in diesen Städten an:</p>
         </div>
         <div class="regions reveal">
           <span class="region-tag">Bottrop</span>
           <span class="region-tag">Gladbeck</span>
-          <span class="region-tag">Essen</span>
           <span class="region-tag">Gelsenkirchen</span>
+          <span class="region-tag">Essen (Norden)</span>
         </div>
+        <p class="note reveal" style="margin-top:18px;">In Essen sind wir vor allem in den nördlichen Stadtteilen tätig. Wohnen Sie knapp außerhalb? Fragen Sie gerne trotzdem nach.</p>
       </div>
     </section>
 
@@ -146,7 +159,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img class="footer-logo" src="images/logo.png" alt="Alltagsanker Betreuung" />
+          <img class="footer-logo" loading="lazy" decoding="async" src="images/logo.png" width="1001" height="711" alt="Alltagsanker Betreuung" />
           <p>Einfühlsame Alltagsbetreuung für Senior:innen – mit Zeit, Verlässlichkeit und einem offenen Ohr.</p>
         </div>
         <div>
@@ -162,8 +175,9 @@
           <h4>Kontakt</h4>
           <ul>
             <li><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></li>
-            <li>Bottrop · Gladbeck</li>
-            <li>Essen · Gelsenkirchen</li>
+            <li>Batenbrockstraße 66, 46238 Bottrop</li>
+            <li>Bottrop · Gladbeck · Gelsenkirchen</li>
+            <li>Essen (Norden)</li>
           </ul>
         </div>
       </div>
