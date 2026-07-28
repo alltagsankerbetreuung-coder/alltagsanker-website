@@ -28,9 +28,10 @@ aktivem JavaScript), Rücksicht auf `prefers-reduced-motion`, Sprungmarke zum
 Inhalt und sichtbare Fokus-Rahmen für die Tastaturbedienung.
 
 Für Suchmaschinen und geteilte Links: strukturierte Daten (`LocalBusiness`
-mit Anschrift und Einsatzgebiet) auf der Startseite, Open-Graph-Angaben für
-Vorschauen in Messengern sowie feste Bildmaße, damit beim Laden nichts
-verspringt.
+mit Anschrift und Einsatzgebiet sowie `FAQPage` mit den häufigen Fragen) auf
+der Startseite, Open-Graph-Angaben für Vorschauen in Messengern sowie feste
+Bildmaße, damit beim Laden nichts verspringt. Titel und Beschreibungen sind
+auf Länge und Suchbegriffe (Ort + Leistung) geprüft.
 
 ## ⚠️ Vor dem Livegang erledigen
 
@@ -46,10 +47,48 @@ eingetragen; es fehlen noch:
 Ein unvollständiges Impressum ist abmahnfähig. Die Texte sind Vorlagen und
 ersetzen keine Rechtsberatung.
 
-Sobald die endgültige Domain feststeht, lohnt es sich außerdem, sie in den
-`og:image`-Angaben der Seiten als vollständige Adresse zu hinterlegen – dann
-zeigen WhatsApp und Facebook beim Teilen auch das Logo an. Eine `sitemap.xml`
-lässt sich dann ebenfalls ergänzen.
+## 🔎 SEO: Sobald die Domain feststeht
+
+Ein paar Dinge lassen sich erst mit der echten, endgültigen Adresse der
+Website sinnvoll ergänzen (z. B. `https://www.alltagsanker.de`) – vorher
+absichtlich weggelassen, damit keine falsche Platzhalter-Domain unbemerkt
+live geht. Sobald die Domain feststeht, folgende Schritte:
+
+**1. `sitemap.xml` im Hauptordner anlegen** (Domain ersetzen):
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.DOMAIN.de/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.DOMAIN.de/ueber-uns.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.DOMAIN.de/leistungen.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.DOMAIN.de/kontakt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.DOMAIN.de/impressum.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.DOMAIN.de/datenschutz.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
+```
+
+**2. In `robots.txt` ergänzen:**
+
+```
+Sitemap: https://www.DOMAIN.de/sitemap.xml
+```
+
+**3. In jeder Seite `<head>` eine kanonische URL ergänzen** (Beispiel für
+`index.html`, auf jeder Seite die eigene Adresse eintragen):
+
+```html
+<link rel="canonical" href="https://www.DOMAIN.de/" />
+<meta property="og:url" content="https://www.DOMAIN.de/" />
+```
+
+**4. Bei Google Search Console anmelden**, die Domain verifizieren und die
+Sitemap dort einreichen – das ist der schnellste Weg, damit Google die Seite
+findet und indexiert.
+
+Ohne diese vier Schritte funktioniert die Website und wird auch gefunden,
+aber Google braucht dafür länger und Suchergebnis-Vorschauen sind seltener
+perfekt (z. B. bei doppelt aufrufbaren Adressen mit und ohne `www.`).
 
 ## Kontaktformular
 
