@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alltagsanker – Alltagsbetreuung für Senioren</title>
   <meta name="description" content="Alltagsanker bietet einfühlsame Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Essen und Gelsenkirchen." />
+  <meta name="theme-color" content="#1a6f78" />
+  <link rel="icon" href="images/logo.png" />
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
   <header>
     <div class="nav-wrap">
       <a class="logo" href="index.html"><img src="images/logo.png" alt="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
-      <nav>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnavigation"><span></span></button>
+      <nav id="hauptnavigation" aria-label="Hauptnavigation">
         <ul>
           <li><a href="index.html" class="active">Startseite</a></li>
           <li><a href="ueber-uns.html">Über uns</a></li>
@@ -22,79 +28,115 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Ein verlässlicher Anker im Alltag</h1>
-        <p>Alltagsanker begleitet Senior:innen in Bottrop, Gladbeck, Essen und Gelsenkirchen mit einfühlsamer, persönlicher Betreuung – damit der Alltag leichter und der Tag schöner wird.</p>
-        <a href="kontakt.html" class="btn">Jetzt Kontakt aufnehmen</a>
-      </div>
-      <div class="hero-media">
-        <img src="images/hero-begleitung.svg" alt="Eine Betreuungsperson begleitet einen Senioren an der frischen Luft" />
-      </div>
-    </div>
-    <img class="hero-wave" src="images/welle.svg" alt="" aria-hidden="true" />
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Wie wir helfen</h2>
-      <p class="section-intro">Ob Gesellschaft, Begleitung zu Terminen oder Unterstützung im Haushalt – wir sind da, wo Hilfe gebraucht wird.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="icon">🤝</div>
-          <h3>Alltagsbegleitung</h3>
-          <p>Gemeinsame Zeit, Gespräche und Unterstützung bei kleinen und großen Dingen des Alltags.</p>
+  <main id="inhalt">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow"><span class="dot"></span> Persönliche Betreuung im Ruhrgebiet</span>
+          <h1>Ein verlässlicher Anker im Alltag</h1>
+          <p>Alltagsanker begleitet Senior:innen in Bottrop, Gladbeck, Essen und Gelsenkirchen mit einfühlsamer, persönlicher Betreuung – damit der Alltag leichter und der Tag schöner wird.</p>
+          <div class="btn-row">
+            <a href="kontakt.html" class="btn">Jetzt Kontakt aufnehmen <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="leistungen.html" class="btn secondary">Leistungen ansehen</a>
+          </div>
         </div>
-        <div class="card">
-          <div class="icon">🛒</div>
-          <h3>Einkäufe & Erledigungen</h3>
-          <p>Wir übernehmen Einkäufe, Botengänge und begleiten Sie gerne dabei.</p>
-        </div>
-        <div class="card">
-          <div class="icon">📅</div>
-          <h3>Terminbegleitung</h3>
-          <p>Sicher und verlässlich zu Arzt- oder anderen wichtigen Terminen.</p>
+        <div class="hero-media">
+          <img src="images/hero-begleitung.svg" alt="Eine Betreuerin begleitet eine ältere Dame beim Spaziergang an der frischen Luft" />
         </div>
       </div>
-    </div>
-  </section>
+      <img class="hero-wave" src="images/welle.svg" alt="" aria-hidden="true" />
+    </section>
 
-  <section class="alt">
-    <div class="container">
-      <h2>Unser Einsatzgebiet</h2>
-      <p class="section-intro">Wir sind in folgenden Städten für Sie da:</p>
-      <div class="regions">
-        <span class="region-tag">Bottrop</span>
-        <span class="region-tag">Gladbeck</span>
-        <span class="region-tag">Essen</span>
-        <span class="region-tag">Gelsenkirchen</span>
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Wie wir helfen</span>
+          <h2>Unterstützung, die zum Leben passt</h2>
+          <p class="section-intro">Ob Gesellschaft, Begleitung zu Terminen oder Unterstützung im Haushalt – wir sind da, wo Hilfe gebraucht wird.</p>
+        </div>
+        <div class="grid">
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">🤝</div>
+            <h3>Alltagsbegleitung</h3>
+            <p>Gemeinsame Zeit, Gespräche und Unterstützung bei kleinen und großen Dingen des Alltags.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">🛒</div>
+            <h3>Einkäufe &amp; Erledigungen</h3>
+            <p>Wir übernehmen Einkäufe, Botengänge und begleiten Sie gerne dabei.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">📅</div>
+            <h3>Terminbegleitung</h3>
+            <p>Sicher und verlässlich zu Arzt- oder anderen wichtigen Terminen.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="container split">
-      <div class="split-text">
-        <h2>Lernen wir uns kennen</h2>
-        <p class="section-intro">Sie haben Fragen oder möchten Alltagsanker kennenlernen? Melden Sie sich gerne – unverbindlich und persönlich. Wir nehmen uns Zeit für Sie und Ihre Wünsche.</p>
-        <a href="kontakt.html" class="btn">Kontakt aufnehmen</a>
+    <section class="alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Einsatzgebiet</span>
+          <h2>In Ihrer Nähe für Sie da</h2>
+          <p class="section-intro">Wir sind in folgenden Städten für Sie unterwegs:</p>
+        </div>
+        <div class="regions reveal">
+          <span class="region-tag">Bottrop</span>
+          <span class="region-tag">Gladbeck</span>
+          <span class="region-tag">Essen</span>
+          <span class="region-tag">Gelsenkirchen</span>
+        </div>
       </div>
-      <div class="split-media">
-        <img src="images/ueber-uns.svg" alt="Zwei Hände reichen sich mit einem Herz – für Vertrauen und Nähe" />
+    </section>
+
+    <section>
+      <div class="container split reveal">
+        <div class="split-text">
+          <span class="kicker">Kennenlernen</span>
+          <h2>Lernen wir uns kennen</h2>
+          <p class="section-intro">Sie haben Fragen oder möchten Alltagsanker kennenlernen? Melden Sie sich gerne – unverbindlich und persönlich. Wir nehmen uns Zeit für Sie und Ihre Wünsche.</p>
+          <a href="kontakt.html" class="btn">Kontakt aufnehmen <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="split-media">
+          <img src="images/ueber-uns.svg" alt="Eine Betreuerin und eine Seniorin sitzen bei einer Tasse Tee zusammen" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <div class="container">
-      <p>&copy; <span id="year"></span> Alltagsanker – Alltagsbetreuung für Senioren</p>
-      <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/logo.png" alt="Alltagsanker Betreuung" />
+          <p>Einfühlsame Alltagsbetreuung für Senior:innen – mit Zeit, Verlässlichkeit und einem offenen Ohr.</p>
+        </div>
+        <div>
+          <h4>Seiten</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></li>
+            <li>Bottrop · Gladbeck</li>
+            <li>Essen · Gelsenkirchen</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Alltagsanker – Alltagsbetreuung für Senioren</p>
+        <p>Unterstützung. Vertrauen. Miteinander.</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

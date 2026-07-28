@@ -4,13 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Danke – Alltagsanker</title>
+  <meta name="description" content="Vielen Dank für Ihre Nachricht an Alltagsanker – wir melden uns in Kürze bei Ihnen." />
+  <meta name="theme-color" content="#1a6f78" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="images/logo.png" />
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
   <header>
     <div class="nav-wrap">
       <a class="logo" href="index.html"><img src="images/logo.png" alt="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
-      <nav>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnavigation"><span></span></button>
+      <nav id="hauptnavigation" aria-label="Hauptnavigation">
         <ul>
           <li><a href="index.html">Startseite</a></li>
           <li><a href="ueber-uns.html">Über uns</a></li>
@@ -21,23 +29,58 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Vielen Dank!</h1>
-      <p>Ihre Nachricht ist bei uns angekommen. Wir melden uns in Kürze bei Ihnen.</p>
-      <a href="index.html" class="btn secondary">Zurück zur Startseite</a>
-    </div>
-  </section>
+  <main id="inhalt">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow"><span class="dot"></span> Nachricht erhalten</span>
+          <h1>Vielen Dank!</h1>
+          <p>Ihre Nachricht ist bei uns angekommen. Wir melden uns in Kürze bei Ihnen – in der Regel innerhalb von 1–2 Werktagen.</p>
+          <div class="btn-row">
+            <a href="index.html" class="btn">Zurück zur Startseite <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="leistungen.html" class="btn secondary">Leistungen ansehen</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="images/kontakt.svg" alt="Ein Briefumschlag mit Sprechblase und Anker" />
+        </div>
+      </div>
+      <img class="hero-wave" src="images/welle.svg" alt="" aria-hidden="true" />
+    </section>
+  </main>
 
   <footer>
     <div class="container">
-      <p>&copy; <span id="year"></span> Alltagsanker – Alltagsbetreuung für Senioren</p>
-      <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/logo.png" alt="Alltagsanker Betreuung" />
+          <p>Einfühlsame Alltagsbetreuung für Senior:innen – mit Zeit, Verlässlichkeit und einem offenen Ohr.</p>
+        </div>
+        <div>
+          <h4>Seiten</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></li>
+            <li>Bottrop · Gladbeck</li>
+            <li>Essen · Gelsenkirchen</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Alltagsanker – Alltagsbetreuung für Senioren</p>
+        <p>Unterstützung. Vertrauen. Miteinander.</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

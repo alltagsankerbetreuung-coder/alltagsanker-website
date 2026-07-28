@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Über uns – Alltagsanker</title>
   <meta name="description" content="Lernen Sie Alltagsanker kennen – unsere Werte, unser Ansatz und warum wir Senioren im Alltag begleiten." />
+  <meta name="theme-color" content="#1a6f78" />
+  <link rel="icon" href="images/logo.png" />
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
   <header>
     <div class="nav-wrap">
       <a class="logo" href="index.html"><img src="images/logo.png" alt="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
-      <nav>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnavigation"><span></span></button>
+      <nav id="hauptnavigation" aria-label="Hauptnavigation">
         <ul>
           <li><a href="index.html">Startseite</a></li>
           <li><a href="ueber-uns.html" class="active">Über uns</a></li>
@@ -22,68 +28,104 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Über Alltagsanker</h1>
-      <p>Vertrauen, Zeit und ein offenes Ohr – das ist die Grundlage unserer Arbeit.</p>
-    </div>
-    <img class="hero-wave" src="images/welle.svg" alt="" aria-hidden="true" />
-  </section>
-
-  <section>
-    <div class="container split reverse">
-      <div class="split-text">
-        <h2>Unsere Idee</h2>
-        <p class="section-intro">Alltagsanker ist entstanden, weil viele Senior:innen im Alltag Unterstützung brauchen, aber niemanden in der Nähe haben, der Zeit hat. Wir möchten dieser verlässliche Anker sein: jemand, der zuhört, begleitet und hilft – ohne Hektik und mit echtem Interesse am Menschen.</p>
-        <p class="section-intro">Wir sind in Bottrop, Gladbeck, Essen und Gelsenkirchen unterwegs und lernen die Menschen, die wir betreuen, persönlich kennen. Jede Betreuung ist individuell – abgestimmt auf Bedürfnisse, Vorlieben und Tagesform.</p>
+  <main id="inhalt">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow"><span class="dot"></span> Über uns</span>
+        <h1>Über Alltagsanker</h1>
+        <p>Vertrauen, Zeit und ein offenes Ohr – das ist die Grundlage unserer Arbeit.</p>
       </div>
-      <div class="split-media">
-        <img src="images/hero-begleitung.svg" alt="Eine Betreuungsperson begleitet einen Senioren beim Spaziergang" />
-      </div>
-    </div>
-  </section>
+      <img class="hero-wave" src="images/welle.svg" alt="" aria-hidden="true" />
+    </section>
 
-  <section class="alt">
-    <div class="container">
-      <h2>Unsere Werte</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="icon">❤️</div>
-          <h3>Einfühlsam</h3>
-          <p>Wir begegnen jedem Menschen mit Respekt, Geduld und echtem Interesse.</p>
+    <section>
+      <div class="container split reverse reveal">
+        <div class="split-text">
+          <span class="kicker">Unsere Idee</span>
+          <h2>Ein Anker für den Alltag</h2>
+          <p class="section-intro">Alltagsanker ist entstanden, weil viele Senior:innen im Alltag Unterstützung brauchen, aber niemanden in der Nähe haben, der Zeit hat. Wir möchten dieser verlässliche Anker sein: jemand, der zuhört, begleitet und hilft – ohne Hektik und mit echtem Interesse am Menschen.</p>
+          <p class="section-intro">Wir sind in Bottrop, Gladbeck, Essen und Gelsenkirchen unterwegs und lernen die Menschen, die wir betreuen, persönlich kennen. Jede Betreuung ist individuell – abgestimmt auf Bedürfnisse, Vorlieben und Tagesform.</p>
         </div>
-        <div class="card">
-          <div class="icon">🔒</div>
-          <h3>Verlässlich</h3>
-          <p>Auf uns ist Verlass – bei Terminen, Absprachen und im Alltag.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🌿</div>
-          <h3>Persönlich</h3>
-          <p>Keine Betreuung von der Stange – wir nehmen uns Zeit für jede Person.</p>
+        <div class="split-media">
+          <img src="images/hero-begleitung.svg" alt="Eine Betreuerin begleitet eine ältere Dame beim Spaziergang" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section style="text-align:center;">
-    <div class="container">
-      <h2>Neugierig geworden?</h2>
-      <p class="section-intro" style="margin-left:auto;margin-right:auto;">Erfahren Sie mehr über unsere Leistungen oder nehmen Sie direkt Kontakt auf.</p>
-      <a href="leistungen.html" class="btn secondary" style="margin-right:12px;">Leistungen ansehen</a>
-      <a href="kontakt.html" class="btn">Kontakt aufnehmen</a>
-    </div>
-  </section>
+    <section class="alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Unsere Werte</span>
+          <h2>Worauf Sie sich verlassen können</h2>
+          <p class="section-intro">Drei Dinge, die jede Betreuung bei uns bestimmen.</p>
+        </div>
+        <div class="grid">
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">❤️</div>
+            <h3>Einfühlsam</h3>
+            <p>Wir begegnen jedem Menschen mit Respekt, Geduld und echtem Interesse.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">🔒</div>
+            <h3>Verlässlich</h3>
+            <p>Auf uns ist Verlass – bei Terminen, Absprachen und im Alltag.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">🌿</div>
+            <h3>Persönlich</h3>
+            <p>Keine Betreuung von der Stange – wir nehmen uns Zeit für jede Person.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Nächster Schritt</span>
+          <h2>Neugierig geworden?</h2>
+          <p class="section-intro" style="margin-inline:auto;">Erfahren Sie mehr über unsere Leistungen oder nehmen Sie direkt Kontakt auf.</p>
+          <div class="btn-row" style="justify-content:center;margin-top:28px;">
+            <a href="kontakt.html" class="btn">Kontakt aufnehmen <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="leistungen.html" class="btn secondary">Leistungen ansehen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="container">
-      <p>&copy; <span id="year"></span> Alltagsanker – Alltagsbetreuung für Senioren</p>
-      <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/logo.png" alt="Alltagsanker Betreuung" />
+          <p>Einfühlsame Alltagsbetreuung für Senior:innen – mit Zeit, Verlässlichkeit und einem offenen Ohr.</p>
+        </div>
+        <div>
+          <h4>Seiten</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></li>
+            <li>Bottrop · Gladbeck</li>
+            <li>Essen · Gelsenkirchen</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Alltagsanker – Alltagsbetreuung für Senioren</p>
+        <p>Unterstützung. Vertrauen. Miteinander.</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

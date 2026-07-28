@@ -10,7 +10,19 @@ Statische Website für Alltagsanker – Alltagsbetreuung für Senioren in Bottro
 - `kontakt.html` – Kontakt (inkl. Kontaktformular)
 - `danke.html` – Bestätigungsseite nach Formularversand
 - `style.css` – Gemeinsames Stylesheet
+- `script.js` – Mobiles Menü, Einblend-Effekte, Jahreszahl im Footer
+- `images/` – Logo und Illustrationen (SVG)
 - `vercel.json` – Vercel-Konfiguration für sauberes Static Hosting
+
+## Design
+
+Modernes, ruhiges Layout mit großer Schrift und hohem Kontrast – bewusst gut
+lesbar für ältere Besucher:innen. Es werden **keine externen Schriftarten oder
+Dienste** geladen (systemeigene Schriften), das ist schnell und DSGVO-freundlich.
+
+Weitere Details: mobiles Menü, sanfte Einblendungen beim Scrollen (nur mit
+aktivem JavaScript), Rücksicht auf `prefers-reduced-motion`, Sprungmarke zum
+Inhalt und sichtbare Fokus-Rahmen für die Tastaturbedienung.
 
 ## Kontaktformular
 
