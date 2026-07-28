@@ -105,8 +105,12 @@
       </g>
     </g>
 
+    <!-- Figuren etwas höher und weiter innen, damit der Kreisrand nichts abschneidet -->
+    <g transform="translate(-8 -14)">
+
     <!-- ground shadows -->
-    <ellipse cx="316" cy="470" rx="70" ry="14" fill="#3f7a6f" opacity="0.28" filter="url(#h-soft)"/>
+    <ellipse cx="316" cy="472" rx="62" ry="13" fill="#3f7a6f" opacity="0.26" filter="url(#h-soft)"/>
+    <ellipse cx="436" cy="472" rx="52" ry="12" fill="#3f7a6f" opacity="0.24" filter="url(#h-soft)"/>
 
     <!-- ===== Caregiver (left) ===== -->
     <g>
@@ -123,8 +127,8 @@
       <!-- collar -->
       <path d="M306 296 l14 12 l14 -12" fill="none" stroke="#eef6f5" stroke-width="4" stroke-linejoin="round"/>
       <!-- near arm around senior -->
-      <path d="M344 322 q40 6 66 30" stroke="url(#h-tealcoat)" stroke-width="17" fill="none" stroke-linecap="round"/>
-      <circle cx="410" cy="352" r="9" fill="url(#h-skin)"/>
+      <path d="M344 322 q40 6 64 28" stroke="url(#h-tealcoat)" stroke-width="15" fill="none" stroke-linecap="round"/>
+      <circle cx="409" cy="351" r="8" fill="url(#h-skin)"/>
       <!-- far arm -->
       <path d="M300 320 q-16 20 -14 50" stroke="#1a636b" stroke-width="15" fill="none" stroke-linecap="round"/>
       <circle cx="286" cy="372" r="8" fill="url(#h-skin)"/>
@@ -146,10 +150,10 @@
 
     <!-- ===== Senior lady (right) ===== -->
     <g>
-      <!-- cane -->
-      <path d="M470 356 q-2 -8 -10 -8 q-8 0 -8 8" fill="none" stroke="#8a6a49" stroke-width="6" stroke-linecap="round"/>
-      <line x1="470" y1="356" x2="470" y2="466" stroke="#9a7b5a" stroke-width="7" stroke-linecap="round"/>
-      <ellipse cx="470" cy="470" rx="7" ry="3" fill="#6f573f"/>
+      <!-- Gehstock: Krücke oben sichtbar, Gummifuß unten auf dem Boden -->
+      <path d="M470 350 q0 -14 12 -14 q12 0 12 14" fill="none" stroke="#8a6a49" stroke-width="6.5" stroke-linecap="round"/>
+      <line x1="470" y1="350" x2="470" y2="466" stroke="#9a7b5a" stroke-width="7" stroke-linecap="round"/>
+      <rect x="465" y="460" width="10" height="10" rx="3" fill="#5f4a34"/>
       <!-- legs -->
       <path d="M414 400 l-3 62 h14 l4 -60 Z" fill="#7d6f8a"/>
       <path d="M436 400 l3 62 h14 l-4 -60 Z" fill="#8a7c96"/>
@@ -161,12 +165,11 @@
       <path d="M410 322 q20 -6 40 0" fill="none" stroke="#cf7f45" stroke-width="2" opacity="0.4"/>
       <!-- buttons -->
       <circle cx="430" cy="334" r="2.2" fill="#a7602f"/><circle cx="430" cy="352" r="2.2" fill="#a7602f"/><circle cx="430" cy="370" r="2.2" fill="#a7602f"/>
-      <!-- arm to caregiver -->
-      <path d="M410 330 q-10 20 -8 44" stroke="#dd8449" stroke-width="14" fill="none" stroke-linecap="round"/>
-      <circle cx="402" cy="376" r="7.5" fill="#eab892"/>
-      <!-- arm to cane -->
-      <path d="M452 330 q14 10 18 26" stroke="#dd8449" stroke-width="13" fill="none" stroke-linecap="round"/>
-      <circle cx="470" cy="358" r="7" fill="#eab892"/>
+      <!-- Ärmel etwas dunkler als der Mantel, damit die Arme erkennbar sind -->
+      <path d="M410 330 q-12 20 -12 44" stroke="#cf7239" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <circle cx="397" cy="379" r="7.5" fill="#eab892"/>
+      <path d="M452 330 q14 12 18 26" stroke="#cf7239" stroke-width="13" fill="none" stroke-linecap="round"/>
+      <circle cx="470" cy="358" r="7.5" fill="#eab892"/>
       <!-- neck + head -->
       <rect x="424" y="278" width="13" height="15" rx="6" fill="#eab892"/>
       <circle cx="430" cy="266" r="26" fill="url(#h-skin)"/>
@@ -186,6 +189,8 @@
       <circle cx="415" cy="272" r="3.2" fill="#f2b39a" opacity="0.6"/>
       <circle cx="445" cy="272" r="3.2" fill="#f2b39a" opacity="0.6"/>
     </g>
+
+    </g><!-- Ende der verschobenen Figurengruppe -->
   </g>
 
   <!-- circle rim -->

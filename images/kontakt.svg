@@ -15,6 +15,10 @@
     <filter id="k-shadow" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1f6f78" flood-opacity="0.22"/>
     </filter>
+    <!-- begrenzt Falz- und Klappenlinien auf den Umschlag -->
+    <clipPath id="k-env-clip">
+      <rect x="70" y="150" width="240" height="158" rx="18"/>
+    </clipPath>
   </defs>
 
   <rect x="18" y="18" width="444" height="324" rx="34" fill="url(#k-bg)"/>
@@ -34,10 +38,12 @@
   <!-- envelope -->
   <g filter="url(#k-shadow)">
     <rect x="70" y="150" width="240" height="158" rx="18" fill="url(#k-env)"/>
-    <!-- inner flap shading -->
-    <path d="M70 168 L190 250 L310 168 L310 176 L190 260 L70 176 Z" fill="#0f3f46" opacity="0.4"/>
-    <path d="M70 166 L190 248 L310 166" fill="none" stroke="#eaf5f4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M70 308 L162 232 M310 308 L218 232" stroke="#0f3f46" stroke-width="4" opacity="0.3"/>
+    <g clip-path="url(#k-env-clip)">
+      <!-- inner flap shading -->
+      <path d="M70 168 L190 250 L310 168 L310 176 L190 260 L70 176 Z" fill="#0f3f46" opacity="0.4"/>
+      <path d="M70 166 L190 248 L310 166" fill="none" stroke="#eaf5f4" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M70 308 L162 232 M310 308 L218 232" stroke="#0f3f46" stroke-width="4" opacity="0.3"/>
+    </g>
   </g>
 
   <!-- anchor seal -->
