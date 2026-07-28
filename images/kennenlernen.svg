@@ -1,0 +1,145 @@
+<svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eine Betreuerin wird an der Haustür freundlich begrüßt">
+  <defs>
+    <linearGradient id="k2-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dceceb"/><stop offset="1" stop-color="#f4efe3"/>
+    </linearGradient>
+    <linearGradient id="k2-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7ece0"/><stop offset="1" stop-color="#ecdcc9"/>
+    </linearGradient>
+    <radialGradient id="k2-inner" cx="0.5" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#ffe9bd"/><stop offset="1" stop-color="#f0c98d"/>
+    </radialGradient>
+    <linearGradient id="k2-door" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2f7d84"/><stop offset="1" stop-color="#1d5c63"/>
+    </linearGradient>
+    <linearGradient id="k2-teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f8a92"/><stop offset="1" stop-color="#1a636b"/></linearGradient>
+    <linearGradient id="k2-green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#86ac72"/><stop offset="1" stop-color="#648b54"/></linearGradient>
+    <linearGradient id="k2-leaf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fb894"/><stop offset="1" stop-color="#5b9a76"/></linearGradient>
+    <radialGradient id="k2-skin" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#f6d3b2"/><stop offset="1" stop-color="#eab892"/></radialGradient>
+    <filter id="k2-soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="560" height="460" fill="url(#k2-sky)"/>
+
+  <!-- Hauswand -->
+  <rect x="236" y="34" width="324" height="382" fill="url(#k2-wall)"/>
+  <rect x="236" y="34" width="10" height="382" fill="#e0cdb6" opacity="0.7"/>
+
+  <!-- Türrahmen und Öffnung -->
+  <rect x="316" y="108" width="164" height="308" rx="6" fill="#dcc7ac"/>
+  <rect x="328" y="120" width="140" height="296" fill="url(#k2-inner)"/>
+
+  <!-- geöffneter Türflügel rechts -->
+  <path d="M468 120 L508 100 L508 430 L468 416 Z" fill="url(#k2-door)"/>
+  <path d="M478 150 L500 140 L500 250 L478 256 Z" fill="#17505700" stroke="#15484f" stroke-width="2" opacity="0.35"/>
+  <circle cx="476" cy="272" r="4.5" fill="#e8c06a"/>
+
+  <!-- Anker-Türschild an der Wand -->
+  <g transform="translate(280 176)">
+    <circle cx="0" cy="0" r="21" fill="#ffffff" opacity="0.9"/>
+    <circle cx="0" cy="0" r="21" fill="none" stroke="#1a636b" stroke-width="1.5" opacity="0.35"/>
+    <g fill="none" stroke="#1a636b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="0" cy="-9" r="3"/>
+      <line x1="0" y1="-6" x2="0" y2="9"/>
+      <line x1="-6" y1="-2" x2="6" y2="-2"/>
+      <path d="M-9 3 q0 8 9 8 q9 0 9 -8"/>
+      <line x1="-9" y1="3" x2="-12" y2="4.5"/>
+      <line x1="9" y1="3" x2="12" y2="4.5"/>
+    </g>
+  </g>
+
+  <!-- Boden -->
+  <rect x="0" y="416" width="560" height="44" fill="#e3d7c3"/>
+  <rect x="0" y="416" width="560" height="5" fill="#d3c3aa"/>
+
+  <!-- Fußmatte -->
+  <g>
+    <rect x="332" y="420" width="118" height="18" rx="4" fill="#b08a5e"/>
+    <rect x="340" y="425" width="102" height="8" rx="3" fill="#9c7549"/>
+  </g>
+
+  <!-- Topfpflanze neben der Tür -->
+  <g transform="translate(276 352)">
+    <g fill="url(#k2-leaf)">
+      <ellipse cx="-13" cy="-26" rx="8" ry="15" transform="rotate(-28 -13 -26)"/>
+      <ellipse cx="2" cy="-34" rx="8" ry="17" transform="rotate(-4 2 -34)"/>
+      <ellipse cx="16" cy="-25" rx="8" ry="15" transform="rotate(26 16 -25)"/>
+      <ellipse cx="-6" cy="-14" rx="7" ry="11" transform="rotate(-16 -6 -14)"/>
+      <ellipse cx="10" cy="-13" rx="7" ry="11" transform="rotate(18 10 -13)"/>
+    </g>
+    <g stroke="#4f8a68" stroke-width="2.4" fill="none" stroke-linecap="round">
+      <path d="M1 -2 q-9 -10 -13 -20"/><path d="M1 -2 q1 -16 1 -28"/><path d="M1 -2 q9 -10 14 -20"/>
+    </g>
+    <path d="M-16 -2 h34 l-5 56 q-1 4 -5 4 h-14 q-4 0 -5 -4 Z" fill="#c9773f"/>
+    <path d="M-16 -2 h34 l-1 6 h-32 Z" fill="#b3642f"/>
+  </g>
+
+  <!-- Schatten am Boden -->
+  <ellipse cx="180" cy="418" rx="52" ry="9" fill="#8a7a63" opacity="0.28" filter="url(#k2-soft)"/>
+  <ellipse cx="392" cy="418" rx="48" ry="9" fill="#8a7a63" opacity="0.24" filter="url(#k2-soft)"/>
+
+  <!-- ===== Seniorin in der Tür (winkt) ===== -->
+  <g>
+    <!-- Beine -->
+    <path d="M378 344 l-3 68 h14 l3 -66 Z" fill="#7d6f8a"/>
+    <path d="M398 344 l3 68 h14 l-2 -66 Z" fill="#8a7c96"/>
+    <path d="M368 412 q-6 5 4 7 h15 v-7 Z" fill="#5a4d3f"/>
+    <path d="M410 412 q6 5 -4 7 h-15 v-7 Z" fill="#5a4d3f"/>
+    <!-- Strickjacke -->
+    <path d="M370 272 q24 -12 48 0 q6 38 4 74 q-28 10 -56 0 q-2 -36 4 -74 Z" fill="url(#k2-green)"/>
+    <path d="M394 264 v82" stroke="#4d7440" stroke-width="2" opacity="0.55"/>
+    <circle cx="394" cy="296" r="2.2" fill="#43682f"/><circle cx="394" cy="312" r="2.2" fill="#43682f"/><circle cx="394" cy="328" r="2.2" fill="#43682f"/>
+    <!-- Arme: Ärmel dunkler als die Jacke -->
+    <path d="M372 296 q-11 16 -9 36" stroke="#537a45" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <circle cx="363" cy="336" r="7" fill="url(#k2-skin)"/>
+    <!-- winkender Arm -->
+    <path d="M416 294 q16 -10 18 -30" stroke="#537a45" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <circle cx="435" cy="258" r="8" fill="url(#k2-skin)"/>
+    <!-- Kopf -->
+    <rect x="388" y="240" width="14" height="16" rx="7" fill="#eab892"/>
+    <circle cx="394" cy="226" r="25" fill="url(#k2-skin)"/>
+    <!-- kurze graue Locken -->
+    <g fill="#d8d8d8">
+      <circle cx="374" cy="216" r="10"/><circle cx="386" cy="206" r="11"/><circle cx="400" cy="204" r="11"/>
+      <circle cx="412" cy="213" r="10"/><circle cx="416" cy="226" r="8"/><circle cx="372" cy="228" r="8"/>
+    </g>
+    <!-- Brille -->
+    <g stroke="#5a4d3f" stroke-width="1.7" fill="none">
+      <circle cx="386" cy="227" r="6.4"/><circle cx="403" cy="227" r="6.4"/>
+      <path d="M392.4 226 h4.2"/><path d="M379.6 225 l-5 -2 M409.4 225 l5 -2"/>
+    </g>
+    <circle cx="386" cy="227" r="2.2" fill="#41352b"/><circle cx="403" cy="227" r="2.2" fill="#41352b"/>
+    <path d="M388 236 q6 5 12 0" fill="none" stroke="#b5654f" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="377" cy="234" r="3.2" fill="#f2a9b6" opacity="0.55"/><circle cx="412" cy="234" r="3.2" fill="#f2a9b6" opacity="0.55"/>
+  </g>
+
+  <!-- ===== Betreuerin davor (winkt zurück) ===== -->
+  <g>
+    <!-- Beine -->
+    <path d="M164 346 l-4 66 h15 l4 -64 Z" fill="#3a4a58"/>
+    <path d="M186 346 l3 66 h15 l-2 -64 Z" fill="#465767"/>
+    <path d="M154 412 q-6 5 5 7 h16 v-7 Z" fill="#2b3742"/>
+    <path d="M199 412 q6 5 -5 7 h-15 v-7 Z" fill="#2b3742"/>
+    <!-- Oberteil -->
+    <path d="M158 268 q26 -12 52 0 l4 80 q-30 10 -60 0 Z" fill="url(#k2-teal)"/>
+    <path d="M184 264 v84" stroke="#16545c" stroke-width="2" opacity="0.45"/>
+    <path d="M168 264 l14 12 l14 -12" fill="none" stroke="#eef6f5" stroke-width="4" stroke-linejoin="round"/>
+    <!-- winkender Arm -->
+    <path d="M208 296 q18 -12 20 -32" stroke="#17565e" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <circle cx="229" cy="258" r="8.5" fill="url(#k2-skin)"/>
+    <!-- ruhender Arm -->
+    <path d="M160 298 q-12 18 -10 38" stroke="#17565e" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <circle cx="150" cy="340" r="7.5" fill="url(#k2-skin)"/>
+    <!-- Kopf -->
+    <rect x="178" y="242" width="14" height="16" rx="7" fill="#eab892"/>
+    <circle cx="185" cy="228" r="26" fill="url(#k2-skin)"/>
+    <!-- rotbraunes Haar mit Dutt -->
+    <path d="M159 228 q-2 -33 26 -34 q28 1 26 34 q-6 -15 -13 -17 q-8 6 -13 6 q-5 0 -13 -6 q-7 2 -13 17 Z" fill="#a05a34"/>
+    <circle cx="185" cy="192" r="10" fill="#a05a34"/>
+    <circle cx="185" cy="192" r="6" fill="#8e4c2a" opacity="0.5"/>
+    <circle cx="177" cy="228" r="2.5" fill="#41352b"/><circle cx="193" cy="228" r="2.5" fill="#41352b"/>
+    <path d="M172 221 q5 -3 9 -1 M189 221 q5 -3 9 -1" stroke="#8e4c2a" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+    <path d="M178 240 q7 6 14 0" fill="none" stroke="#b5654f" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="168" cy="235" r="3.4" fill="#f2b39a" opacity="0.6"/><circle cx="202" cy="235" r="3.4" fill="#f2b39a" opacity="0.6"/>
+  </g>
+</svg>

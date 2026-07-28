@@ -80,10 +80,6 @@
 
     <!-- ===== Senior gentleman standing right ===== -->
     <g>
-      <!-- Gehstock: Krücke zeigt nach außen, Gummifuß auf Schuhhöhe -->
-      <path d="M392 338 q0 -13 11 -13 q11 0 11 13" fill="none" stroke="#8a6a49" stroke-width="6.5" stroke-linecap="round"/>
-      <line x1="392" y1="338" x2="392" y2="434" stroke="#9a7b5a" stroke-width="7" stroke-linecap="round"/>
-      <rect x="387" y="428" width="10" height="10" rx="3" fill="#5f4a34"/>
       <!-- trousers -->
       <path d="M336 350 l-3 80 h15 l3 -78 Z" fill="#9a7b52"/>
       <path d="M360 350 l3 80 h15 l-2 -78 Z" fill="#8a6c46"/>
@@ -97,8 +93,14 @@
       <!-- Ärmel dunkler als die Strickjacke, damit die Arme erkennbar sind -->
       <path d="M330 300 q-8 18 -4 40" stroke="#37587e" stroke-width="13" fill="none" stroke-linecap="round"/>
       <circle cx="327" cy="342" r="7" fill="url(#l-skin2)"/>
-      <path d="M376 300 q12 16 16 38" stroke="#37587e" stroke-width="12" fill="none" stroke-linecap="round"/>
-      <circle cx="392" cy="342" r="7" fill="url(#l-skin2)"/>
+      <!-- er trägt selbst eine kleine Tasche -->
+      <path d="M378 300 q10 18 10 40" stroke="#37587e" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <circle cx="388" cy="344" r="7" fill="url(#l-skin2)"/>
+      <g transform="translate(388 352)">
+        <path d="M-9 2 q0 -9 9 -9 q9 0 9 9" fill="none" stroke="#7a5a3c" stroke-width="3"/>
+        <path d="M-15 2 h30 l-3 30 q0 3 -4 3 h-16 q-4 0 -4 -3 Z" fill="#8a6a49"/>
+        <path d="M-15 2 h30 l-0.6 6 h-28.8 Z" fill="#6f553a"/>
+      </g>
       <!-- head -->
       <rect x="347" y="248" width="12" height="14" rx="6" fill="#e3ab82"/>
       <circle cx="353" cy="236" r="24" fill="url(#l-skin2)"/>

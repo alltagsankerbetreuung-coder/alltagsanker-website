@@ -384,6 +384,51 @@ nav a.active {
   50% { transform: translateY(-12px); }
 }
 
+/* dezenter Anker als Wasserzeichen im Hero */
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -34px;
+  bottom: 68px;
+  width: 190px;
+  height: 222px;
+  background: rgba(255, 255, 255, 0.07);
+  -webkit-mask: url("images/anker.svg") no-repeat center / contain;
+  mask: url("images/anker.svg") no-repeat center / contain;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+/* kleiner Anker als Trenner zwischen zwei Abschnitten */
+.anchor-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 auto;
+  max-width: 340px;
+  color: var(--color-primary);
+}
+
+.anchor-divider::before,
+.anchor-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(26, 111, 120, 0.32), transparent);
+}
+
+.anchor-divider i {
+  flex-shrink: 0;
+  width: 22px;
+  height: 26px;
+  background: currentColor;
+  opacity: 0.55;
+  -webkit-mask: url("images/anker.svg") no-repeat center / contain;
+  mask: url("images/anker.svg") no-repeat center / contain;
+}
+
 /* Wellen-Übergang */
 .hero-wave {
   position: absolute;
@@ -623,14 +668,30 @@ section.alt {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: clamp(28px, 4vw, 56px);
-  padding: clamp(32px, 4.5vw, 52px);
+  gap: clamp(24px, 3.4vw, 44px);
+  padding: clamp(26px, 3.4vw, 40px);
+  max-width: 960px;
+  margin-inline: auto;
   border-radius: var(--radius-lg);
   color: #fff;
   background:
-    radial-gradient(80% 130% at 88% 10%, rgba(108, 180, 63, 0.34) 0%, transparent 58%),
+    radial-gradient(80% 130% at 88% 10%, rgba(108, 180, 63, 0.3) 0%, transparent 58%),
     linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 60%, var(--color-primary-deep) 100%);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow);
+}
+
+/* im Kasten kleinere Schrift – er soll den Abschnitt nicht erschlagen */
+.highlight h2 {
+  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+  margin-bottom: 12px;
+}
+
+.highlight p {
+  font-size: 1rem;
+}
+
+.highlight .kicker {
+  margin-bottom: 8px;
 }
 
 /* Grid-Kinder dürfen schrumpfen, sonst läuft der Block seitlich über */
@@ -659,8 +720,9 @@ section.alt {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  min-width: 190px;
-  padding: 26px 30px;
+  min-width: 156px;
+  max-width: 190px;
+  padding: 20px 22px;
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.24);
@@ -670,7 +732,7 @@ section.alt {
 }
 
 .amount .value {
-  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-size: clamp(2rem, 3.6vw, 2.6rem);
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -683,33 +745,35 @@ section.alt {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 66px;
-  height: 66px;
-  margin-bottom: 10px;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 8px;
   border-radius: 50%;
   background: var(--color-green);
-  box-shadow: 0 0 0 8px rgba(108, 180, 63, 0.22);
-  font-size: 2rem;
+  box-shadow: 0 0 0 7px rgba(108, 180, 63, 0.2);
+  font-size: 1.6rem;
 }
 
 .amount .label {
   min-width: 0;
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   font-weight: 600;
+  line-height: 1.4;
   color: rgba(233, 245, 244, 0.88);
 }
 
 .highlight .btn-row {
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 /* Merkmalsliste mit Häkchen */
 .check-list {
   list-style: none;
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 8px;
+  font-size: 0.98rem;
 }
 
 .check-list li {
@@ -725,13 +789,13 @@ section.alt {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 21px;
+  height: 21px;
   margin-top: 3px;
   border-radius: 50%;
   background: var(--color-green);
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
