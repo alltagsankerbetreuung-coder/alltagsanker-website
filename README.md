@@ -9,6 +9,8 @@ Statische Website für Alltagsanker – Alltagsbetreuung für Senioren in Bottro
 - `leistungen.html` – Leistungen
 - `kontakt.html` – Kontakt (inkl. Kontaktformular)
 - `danke.html` – Bestätigungsseite nach Formularversand
+- `impressum.html` – Impressum (**Platzhalter müssen ausgefüllt werden**)
+- `datenschutz.html` – Datenschutzerklärung (**Platzhalter müssen ausgefüllt werden**)
 - `style.css` – Gemeinsames Stylesheet
 - `script.js` – Mobiles Menü, Einblend-Effekte, Jahreszahl im Footer
 - `images/` – Logo und Illustrationen (SVG)
@@ -23,6 +25,14 @@ Dienste** geladen (systemeigene Schriften), das ist schnell und DSGVO-freundlich
 Weitere Details: mobiles Menü, sanfte Einblendungen beim Scrollen (nur mit
 aktivem JavaScript), Rücksicht auf `prefers-reduced-motion`, Sprungmarke zum
 Inhalt und sichtbare Fokus-Rahmen für die Tastaturbedienung.
+
+## ⚠️ Vor dem Livegang erledigen
+
+`impressum.html` und `datenschutz.html` enthalten **orange markierte Platzhalter**
+(vollständiger Name, Anschrift, Telefonnummer, ggf. USt-IdNr. und Aktenzeichen der
+Anerkennung nach § 45a SGB XI). Diese müssen durch die echten Angaben ersetzt
+werden – ein unvollständiges Impressum ist abmahnfähig. Die Texte sind Vorlagen
+und ersetzen keine Rechtsberatung.
 
 ## Kontaktformular
 
