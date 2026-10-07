@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakt – Alltagsanker</title>
-  <meta name="description" content="Nehmen Sie Kontakt zu Alltagsanker auf – Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Essen und Gelsenkirchen." />
+  <title>Kontakt – Alltagsbetreuung in Bottrop und Umgebung – Alltagsanker</title>
+  <meta name="description" content="Schreiben Sie uns: Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord. Wir melden uns innerhalb von 1–2 Werktagen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Kontakt – Alltagsbetreuung in Bottrop und Umgebung – Alltagsanker" />
+  <meta property="og:description" content="Schreiben Sie uns: Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord. Wir melden uns innerhalb von 1–2 Werktagen." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <header>
     <div class="nav-wrap">
       <a class="logo" href="index.html"><img src="images/logo.svg" alt="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
-      <nav>
+      <nav aria-label="Hauptmenü">
         <ul>
           <li><a href="index.html">Startseite</a></li>
           <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="kontakt.html" class="active">Kontakt</a></li>
+          <li><a href="kosten.html">Kosten</a></li>
+          <li><a href="kontakt.html" class="active" aria-current="page">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <main id="inhalt">
 
   <section class="hero">
     <div class="container hero-grid">
@@ -44,50 +53,62 @@
         </div>
         <div class="item">
           <strong>Einsatzgebiet</strong>
-          <p>Bottrop, Gladbeck, Essen, Gelsenkirchen</p>
+          <p>Bottrop, Gladbeck, Gelsenkirchen, Essen-Nord</p>
         </div>
         <div class="item">
           <strong>Erreichbarkeit</strong>
-          <p>Wir melden uns in der Regel innerhalb von 1–2 Werktagen zurück.</p>
+          <p>Wir melden uns in der Regel innerhalb von 1–2 Werktagen zurück. Sie möchten lieber telefonieren? Geben Sie Ihre Nummer an, dann rufen wir Sie an.</p>
         </div>
       </div>
 
       <form class="contact-form" action="https://formsubmit.co/alltagsankerbetreuung@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Neue Anfrage über Alltagsanker Website" />
+        <input type="hidden" name="_subject" value="Neue Anfrage über die Website" />
         <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="danke.html" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="danke.html" id="next-url" />
+        <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
         <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="Name" required />
+          <label for="name">Ihr Name</label>
+          <input type="text" id="name" name="Name" autocomplete="name" required />
         </div>
         <div>
-          <label for="email">E-Mail</label>
-          <input type="email" id="email" name="E-Mail" required />
+          <label for="email">Ihre E-Mail-Adresse</label>
+          <input type="email" id="email" name="E-Mail" autocomplete="email" required />
         </div>
         <div>
-          <label for="ort">Stadt</label>
-          <input type="text" id="ort" name="Stadt" placeholder="z.B. Bottrop" />
+          <label for="telefon">Ihre Telefonnummer <span class="optional">(freiwillig, für einen Rückruf)</span></label>
+          <input type="tel" id="telefon" name="Telefon" autocomplete="tel" />
         </div>
         <div>
-          <label for="nachricht">Nachricht</label>
+          <label for="ort">Ihre Stadt</label>
+          <input type="text" id="ort" name="Stadt" placeholder="zum Beispiel Bottrop" />
+        </div>
+        <div>
+          <label for="nachricht">Ihre Nachricht</label>
           <textarea id="nachricht" name="Nachricht" rows="5" required></textarea>
         </div>
+        <p class="note">Bitte schreiben Sie keine Angaben zur Gesundheit oder zum Pflegegrad in die Nachricht. Das besprechen wir lieber persönlich.</p>
+        <p class="note">Mit dem Absenden werden Ihre Angaben an uns übermittelt. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
         <button type="submit" class="btn">Nachricht senden</button>
-        <p class="note">Hinweis: Beim ersten Absenden bittet formsubmit.co einmalig um eine E-Mail-Bestätigung an alltagsankerbetreuung@gmail.com.</p>
       </form>
     </div>
   </section>
+
+  </main>
 
   <footer>
     <div class="container">
       <p>&copy; <span id="year"></span> Alltagsanker – Alltagsbetreuung für Senioren</p>
       <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+      <p class="footer-links"><a href="kosten.html">Kosten und Pflegekasse</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    // formsubmit.co braucht eine vollständige Adresse für die Weiterleitung
+    document.getElementById("next-url").value = new URL("danke.html", window.location.href).href;
   </script>
 </body>
 </html>

@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leistungen – Alltagsanker</title>
-  <meta name="description" content="Alltagsbegleitung, Einkäufe, Terminbegleitung und Gesellschaft für Senioren – die Leistungen von Alltagsanker im Überblick." />
+  <title>Leistungen: Alltagsbegleitung, Einkäufe, Arzttermine – Alltagsanker</title>
+  <meta name="description" content="Gesellschaft, Spaziergänge, Einkäufe, Begleitung zu Arzt und Behörden, Hilfe im Haushalt – unsere Leistungen für Senioren in Bottrop und Umgebung." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Leistungen: Alltagsbegleitung, Einkäufe, Arzttermine – Alltagsanker" />
+  <meta property="og:description" content="Gesellschaft, Spaziergänge, Einkäufe, Begleitung zu Arzt und Behörden, Hilfe im Haushalt – unsere Leistungen für Senioren in Bottrop und Umgebung." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <header>
     <div class="nav-wrap">
       <a class="logo" href="index.html"><img src="images/logo.svg" alt="Alltagsanker Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
-      <nav>
+      <nav aria-label="Hauptmenü">
         <ul>
           <li><a href="index.html">Startseite</a></li>
           <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="leistungen.html" class="active">Leistungen</a></li>
+          <li><a href="leistungen.html" class="active" aria-current="page">Leistungen</a></li>
+          <li><a href="kosten.html">Kosten</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <main id="inhalt">
 
   <section class="hero">
     <div class="container hero-grid">
@@ -39,32 +48,32 @@
     <div class="container">
       <div class="grid">
         <div class="card">
-          <div class="icon">🤝</div>
+          <div class="icon" aria-hidden="true">🤝</div>
           <h3>Alltagsbegleitung</h3>
           <p>Gemeinsame Zeit verbringen, Gespräche führen, Gesellschaft leisten – gegen Einsamkeit und für gute Momente im Alltag.</p>
         </div>
         <div class="card">
-          <div class="icon">🛒</div>
+          <div class="icon" aria-hidden="true">🛒</div>
           <h3>Einkäufe & Besorgungen</h3>
           <p>Wir übernehmen Einkäufe und Botengänge oder begleiten Sie dabei, wenn Sie selbst unterwegs sein möchten.</p>
         </div>
         <div class="card">
-          <div class="icon">📅</div>
+          <div class="icon" aria-hidden="true">📅</div>
           <h3>Begleitung zu Terminen</h3>
           <p>Ob Arzt, Behörde oder Friseur – wir begleiten Sie zuverlässig und sicher zu Ihren Terminen.</p>
         </div>
         <div class="card">
-          <div class="icon">🏡</div>
+          <div class="icon" aria-hidden="true">🏡</div>
           <h3>Unterstützung im Haushalt</h3>
           <p>Kleine Hilfen im Alltag – von Ordnung schaffen bis zu leichten Handreichungen im Haushalt.</p>
         </div>
         <div class="card">
-          <div class="icon">🚶</div>
+          <div class="icon" aria-hidden="true">🚶</div>
           <h3>Spaziergänge</h3>
           <p>Gemeinsame Spaziergänge an der frischen Luft, in Ihrem Tempo und nach Ihren Wünschen.</p>
         </div>
         <div class="card">
-          <div class="icon">💬</div>
+          <div class="icon" aria-hidden="true">💬</div>
           <h3>Ein offenes Ohr</h3>
           <p>Zeit für Gespräche, Zuhören und ein vertrauensvolles Miteinander.</p>
         </div>
@@ -79,7 +88,7 @@
       <div class="regions">
         <span class="region-tag">Bottrop</span>
         <span class="region-tag">Gladbeck</span>
-        <span class="region-tag">Essen</span>
+        <span class="region-tag">Essen-Nord</span>
         <span class="region-tag">Gelsenkirchen</span>
       </div>
     </div>
@@ -88,15 +97,18 @@
   <section style="text-align:center;">
     <div class="container">
       <h2>Interesse an einer Betreuung?</h2>
-      <p class="section-intro" style="margin-left:auto;margin-right:auto;">Sprechen Sie uns an – wir finden gemeinsam die passende Unterstützung.</p>
+      <p class="section-intro" style="margin-left:auto;margin-right:auto;">Sprechen Sie uns an – wir finden gemeinsam die passende Unterstützung. Was die Betreuung kostet und was die Pflegekasse zahlt, lesen Sie auf der Seite <a href="kosten.html">Kosten und Pflegekasse</a>.</p>
       <a href="kontakt.html" class="btn">Kontakt aufnehmen</a>
     </div>
   </section>
+
+  </main>
 
   <footer>
     <div class="container">
       <p>&copy; <span id="year"></span> Alltagsanker – Alltagsbetreuung für Senioren</p>
       <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+      <p class="footer-links"><a href="kosten.html">Kosten und Pflegekasse</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
 

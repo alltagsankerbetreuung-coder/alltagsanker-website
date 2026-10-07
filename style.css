@@ -7,7 +7,7 @@
   --color-bg: #faf7f2;
   --color-bg-alt: #ffffff;
   --color-text: #2b2b2b;
-  --color-text-light: #5a5a5a;
+  --color-text-light: #4a4a4a;
   --radius: 14px;
   --shadow: 0 6px 20px rgba(31, 111, 120, 0.12);
 }
@@ -27,11 +27,37 @@ body {
 
 a {
   color: var(--color-primary);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--color-primary-dark);
+}
+
+/* Deutlich sichtbarer Rahmen für Tastatur-Bedienung */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  background: var(--color-primary-dark);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 12px;
 }
 
 img {
@@ -71,6 +97,7 @@ header {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-primary-dark);
+  text-decoration: none;
 }
 
 .logo img {
@@ -98,6 +125,7 @@ nav ul {
 nav a {
   color: var(--color-text);
   font-weight: 600;
+  text-decoration: none;
 }
 
 nav a.active,
@@ -179,7 +207,8 @@ nav a:hover {
 .btn {
   display: inline-block;
   background: var(--color-accent);
-  color: #fff;
+  color: #1f1f1f;
+  text-decoration: none;
   font-weight: 700;
   padding: 14px 28px;
   border-radius: 999px;
@@ -188,14 +217,23 @@ nav a:hover {
 }
 
 .btn:hover {
+  color: #1f1f1f;
   transform: translateY(-2px);
   text-decoration: none;
   box-shadow: 0 10px 24px rgba(232, 152, 94, 0.35);
 }
 
-.btn.secondary {
+.btn.secondary,
+.btn.secondary:hover {
   background: #fff;
   color: var(--color-primary-dark);
+}
+
+.btn.secondary-outline,
+.btn.secondary-outline:hover {
+  background: #fff;
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary);
 }
 
 /* Sections */
@@ -337,6 +375,15 @@ form.contact-form button {
   font-size: 1rem;
 }
 
+.honeypot {
+  display: none;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--color-text-light);
+}
+
 .note {
   font-size: 0.95rem;
   color: var(--color-text-light);
@@ -353,6 +400,101 @@ footer {
 footer a {
   color: #fff;
   text-decoration: underline;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.footer-links {
+  margin-top: 16px;
+}
+
+/* Textseiten: Kosten, Impressum, Datenschutz */
+.text-page {
+  max-width: 760px;
+}
+
+.text-page h2 {
+  margin-top: 48px;
+}
+
+.text-page h2:first-child {
+  margin-top: 0;
+}
+
+.text-page h3 {
+  color: var(--color-primary-dark);
+  margin-top: 32px;
+}
+
+.text-page li {
+  margin-bottom: 8px;
+}
+
+.price-box {
+  background: var(--color-bg-alt);
+  border-left: 6px solid var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+
+.price-box .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 8px;
+}
+
+.info-box {
+  background: #fff4ea;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+table.simple {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  background: var(--color-bg-alt);
+}
+
+table.simple th,
+table.simple td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+table.simple th {
+  color: var(--color-primary-dark);
+}
+
+details {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 22px;
+  margin-bottom: 14px;
+}
+
+summary {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  cursor: pointer;
+}
+
+details[open] summary {
+  margin-bottom: 8px;
 }
 
 /* Responsive */

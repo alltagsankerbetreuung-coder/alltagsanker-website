@@ -7,8 +7,12 @@ Statische Website für Alltagsanker – Alltagsbetreuung für Senioren in Bottro
 - `index.html` – Startseite
 - `ueber-uns.html` – Über uns
 - `leistungen.html` – Leistungen
+- `kosten.html` – Kosten und Pflegekasse (Stand der Rechtslage regelmäßig prüfen)
 - `kontakt.html` – Kontakt (inkl. Kontaktformular)
 - `danke.html` – Bestätigungsseite nach Formularversand
+- `impressum.html`, `datenschutz.html` – Pflichtseiten
+- `404.html` – Seite für nicht gefundene Adressen
+- `robots.txt` – Hinweise für Suchmaschinen (Sitemap folgt, sobald die Domain feststeht)
 - `style.css` – Gemeinsames Stylesheet
 - `vercel.json` – Vercel-Konfiguration für sauberes Static Hosting
 
