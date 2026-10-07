@@ -830,10 +830,6 @@ table.simple th {
   color: var(--color-primary-dark);
 }
 
-table.costs td:nth-child(n+2) {
-  white-space: nowrap;
-}
-
 details {
   background: var(--color-bg-alt);
   border-radius: var(--radius);
