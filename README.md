@@ -12,7 +12,7 @@ Statische Website für Alltagsanker – Alltagsbetreuung für Senioren in Bottro
 - `danke.html` – Bestätigungsseite nach Formularversand
 - `impressum.html`, `datenschutz.html` – Pflichtseiten
 - `404.html` – Seite für nicht gefundene Adressen
-- `robots.txt` – Hinweise für Suchmaschinen (Sitemap folgt, sobald die Domain feststeht)
+- `robots.txt` und `vercel.json` – sperren die Seite vorerst für Suchmaschinen (Disallow + Header „noindex“). Zum Start beides entfernen und Sitemap ergänzen.
 - `style.css` – Gemeinsames Stylesheet
 - `vercel.json` – Vercel-Konfiguration für sauberes Static Hosting
 
