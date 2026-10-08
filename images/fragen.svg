@@ -1,0 +1,14 @@
+<svg viewBox="0 0 480 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zwei Sprechblasen, eine mit Fragezeichen">
+  <path d="M60 60 Q240 0 420 60 Q480 200 410 320 Q240 400 70 320 Q0 200 60 60 Z" fill="#e9d8c1"/>
+  <!-- große Sprechblase -->
+  <path d="M96 92 H286 Q314 92 314 120 V214 Q314 242 286 242 H170 L124 284 L134 242 H96 Q68 242 68 214 V120 Q68 92 96 92 Z" fill="#173a66"/>
+  <path d="M164 142 a27 27 0 1 1 38 24 c-8 4-11 9-11 17 v6" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="191" cy="214" r="9" fill="#fff"/>
+  <!-- kleine Sprechblase -->
+  <path d="M286 186 H390 Q414 186 414 210 V262 Q414 286 390 286 H382 L390 318 L352 286 H286 Q262 286 262 262 V210 Q262 186 286 186 Z" fill="#c9553f"/>
+  <circle cx="306" cy="236" r="9" fill="#fff"/>
+  <circle cx="338" cy="236" r="9" fill="#fff"/>
+  <circle cx="370" cy="236" r="9" fill="#fff"/>
+  <!-- Sonne -->
+  <circle cx="392" cy="96" r="26" fill="#e0874f"/>
+</svg>

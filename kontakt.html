@@ -3,30 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakt – Alltagsbetreuung in Bottrop und Umgebung – Alltagsfels</title>
-  <meta name="description" content="Schreiben Sie uns: Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord. Wir melden uns innerhalb von 1–2 Werktagen." />
+  <title>Kontakt: kostenloses Erstgespräch anfragen – Alltagsfels</title>
+  <meta name="description" content="Schreiben Sie uns: Alltagsbetreuung in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord. Wir melden uns innerhalb von 1–2 Werktagen." />
+  <link rel="canonical" href="https://alltagsfels.de/kontakt" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
-  <meta property="og:title" content="Kontakt – Alltagsbetreuung in Bottrop und Umgebung – Alltagsfels" />
-  <meta property="og:description" content="Schreiben Sie uns: Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord. Wir melden uns innerhalb von 1–2 Werktagen." />
+  <meta property="og:site_name" content="Alltagsfels" />
+  <meta property="og:url" content="https://alltagsfels.de/kontakt" />
+  <meta property="og:title" content="Kontakt: kostenloses Erstgespräch anfragen – Alltagsfels" />
+  <meta property="og:description" content="Schreiben Sie uns: Alltagsbetreuung in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord. Wir melden uns innerhalb von 1–2 Werktagen." />
+  <meta name="theme-color" content="#173a66" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <div class="topbar">
     <p>Wir starten im Januar 2027. <a href="kontakt.html">Lassen Sie sich schon jetzt vormerken.</a></p>
   </div>
-  <header>
+  <header class="site-header">
     <div class="nav-wrap">
-      <a class="logo" href="index.html"><img src="images/logo.svg" alt="Alltagsfels Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
-      <nav aria-label="Hauptmenü">
+      <a class="logo" href="index.html"><img src="images/logo.svg" alt="Alltagsfels – Betreuung im Alltag, zur Startseite" width="479" height="100" /></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptmenue">
+        <svg class="icon-svg icon-open" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-svg icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        Menü
+      </button>
+      <nav class="main-nav" id="hauptmenue" aria-label="Hauptmenü">
         <ul>
           <li><a href="index.html">Startseite</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="kosten.html">Kosten</a></li>
-          <li><a href="kontakt.html" class="active" aria-current="page">Kontakt</a></li>
+          <li><a href="fragen.html">Häufige Fragen</a></li>
+          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
         </ul>
       </nav>
     </div>
@@ -34,90 +48,136 @@
 
   <main id="inhalt">
 
-  <section class="hero">
+  <section class="page-hero">
     <div class="container hero-grid">
       <div class="hero-text">
         <h1>Kontakt</h1>
-        <p>Wir freuen uns auf Ihre Nachricht – unverbindlich und persönlich.</p>
+        <p>Wir freuen uns auf Ihre Nachricht. Unverbindlich und persönlich.</p>
       </div>
       <div class="hero-media">
-        <img src="images/kontakt.svg" alt="Nehmen Sie Kontakt auf: ein Briefumschlag mit Herz und eine Sprechblase" />
+        <img src="images/kontakt.svg" alt="Ein Briefumschlag mit Herz und eine Sprechblase" width="320" height="260" />
       </div>
     </div>
-    <img class="hero-wave" src="images/welle.svg" alt="" aria-hidden="true" />
   </section>
 
   <section>
     <div class="container contact-grid">
       <div class="contact-info">
-        <div class="item">
-          <strong>E-Mail</strong>
-          <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a>
+        <div class="contact-item reveal">
+          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></div>
+          <div>
+            <h2>E-Mail</h2>
+            <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+          </div>
         </div>
-        <div class="item">
-          <strong>Telefon</strong>
-          <p>Unsere Telefonnummer folgt bald. Sie möchten lieber telefonieren? Geben Sie im Formular Ihre Nummer an, dann rufen wir Sie an.</p>
+        <div class="contact-item reveal">
+          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 3.5h2.6l1.5 4-2 1.3a11 11 0 0 0 6.5 6.5l1.3-2 4 1.5v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg></div>
+          <div>
+            <h2>Telefon</h2>
+            <p>Unsere Telefonnummer folgt bald. Sie möchten lieber telefonieren? Geben Sie im Formular Ihre Nummer an, dann rufen wir Sie an.</p>
+          </div>
         </div>
-        <div class="item">
-          <strong>Einsatzgebiet</strong>
-          <p>Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord, bis etwa 20 km rund um Bottrop</p>
+        <div class="contact-item reveal">
+          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></div>
+          <div>
+            <h2>Einsatzgebiet</h2>
+            <p>Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord, bis etwa 20 km rund um Bottrop</p>
+          </div>
         </div>
-        <div class="item">
-          <strong>So geht es weiter</strong>
-          <ol class="mini-steps">
-            <li>Wir melden uns innerhalb von 1–2 Werktagen bei Ihnen.</li>
-            <li>Wir besuchen Sie zu Hause und lernen uns kennen. Dieses Gespräch ist kostenlos.</li>
-            <li>Ab Januar 2027 kann die Betreuung beginnen.</li>
-          </ol>
+        <div class="contact-item reveal">
+          <div class="icon-circle blue"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 6h10M10 12h10M10 18h10"/><path d="m3.5 6 1.2 1.2L7 5M3.5 12l1.2 1.2L7 11M3.5 18l1.2 1.2L7 17"/></svg></div>
+          <div>
+            <h2>So geht es weiter</h2>
+            <ol class="mini-steps">
+              <li>Wir melden uns innerhalb von 1–2 Werktagen bei Ihnen.</li>
+              <li>Wir besuchen Sie zu Hause und lernen uns kennen. Dieses Gespräch ist kostenlos.</li>
+              <li>Ab Januar 2027 kann die Betreuung beginnen.</li>
+            </ol>
+          </div>
         </div>
       </div>
 
-      <form class="contact-form" action="https://formsubmit.co/alltagsankerbetreuung@gmail.com" method="POST">
+      <form class="contact-form reveal reveal-d1" action="https://formsubmit.co/alltagsankerbetreuung@gmail.com" method="POST">
+        <h2 class="form-title">Schreiben Sie uns</h2>
+        <p class="form-intro">Felder mit <span class="req">*</span> brauchen wir, um Ihnen zu antworten.</p>
         <input type="hidden" name="_subject" value="Neue Anfrage über die Website" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_next" value="danke.html" id="next-url" />
         <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-        <div>
-          <label for="name">Ihr Name</label>
+        <div class="field">
+          <label for="name">Ihr Name <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="name" name="Name" autocomplete="name" required />
         </div>
-        <div>
-          <label for="email">Ihre E-Mail-Adresse</label>
-          <input type="email" id="email" name="E-Mail" autocomplete="email" required />
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Ihre E-Mail-Adresse <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="E-Mail" autocomplete="email" inputmode="email" required />
+          </div>
+          <div class="field">
+            <label for="telefon">Ihre Telefonnummer <span class="optional">(freiwillig, für einen Rückruf)</span></label>
+            <input type="tel" id="telefon" name="Telefon" autocomplete="tel" inputmode="tel" />
+          </div>
         </div>
-        <div>
-          <label for="telefon">Ihre Telefonnummer <span class="optional">(freiwillig, für einen Rückruf)</span></label>
-          <input type="tel" id="telefon" name="Telefon" autocomplete="tel" />
+        <div class="field">
+          <label for="ort">Ihre Stadt <span class="optional">(freiwillig)</span></label>
+          <select id="ort" name="Stadt">
+            <option value="">Bitte wählen</option>
+            <option>Bottrop</option>
+            <option>Gladbeck</option>
+            <option>Gelsenkirchen</option>
+            <option>Essen-Nord</option>
+            <option>Anderer Ort in der Nähe</option>
+          </select>
         </div>
-        <div>
-          <label for="ort">Ihre Stadt</label>
-          <input type="text" id="ort" name="Stadt" placeholder="zum Beispiel Bottrop" />
+        <div class="field">
+          <label for="nachricht">Ihre Nachricht <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="nachricht" name="Nachricht" rows="6" required placeholder="Zum Beispiel: Ich suche Unterstützung für meine Mutter in Gladbeck."></textarea>
         </div>
-        <div>
-          <label for="nachricht">Ihre Nachricht</label>
-          <textarea id="nachricht" name="Nachricht" rows="5" required></textarea>
+        <div class="form-hints">
+          <p>Bitte schreiben Sie keine Angaben zur Gesundheit oder zum Pflegegrad in die Nachricht. Das besprechen wir lieber persönlich.</p>
+          <p>Mit dem Absenden werden Ihre Angaben an uns übermittelt. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
         </div>
-        <p class="note">Bitte schreiben Sie keine Angaben zur Gesundheit oder zum Pflegegrad in die Nachricht. Das besprechen wir lieber persönlich.</p>
-        <p class="note">Mit dem Absenden werden Ihre Angaben an uns übermittelt. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-        <button type="submit" class="btn">Nachricht senden</button>
+        <button type="submit" class="btn"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 3 10 14"/><path d="M21 3 14.5 21l-4.5-7-7-4.5z"/></svg> Nachricht senden</button>
+        <p class="form-safe"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></svg> Unverbindlich und kostenlos</p>
       </form>
     </div>
   </section>
 
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Alltagsfels – Alltagsbetreuung für Senioren</p>
-      <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
-      <p class="footer-links"><a href="kosten.html">Kosten und Pflegekasse</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="images/logo-hell.svg" alt="Alltagsfels – zur Startseite" width="479" height="100" loading="lazy" /></a>
+        <p>Betreuung im Alltag in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord. Vor allem für ältere Menschen und für alle, die im Alltag Unterstützung brauchen.</p>
+      </div>
+      <div>
+        <h2>Seiten</h2>
+        <ul>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kosten.html">Kosten und Pflegekasse</a></li>
+          <li><a href="fragen.html">Häufige Fragen</a></li>
+          <li><a href="index.html#einsatzgebiet">Unser Einsatzgebiet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <ul>
+          <li><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></li>
+          <li><a href="kontakt.html">Zum Kontaktformular</a></li>
+          <li>Batenbrockstraße 66<br />46238 Bottrop</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span class="year">2026</span> Alltagsfels</p>
+      <p><a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
-
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
     // formsubmit.co braucht eine vollständige Adresse für die Weiterleitung
     document.getElementById("next-url").value = new URL("danke.html", window.location.href).href;
   </script>
