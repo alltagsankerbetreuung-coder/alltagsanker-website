@@ -9,13 +9,13 @@
 
   <g clip-path="url(#rund3)">
     <rect width="600" height="480" fill="url(#bg3)"/>
-    <circle cx="410" cy="110" r="32" fill="#f0b07a"/>
-    <path d="M0 390 Q300 360 600 390 V480 H0 Z" fill="#d6e5e3"/>
+    <circle cx="410" cy="110" r="32" fill="#e8a06b"/>
+    <path d="M0 390 Q300 360 600 390 V480 H0 Z" fill="#e3e8d6"/>
 
     <!-- Pflanze -->
-    <ellipse cx="148" cy="318" rx="9" ry="24" fill="#7fae9c" transform="rotate(-20 148 318)"/>
-    <ellipse cx="166" cy="314" rx="9" ry="26" fill="#93bfae" transform="rotate(18 166 314)"/>
-    <path d="M138 340 H176 L171 380 H143 Z" fill="#c8743d"/>
+    <ellipse cx="148" cy="318" rx="9" ry="24" fill="#86a86f" transform="rotate(-20 148 318)"/>
+    <ellipse cx="166" cy="314" rx="9" ry="26" fill="#9fbd88" transform="rotate(18 166 314)"/>
+    <path d="M138 340 H176 L171 380 H143 Z" fill="#a84b33"/>
 
     <!-- Bank hinten -->
     <path d="M204 232 V300 M396 232 V300" stroke="#8a6648" stroke-width="10" stroke-linecap="round"/>
@@ -24,9 +24,9 @@
 
     <!-- Betreuungsperson -->
     <g stroke-linecap="round" fill="none">
-      <path d="M226 308 V374 M254 308 V374" stroke="#174f56" stroke-width="20"/>
-      <path d="M210 214 L202 280" stroke="#1f6f78" stroke-width="16"/>
-      <path d="M270 214 L292 266" stroke="#1f6f78" stroke-width="16"/>
+      <path d="M226 308 V374 M254 308 V374" stroke="#173a66" stroke-width="20"/>
+      <path d="M210 214 L202 280" stroke="#2b5487" stroke-width="16"/>
+      <path d="M270 214 L292 266" stroke="#2b5487" stroke-width="16"/>
     </g>
     <ellipse cx="222" cy="380" rx="15" ry="8" fill="#3b3b3b"/>
     <ellipse cx="258" cy="380" rx="15" ry="8" fill="#3b3b3b"/>
@@ -34,8 +34,8 @@
     <!-- Seniorin -->
     <g stroke-linecap="round" fill="none">
       <path d="M346 308 V374 M374 308 V374" stroke="#8a6d55" stroke-width="20"/>
-      <path d="M330 218 L298 266" stroke="#e8955a" stroke-width="16"/>
-      <path d="M390 218 L398 282" stroke="#e8955a" stroke-width="16"/>
+      <path d="M330 218 L298 266" stroke="#d0694a" stroke-width="16"/>
+      <path d="M390 218 L398 282" stroke="#d0694a" stroke-width="16"/>
     </g>
     <ellipse cx="342" cy="380" rx="15" ry="8" fill="#3b3b3b"/>
     <ellipse cx="378" cy="380" rx="15" ry="8" fill="#3b3b3b"/>
@@ -44,20 +44,20 @@
     <rect x="186" y="298" width="228" height="16" rx="8" fill="#a98463"/>
 
     <!-- Körper und Köpfe -->
-    <path d="M206 214 Q206 198 222 196 L258 196 Q274 198 274 214 L278 306 L202 306 Z" fill="#1f6f78"/>
+    <path d="M206 214 Q206 198 222 196 L258 196 Q274 198 274 214 L278 306 L202 306 Z" fill="#2b5487"/>
     <circle cx="202" cy="285" r="9" fill="#f1caa8"/>
     <circle cx="240" cy="160" r="30" fill="#f1caa8"/>
     <path d="M210 158 Q210 128 240 128 Q270 128 270 158 Q256 144 240 146 Q224 144 210 158 Z" fill="#6b4a33"/>
 
-    <path d="M326 218 Q326 202 342 200 L378 200 Q394 202 394 218 L398 306 L322 306 Z" fill="#e8955a"/>
+    <path d="M326 218 Q326 202 342 200 L378 200 Q394 202 394 218 L398 306 L322 306 Z" fill="#d0694a"/>
     <circle cx="295" cy="268" r="10" fill="#f1caa8"/>
     <circle cx="398" cy="287" r="9" fill="#f1caa8"/>
     <circle cx="360" cy="164" r="30" fill="#f1caa8"/>
     <path d="M330 162 Q328 132 360 132 Q392 132 390 162 Q384 148 360 150 Q336 148 330 162 Z" fill="#d9d9d9"/>
 
     <!-- Einkaufstasche -->
-    <path d="M432 332 Q432 312 446 312 Q460 312 460 332" stroke="#c8743d" stroke-width="5" fill="none"/>
-    <rect x="424" y="330" width="44" height="48" rx="7" fill="#e8955a"/>
-    <ellipse cx="436" cy="324" rx="6" ry="14" fill="#7fae9c" transform="rotate(-15 436 324)"/>
+    <path d="M432 332 Q432 312 446 312 Q460 312 460 332" stroke="#a84b33" stroke-width="5" fill="none"/>
+    <rect x="424" y="330" width="44" height="48" rx="7" fill="#d0694a"/>
+    <ellipse cx="436" cy="324" rx="6" ry="14" fill="#86a86f" transform="rotate(-15 436 324)"/>
   </g>
 </svg>

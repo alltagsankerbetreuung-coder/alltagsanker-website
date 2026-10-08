@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Alltagsfels – Flyer A5, 4 Seiten</title>
+<link rel="stylesheet" href="druck.css" />
+<style>
+  /* Einzelseiten: A5 (148 x 210 mm) + 3 mm Beschnitt = 154 x 216 mm */
+  .panel {
+    width: 154mm;
+    height: 216mm;
+    padding: 14mm 14mm 14mm;
+    display: flex;
+    flex-direction: column;
+    font-size: 13.5pt;
+    line-height: 1.38;
+  }
+
+  /* Druckbogen: A4 quer (297 x 210 mm) + 3 mm Beschnitt = 303 x 216 mm */
+  .bogen .spread {
+    width: 303mm;
+    height: 216mm;
+    display: flex;
+    break-after: page;
+  }
+  .bogen .spread:last-child { break-after: auto; }
+  .bogen .panel { width: 151.5mm; break-after: auto; }
+  .bogen .panel.links { padding-left: 14mm; padding-right: 11.5mm; }
+  .bogen .panel.rechts { padding-left: 11.5mm; padding-right: 14mm; }
+
+  .panel h2 {
+    font-size: 23pt;
+    margin-bottom: 6mm;
+  }
+
+  /* Seite 1 */
+  .titel { background: var(--sand); }
+  .titel::before {
+    content: "";
+    position: absolute;
+    width: 150mm; height: 150mm;
+    right: -60mm; top: -70mm;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 70%);
+  }
+  .titel > * { position: relative; }
+  .titel .logo { width: 74mm; margin-bottom: 9mm; }
+  .titel h1 { font-size: 31pt; line-height: 1.08; margin-bottom: 4mm; }
+  .titel .unter { font-size: 15pt; font-weight: 700; color: var(--text-soft); margin-bottom: 0; }
+  .titel .bild-zeile { display: flex; align-items: center; justify-content: center; position: relative; margin: 4mm 0 3mm; }
+  .titel .bild-zeile img { width: 78mm; }
+  .titel .start {
+    position: absolute; right: 2mm; top: 2mm;
+    width: 30mm; height: 30mm; border-radius: 50%;
+    background: var(--sun); color: #1f1b17;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; font-weight: 700; font-size: 12pt; line-height: 1.15;
+    transform: rotate(-8deg);
+  }
+  .titel .start b { font-family: var(--head); font-weight: 600; font-size: 15pt; }
+  .titel .gebiet { display: flex; gap: 3mm; align-items: center; font-size: 13pt; font-weight: 700; color: var(--navy); margin-bottom: 5mm; }
+  .titel .anruf {
+    margin-top: auto;
+    background: var(--navy); color: #fff; border-radius: 5mm;
+    padding: 6mm 7mm;
+  }
+  .titel .anruf p { margin: 0; }
+  .titel .anruf .gross { font-family: var(--head); font-size: 17pt; line-height: 1.3; }
+  .titel .anruf .ph { font-family: var(--body); font-size: 17pt; }
+  .titel .anruf .klein { font-size: 13pt; color: #f3c9a8; font-weight: 700; margin-top: 2mm; }
+
+  /* Seite 2 */
+  .leistung { display: flex; gap: 4.5mm; align-items: flex-start; margin-bottom: 6.5mm; }
+  .leistung h3 { font-size: 16pt; margin-bottom: 1mm; }
+  .leistung p { margin: 0; }
+  .keine-pflege {
+    margin-top: auto;
+    display: flex; gap: 4.5mm; align-items: flex-start;
+    background: #fff; border: 0.5mm solid var(--red-soft); border-radius: 4mm; padding: 5mm;
+  }
+  .keine-pflege h3 { font-size: 16pt; color: var(--red); margin-bottom: 1mm; }
+  .keine-pflege p { margin: 0; }
+
+  /* Seite 3 */
+  .kosten-box {
+    background: #fff; border-radius: 4mm; padding: 5.5mm 6mm; margin-bottom: 6mm;
+    border-left: 1.6mm solid var(--red);
+  }
+  .kosten-box .haken { margin-top: 3mm; }
+  .kosten-box .haken li:last-child { margin-bottom: 0; }
+  .zahlen h3 { font-size: 17pt; margin-bottom: 3.5mm; }
+  .zahl-karte {
+    background: #fff; border-radius: 4mm; padding: 4.5mm 5.5mm; margin-bottom: 4mm;
+    border-top: 1.3mm solid var(--navy);
+  }
+  .zahl-karte.warm { border-top-color: var(--red); }
+  .zahl-karte h4 { margin: 0 0 1mm; font-size: 14pt; color: var(--navy); }
+  .zahl-karte p { margin: 0; }
+  .fussnote { margin-top: auto; font-weight: 700; color: var(--navy); display: flex; gap: 3.5mm; align-items: center; }
+
+  /* Seite 4 */
+  .rueck .team-platzhalter { height: 46mm; margin-bottom: 7mm; }
+  .rueck .team-platzhalter span { font-size: 12pt; }
+  .zeiten { display: flex; gap: 4mm; align-items: center; margin-bottom: 7mm; }
+  .zeiten p { margin: 0; }
+  .rueck h3 { font-size: 16pt; margin-bottom: 3mm; }
+  .schritte { list-style: none; padding: 0; margin: 0 0 4mm; }
+  .schritte li { display: flex; gap: 3.5mm; align-items: center; margin-bottom: 3mm; }
+  .schritte .nr {
+    width: 8.5mm; height: 8.5mm; flex: 0 0 8.5mm; border-radius: 50%;
+    background: var(--navy); color: #fff; font-family: var(--head); font-size: 13pt;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .kontakt {
+    margin-top: auto;
+    background: var(--navy); color: #fff; border-radius: 5mm; padding: 5.5mm 6mm;
+  }
+  .kontakt p { margin: 0 0 1.4mm; }
+  .kontakt .label { color: #f3c9a8; font-weight: 700; }
+  .kontakt .firma { margin: 3mm 0 0; padding-top: 3mm; border-top: 0.3mm solid rgba(255,255,255,.3); font-size: 12pt; color: #e3ebf6; }
+  .rueck .logo { width: 50mm; margin-bottom: 6mm; }
+</style>
+</head>
+<body>
+<div class="flyer">
+
+  <!-- ===================== SEITE 1: Titelseite ===================== -->
+  <section class="seite panel titel" data-seite="1">
+    <img class="logo" src="bilder/alltagsfels-logo.svg" alt="Alltagsfels" />
+    <h1>Zeit für Sie.<br />Hilfe im Alltag.</h1>
+    <p class="unter">Alltagsbetreuung für ältere Menschen bei Ihnen zu Hause</p>
+    <div class="bild-zeile">
+      <img src="bilder/hero-begleitung.svg" alt="" />
+    </div>
+    <p class="gebiet">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span>
+      <span>Für Sie da in Bottrop und Umgebung.</span>
+    </p>
+    <div class="anruf">
+      <p class="gross">Rufen Sie uns einfach an: <span class="ph">[TELEFON]</span></p>
+      <p class="klein">Das erste Gespräch ist kostenlos.</p>
+    </div>
+  </section>
+
+  <!-- ===================== SEITE 2: Was wir für Sie tun ===================== -->
+  <section class="seite panel" data-seite="2">
+    <h2>Was wir für Sie tun</h2>
+    <div class="leistung">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg></span>
+      <div><h3>Gesellschaft leisten</h3><p>Wir reden, hören zu, lesen vor, spielen und machen Gedächtnistraining. Wir gehen mit Ihnen spazieren.</p></div>
+    </div>
+    <div class="leistung">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="8.5" cy="7.5" r="3"/><path d="M3 20v-1.5A4.5 4.5 0 0 1 7.5 14h2a4.5 4.5 0 0 1 4.5 4.5V20"/><circle cx="16.5" cy="8.5" r="2.5"/><path d="M16 13.5h1a4 4 0 0 1 4 4V20"/></svg></span>
+      <div><h3>Begleiten</h3><p>Wir begleiten Sie zum Arzt, zu Ämtern, zur Bank, zum Friseur oder zum Einkaufen. Wir sind an Ihrer Seite, auch auf dem Weg dorthin.</p></div>
+    </div>
+    <div class="leistung">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg></span>
+      <div><h3>Im Haushalt mithelfen</h3><p>Gemeinsam mit Ihnen: einkaufen, aufräumen, leichte Hausarbeit, kleine Mahlzeiten kochen.</p></div>
+    </div>
+    <div class="leistung">
+      <span class="ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
+      <div><h3>Den Alltag ordnen</h3><p>Wir helfen bei Terminen und Post. Und beim Kontakt zu Familie und Freunden.</p></div>
+    </div>
+    <div class="keine-pflege">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></svg></span>
+      <div><h3>Keine Pflege</h3><p>Waschen, Anziehen oder Medikamente gehören nicht dazu. Dafür nennen wir Ihnen gern einen Pflegedienst.</p></div>
+    </div>
+  </section>
+
+  <!-- ===================== SEITE 3: Was kostet das? ===================== -->
+  <section class="seite panel" data-seite="3">
+    <h2>Was kostet das?</h2>
+    <div class="kosten-box">
+      <p>Das erste Gespräch bei Ihnen zu Hause ist <strong>kostenlos und unverbindlich</strong>. Dabei besprechen wir in Ruhe, was Sie brauchen und was es kostet.</p>
+      <ul class="haken">
+        <li>Sie bezahlen nur die Zeit, die wir bei Ihnen sind.</li>
+      </ul>
+    </div>
+    <div class="zahlen">
+      <h3>So bezahlen Sie:</h3>
+      <div class="zahl-karte">
+        <h4>Mit Pflegegrad 2 oder höher:</h4>
+        <p>Die Pflegekasse kann die Kosten übernehmen. Wir rechnen direkt mit ihr ab. Sie müssen sich um nichts kümmern.</p>
+      </div>
+      <div class="zahl-karte warm">
+        <h4>Ohne Pflegegrad:</h4>
+        <p>Auch ohne Pflegegrad sind Sie bei uns herzlich willkommen. Sie bezahlen einfach per Rechnung.</p>
+      </div>
+    </div>
+    <p class="fussnote">
+      <span class="ic blau"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg></span>
+      <span>Alle Fragen zur Pflegekasse klären wir gern im ersten Gespräch.</span>
+    </p>
+  </section>
+
+  <!-- ===================== SEITE 4: Rückseite ===================== -->
+  <section class="seite panel rueck" data-seite="4">
+    <h2>Wer zu Ihnen kommt</h2>
+
+    <!-- TEAM-PLATZHALTER: Diesen Kasten später durch Fotos oder Kreise mit Anfangsbuchstaben ersetzen -->
+    <div class="team-platzhalter">
+      <strong>[TEAM – noch offen]</strong>
+      <span>Julian Wehner und Dominik Vogel – Darstellung folgt</span>
+    </div>
+
+    <div class="zeiten">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2.5"/></svg></span>
+      <p>Wir kommen Montag bis Samstag, zu festen Zeiten, die wir mit Ihnen absprechen.</p>
+    </div>
+
+    <h3>So einfach geht es los:</h3>
+    <ol class="schritte">
+      <li><span class="nr">1</span><span>Sie rufen uns an.</span></li>
+      <li><span class="nr">2</span><span>Wir besuchen Sie zu Hause und lernen uns kennen.</span></li>
+      <li><span class="nr">3</span><span>Wir vereinbaren feste Termine.</span></li>
+    </ol>
+
+    <div class="kontakt">
+      <p><span class="label">Telefon:</span> <span class="ph">[TELEFON]</span></p>
+      <p><span class="label">E-Mail:</span> <span class="ph">[E-MAIL]</span></p>
+      <p><span class="label">Internet:</span> www.alltagsfels.de</p>
+      <p class="firma">Alltagsfels UG (haftungsbeschränkt), Batenbrockstraße 66, 46238 Bottrop</p>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  // Mit "?bogen" in der Adresse werden die Seiten zum Druckbogen A4 quer zusammengestellt:
+  // Außenseite = Seite 4 | Seite 1, Innenseite = Seite 2 | Seite 3
+  if (location.search.indexOf("bogen") !== -1) {
+    var f = document.querySelector(".flyer");
+    var p = {};
+    f.querySelectorAll(".panel").forEach(function (el) { p[el.dataset.seite] = el; });
+    document.body.classList.add("bogen");
+    [["4", "1"], ["2", "3"]].forEach(function (paar) {
+      var s = document.createElement("div");
+      s.className = "spread";
+      p[paar[0]].classList.add("links");
+      p[paar[1]].classList.add("rechts");
+      s.appendChild(p[paar[0]]);
+      s.appendChild(p[paar[1]]);
+      f.appendChild(s);
+    });
+  }
+</script>
+</body>
+</html>

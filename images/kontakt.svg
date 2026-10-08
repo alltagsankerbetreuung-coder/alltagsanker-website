@@ -1,18 +1,18 @@
 <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nehmen Sie Kontakt auf: ein Briefumschlag mit Herz und eine Sprechblase">
   <defs>
     <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#eef5f4"/>
+      <stop offset="0" stop-color="#f5ecdf"/>
       <stop offset="1" stop-color="#fdfbf7"/>
     </linearGradient>
   </defs>
 
   <rect x="20" y="20" width="440" height="320" rx="34" fill="url(#bg4)"/>
 
-  <rect x="70" y="140" width="250" height="160" rx="16" fill="#1f6f78"/>
-  <path d="M86 156 L195 236 L304 156" stroke="#d8ebe9" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="70" y="140" width="250" height="160" rx="16" fill="#2b5487"/>
+  <path d="M86 156 L195 236 L304 156" stroke="#e8eef6" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M195 282 C176 270 176 252 187 252 C191 252 194 255 195 258 C196 255 199 252 203 252 C214 252 214 270 195 282 Z" fill="#ffffff"/>
 
-  <path d="M300 60 H406 Q428 60 428 82 V132 Q428 154 406 154 H330 L304 182 L310 154 H300 Q278 154 278 132 V82 Q278 60 300 60 Z" fill="#e99a62"/>
+  <path d="M300 60 H406 Q428 60 428 82 V132 Q428 154 406 154 H330 L304 182 L310 154 H300 Q278 154 278 132 V82 Q278 60 300 60 Z" fill="#d0694a"/>
   <circle cx="320" cy="107" r="9" fill="#ffffff"/>
   <circle cx="353" cy="107" r="9" fill="#ffffff"/>
   <circle cx="386" cy="107" r="9" fill="#ffffff"/>

@@ -5,46 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datenschutzerklärung – Alltagsfels</title>
   <meta name="description" content="Datenschutzerklärung der Website der Alltagsfels UG (haftungsbeschränkt), Bottrop." />
+  <link rel="canonical" href="https://alltagsfels.de/datenschutz" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="Alltagsfels" />
+  <meta property="og:url" content="https://alltagsfels.de/datenschutz" />
   <meta property="og:title" content="Datenschutzerklärung – Alltagsfels" />
   <meta property="og:description" content="Datenschutzerklärung der Website der Alltagsfels UG (haftungsbeschränkt), Bottrop." />
+  <meta name="theme-color" content="#173a66" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.alltagsfelsBereit)document.documentElement.classList.remove("js")},3000);</script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <div class="topbar">
     <p>Wir starten im Januar 2027. <a href="kontakt.html">Lassen Sie sich schon jetzt vormerken.</a></p>
   </div>
-  <header>
+  <header class="site-header">
     <div class="nav-wrap">
-      <a class="logo" href="index.html"><img src="images/logo.svg" alt="Alltagsfels Betreuung – Unterstützung, Vertrauen, Miteinander" /></a>
-      <nav aria-label="Hauptmenü">
+      <a class="logo" href="index.html"><img src="images/logo.svg" alt="Alltagsfels – Betreuung im Alltag, zur Startseite" width="479" height="110" /></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptmenue">
+        <svg class="icon-svg icon-open" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-svg icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        Menü
+      </button>
+      <nav class="main-nav" id="hauptmenue" aria-label="Hauptmenü">
         <ul>
           <li><a href="index.html">Startseite</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="kosten.html">Kosten</a></li>
+          <li><a href="fragen.html">Häufige Fragen</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
-      <a class="btn btn-small header-cta" href="kontakt.html">Erstgespräch anfragen</a>
+      <a class="btn btn-small header-cta" href="kontakt.html">Kostenloses Erstgespräch</a>
     </div>
   </header>
 
   <main id="inhalt">
 
-  <section class="hero">
+  <section class="page-hero">
     <div class="container">
-      <h1>Datenschutzerklärung</h1>
-      <p>Hier lesen Sie, welche Daten wir auf dieser Website verarbeiten und warum.</p>
-    </div>
-    <img class="hero-wave" src="images/welle.svg" alt="" aria-hidden="true" />
+        <h1>Datenschutzerklärung</h1>
+        <p>Hier lesen Sie, welche Daten wir auf dieser Website verarbeiten und warum.</p>
+      </div>
   </section>
 
   <section>
-    <div class="container text-page">
+    <div class="container text-page legal">
       <h2>1. Wer ist verantwortlich?</h2>
       <p>Alltagsfels UG (haftungsbeschränkt), im Handelsregister derzeit noch als Alltagsanker UG (haftungsbeschränkt) eingetragen, vertreten durch den Geschäftsführer Julian Wehner<br />
       Batenbrockstraße 66, 46238 Bottrop<br />
@@ -80,18 +93,38 @@
       <p class="note">Stand: Oktober 2026</p>
     </div>
   </section>
+
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Alltagsfels – Alltagsbetreuung für Senioren</p>
-      <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
-      <p class="footer-links"><a href="kosten.html">Kosten und Pflegekasse</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="images/logo-hell.svg" alt="Alltagsfels – zur Startseite" width="479" height="110" loading="lazy" /></a>
+        <p>Betreuung im Alltag in Bottrop und Umgebung, im Umkreis von etwa&nbsp;20&nbsp;km. Vor allem für ältere Menschen und für alle, die im Alltag Unterstützung brauchen.</p>
+      </div>
+      <div>
+        <h2>Seiten</h2>
+        <ul>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kosten.html">Kosten und Pflegekasse</a></li>
+          <li><a href="fragen.html">Häufige Fragen</a></li>
+          <li><a href="index.html#einsatzgebiet">Unser Einsatzgebiet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <ul>
+          <li><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></li>
+          <li><a href="kontakt.html">Zum Kontaktformular</a></li>
+          <li>Batenbrockstraße 66<br />46238 Bottrop</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span class="year">2026</span> Alltagsfels</p>
+      <p><a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
