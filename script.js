@@ -1,5 +1,8 @@
 // Alltagsfels – kleine Helfer für alle Seiten
 
+// Zeichen für die Sicherung im Kopf der Seiten: Skript ist geladen
+window.alltagsfelsBereit = true;
+
 // Aktuelles Jahr im Fußbereich
 document.querySelectorAll(".year").forEach(function (el) {
   el.textContent = new Date().getFullYear();
