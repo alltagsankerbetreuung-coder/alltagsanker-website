@@ -1,6 +1,6 @@
-# Alltagsanker Website
+# Alltagsfels Website
 
-Statische Website für Alltagsanker – Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Essen und Gelsenkirchen.
+Statische Website für Alltagsfels – Alltagsbetreuung für Senioren in Bottrop, Gladbeck, Essen und Gelsenkirchen.
 
 ## Struktur
 
@@ -41,7 +41,7 @@ Siehe die Schritt-für-Schritt-Anleitung im Chat bzw. unten.
 ```bash
 git init
 git add .
-git commit -m "Initial commit: Alltagsanker Website"
+git commit -m "Initial commit: Alltagsfels Website"
 git branch -M main
 git remote add origin https://github.com/<dein-username>/alltagsanker-website.git
 git push -u origin main
