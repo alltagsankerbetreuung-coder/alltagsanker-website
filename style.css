@@ -1492,10 +1492,10 @@ form.contact-form .btn {
   /* aufgehende Sonne als Schmuck */
   content: "";
   position: absolute;
-  width: 260px;
-  height: 260px;
-  right: -70px;
-  bottom: -130px;
+  width: 240px;
+  height: 240px;
+  right: -80px;
+  top: -140px;
   border-radius: 50%;
   background: var(--sun);
   opacity: 0.9;
