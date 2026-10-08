@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alltagsbetreuung in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord – Alltagsfels</title>
-  <meta name="description" content="Betreuung und Hilfe im Alltag, vor allem für ältere Menschen: Gesellschaft, Begleitung zu Terminen, Hilfe im Haushalt. In Bottrop und Umgebung. Erstgespräch kostenlos." />
+  <title>Alltagsbetreuung in Bottrop und Umgebung – Alltagsfels</title>
+  <meta name="description" content="Betreuung und Hilfe im Alltag, vor allem für ältere Menschen. In Bottrop und Umgebung (ca. 20 km), z. B. Gladbeck, Gelsenkirchen und Essen. Erstgespräch kostenlos." />
   <link rel="canonical" href="https://alltagsfels.de/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Alltagsfels" />
   <meta property="og:url" content="https://alltagsfels.de/" />
-  <meta property="og:title" content="Alltagsbetreuung in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord – Alltagsfels" />
-  <meta property="og:description" content="Betreuung und Hilfe im Alltag, vor allem für ältere Menschen: Gesellschaft, Begleitung zu Terminen, Hilfe im Haushalt. In Bottrop und Umgebung. Erstgespräch kostenlos." />
+  <meta property="og:title" content="Alltagsbetreuung in Bottrop und Umgebung – Alltagsfels" />
+  <meta property="og:description" content="Betreuung und Hilfe im Alltag, vor allem für ältere Menschen. In Bottrop und Umgebung (ca. 20 km), z. B. Gladbeck, Gelsenkirchen und Essen. Erstgespräch kostenlos." />
   <meta name="theme-color" content="#173a66" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="preload" href="fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
@@ -24,7 +24,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Alltagsfels",
-    "description": "Alltagsbetreuung in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord, vor allem für ältere Menschen",
+    "description": "Alltagsbetreuung in Bottrop und Umgebung (ca. 20 km), zum Beispiel Gladbeck, Gelsenkirchen und Essen, vor allem für ältere Menschen",
     "url": "https://alltagsfels.de/",
     "logo": "https://alltagsfels.de/images/logo.svg",
     "email": "alltagsankerbetreuung@gmail.com",
@@ -35,7 +35,11 @@
       "addressLocality": "Bottrop",
       "addressCountry": "DE"
     },
-    "areaServed": ["Bottrop", "Gladbeck", "Gelsenkirchen", "Essen"]
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 51.5236, "longitude": 6.9285},
+      "geoRadius": "20000"
+    }
   }
   </script>
 </head>
@@ -71,7 +75,7 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-text">
-        <h1><span class="eyebrow">Alltagsbetreuung in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord</span> <span class="h1-main">Zeit für Sie.<br /> Hilfe im Alltag.</span></h1>
+        <h1><span class="eyebrow">Alltagsbetreuung in Bottrop und Umgebung</span> <span class="h1-main">Zeit für Sie.<br /> Hilfe im Alltag.</span></h1>
         <p>Wir begleiten Menschen zu Hause, die im Alltag Hilfe brauchen. Vor allem ältere Menschen, aber nicht nur. Mit Gesellschaft, Begleitung zu Terminen und Hilfe im Haushalt. Persönlich, verlässlich und ohne Hektik.</p>
         <ul class="checklist">
           <li><span class="check"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5 10 17.5 19.5 7"/></svg></span> Examinierte Pflegefachkraft im Team</li>
@@ -158,45 +162,44 @@
     <div class="container area">
       <div class="area-map reveal">
           <svg viewBox="0 0 560 440" role="img" aria-labelledby="karte-titel">
-            <title id="karte-titel">Schematische Karte: Bottrop in der Mitte, Gladbeck im Norden, Gelsenkirchen im Osten und Essen-Nord im Süden</title>
+            <title id="karte-titel">Schematische Karte: Umkreis von etwa&nbsp;20&nbsp;km um Bottrop, mit Gladbeck, Gelsenkirchen und Essen als Beispiele</title>
             <rect width="560" height="440" rx="22" fill="#fbf6ee"/>
-            <path d="M70 220 C 60 120, 170 50, 290 52 C 410 54, 510 120, 500 230 C 492 330, 400 400, 270 396 C 150 392, 80 320, 70 220 Z" fill="#e3e8d6"/>
-            <path d="M70 220 C 60 120, 170 50, 290 52 C 410 54, 510 120, 500 230 C 492 330, 400 400, 270 396 C 150 392, 80 320, 70 220 Z" fill="none" stroke="#86a86f" stroke-width="3" stroke-dasharray="10 9"/>
-            <path d="M0 300 C 90 280, 150 318, 240 300 S 400 270, 560 296" fill="none" stroke="#bcd0e6" stroke-width="10" stroke-linecap="round"/>
-            <g fill="#173a66" opacity="0.18">
-              <circle cx="120" cy="140" r="3"/><circle cx="430" cy="110" r="3"/><circle cx="460" cy="360" r="3"/><circle cx="110" cy="350" r="3"/>
+            <circle cx="270" cy="220" r="190" fill="#e3e8d6"/>
+            <circle cx="270" cy="220" r="190" fill="none" stroke="#86a86f" stroke-width="3" stroke-dasharray="10 9"/>
+            <path d="M0 300 C 90 280, 150 318, 240 300 S 400 270, 560 296" fill="none" stroke="#bcd0e6" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+            <g stroke="#a33a27" stroke-width="2.5" fill="none" stroke-linecap="round">
+              <path d="M270 220 L 92 220" stroke-dasharray="6 6"/>
+              <path d="M84 220 l12 -7 M84 220 l12 7"/>
             </g>
-            <g stroke="#cdbfae" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round" fill="none">
-              <path d="M210 210 L270 112"/><path d="M210 210 L392 222"/><path d="M210 210 L300 300"/>
+            <rect x="122" y="196" width="104" height="30" rx="15" fill="#fff"/>
+            <text x="174" y="217" font-size="18" fill="#a33a27" text-anchor="middle">ca. 20 km</text>
+            <g>
+              <circle cx="318" cy="118" r="13" fill="#2b5487"/><circle cx="318" cy="118" r="5" fill="#fff"/>
+              <text x="338" y="125" font-size="21" fill="#173a66">Gladbeck</text>
+              <circle cx="408" cy="236" r="13" fill="#2b5487"/><circle cx="408" cy="236" r="5" fill="#fff"/>
+              <text x="352" y="274" font-size="21" fill="#173a66">Gelsenkirchen</text>
+              <circle cx="306" cy="318" r="13" fill="#2b5487"/><circle cx="306" cy="318" r="5" fill="#fff"/>
+              <text x="326" y="325" font-size="21" fill="#173a66">Essen</text>
             </g>
             <g>
-              <circle cx="270" cy="112" r="15" fill="#2b5487"/><circle cx="270" cy="112" r="6" fill="#fff"/>
-              <text x="292" y="104" font-size="22" fill="#173a66">Gladbeck</text>
-              <circle cx="392" cy="222" r="15" fill="#2b5487"/><circle cx="392" cy="222" r="6" fill="#fff"/>
-              <text x="330" y="262" font-size="22" fill="#173a66">Gelsenkirchen</text>
-              <circle cx="300" cy="300" r="15" fill="#2b5487"/><circle cx="300" cy="300" r="6" fill="#fff"/>
-              <text x="322" y="340" font-size="22" fill="#173a66">Essen-Nord</text>
-            </g>
-            <g>
-              <circle cx="210" cy="210" r="42" fill="#a33a27" opacity="0.14"/>
-              <circle cx="210" cy="210" r="24" fill="#a33a27"/>
-              <path d="M198 220 l5-9 5-4 4-5 6-1 4 4 4 8 2 7z" fill="#fff"/>
-              <text x="96" y="182" font-size="26" fill="#173a66">Bottrop</text>
-              <text x="96" y="160" font-size="15" fill="#a33a27" letter-spacing="1.5">UNSER SITZ</text>
+              <circle cx="270" cy="220" r="40" fill="#a33a27" opacity="0.14"/>
+              <circle cx="270" cy="220" r="23" fill="#a33a27"/>
+              <path d="M258 230 l5-9 5-4 4-5 6-1 4 4 4 8 2 7z" fill="#fff"/>
+              <text x="270" y="170" font-size="26" fill="#173a66" text-anchor="middle">Bottrop</text>
             </g>
           </svg>
       </div>
       <div class="reveal reveal-d1">
         <p class="eyebrow">Hier sind wir für Sie da</p>
         <h2>Unser Einsatzgebiet</h2>
-        <p class="lead">Wir kommen zu Ihnen nach Hause, in diese vier Städte:</p>
+        <p class="lead">Wir kommen zu Ihnen nach Hause: in Bottrop und im Umkreis von etwa&nbsp;20&nbsp;km. Zum Beispiel in diese Städte:</p>
           <ul class="city-list">
             <li><span class="pin"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span><span>Bottrop<small>Hier ist unser Sitz</small></span></li>
             <li><span class="pin"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span><span>Gladbeck</span></li>
             <li><span class="pin"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span><span>Gelsenkirchen</span></li>
-            <li><span class="pin"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span><span>Essen-Nord</span></li>
+            <li><span class="pin"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span><span>Essen</span></li>
           </ul>
-        <p class="area-note">Bis etwa 20 km rund um Bottrop. Sie wohnen in einem Ort in der Nähe? Fragen Sie uns gern.</p>
+        <p class="area-note">Ihr Ort ist nicht dabei? Fragen Sie uns einfach. Wir sagen Ihnen gern, ob wir zu Ihnen kommen.</p>
         <a href="kontakt.html" class="btn">Jetzt anfragen</a>
       </div>
     </div>
@@ -323,7 +326,7 @@
     <div class="container footer-grid">
       <div>
         <a class="footer-logo" href="index.html"><img src="images/logo-hell.svg" alt="Alltagsfels – zur Startseite" width="479" height="110" loading="lazy" /></a>
-        <p>Betreuung im Alltag in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord. Vor allem für ältere Menschen und für alle, die im Alltag Unterstützung brauchen.</p>
+        <p>Betreuung im Alltag in Bottrop und Umgebung, im Umkreis von etwa&nbsp;20&nbsp;km. Vor allem für ältere Menschen und für alle, die im Alltag Unterstützung brauchen.</p>
       </div>
       <div>
         <h2>Seiten</h2>
