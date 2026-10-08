@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Alltagsfels – Briefpapier A4 (DIN 5008, Form B)</title>
+<link rel="stylesheet" href="druck.css" />
+<style>
+  /* A4 (210 x 297 mm) + 3 mm Beschnitt = 216 x 303 mm.
+     Alle Positionen unten sind vom Endformat aus gemessen und um 3 mm verschoben. */
+  .blatt { width: 216mm; height: 303mm; background: #fff; }
+  .blatt > * { position: absolute; }
+
+  .logo { top: calc(3mm + 13mm); right: calc(3mm + 20mm); width: 72mm; }
+
+  /* Rücksendeangabe (Absenderzeile) im Anschriftfeld, Form B: Feld ab 45 mm von oben, 20 mm von links */
+  .absender {
+    top: calc(3mm + 57mm); left: calc(3mm + 25mm); width: 80mm;
+    font-size: 7pt; color: var(--text-soft); white-space: nowrap;
+    border-bottom: 0.25mm solid #9a9087; padding-bottom: 0.6mm;
+  }
+
+  /* Informationsblock, Form B: ab 50 mm von oben, 125 mm von links */
+  .info { top: calc(3mm + 50mm); left: calc(3mm + 125mm); width: 65mm; font-size: 11pt; line-height: 1.5; }
+  .info p { margin: 0; }
+  .info b { color: var(--navy); }
+
+  /* Falzmarken (105 mm, 210 mm) und Lochmarke (148,5 mm) */
+  .marke { left: 3mm; width: 5mm; border-top: 0.25mm solid #9a9087; }
+  .marke.loch { width: 7mm; }
+
+  .fuss {
+    left: calc(3mm + 25mm); right: calc(3mm + 20mm); bottom: calc(3mm + 10mm);
+    display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 0.85fr; gap: 4mm;
+    padding-top: 3mm; border-top: 0.4mm solid var(--sand-dark);
+    font-size: 8.5pt; line-height: 1.45; color: var(--text-soft);
+  }
+  .fuss p { margin: 0; }
+  .fuss b { color: var(--navy); }
+  .fuss::before {
+    content: ""; position: absolute; left: 0; top: -1.6mm;
+    width: 3mm; height: 3mm; border-radius: 50%; background: var(--sun);
+  }
+</style>
+</head>
+<body>
+  <section class="seite blatt">
+    <img class="logo" src="bilder/alltagsfels-logo.svg" alt="Alltagsfels" />
+
+    <div class="absender">Alltagsfels UG (haftungsbeschränkt) · Batenbrockstr. 66 · 46238 Bottrop</div>
+
+    <div class="info">
+      <p><b>Telefon</b> <span class="ph">[TELEFON]</span></p>
+      <p><b>E-Mail</b> <span class="ph">[E-MAIL]</span></p>
+      <p><b>Internet</b> www.alltagsfels.de</p>
+    </div>
+
+    <div class="marke" style="top: calc(3mm + 105mm)"></div>
+    <div class="marke loch" style="top: calc(3mm + 148.5mm)"></div>
+    <div class="marke" style="top: calc(3mm + 210mm)"></div>
+
+    <div class="fuss">
+      <div>
+        <p><b>Alltagsfels UG (haftungsbeschränkt)</b></p>
+        <p>Batenbrockstraße 66</p>
+        <p>46238 Bottrop</p>
+      </div>
+      <div>
+        <p>Geschäftsführer: Julian Wehner</p>
+        <p>Amtsgericht Gelsenkirchen</p>
+        <p>HRB 20165</p>
+      </div>
+      <div>
+        <p>Telefon <span class="ph">[TELEFON]</span></p>
+        <p>E-Mail <span class="ph">[E-MAIL]</span></p>
+        <p>www.alltagsfels.de</p>
+      </div>
+      <div>
+        <p>Bankverbindung</p>
+        <p>IBAN <span class="ph">[IBAN]</span></p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

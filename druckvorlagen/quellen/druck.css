@@ -1,0 +1,203 @@
+/* Alltagsfels – gemeinsame Gestaltung für alle Druckvorlagen
+   Farben und Schriften wie auf der Website. Maße in mm, Schriftgrößen in pt.
+   Jede Seite ist 3 mm größer als das Endformat (Beschnitt) – an allen Seiten. */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("schriften/fraunces-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("schriften/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("schriften/atkinson-hyperlegible-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("schriften/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+}
+
+:root {
+  --navy: #173a66;
+  --navy-dark: #102a4c;
+  --blue: #2b5487;
+  --blue-soft: #e8eef6;
+  --red: #a33a27;
+  --red-soft: #f8e4dc;
+  --sun: #e0874f;
+  --sand: #f3e7d6;
+  --sand-dark: #e9d8c1;
+  --cream: #fbf6ee;
+  --text: #1f1b17;
+  --text-soft: #3d3730;
+  --beschnitt: 3mm;
+  --head: "Fraunces", Georgia, serif;
+  --body: "Atkinson Hyperlegible", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: var(--body);
+  font-size: 12.5pt;
+  line-height: 1.4;
+  color: var(--text);
+  background: #8a8a8a; /* nur Bildschirm-Ansicht */
+}
+
+@media print {
+  body {
+    background: none;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--head);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.15;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 2.5mm;
+}
+
+img {
+  display: block;
+}
+
+/* Eine Druckseite inkl. Beschnitt */
+.seite {
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
+  break-after: page;
+  page-break-after: always;
+}
+
+.seite:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+/* Gelb markierte Platzhalter – vor dem Druck ersetzen */
+.ph {
+  background: #ffe600;
+  color: #000;
+  font-weight: 700;
+  padding: 0 1mm;
+  border-radius: 0.8mm;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Platzhalter für das Team – später austauschen */
+.team-platzhalter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5mm;
+  background: #fff6a0;
+  border: 0.6mm dashed #b39400;
+  border-radius: 3mm;
+  color: #000;
+  text-align: center;
+  padding: 4mm;
+}
+
+.team-platzhalter strong {
+  font-size: 15pt;
+}
+
+.team-platzhalter span {
+  font-size: 12pt;
+}
+
+/* Symbole */
+.ic {
+  width: 11mm;
+  height: 11mm;
+  flex: 0 0 11mm;
+  border-radius: 50%;
+  background: var(--red-soft);
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ic.blau {
+  background: var(--blue-soft);
+  color: var(--navy);
+}
+
+.ic svg {
+  width: 6mm;
+  height: 6mm;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.haken {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.haken li {
+  position: relative;
+  padding-left: 7.5mm;
+  margin-bottom: 2mm;
+}
+
+.haken li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6mm;
+  width: 5mm;
+  height: 5mm;
+  border-radius: 50%;
+  background: var(--blue-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23173a66' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5 10 17.5 19.5 7'/%3E%3C/svg%3E") center / 3.4mm no-repeat;
+}
+
+.kreuze li::before {
+  background: var(--red-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a33a27' stroke-width='3.4' stroke-linecap='round'%3E%3Cpath d='M7 7l10 10M17 7 7 17'/%3E%3C/svg%3E") center / 3.4mm no-repeat;
+}
+
+.ueberzeile {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 10.5pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 1.5mm;
+}

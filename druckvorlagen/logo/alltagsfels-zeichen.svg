@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 12 116 96" role="img" aria-label="Alltagsfels">
+  <circle cx="90" cy="44" r="19" fill="#e0874f"/>
+  <path d="M6 104 L15 84 L31 70 L47 62 L59 50 L77 47 L93 57 L105 73 L114 104 Z" fill="#173a66" stroke="#173a66" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M47 62 L59 50 L77 47 L66 104 L38 104 Z" fill="#2b5487"/>
+  <path d="M77 47 L93 57 L105 73 L86 80 Z" fill="#24497a"/>
+  <path d="M15 84 L31 70 L47 62 L38 104 L10 104 Z" fill="#1f4675"/></svg>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Alltagsfels – Visitenkarten 85 x 55 mm</title>
+<link rel="stylesheet" href="druck.css" />
+<style>
+  /* 85 x 55 mm + 3 mm Beschnitt = 91 x 61 mm; Sicherheitsabstand 4 mm innerhalb des Endformats */
+  .karte {
+    width: 91mm;
+    height: 61mm;
+    padding: 7mm 7mm 7mm 10mm;
+    display: flex;
+    flex-direction: column;
+  }
+  .vorne { background: var(--cream); }
+  .vorne::before {
+    /* farbiger Streifen am linken Rand (läuft in den Beschnitt) */
+    content: "";
+    position: absolute; left: 0; top: 0; bottom: 0; width: 5mm;
+    background: var(--navy);
+  }
+  .vorne::after {
+    content: "";
+    position: absolute; left: 0; top: 0; width: 5mm; height: 22mm;
+    background: var(--sun);
+  }
+  .vorne .logo { width: 47mm; margin-bottom: 3.5mm; }
+  .name { font-family: var(--head); font-size: 15pt; color: var(--navy); line-height: 1.1; margin: 0; }
+  .funktion { font-size: 12pt; font-weight: 700; color: var(--red); margin: 0.8mm 0 0; }
+  .daten { margin-top: auto; font-size: 12pt; line-height: 1.3; }
+  .daten p { margin: 0; }
+  .daten b { color: var(--navy); }
+
+  .hinten {
+    background: var(--navy);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 7mm;
+  }
+  .hinten::after {
+    content: "";
+    position: absolute; width: 26mm; height: 26mm; right: -9mm; top: -11mm;
+    border-radius: 50%; background: var(--sun); opacity: .9;
+  }
+  .hinten > * { position: relative; z-index: 1; }
+  .hinten img { width: 17mm; margin-bottom: 3mm; }
+  .hinten .marke { font-family: var(--head); font-size: 16pt; margin: 0 0 2mm; }
+  .hinten p { font-size: 12pt; line-height: 1.3; margin: 0; max-width: 66mm; color: #f1f5fa; }
+</style>
+</head>
+<body>
+
+  <!-- ============ Julian Wehner – Vorderseite ============ -->
+  <section class="seite karte vorne">
+    <img class="logo" src="bilder/alltagsfels-logo.svg" alt="Alltagsfels" />
+    <p class="name">Julian Wehner</p>
+    <p class="funktion">Geschäftsführer</p>
+    <div class="daten">
+      <p><b>Telefon</b> <span class="ph">[TELEFON]</span></p>
+      <p><b>E-Mail</b> <span class="ph">[E-MAIL]</span></p>
+      <p>www.alltagsfels.de</p>
+    </div>
+  </section>
+
+  <!-- ============ Julian Wehner – Rückseite ============ -->
+  <section class="seite karte hinten">
+    <img src="bilder/alltagsfels-zeichen-hell.svg" alt="" />
+    <p class="marke">Alltagsfels</p>
+    <p>Alltagsbetreuung für ältere Menschen in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord.</p>
+  </section>
+
+  <!-- ============ Dominik Vogel – Vorderseite ============ -->
+  <section class="seite karte vorne">
+    <img class="logo" src="bilder/alltagsfels-logo.svg" alt="Alltagsfels" />
+    <p class="name">Dominik Vogel</p>
+    <p class="funktion">Pflegefachkraft</p>
+    <div class="daten">
+      <p><b>Telefon</b> <span class="ph">[TELEFON]</span></p>
+      <p><b>E-Mail</b> <span class="ph">[E-MAIL]</span></p>
+      <p>www.alltagsfels.de</p>
+    </div>
+  </section>
+
+  <!-- ============ Dominik Vogel – Rückseite ============ -->
+  <section class="seite karte hinten">
+    <img src="bilder/alltagsfels-zeichen-hell.svg" alt="" />
+    <p class="marke">Alltagsfels</p>
+    <p>Alltagsbetreuung für ältere Menschen in Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord.</p>
+  </section>
+
+</body>
+</html>

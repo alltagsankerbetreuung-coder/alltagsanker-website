@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Alltagsfels – Infoblatt für Partner A4</title>
+<link rel="stylesheet" href="druck.css" />
+<style>
+  /* A4 (210 x 297 mm) + 3 mm Beschnitt = 216 x 303 mm */
+  .blatt {
+    width: 216mm; height: 303mm; background: #fff;
+    padding: 16mm 18mm 0; display: flex; flex-direction: column;
+    font-size: 12pt; line-height: 1.38;
+  }
+  .kopf { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 7mm; }
+  .kopf img { width: 62mm; }
+  .kopf .fuer { text-align: right; font-size: 11pt; font-weight: 700; color: var(--red); letter-spacing: .06em; text-transform: uppercase; line-height: 1.5; margin-top: 2mm; }
+  h1 { font-size: 25pt; margin-bottom: 2.5mm; }
+  .einleitung { font-size: 13pt; color: var(--text-soft); margin-bottom: 7mm; }
+  .reihe { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-bottom: 6mm; }
+  .kasten { background: var(--cream); border-radius: 4mm; padding: 5mm 6mm; }
+  .kasten.nein { background: #fff; border: 0.5mm solid var(--red-soft); }
+  .kasten h2 { font-size: 15pt; margin-bottom: 3mm; display: flex; align-items: center; gap: 3mm; }
+  .kasten h2 .ic { width: 9mm; height: 9mm; flex-basis: 9mm; }
+  .kasten h2 .ic svg { width: 5mm; height: 5mm; }
+  .kasten .haken li:last-child { margin-bottom: 0; }
+  .kasten p:last-child { margin-bottom: 0; }
+  .team-platzhalter { height: 100%; min-height: 40mm; }
+  .vermitteln { margin-bottom: 6mm; }
+  .vermitteln h2 { font-size: 15pt; margin-bottom: 3mm; }
+  .schritte { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; list-style: none; margin: 0; padding: 0; }
+  .schritte li { display: flex; gap: 3mm; align-items: flex-start; }
+  .schritte .nr {
+    width: 9mm; height: 9mm; flex: 0 0 9mm; border-radius: 50%;
+    background: var(--navy); color: #fff; font-family: var(--head); font-size: 13pt;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .kontakt {
+    margin: auto -18mm 0; padding: 7mm 18mm 10mm;
+    background: var(--navy); color: #fff; font-size: 12.5pt;
+  }
+  .kontakt p { margin: 0 0 1.5mm; }
+  .kontakt .gross { font-family: var(--head); font-size: 15pt; margin-bottom: 2.5mm; }
+  .kontakt .label { color: #f3c9a8; font-weight: 700; }
+  .kontakt .firma { color: #e3ebf6; margin: 0; }
+</style>
+</head>
+<body>
+  <section class="seite blatt">
+    <div class="kopf">
+      <img src="bilder/alltagsfels-logo.svg" alt="Alltagsfels" />
+      <p class="fuer">Information für<br />Pflegedienste, Pflegeberatung,<br />Sozialdienste und Hausarztpraxen</p>
+    </div>
+
+    <h1>Alltagsbetreuung zu Hause –<br /><span style="white-space:nowrap">ab Januar 2027</span></h1>
+    <p class="einleitung">Wir unterstützen Menschen im Alltag, damit sie gut zu Hause leben können. In Bottrop, Gladbeck, Gelsenkirchen und Essen-Nord. Montag bis Samstag, zu festen Zeiten, mindestens 2 Stunden pro Besuch.</p>
+
+    <div class="reihe">
+      <div class="kasten">
+        <h2><span class="ic blau"><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19.5 7"/></svg></span>Was wir übernehmen</h2>
+        <ul class="haken">
+          <li>Gesellschaft leisten</li>
+          <li>Begleitung zu Terminen, zum Beispiel zum Arzt, zu Ämtern oder zur Bank</li>
+          <li>Gemeinsame Hilfe im Haushalt</li>
+          <li>Hilfe bei Post und Terminen</li>
+          <li>Stundenweise Entlastung pflegender Angehöriger</li>
+        </ul>
+      </div>
+      <div class="kasten nein">
+        <h2><span class="ic"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></svg></span>Was wir nicht übernehmen</h2>
+        <ul class="haken kreuze">
+          <li>Keine Pflege, zum Beispiel Waschen oder Anziehen</li>
+          <li>Keine Medikamente</li>
+        </ul>
+        <p style="margin-top:3mm">Für Pflege verweisen wir an Pflegedienste.</p>
+      </div>
+    </div>
+
+    <div class="reihe">
+      <div class="kasten">
+        <h2><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.8"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg></span>Für wen</h2>
+        <p>Für pflegebedürftige Erwachsene, vor allem Senioren. Auch bei Demenz.</p>
+        <ul class="haken">
+          <li><strong>Mit Pflegegrad:</strong> Wir rechnen über die Pflegekasse ab.</li>
+          <li><strong>Ohne Pflegegrad:</strong> als Selbstzahler.</li>
+        </ul>
+      </div>
+      <div>
+        <!-- TEAM-PLATZHALTER: später durch Fotos oder Kreise mit Anfangsbuchstaben ersetzen -->
+        <div class="team-platzhalter">
+          <strong>[TEAM – noch offen]</strong>
+          <span>Wer wir sind: Julian Wehner und Dominik Vogel – Darstellung folgt</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vermitteln">
+      <h2>So vermitteln Sie</h2>
+      <ol class="schritte">
+        <li><span class="nr">1</span><span>Rufen Sie uns an.</span></li>
+        <li><span class="nr">2</span><span>Wir melden uns innerhalb eines Werktags.</span></li>
+        <li><span class="nr">3</span><span>Kostenloses Erstgespräch zu Hause.</span></li>
+      </ol>
+    </div>
+
+    <div class="kontakt">
+      <p class="gross">Wir freuen uns auf die Zusammenarbeit.</p>
+      <p><span class="label">Telefon</span> <span class="ph">[TELEFON]</span> &nbsp;·&nbsp; <span class="label">E-Mail</span> <span class="ph">[E-MAIL]</span> &nbsp;·&nbsp; www.alltagsfels.de</p>
+      <p class="firma">Alltagsfels UG (haftungsbeschränkt) · Batenbrockstraße 66 · 46238 Bottrop</p>
+    </div>
+  </section>
+</body>
+</html>
