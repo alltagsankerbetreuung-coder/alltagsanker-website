@@ -1984,3 +1984,54 @@ form.contact-form ::placeholder {
     padding: 26px 22px;
   }
 }
+
+/* ---------- Mitarbeiten ---------- */
+
+.job-facts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 0;
+}
+
+.job-facts li {
+  background: var(--white);
+  border: 2px solid var(--sand-dark);
+  color: var(--navy);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.job-no {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: var(--red-soft);
+  border-radius: 14px;
+}
+
+.job-welcome {
+  margin: 32px 0 0;
+  max-width: 820px;
+  font-size: 1.3rem;
+  color: var(--text-soft);
+}
+
+.contact-item .btn.job-mail {
+  margin-top: 16px;
+  color: #fff;
+}
+
+.job-teaser {
+  margin: 0 0 24px;
+}
+
+/* Lange Wörter auf kleinen Handys sauber trennen */
+.job-title {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+}

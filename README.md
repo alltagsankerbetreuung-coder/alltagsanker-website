@@ -22,8 +22,9 @@ Diese Punkte kann nur der Inhaber erledigen. Die Website selbst ist fertig.
   }
   ```
 - [ ] **Telefonnummer eintragen**, sobald es sie gibt: in `kontakt.html` (Kasten „Telefon“, Text „Unsere Telefonnummer folgt bald …“ ersetzen), im Fußbereich aller Seiten (Liste „Kontakt“), in `index.html` im Google-Datenblock (`"telephone": "+49 …"`) und im Impressum.
-- [ ] **Hinweise auf den Start anpassen:** Die Leiste ganz oben auf allen Seiten („Wir starten im Januar 2027 …“) ändern oder entfernen. Außerdem „Ab Januar 2027 …“ in `index.html` (Ablauf, Schritt 3), `kontakt.html` („So geht es weiter“), `danke.html` (Schritt 3) und `fragen.html` (Frage „Ab wann kann die Betreuung beginnen?“, zweimal: sichtbar und im Google-Datenblock oben).
-- [ ] **Kontaktformular testen:** Einmal selbst eine Nachricht senden. Beim ersten Mal kommt von formsubmit.co eine Bestätigungs-E-Mail an `alltagsankerbetreuung@gmail.com`, die einmal bestätigt werden muss.
+- [ ] **Hinweise auf den Start anpassen:** Die Leiste ganz oben auf allen Seiten („Wir starten im Januar 2027 …“) ändern oder entfernen. Außerdem „Ab Januar 2027 …“ in `index.html` (Ablauf, Schritt 3), `kontakt.html` („So geht es weiter“), `danke.html` (Schritt 3 für Kunden und für Bewerber), `mitarbeiten.html` (Überschrift „Ab Januar 2027“, „So geht es weiter“), `ueber-uns.html` (Kasten „Wir suchen Verstärkung“) und `fragen.html` (Frage „Ab wann kann die Betreuung beginnen?“, zweimal: sichtbar und im Google-Datenblock oben).
+- [ ] **Stellenangebot pflegen:** Sobald alle Stellen besetzt sind, den Link „Mitarbeiten“ im Fußbereich aller Seiten und den Kasten auf „Über uns“ entfernen. Stundenlohn, Fahrtkosten oder Kursgebühr bei Bedarf auf `mitarbeiten.html` ergänzen, wenn sie entschieden sind.
+- [ ] **Kontaktformular testen:** Einmal selbst eine Nachricht senden, auch über das Bewerbungsformular auf `mitarbeiten.html`. Beim ersten Mal kommt von formsubmit.co eine Bestätigungs-E-Mail an `alltagsankerbetreuung@gmail.com`, die einmal bestätigt werden muss.
 - [ ] **Impressum und Datenschutz prüfen:** Stimmen alle Angaben (z. B. Handelsregister, Telefon)? Am besten rechtlich prüfen lassen.
 - [ ] **Bei Google anmelden:** In der [Google Search Console](https://search.google.com/search-console) die Domain bestätigen und `https://alltagsfels.de/sitemap.xml` einreichen. Empfehlenswert: ein kostenloses Google-Unternehmensprofil für Bottrop anlegen.
 - [ ] **Vorschau testen:** Den Link `https://alltagsfels.de` in WhatsApp an sich selbst schicken und prüfen, ob Bild und Text erscheinen.
@@ -37,7 +38,8 @@ Diese Punkte kann nur der Inhaber erledigen. Die Website selbst ist fertig.
 - `kosten.html` – Kosten und Pflegekasse (Stand der Rechtslage regelmäßig prüfen)
 - `fragen.html` – Häufige Fragen (vor allem für Angehörige)
 - `kontakt.html` – Kontakt (inkl. Kontaktformular)
-- `danke.html` – Bestätigungsseite nach Formularversand
+- `mitarbeiten.html` – Stellenangebot Alltagsbegleitung (m/w/d) mit Bewerbungsformular; verlinkt im Fußbereich und auf „Über uns“, nicht im Hauptmenü
+- `danke.html` – Bestätigungsseite nach Formularversand (nach einer Bewerbung, `danke.html?bewerbung`, erscheinen eigene Schritte für Bewerber)
 - `impressum.html`, `datenschutz.html` – Pflichtseiten
 - `404.html` – Seite für nicht gefundene Adressen
 - `style.css` – Gemeinsame Gestaltung (Farben, Schriften, Abstände)
