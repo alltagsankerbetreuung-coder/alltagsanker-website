@@ -1627,7 +1627,7 @@ form.contact-form .btn {
 
 /* ---------- Anpassung an kleinere Bildschirme ---------- */
 
-@media (max-width: 1420px) {
+@media (max-width: 1560px) {
   .header-cta {
     display: none;
   }
