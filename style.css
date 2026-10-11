@@ -551,28 +551,6 @@ summary:focus-visible {
   stroke-linejoin: round;
 }
 
-.start-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 26px;
-  margin-bottom: 0;
-  padding: 8px 16px 8px 10px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 999px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.start-note .dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--sun);
-  box-shadow: 0 0 0 5px rgba(224, 135, 79, 0.25);
-}
-
 /* ---------- Unterseiten: Kopfbereich ---------- */
 
 .page-hero {
@@ -596,6 +574,14 @@ summary:focus-visible {
 
 .page-hero .btn {
   margin-top: 24px;
+}
+
+.page-hero .btn-row .btn {
+  margin-top: 0;
+}
+
+.page-hero .btn-row {
+  margin-top: 28px;
 }
 
 .page-hero .hero-media img {
@@ -1280,7 +1266,7 @@ details[open] summary::after {
 }
 
 .contact-item a {
-  word-break: break-word;
+  overflow-wrap: break-word;
   font-weight: 700;
 }
 
@@ -1571,6 +1557,7 @@ form.contact-form .btn {
 }
 
 .site-footer a {
+  overflow-wrap: break-word;
   color: #fff;
   text-decoration-color: rgba(255, 255, 255, 0.4);
 }
@@ -1856,8 +1843,13 @@ form.contact-form .btn {
 
   .row-card,
   .person,
-  .info-box {
+  .info-box,
+  .contact-item {
     flex-direction: column;
+  }
+
+  .contact-item {
+    gap: 14px;
   }
 
   .card,
@@ -1962,4 +1954,33 @@ form.contact-form .btn {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Kosten: Einzelheiten direkt in den beiden Kacheln */
+.pay-card p + .ticks {
+  margin-top: 20px;
+}
+
+.pay-card .ticks {
+  margin-bottom: 0;
+}
+
+.pay-card .ticks li:last-child {
+  margin-bottom: 0;
+}
+
+/* Gut lesbare Beispieltexte in Formularfeldern */
+form.contact-form ::placeholder {
+  color: #6f665c;
+  opacity: 1;
+}
+
+.faq-nav:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .price-box {
+    padding: 26px 22px;
+  }
 }
