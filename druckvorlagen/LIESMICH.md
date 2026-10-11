@@ -10,9 +10,10 @@ Gelb markiert sind Angaben, die es noch nicht gibt:
 - **[TELEFON]** – Telefonnummer
 - **[E-MAIL]** – E-Mail-Adresse
 - **[IBAN]** – Bankverbindung (nur Briefpapier und E-Mail-Signatur)
-- **[TEAM – noch offen]** – Kasten für Julian Wehner und Dominik Vogel (Flyer Seite 4 und Partner-Infoblatt)
 
 Die Platzhalter stehen in den Dateien im Ordner `quellen/`. Nach dem Ersetzen müssen die PDFs neu erstellt werden (siehe unten).
+
+Das Team (Flyer Seite 4 und Partner-Infoblatt) wird ohne Fotos mit Kreisen und Anfangsbuchstaben gezeigt (Entscheidung vom 08.10.2026).
 
 ## Fertige PDFs zum Drucken – Ordner `pdf/`
 
