@@ -57,7 +57,7 @@
       </div>
   </section>
 
-  <section id="weiter-kunden">
+  <section>
     <div class="container narrow">
       <h2>So geht es weiter</h2>
       <ol class="steps steps-vertical">
@@ -66,18 +66,6 @@
         <li><span class="step-num" aria-hidden="true">3</span><h3>Die Betreuung beginnt</h3><p>Ab Januar 2027 kann es losgehen.</p></li>
       </ol>
       <p class="section-foot">In der Zwischenzeit: <a class="text-link" href="fragen.html">Häufige Fragen lesen</a></p>
-    </div>
-  </section>
-
-  <section id="weiter-bewerbung" hidden>
-    <div class="container narrow">
-      <h2>So geht es weiter</h2>
-      <ol class="steps steps-vertical">
-        <li><span class="step-num" aria-hidden="true">1</span><h3>Wir lesen Ihre Bewerbung</h3><p>Wir melden uns so schnell wie möglich bei Ihnen.</p></li>
-        <li><span class="step-num" aria-hidden="true">2</span><h3>Wir lernen uns kennen</h3><p>In einem Gespräch erzählen wir Ihnen alles über die Arbeit bei uns.</p></li>
-        <li><span class="step-num" aria-hidden="true">3</span><h3>Sie fangen an</h3><p>Ab Januar 2027 können Sie bei uns anfangen.</p></li>
-      </ol>
-      <p class="section-foot">Ihren Lebenslauf können Sie uns gern per E-Mail schicken: <a href="mailto:alltagsankerbetreuung@gmail.com?subject=Bewerbung%20Alltagsbegleitung">alltagsankerbetreuung<wbr />@gmail.com</a></p>
     </div>
   </section>
 
@@ -114,12 +102,5 @@
       <p><a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
-  <script>
-    // Nach einer Bewerbung (danke.html?bewerbung) die passenden Schritte zeigen
-    if (/bewerbung/.test(window.location.search)) {
-      document.getElementById("weiter-kunden").hidden = true;
-      document.getElementById("weiter-bewerbung").hidden = false;
-    }
-  </script>
 </body>
 </html>
