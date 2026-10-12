@@ -41,3 +41,31 @@ if ("IntersectionObserver" in window) {
     el.classList.add("is-visible");
   });
 }
+
+// Formulare: Antwort-Adresse setzen und doppeltes Absenden verhindern
+document.querySelectorAll("form.contact-form").forEach(function (form) {
+  form.addEventListener("submit", function () {
+    var mail = form.querySelector('input[type="email"]');
+    var replyto = form.querySelector(".replyto");
+    if (mail && replyto) {
+      replyto.value = mail.value;
+    }
+    var button = form.querySelector('button[type="submit"]');
+    if (button) {
+      button.dataset.label = button.lastChild.textContent;
+      button.disabled = true;
+      button.setAttribute("aria-busy", "true");
+      button.lastChild.textContent = " Wird gesendet …";
+    }
+  });
+});
+
+// Nach dem Zurückblättern den Senden-Knopf wieder freigeben
+window.addEventListener("pageshow", function (event) {
+  if (!event.persisted) return;
+  document.querySelectorAll("form.contact-form button[disabled]").forEach(function (button) {
+    button.disabled = false;
+    button.removeAttribute("aria-busy");
+    button.lastChild.textContent = button.dataset.label || button.lastChild.textContent;
+  });
+});
