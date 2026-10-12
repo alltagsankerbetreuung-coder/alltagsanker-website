@@ -118,6 +118,10 @@
   .kontakt p { margin: 0 0 1.4mm; }
   .kontakt .label { color: #f3c9a8; font-weight: 700; }
   .kontakt .firma { margin: 3mm 0 0; padding-top: 3mm; border-top: 0.3mm solid rgba(255,255,255,.3); font-size: 12pt; color: #e3ebf6; }
+  .verlassen { margin-bottom: 4mm; }
+  .rueck .zeiten { margin-bottom: 4.5mm; }
+  .verlassen li { margin-bottom: 1.2mm; }
+  .kontakt .ansprech { margin-bottom: 2.5mm; padding-bottom: 2.5mm; border-bottom: 0.3mm solid rgba(255,255,255,.3); }
   .rueck .logo { width: 50mm; margin-bottom: 6mm; }
 </style>
 </head>
@@ -195,17 +199,18 @@
 
   <!-- ===================== SEITE 4: Rückseite ===================== -->
   <section class="seite panel rueck" data-seite="4">
-    <h2>Wer zu Ihnen kommt</h2>
-
-    <!-- TEAM-PLATZHALTER: Diesen Kasten später durch Fotos oder Kreise mit Anfangsbuchstaben ersetzen -->
-    <div class="team-platzhalter">
-      <strong>[TEAM – noch offen]</strong>
-      <span>Julian Wehner und Dominik Vogel – Darstellung folgt</span>
-    </div>
+    <h2>Darauf ist Verlass</h2>
+    <ul class="haken verlassen">
+      <li><strong>Feste Ansprechpartner,</strong> vertraute Gesichter</li>
+      <li><strong>Pflegefachkraft</strong> im Team</li>
+      <li><strong>Aus der Region,</strong> wir kennen uns aus</li>
+      <li><strong>Mit Zeit und Ruhe</strong> für Ihre Wünsche</li>
+      <li><strong>Verschwiegen:</strong> Es bleibt unter uns</li>
+    </ul>
 
     <div class="zeiten">
       <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2.5"/></svg></span>
-      <p>Wir kommen Montag bis Samstag, zu festen Zeiten, die wir mit Ihnen absprechen.</p>
+      <p>Wir kommen zu festen Zeiten, die wir mit Ihnen absprechen.</p>
     </div>
 
     <h3>So einfach geht es los:</h3>
@@ -216,6 +221,7 @@
     </ol>
 
     <div class="kontakt">
+      <p class="ansprech"><span class="label">Ihr Ansprechpartner:</span> Julian Wehner, Geschäftsführer</p>
       <p><span class="label">Telefon:</span> <span class="ph">[TELEFON]</span></p>
       <p><span class="label">E-Mail:</span> <span class="ph">[E-MAIL]</span></p>
       <p><span class="label">Internet:</span> www.alltagsfels.de</p>
