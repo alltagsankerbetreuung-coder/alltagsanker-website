@@ -44,7 +44,7 @@ Diese Punkte kann nur der Inhaber erledigen. Die Website selbst ist fertig.
 - `404.html` – Seite für nicht gefundene Adressen
 - `style.css` – Gemeinsame Gestaltung (Farben, Schriften, Abstände)
 - `script.js` – Handy-Menü, sanftes Einblenden beim Scrollen, Jahreszahl
-- `fonts/` – Schriften Fraunces (Überschriften) und Atkinson Hyperlegible (Text), liegen auf der eigenen Website, keine Verbindung zu Google
+- `fonts/` – Schriften Fraunces (Überschriften) und Atkinson Hyperlegible Next (Text), beide als variable Schriften, liegen auf der eigenen Website, keine Verbindung zu Google
 - `images/` – Logo (`logo.svg`, `logo-hell.svg` für dunklen Hintergrund), `favicon.svg`, Zeichnungen, `vorschau.png` (Vorschaubild 1200 × 630 für WhatsApp, E-Mail und soziale Netzwerke) und `icon-192.png` / `icon-512.png` (Symbole für den Handy-Startbildschirm)
 - `apple-touch-icon.png` und `site.webmanifest` – Symbol und Angaben für den Handy-Startbildschirm
 - `sitemap.xml` – Liste aller Seiten für Suchmaschinen (für https://alltagsfels.de, wird erst zum Start bei Google eingereicht)
