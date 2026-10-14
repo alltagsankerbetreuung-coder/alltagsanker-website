@@ -10,7 +10,6 @@ Gelb markiert sind Angaben, die es noch nicht gibt:
 - **[TELEFON]** – Telefonnummer
 - **[E-MAIL]** – E-Mail-Adresse
 - **[IBAN]** – Bankverbindung (nur Briefpapier und E-Mail-Signatur)
-- **[TEAM – noch offen]** – Kasten für Julian Wehner und Dominik Vogel (Flyer Seite 4 und Partner-Infoblatt)
 
 Die Platzhalter stehen in den Dateien im Ordner `quellen/`. Nach dem Ersetzen müssen die PDFs neu erstellt werden (siehe unten).
 
@@ -61,7 +60,8 @@ Fragt die Druckerei nach einem „Druckbogen“ oder „A4 auf A5 gefalzt“, ne
 
 ## Vorschau – Ordner `vorschau/`
 
-Zwei Bilder mit allen Vorlagen auf einen Blick.
+Zwei Bilder mit allen Vorlagen auf einen Blick. Nach Änderungen an den Vorlagen neu erstellen mit
+`node druckvorlagen/vorschau-erstellen.js` (siehe unten).
 
 ## Quelldateien – Ordner `quellen/`
 
@@ -75,9 +75,12 @@ Bilder liegen in `quellen/bilder/`, Schriften in `quellen/schriften/`.
 node druckvorlagen/pdf-erstellen.js          # alle PDFs
 node druckvorlagen/pdf-erstellen.js flyer    # nur der Flyer
 python3 druckvorlagen/word-vorlage-erstellen.py   # Word-Vorlage
+node druckvorlagen/vorschau-erstellen.js     # beide Vorschaubilder in vorschau/
 ```
 
 Benötigt: Node.js mit Playwright (Chromium), Python 3 mit `pypdf` und `python-docx`.
+Für das Word-Beispiel in der Vorschau zusätzlich LibreOffice und `pdftoppm`; ohne diese wird
+das gespeicherte Bild `vorschau/teile/word-beispiel.png` genommen.
 
 ## Hinweise für die Druckerei
 
