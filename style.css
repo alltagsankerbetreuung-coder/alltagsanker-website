@@ -1496,7 +1496,7 @@ legend { padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
 .karte-orte .ort-essen { left: 57.8%; top: 66.1%; }
 .karte-orte .ort-oberhausen { left: 38%; top: 57.2%; }
 .karte-orte .ort-dinslaken { left: 22%; top: 40.7%; }
-.karte-orte .ort-radius { left: 3%; top: 15.5%; text-shadow: none; }
+.karte-orte .ort-radius { left: 10%; top: 54%; }
 @media (max-width: 29.99em) {
   .karte-orte li { font-size: 1rem; }
   .karte-orte .ort-bottrop { font-size: 1.25rem; }
