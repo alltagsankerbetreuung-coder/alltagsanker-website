@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 462" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<defs><clipPath id="fels"><path d="M28.0 452.0 76.6 344.0 163.0 268.4 249.4 225.2 314.2 160.4 411.4 144.2 497.8 198.2 562.6 284.6 611.2 452.0z"/></clipPath></defs>
+<circle cx="481.6" cy="128.0" r="102.6" fill="#e0874f"/>
+<g clip-path="url(#fels)">
+<path fill="#fbf6ee" d="M0 0h640v462H0z"/>
+<path fill="#e3e8d6" d="M0 452h640v462H0z"/>
+<path fill="#fbf6ee" d="M0 0h640v330H0z"/>
+<path fill="#e3e8d6" stroke="#173a66" stroke-width="2" d="M0 330C120 320 220 334 330 326S520 318 640 330V470H0z"/>
+<path fill="#e9d8c1" stroke="#173a66" stroke-width="3" d="M262 330V228l58-44 58 44V330z"/>
+<path fill="none" stroke="#173a66" stroke-width="3" d="M250 236l70-58 70 58"/>
+<path fill="#173a66" stroke="#173a66" stroke-width="3" d="M302 330v-56a18 18 0 0 1 36 0v56z"/>
+<circle cx="331" cy="304" r="2.5" fill="#e0874f"/>
+<path fill="#fbf6ee" stroke="#173a66" stroke-width="2.5" d="M280 248h22v22h-22zM338 248h22v22h-22z"/>
+<path fill="#f3e7d6" d="M60 452C120 420 210 398 292 340H348C390 372 470 412 600 452Z"/>
+<path stroke="#173a66" stroke-width="3" d="M60 452C120 420 210 398 292 340M600 452C470 412 390 372 348 340"/>
+<path stroke="#173a66" stroke-width="3" d="M150 452C210 420 280 380 318 340M500 452C430 418 360 380 322 340"/>
+<path stroke="#173a66" stroke-width="1.5" d="M140 430h22M230 398h18M410 398h18M486 430h22"/>
+<path stroke="#173a66" stroke-width="1.5" d="M120 352v-10M128 354v-8M520 346v-10M528 348v-8"/>
+<path fill="#e3e8d6" stroke="#173a66" stroke-width="3" d="M454 300a22 22 0 1 1 44 0a22 22 0 1 1-44 0z"/>
+<path stroke="#173a66" stroke-width="3" d="M476 322v14"/>
+<path stroke="#173a66" stroke-width="3" d="M0 452h640"/>
+</g>
+<path stroke="#173a66" stroke-width="3.5" d="M28.0 452.0 76.6 344.0 163.0 268.4 249.4 225.2 314.2 160.4 411.4 144.2 497.8 198.2 562.6 284.6 611.2 452.0z"/>
+<path stroke="#173a66" stroke-width="3.5" d="M6 452h628"/>
+</svg>

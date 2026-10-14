@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 462" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<defs><clipPath id="fels"><path d="M28.0 452.0 76.6 344.0 163.0 268.4 249.4 225.2 314.2 160.4 411.4 144.2 497.8 198.2 562.6 284.6 611.2 452.0z"/></clipPath></defs>
+<circle cx="481.6" cy="128.0" r="102.6" fill="#e0874f"/>
+<g clip-path="url(#fels)">
+<path fill="#f3e7d6" d="M0 0h640v462H0z"/>
+<path fill="#e9d8c1" d="M0 430h640v462H0z"/>
+<path fill="#d9c6ab" stroke="#173a66" stroke-width="3" d="M200 230H470V244H200z"/>
+<path stroke="#173a66" stroke-width="3" d="M238 244v14q0 8 8 8"/>
+<path stroke="#173a66" stroke-width="3" d="M300 244v14q0 8 8 8"/>
+<path stroke="#173a66" stroke-width="3" d="M362 244v14q0 8 8 8"/>
+<path stroke="#173a66" stroke-width="3" d="M428 244v14q0 8 8 8"/>
+<path fill="#2b5487" stroke="#173a66" stroke-width="3" d="M272 278l-20 92 13 3 18-74z"/>
+<path fill="#2b5487" stroke="#173a66" stroke-width="3" d="M328 278l20 92-13 3-18-74z"/>
+<path fill="#2b5487" stroke="#173a66" stroke-width="3" d="M300 262l-30 14-6 30 4 92h64l4-92-6-30z"/>
+<path stroke="#fbf6ee" stroke-width="2" d="M300 262l-12 34M300 262l12 34M300 296v102"/>
+<path stroke="#fbf6ee" stroke-width="1.5" d="M276 340h14M310 340h14"/>
+<g fill="#e0874f"><circle cx="306" cy="314" r="2.5"/><circle cx="306" cy="338" r="2.5"/><circle cx="306" cy="362" r="2.5"/></g>
+<path stroke="#173a66" stroke-width="2.5" d="M428 266l-20 50M436 266l20 50"/>
+<path fill="#a33a27" stroke="#173a66" stroke-width="3" d="M398 316h68l-6 58h-56z"/>
+<path stroke="#fbf6ee" stroke-width="1.5" d="M410 334h44"/>
+<path fill="#e0874f" stroke="#173a66" stroke-width="2.5" d="M230 262h16l-2 96h-12z"/>
+<path stroke="#173a66" stroke-width="1.5" d="M232 358v8M238 358v8M244 358v8M232 292h12M232 300h12"/>
+<path fill="#173a66" stroke="#173a66" stroke-width="2.5" d="M250 430v-14h24l16 8v6zM296 430v-14h24l16 8v6z"/>
+<path fill="#d9c6ab" stroke="#173a66" stroke-width="3" d="M360 400H500V410H360z"/>
+<path stroke="#173a66" stroke-width="3" d="M372 410v20M488 410v20"/>
+<path fill="#e3e8d6" stroke="#173a66" stroke-width="2.5" d="M392 400v-16h36v16z"/>
+<path stroke="#173a66" stroke-width="3" d="M0 430h640"/>
+</g>
+<path stroke="#173a66" stroke-width="3.5" d="M28.0 452.0 76.6 344.0 163.0 268.4 249.4 225.2 314.2 160.4 411.4 144.2 497.8 198.2 562.6 284.6 611.2 452.0z"/>
+<path stroke="#173a66" stroke-width="3.5" d="M6 452h628"/>
+</svg>

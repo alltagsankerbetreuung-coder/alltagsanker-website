@@ -1,12 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="300" cy="300" r="250" fill="#e3e8d6"/>
-<circle cx="300" cy="300" r="250" stroke="#173a66" stroke-width="2.5" stroke-dasharray="10 9"/>
-<path stroke="#173a66" stroke-width="2" d="M292 308 126 474M126 462v12h12"/>
-<g fill="#173a66"><circle cx="351" cy="235" r="9"/><circle cx="436" cy="308" r="9"/><circle cx="372" cy="395" r="9"/></g>
-<g fill="#fff"><circle cx="351" cy="235" r="3.5"/><circle cx="436" cy="308" r="3.5"/><circle cx="372" cy="395" r="3.5"/></g>
-<path fill="#d9c6ab" stroke="#173a66" stroke-width="2.5" d="M318 328l10-12h16l10 12z"/>
-<path stroke="#173a66" stroke-width="2.5" d="M330 316l6-14 6 14M336 302l1 14"/>
-<circle cx="316" cy="276" r="12" fill="#e0874f"/>
-<path fill="#173a66" stroke="#173a66" stroke-width="3" d="M276 312l5-11 9-8 9-4 7-7 10-2 9 6 7 9 5 17z"/>
-<path fill="#2b5487" d="M299 289l7-7 10-2-6 32h-16z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 540" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<clipPath id="rahmen"><path d="M0 0h600v540H0z"/></clipPath>
+<circle cx="270" cy="270" r="230" fill="#e3e8d6"/>
+<g clip-path="url(#rahmen)">
+<path fill="#e9d8c1" stroke="#d9c6ab" stroke-width="1.5" d="M303 275L289 288L275 299L258 291L238 284L241 266L247 249L266 246L286 243L297 258z"/>
+<path fill="#f3e7d6" stroke="#d9c6ab" stroke-width="1.5" d="M279 172L270 174L262 176L256 172L248 167L253 161L259 156L268 157L277 158L279 165z"/>
+<path fill="#f3e7d6" stroke="#d9c6ab" stroke-width="1.5" d="M323 96L315 104L306 112L293 109L279 106L278 96L280 86L293 83L307 80L316 87z"/>
+<path fill="#f3e7d6" stroke="#d9c6ab" stroke-width="1.5" d="M340 217L328 224L316 229L305 223L293 216L298 205L304 196L318 196L332 196L337 206z"/>
+<path fill="#f3e7d6" stroke="#d9c6ab" stroke-width="1.5" d="M446 294L426 306L405 317L384 307L360 298L366 279L376 262L401 260L427 259L439 276z"/>
+<path fill="#f3e7d6" stroke="#d9c6ab" stroke-width="1.5" d="M406 362L379 385L351 406L315 394L274 385L276 353L284 324L323 316L364 308L389 333z"/>
+<path fill="#f3e7d6" stroke="#d9c6ab" stroke-width="1.5" d="M252 316L233 324L214 331L198 320L179 310L188 295L200 282L222 284L244 285L251 300z"/>
+<path fill="#f3e7d6" stroke="#d9c6ab" stroke-width="1.5" d="M145 224L135 231L124 237L113 232L99 228L102 217L106 207L120 206L134 204L141 214z"/>
+<path stroke="#2b5487" stroke-width="2" d="M150 356C190 342 230 330 262 324S330 312 362 298 430 278 520 264"/>
+<path stroke="#2b5487" stroke-width="2" d="M150 344C186 332 214 318 250 312S300 306 330 294 380 284 420 272 480 260 520 254"/>
+<path stroke="#173a66" stroke-width="1.5" stroke-dasharray="7 5" d="M192 262L223 251 289 241 319 232 367 228 431 191 500 170"/>
+</g>
+<circle cx="270" cy="270" r="230" stroke="#173a66" stroke-width="2" stroke-dasharray="9 8"/>
+<path stroke="#173a66" stroke-width="1.5" d="M270 270L107 107"/>
+<path stroke="#173a66" stroke-width="1.5" d="M107 119v-12h12"/>
+<path fill="#d9c6ab" stroke="#173a66" stroke-width="1.5" d="M292 292C296.56 288.85 300.35999999999996 283 303.4 283H318.6C321.64000000000004 283 325.44 288.85 330 292Z"/>
+<path stroke="#173a66" stroke-width="1.2" d="M304.0 280L311 267L318.0 280ZM308.0 280V283M311 280V283M314.0 280V283M306.52 275.32H315.48M308.76 271.16H313.24M304.0 280L313.24 271.16M318.0 280L308.76 271.16M311 267V280"/><path stroke="#173a66" stroke-width="2" d="M304.0 280L311 267L318.0 280Z"/>
+<circle cx="265" cy="166" r="6" fill="#ffffff" stroke="#173a66" stroke-width="3"/>
+<circle cx="299" cy="96" r="6" fill="#ffffff" stroke="#173a66" stroke-width="3"/>
+<circle cx="317" cy="211" r="6" fill="#ffffff" stroke="#173a66" stroke-width="3"/>
+<circle cx="403" cy="286" r="6" fill="#ffffff" stroke="#173a66" stroke-width="3"/>
+<circle cx="336" cy="357" r="6" fill="#ffffff" stroke="#173a66" stroke-width="3"/>
+<circle cx="218" cy="305" r="6" fill="#ffffff" stroke="#173a66" stroke-width="3"/>
+<circle cx="122" cy="220" r="6" fill="#ffffff" stroke="#173a66" stroke-width="3"/>
+<circle cx="282.6" cy="250.8" r="8.0" fill="#e0874f"/>
+<path fill="#173a66" stroke="#173a66" stroke-width="2" d="M247.3 276.0L251.1 267.6L257.8 261.7L264.5 258.4L269.6 253.3L277.1 252.1L283.9 256.3L288.9 263.0L292.7 276.0z"/>
+<path fill="#2b5487" d="M264.5 258.4L269.6 253.3L277.1 252.1L272.5 276.0L260.8 276.0z"/>
 </svg>

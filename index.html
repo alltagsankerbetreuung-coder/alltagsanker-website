@@ -54,11 +54,16 @@
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <aside class="kopfleiste" aria-label="Hinweis">
-    <p id="kopfleiste-text"><span class="lang">Neu in Bottrop: Wir starten im <span class="plakette">Januar 2027</span>. <a href="kontakt.html">Lassen Sie sich schon jetzt vormerken.</a></span><span class="kurz">Start <span class="plakette">Januar 2027</span> · <a href="kontakt.html">Jetzt vormerken</a></span></p>
+    <a class="kopfleiste-link" href="kontakt.html"><span class="lang">Neu in Bottrop: Wir starten im <span class="datum">Januar <span class="zahl">2027</span></span>. <span class="unterstrichen">Lassen Sie sich schon jetzt vormerken.</span></span><span class="kurz">Start <span class="datum">Januar <span class="zahl">2027</span></span> · <span class="unterstrichen">Jetzt vormerken</span></span></a>
   </aside>
   <header class="kopf">
     <div class="container kopf-innen">
-      <a class="kopf-logo" href="index.html"><picture><source media="(min-width: 64em)" srcset="images/logo.svg" width="479" height="110" /><img src="images/logo-kurz.svg" alt="Alltagsfels – Betreuung im Alltag, zur Startseite" width="477" height="87" /></picture></a>
+      <a class="kopf-logo" href="index.html"><img src="images/logo-kurz.svg" alt="Alltagsfels, zur Startseite" width="477" height="87" /></a>
+      <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
+        <svg class="auf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="zu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Menü
+      </button>
       <nav class="hauptmenue" id="hauptmenue" aria-label="Hauptmenü">
         <ul class="menue-liste">
           <li><a href="leistungen.html">Leistungen</a></li>
@@ -73,14 +78,7 @@
           <p>Oder per E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
         </div>
       </nav>
-      <div class="kopf-aktionen">
-        <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
-          <svg class="auf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg class="zu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          Menü
-        </button>
-        <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
-      </div>
+      <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
     </div>
   </header>
 
@@ -88,11 +86,9 @@
 
   <!-- Hero: Gefühl und Orientierung -->
   <section class="hero" aria-labelledby="hero-titel">
-    <div class="hoehenlinien" aria-hidden="true"></div>
     <div class="container raster hero-raster">
       <div class="hero-text">
-        <p class="hero-start"><span class="plakette">Start Januar 2027</span></p>
-        <h1 class="display" id="hero-titel"><span class="dachzeile">Alltagsbetreuung in Bottrop und Umgebung</span> <span class="h1-haupt">Jemand, auf den<br /> <em class="akzent">Verlass</em> ist.</span></h1>
+        <h1 class="display" id="hero-titel"><span class="dachzeile">Alltagsbetreuung in Bottrop und Umgebung</span> <span class="h1-haupt">Jemand, auf&nbsp;den <em class="akzent">Verlass</em> ist.</span></h1>
         <p class="lead hero-lead">Alltagsbetreuung für ältere Menschen in Bottrop und Umgebung. Wir kommen zu festen Zeiten, machen die Dinge gemeinsam mit Ihnen und haben eine examinierte Pflegefachkraft im Team.</p>
         <div class="knopf-reihe">
           <a class="btn" href="kontakt.html">Kostenloses Erstgespräch anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
@@ -105,15 +101,16 @@
         </ul>
       </div>
       <div class="hero-bild">
-        <img src="images/hero-kueche.svg" alt="Zeichnung: ein Küchentisch am Fenster mit zwei Tassen, an der Wand ein Kalender mit einem markierten Termin, draußen die Halde mit dem Tetraeder" width="560" height="620" fetchpriority="high" />
+        <div class="hoehenlinien" aria-hidden="true"></div>
+        <img src="images/hero-kueche.svg" alt="Zeichnung im Umriss des Alltagsfels-Felsens: ein gedeckter Küchentisch mit zwei Tassen und zwei Stühlen, an der Wand ein Kalender mit einem markierten Termin. Durch das Fenster fällt Sonnenlicht, draußen liegt die Halde mit dem Tetraeder." width="640" height="462" fetchpriority="high" />
       </div>
     </div>
     <div class="schichtkante kante-hero" aria-hidden="true">
-      <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false">
-        <path class="band-1" fill="#e9d8c1" d="M0 14 380 6 760 16 1120 8 1440 18V64H0z"/>
-        <path class="band-2" fill="#f3e7d6" d="M0 30 300 36 700 26 1100 34 1440 28V64H0z"/>
-        <path class="band-3" fill="#fbf6ee" d="M0 50 420 44 820 54 1200 46 1440 52V64H0z"/>
-        <path class="kante-linie" pathLength="1" fill="none" stroke="#173a66" stroke-width="2" vector-effect="non-scaling-stroke" d="M0 14 380 6 760 16 1120 8 1440 18"/>
+      <svg viewBox="0 0 1440 72" preserveAspectRatio="none" focusable="false">
+        <path class="band-1" fill="#d9c6ab" d="M0 10 360 2 780 14 1130 4 1440 12V72H0z"/>
+        <path class="band-2" fill="#e9d8c1" d="M0 30 320 38 720 26 1080 35 1440 27V72H0z"/>
+        <path class="band-3" fill="#fbf6ee" d="M0 52 420 45 840 56 1200 47 1440 53V72H0z"/>
+        <path class="kante-linie" pathLength="1" fill="none" stroke="#173a66" stroke-width="2" vector-effect="non-scaling-stroke" d="M0 10 360 2 780 14 1130 4 1440 12"/>
       </svg>
     </div>
   </section>
@@ -125,7 +122,7 @@
       <ul class="weiche-liste">
         <li>
           <a class="weiche-karte" href="#leistungen">
-            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haus"/></svg>
+            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-tasse"/></svg>
             <span class="weiche-titel">Für mich selbst</span>
             <span class="weiche-text">Was wir gemeinsam mit Ihnen machen</span>
             <svg class="icon weiche-pfeil" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg>
@@ -133,9 +130,9 @@
         </li>
         <li>
           <a class="weiche-karte" href="#angehoerige">
-            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-sessel"/></svg>
+            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haus"/></svg>
             <span class="weiche-titel">Für meine Mutter oder meinen Vater</span>
-            <span class="weiche-text">Was Sie als Tochter, Sohn oder Enkel wissen sollten</span>
+            <span class="weiche-text">Wie wir Ihre Eltern begleiten</span>
             <svg class="icon weiche-pfeil" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg>
           </a>
         </li>
@@ -151,60 +148,49 @@
     </div>
   </section>
 
-  <div class="schichtkante" style="--oben: var(--creme)" aria-hidden="true">
-    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" focusable="false"><path fill="#d9c6ab" d="M0 18 340 8 760 20 1140 10 1440 19V48H0z"/><path fill="#f3e7d6" d="M0 28 380 20 800 32 1160 22 1440 30V48H0z"/></svg>
-  </div>
-
-  <!-- Versprechen: Darauf ist Verlass (das einzige Bento) -->
-  <section class="kapitel flaeche-sand verlass" id="verlass" aria-labelledby="verlass-titel">
+  <!-- Zusagen (das einzige Bento) -->
+  <section class="kapitel flaeche-sand zusagen" id="zusagen" aria-labelledby="zusagen-titel">
     <div class="container">
       <div class="kopf-block">
-        <p class="marke">Unsere Zusagen</p>
-        <h2 class="kapitel-titel" id="verlass-titel">Darauf ist Verlass</h2>
-        <p>Was wir Ihnen zusagen, und was das im Alltag für Sie heißt.</p>
+        <h2 class="kapitel-titel" id="zusagen-titel">Was wir Ihnen zusagen</h2>
+        <p>Und was das im Alltag für Sie heißt.</p>
       </div>
       <ul class="bento">
         <li class="bento-gross">
           <article class="kachel">
-            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-wegweiser"/></svg>
-            <h3>Gemeinsam. Und Sie entscheiden.</h3>
-            <p>Wir machen die Dinge mit Ihnen, nicht über Ihren Kopf hinweg. Was wir tun und in welchem Tempo, bestimmen Sie.</p>
-            <p class="heisst"><strong>Das heißt für Sie:</strong> Wir kaufen gemeinsam ein, sortieren gemeinsam die Post und gehen in Ihrem Tempo spazieren.</p>
-            <div class="bento-schichten" aria-hidden="true">
-              <svg viewBox="0 0 600 170" preserveAspectRatio="none" focusable="false"><path fill="#f3e7d6" d="M0 46 180 30 360 44 500 28 600 38V170H0z"/><path fill="#e9d8c1" d="M0 92 150 102 330 86 470 98 600 84V170H0z"/><path fill="#d9c6ab" d="M0 134 210 124 400 138 600 126V170H0z"/><path fill="none" stroke="#173a66" stroke-width="2" vector-effect="non-scaling-stroke" d="M0 46 180 30 360 44 500 28 600 38M0 92 150 102 330 86 470 98 600 84M0 134 210 124 400 138 600 126"/></svg>
+            <div class="kachel-haupt">
+              <h3>Gemeinsam. Und Sie entscheiden.</h3>
+              <p>Wir machen die Dinge mit Ihnen, nicht über Ihren Kopf hinweg. Was wir tun und in welchem Tempo, bestimmen Sie.</p>
+            </div>
+            <div class="heisst">
+              <p class="heisst-titel">Das heißt für Sie:</p>
+              <ul class="heisst-liste">
+                <li>Wir kaufen gemeinsam ein.</li>
+                <li>Wir sortieren gemeinsam die Post.</li>
+                <li>Wir gehen in Ihrem Tempo spazieren.</li>
+              </ul>
             </div>
           </article>
         </li>
         <li>
           <article class="kachel">
-            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-schild"/></svg>
             <h3>Eine Pflegefachkraft im Team.</h3>
             <p>Wir pflegen nicht. Aber Dominik Vogel, examinierte Pflegefachkraft, ist unser fachlicher Ansprechpartner.</p>
-            <p class="heisst"><strong>Das heißt für Sie:</strong> Wird mehr Hilfe nötig, sprechen wir offen mit Ihnen darüber.</p>
+            <div class="heisst"><p class="heisst-titel">Das heißt für Sie:</p><p>Wird mehr Hilfe nötig, sprechen wir offen mit Ihnen darüber.</p></div>
           </article>
         </li>
         <li>
           <article class="kachel">
-            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-uhr"/></svg>
             <h3>Feste Zeiten. Und Zeit, wenn wir da sind.</h3>
             <p>Wir kommen zu festen Zeiten, die wir mit Ihnen absprechen. Dann haben wir Zeit und Ruhe für Sie.</p>
-            <p class="heisst"><strong>Das heißt für Sie:</strong> Ein Termin, auf den Sie sich verlassen und freuen können.</p>
+            <div class="heisst"><p class="heisst-titel">Das heißt für Sie:</p><p>Ein Termin, auf den Sie sich freuen können.</p></div>
           </article>
         </li>
         <li>
           <article class="kachel">
-            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-dokument"/></svg>
             <h3>Wir kümmern uns um die Abrechnung.</h3>
             <p>Ab Pflegegrad 2 rechnen wir auf Wunsch direkt mit Ihrer Pflegekasse ab.</p>
-            <p class="heisst"><strong>Das heißt für Sie:</strong> Weniger Papierkram. Und Sie behalten den Überblick.</p>
-          </article>
-        </li>
-        <li>
-          <article class="kachel">
-            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-halde"/></svg>
-            <h3>Vertraute Gesichter aus der Region.</h3>
-            <p>Wir sind ein kleines Team aus Bottrop. Sie haben feste Ansprechpartner, die sich hier auskennen.</p>
-            <p class="heisst"><strong>Das heißt für Sie:</strong> Verschwiegen. Was Sie uns anvertrauen, bleibt unter uns.</p>
+            <div class="heisst"><p class="heisst-titel">Das heißt für Sie:</p><p>Weniger Papierkram. Und Sie behalten den Überblick.</p></div>
           </article>
         </li>
       </ul>
@@ -249,13 +235,6 @@
               <p>Wir helfen bei Terminen und Post. Und beim Kontakt zu Familie und Freunden.</p>
             </div>
           </li>
-          <li>
-            <img src="images/spot-fahrrad.svg" alt="" width="160" height="120" loading="lazy" />
-            <div>
-              <h3>Zeit für Angehörige</h3>
-              <p>Während wir bei Ihrer Mutter sind, haben Sie Zeit für sich.</p>
-            </div>
-          </li>
         </ul>
       </div>
 
@@ -288,39 +267,26 @@
     </div>
   </section>
 
-  <!-- Beispielbesuch -->
-  <section class="folge flaeche-weiss" aria-labelledby="besuch-titel">
+  <!-- Beispielbesuch: eine Szene, eine ruhige Liste -->
+  <section class="folge flaeche-weiss mit-linie" aria-labelledby="besuch-titel">
     <div class="container">
-      <div class="besuch-kopf">
+      <div class="kopf-block">
         <h2 id="besuch-titel">So kann ein Besuch aussehen</h2>
         <p class="hinweis-beispiel"><strong>Ein Beispiel.</strong> Wie oft und wie lange wir kommen, besprechen wir mit Ihnen.</p>
       </div>
-      <ol class="zeitleiste">
-        <li>
-          <span class="station-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-tuer"/></svg></span>
-          <div><span class="station-nr" aria-hidden="true">1</span><p>Wir klingeln zur verabredeten Zeit.</p></div>
-        </li>
-        <li>
-          <span class="station-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-tasse"/></svg></span>
-          <div><span class="station-nr" aria-hidden="true">2</span><p>Erst einmal ankommen: ein Kaffee, ein paar Worte, wie es Ihnen geht.</p></div>
-        </li>
-        <li>
-          <span class="station-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-brief"/></svg></span>
-          <div><span class="station-nr" aria-hidden="true">3</span><p>Gemeinsam die Post durchsehen. Ein Brief von der Krankenkasse? Wir lesen ihn zusammen.</p></div>
-        </li>
-        <li>
-          <span class="station-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-schuh"/></svg></span>
-          <div><span class="station-nr" aria-hidden="true">4</span><p>Zu Fuß zur Bank und auf dem Rückweg zum Einkaufen.</p></div>
-        </li>
-        <li>
-          <span class="station-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-korb"/></svg></span>
-          <div><span class="station-nr" aria-hidden="true">5</span><p>Zu Hause räumen wir den Einkauf zusammen ein.</p></div>
-        </li>
-        <li>
-          <span class="station-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-kalender"/></svg></span>
-          <div><span class="station-nr" aria-hidden="true">6</span><p>Zum Schluss steht der nächste Termin im Kalender.</p></div>
-        </li>
-      </ol>
+      <div class="raster besuch-raster">
+        <div class="besuch-bild">
+          <img src="images/besuch-weg.svg" alt="" width="640" height="400" loading="lazy" />
+        </div>
+        <ol class="besuch-liste">
+          <li><span class="besuch-nr" aria-hidden="true">1</span><p>Wir klingeln zur verabredeten Zeit.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">2</span><p>Erst einmal ankommen: ein Kaffee, ein paar Worte, wie es Ihnen geht.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">3</span><p>Gemeinsam die Post durchsehen. Ein Brief von der Krankenkasse? Wir lesen ihn zusammen.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">4</span><p>Zu Fuß zur Bank und auf dem Rückweg zum Einkaufen.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">5</span><p>Zu Hause räumen wir den Einkauf zusammen ein.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">6</span><p>Zum Schluss steht der nächste Termin im Kalender.</p></li>
+        </ol>
+      </div>
     </div>
   </section>
 
@@ -330,24 +296,25 @@
       <div class="angehoerige-text">
         <p class="marke">Für Töchter, Söhne und Enkel</p>
         <h2 id="angehoerige-titel">Für Ihre Mutter oder Ihren Vater da, auch wenn Sie es nicht immer sein können.</h2>
-        <p>Vielleicht wohnen Sie weiter weg. Vielleicht arbeiten Sie und schaffen es nicht mehr, zu jedem Arzttermin mitzugehen.</p>
+        <p>Vielleicht wohnen Sie weiter&nbsp;weg. Vielleicht arbeiten Sie und schaffen es nicht mehr, zu jedem Arzttermin mitzugehen.</p>
         <p>Dann sind wir für Ihre Eltern da: zu festen Zeiten, mit Zeit und Ruhe, und mit einer examinierten Pflegefachkraft im Team.</p>
+        <p>Und während wir bei Ihrer Mutter sind, haben Sie Zeit für sich.</p>
         <div class="knopf-reihe">
           <a class="btn" href="kontakt.html">Erstgespräch für meine Eltern anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
           <a class="pfeil-link" href="fragen.html">Fragen von Angehörigen lesen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
         </div>
       </div>
-      <div class="angehoerige-karte">
-        <h3>Wenn Ihre Mutter sagt: „Ich brauche keine Hilfe.“</h3>
+      <div class="angehoerige-satz">
+        <h3>Wenn Ihre Mutter sagt: <span class="satz-zitat">„Ich brauche keine Hilfe.“</span></h3>
         <p>Das ist verständlich. Niemand gibt gern zu, dass etwas schwerer wird. Oft hilft es, klein anzufangen, zum Beispiel mit einem Spaziergang oder der Begleitung zu einem Arzttermin.</p>
         <p>Beim Erstgespräch lernt Ihre Mutter uns in Ruhe kennen. Ob sie es möchte, entscheidet sie selbst.</p>
-        <button class="knopf-text nur-js" type="button" data-drucken><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-drucker"/></svg>Diese Seite ausdrucken</button>
+        <button class="knopf-text nur-js" type="button" data-drucken="angehoerige"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-drucker"/></svg>Diesen Abschnitt ausdrucken</button>
       </div>
     </div>
   </section>
 
-  <div class="schichtkante" style="--oben: var(--creme)" aria-hidden="true">
-    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" focusable="false"><path fill="#d9c6ab" d="M0 16 300 8 720 20 1100 10 1440 18V48H0z"/><path fill="#173a66" d="M0 26 360 18 760 30 1120 20 1440 28V48H0z"/></svg>
+  <div class="schichtkante kante-band" aria-hidden="true">
+    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><path fill="#e9d8c1" d="M0 12 340 4 760 16 1140 6 1440 14V64H0z"/><path fill="#d9c6ab" d="M0 28 300 36 700 24 1100 33 1440 25V64H0z"/><path fill="#173a66" d="M0 46 380 39 800 50 1180 41 1440 47V64H0z"/></svg>
   </div>
 
   <!-- Das eine Navy-Band: Menschen -->
@@ -356,19 +323,11 @@
       <div class="band-kopf">
         <p class="marke">Unser Team</p>
         <h2 class="kapitel-titel" id="team-titel">Wer hinter Alltagsfels steht</h2>
-        <p>Ein kleines Team aus Bottrop. Feste Ansprechpartner, vertraute Gesichter.</p>
-      </div>
-      <figure class="zitat band-zitat">
-        <blockquote cite="https://alltagsfels.de/ueber-uns">
-          <p class="zitat-vorlauf">„Dominik Vogel arbeitet seit vielen Jahren als Pflegefachkraft. Er erlebt immer wieder, dass ältere Menschen zu Hause mehr brauchen als Pflege: jemanden, der Zeit mitbringt, zuhört, mit ihnen spazieren geht oder sie zum Arzt begleitet.</p>
-          <p class="zitat-kern">Im Pflegealltag ist dafür meist keine Zeit.“</p>
-        </blockquote>
-        <figcaption>Aus unserer Gründungsgeschichte</figcaption>
-      </figure>
-      <div class="band-personen">
+        <p class="band-lead">Ein kleines Team aus Bottrop. Feste Ansprechpartner, vertraute Gesichter.</p>
+        <p>Verschwiegen: Was Sie uns anvertrauen, bleibt unter uns.</p>
         <ul class="personen">
           <li class="person-eintrag">
-            <svg class="monogramm" viewBox="0 0 88 90" aria-hidden="true" focusable="false"><circle cx="66" cy="38" r="14" fill="#e0874f"/><path d="M4 82 10.7 67.4 22.5 57 34.3 51.1 43.2 42.2 56.5 40 68.4 47.4 77.3 59.2 84 82z" fill="#102a4c" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="45" y="76" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="24" font-style="italic" font-weight="500" fill="currentColor">JW</text><path d="M1 87h86" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="monogramm" aria-hidden="true"><span>J</span><span>W</span></span>
             <div>
               <h3>Julian Wehner</h3>
               <p class="person-rolle">Geschäftsführer, geschult in Alltagsbetreuung</p>
@@ -376,7 +335,7 @@
             </div>
           </li>
           <li class="person-eintrag">
-            <svg class="monogramm" viewBox="0 0 88 90" aria-hidden="true" focusable="false"><circle cx="66" cy="38" r="14" fill="#e0874f"/><path d="M4 82 10.7 67.4 22.5 57 34.3 51.1 43.2 42.2 56.5 40 68.4 47.4 77.3 59.2 84 82z" fill="#102a4c" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="45" y="76" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="24" font-style="italic" font-weight="500" fill="currentColor">DV</text><path d="M1 87h86" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="monogramm" aria-hidden="true"><span>D</span><span>V</span></span>
             <div>
               <h3>Dominik Vogel</h3>
               <p class="person-rolle">Examinierte Pflegefachkraft</p>
@@ -384,6 +343,12 @@
             </div>
           </li>
         </ul>
+      </div>
+      <div class="band-geschichte">
+        <p class="geschichte-quelle">Aus unserer Gründungsgeschichte</p>
+        <p class="geschichte-text">Dominik Vogel arbeitet seit vielen Jahren als Pflegefachkraft. Er erlebt immer wieder, dass ältere Menschen zu Hause mehr brauchen als Pflege: jemanden, der Zeit mitbringt, zuhört, mit ihnen spazieren geht oder sie zum Arzt begleitet.</p>
+        <p class="leitsatz">Im Pflegealltag ist dafür meist keine Zeit.</p>
+        <p class="leitsatz-folge">Das möchten wir ändern.</p>
         <p class="band-fuss"><a class="pfeil-link" href="ueber-uns.html">Warum es uns gibt <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a></p>
       </div>
     </div>
@@ -393,17 +358,16 @@
   <section class="folge flaeche-sand" id="kosten" aria-labelledby="kosten-titel">
     <div class="container">
       <div class="kopf-block">
-        <p class="marke">Kosten</p>
         <h2 id="kosten-titel">Wer bezahlt die Betreuung?</h2>
         <p>Es gibt zwei Wege. Wir erklären Ihnen beide in Ruhe.</p>
       </div>
       <ul class="zwei-wege">
         <li>
-          <div class="weg-kopf"><svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-dokument"/></svg><h3>Mit Pflegegrad 2 oder höher</h3></div>
+          <h3>Mit Pflegegrad 2 oder höher</h3>
           <p>Wir rechnen auf Wunsch direkt mit Ihrer Pflegekasse ab. Bevor Sie etwas unterschreiben, erklären wir Ihnen, welche Leistung der Pflegekasse wir dafür nutzen.</p>
         </li>
         <li>
-          <div class="weg-kopf"><svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-rechnung"/></svg><h3>Ohne Pflegegrad</h3></div>
+          <h3>Ohne Pflegegrad</h3>
           <p>Sie bezahlen privat per Rechnung. Auch Angehörige können die Betreuung bezahlen.</p>
         </li>
       </ul>
@@ -414,74 +378,77 @@
     </div>
   </section>
 
-  <!-- Einstieg: So lernen wir uns kennen, mit Einsatzgebiet -->
+  <!-- Einstieg: So fangen wir an, mit Einsatzgebiet -->
   <section class="folge flaeche-creme" id="ablauf" aria-labelledby="ablauf-titel">
     <div class="container">
       <div class="kopf-block">
-        <p class="marke">Der Einstieg</p>
-        <h2 id="ablauf-titel">So lernen wir uns kennen</h2>
+        <h2 id="ablauf-titel">So fangen wir an</h2>
       </div>
       <ol class="schritte">
         <li>
           <span class="schritt-ziffer" aria-hidden="true">1</span>
           <h3><span class="nur-vorlesen">Schritt 1: </span>Melden Sie sich</h3>
-          <p>Über das Formular oder per E-Mail. Gern rufen wir Sie zurück.</p>
+          <p>Über das Formular oder per E&#8209;Mail. Gern rufen wir Sie zurück.</p>
         </li>
         <li>
           <span class="schritt-ziffer" aria-hidden="true">2</span>
-          <h3><span class="nur-vorlesen">Schritt 2: </span>Lernen wir uns kennen</h3>
-          <p>Wir besuchen Sie zu Hause, in Ruhe am Küchentisch. Sie erzählen, was Ihnen schwerfällt und was Ihnen Freude macht. Das Erstgespräch ist kostenlos und unverbindlich.</p>
+          <h3><span class="nur-vorlesen">Schritt 2: </span>Wir besuchen Sie zu Hause</h3>
+          <p>In Ruhe am Küchentisch. Sie erzählen, was Ihnen schwerfällt und was Ihnen Freude macht. Das Erstgespräch ist kostenlos und unverbindlich.</p>
         </li>
         <li>
           <span class="schritt-ziffer" aria-hidden="true">3</span>
           <h3><span class="nur-vorlesen">Schritt 3: </span>Sie entscheiden in Ruhe</h3>
-          <p>Wenn es passt, vereinbaren wir feste Zeiten, und Sie bekommen einen schriftlichen Vertrag. Ab <span class="zahl">Januar 2027</span> kann es losgehen.</p>
+          <p>Wenn es passt, vereinbaren wir feste Zeiten, und Sie bekommen einen schriftlichen Vertrag. Ab Januar <span class="zahl">2027</span> kann es losgehen.</p>
         </li>
       </ol>
 
-      <div class="raster kennen-unten">
-        <div class="bereitlegen">
-          <h3>Was Sie bereitlegen können</h3>
-          <ul class="liste-zeichen liste-ja">
-            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haken"/></svg>Ihren Pflegegrad-Bescheid, falls vorhanden</li>
-            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haken"/></svg>Den Namen Ihrer Pflegekasse</li>
-            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haken"/></svg>Termine, die anstehen</li>
-            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haken"/></svg>Ihre Fragen</li>
+      <div class="bereitlegen">
+        <h3>Was Sie zum Erstgespräch bereitlegen können</h3>
+        <ul class="bereitlegen-liste">
+          <li>Ihren Pflegegrad-Bescheid, falls vorhanden</li>
+          <li>Den Namen Ihrer Pflegekasse</li>
+          <li>Termine, die anstehen</li>
+          <li>Ihre Fragen</li>
+        </ul>
+        <p>Gern kann auch jemand aus Ihrer Familie dabei sein.</p>
+      </div>
+
+      <div class="raster einsatz" id="einsatzgebiet">
+        <figure class="karte">
+          <img src="images/karte.svg" alt="Karte des Einsatzgebiets: Bottrop mit Kirchhellen in der Mitte, darum ein Kreis mit etwa 20 Kilometern Radius. Darin liegen Dorsten im Norden, Gladbeck im Nordosten, Gelsenkirchen im Osten, Essen im Süden, Oberhausen im Südwesten und Dinslaken im Westen." width="600" height="540" loading="lazy" />
+          <ul class="karte-orte" aria-hidden="true">
+            <li class="ort-bottrop">Bottrop</li>
+            <li class="ort-kirchhellen">Kirchhellen</li>
+            <li class="ort-dorsten">Dorsten</li>
+            <li class="ort-gladbeck">Gladbeck</li>
+            <li class="ort-gelsenkirchen">Gelsenkirchen</li>
+            <li class="ort-essen">Essen</li>
+            <li class="ort-oberhausen">Oberhausen</li>
+            <li class="ort-dinslaken">Dinslaken</li>
+            <li class="ort-radius">etwa <span class="zahl">20</span>&nbsp;km</li>
           </ul>
-          <p>Gern kann auch ein Angehöriger dabei sein.</p>
-        </div>
-        <div class="einsatz" id="einsatzgebiet">
+        </figure>
+        <div class="einsatz-text">
           <h3>Hier sind wir für Sie da</h3>
-          <figure class="karte">
-            <div class="hoehenlinien" aria-hidden="true"></div>
-            <img src="images/karte.svg" alt="Karte: Bottrop in der Mitte, darum ein Kreis mit etwa 20 Kilometern Radius. Darin liegen Gladbeck, Gelsenkirchen und Essen." width="600" height="600" loading="lazy" />
-            <ul class="karte-orte" aria-hidden="true">
-              <li class="ort-bottrop">Bottrop</li>
-              <li class="ort-gladbeck">Gladbeck</li>
-              <li class="ort-gelsenkirchen">Gelsenkirchen</li>
-              <li class="ort-essen">Essen</li>
-              <li class="ort-radius">ca. <span class="zahl">20</span> km</li>
-            </ul>
-          </figure>
-          <p class="einsatz-text">Wir kommen zu Ihnen nach Hause: in Bottrop und im Umkreis von etwa <span class="zahl">20</span>&nbsp;km, zum Beispiel nach Gladbeck, Gelsenkirchen und Essen. Ihr Ort ist nicht dabei? Fragen Sie uns einfach.</p>
-          <a class="btn" href="kontakt.html">Kostenloses Erstgespräch anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+          <p>Wir kommen zu Ihnen nach Hause: in Bottrop und im Umkreis von etwa <span class="zahl">20</span>&nbsp;km, zum Beispiel nach Gladbeck, Gelsenkirchen und Essen.</p>
+          <p>Ihr Ort ist nicht dabei? Fragen Sie uns einfach.</p>
+          <a class="btn" href="kontakt.html">Erstgespräch anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Fragen -->
-  <section class="folge flaeche-weiss" aria-labelledby="fragen-titel">
+  <section class="folge flaeche-weiss mit-linie" aria-labelledby="fragen-titel">
     <div class="container raster fragen-raster">
       <div class="fragen-kopf">
-        <p class="marke">Fragen und Antworten</p>
         <h2 id="fragen-titel">Was viele vorher wissen möchten</h2>
         <p class="fragen-fuss"><a class="pfeil-link" href="fragen.html">Alle Fragen ansehen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a></p>
       </div>
       <div class="fragen-liste">
         <details>
           <summary>Wie läuft das Erstgespräch ab?</summary>
-          <div class="antwort"><p>Wir besuchen Sie zu Hause, in Ruhe am Küchentisch. Sie erzählen, was Ihnen schwerfällt und was Ihnen Freude macht. Gern kann auch ein Angehöriger dabei sein. Das Erstgespräch ist kostenlos und unverbindlich.</p></div>
+          <div class="antwort"><p>Wir besuchen Sie zu Hause, in Ruhe am Küchentisch. Sie erzählen, was Ihnen schwerfällt und was Ihnen Freude macht. Gern kann auch jemand aus Ihrer Familie dabei sein. Das Erstgespräch ist kostenlos und unverbindlich.</p></div>
         </details>
         <details>
           <summary>Was ist der Unterschied zu einem Pflegedienst?</summary>
@@ -493,7 +460,7 @@
         </details>
         <details>
           <summary>Können Sie auch Menschen mit Demenz begleiten?</summary>
-          <div class="antwort"><p>Ja. Wir begleiten auch Menschen mit Demenz oder starker Vergesslichkeit. Gerade dann helfen feste Zeiten und vertraute Abläufe. Wir nehmen uns Zeit und bilden uns regelmäßig fort, zum Beispiel zu Demenz.</p></div>
+          <div class="antwort"><p>Ja. Wir begleiten auch Menschen mit Demenz oder starker Vergesslichkeit. Gerade dann helfen feste Zeiten und vertraute Abläufe. Was dabei wichtig ist, besprechen wir in Ruhe im Erstgespräch.</p></div>
         </details>
         <details>
           <summary>Bin ich nach dem Erstgespräch zu etwas verpflichtet?</summary>
@@ -506,26 +473,23 @@
   <!-- Für Fachstellen -->
   <section class="folge flaeche-creme" id="fachstellen" aria-labelledby="fachstellen-titel">
     <div class="container">
-      <div class="fachstellen-box">
-        <div class="fachstellen-kopf">
-          <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-klemmbrett"/></svg>
-          <h2 id="fachstellen-titel">Für Pflegedienste, Praxen und Beratungsstellen</h2>
-        </div>
+      <div class="fachstellen">
+        <h2 id="fachstellen-titel">Für Pflegedienste, Praxen und Beratungsstellen</h2>
         <div class="fachstellen-text">
           <p>Wir ergänzen die Pflege im Alltag: Gesellschaft, Begleitung zu Terminen, gemeinsame Hilfe im Haushalt. Pflege und Medikamente übernehmen wir nicht. Ab Pflegegrad 2 rechnen wir über die Pflegekasse ab, ohne Pflegegrad privat.</p>
-          <p><a href="kontakt.html">Schreiben Sie uns</a>, wir schicken Ihnen gern unser Infoblatt. E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+          <p>Schreiben Sie uns, wir schicken Ihnen gern unser Infoblatt.</p>
+          <ul class="link-liste">
+            <li><a class="pfeil-link" href="kontakt.html">Infoblatt anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a></li>
+            <li>E-Mail: <a class="mail-link" href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="schichtkante" style="--oben: var(--creme)" aria-hidden="true">
-    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" focusable="false"><path fill="#e9d8c1" d="M0 20 360 10 780 22 1150 12 1440 20V48H0z"/><path fill="#e3e8d6" d="M0 30 420 22 820 34 1180 24 1440 31V48H0z"/></svg>
-  </div>
-
   <!-- Abschluss -->
   <section class="kapitel flaeche-salbei abschluss" aria-labelledby="abschluss-titel">
-    <div class="container">
+    <div class="container abschluss-raster">
       <div class="abschluss-inhalt">
         <p class="marke">Halt im Alltag</p>
         <h2 class="kapitel-titel" id="abschluss-titel">Lernen wir uns kennen</h2>
@@ -535,20 +499,20 @@
           <a class="btn" href="kontakt.html">Erstgespräch anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
           <a class="pfeil-link" href="kontakt.html#rueckruf">Lieber zurückrufen lassen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
         </div>
-        <p class="abschluss-mail">Lieber per E-Mail? Schreiben Sie an <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+        <p class="abschluss-mail">Lieber per E-Mail? Schreiben Sie an <a class="mail-link" href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
       </div>
+      <div class="abschluss-fels" aria-hidden="true"><img src="images/fels-sonne.svg" alt="" width="240" height="170" loading="lazy" /></div>
     </div>
-    <div class="abschluss-fels" aria-hidden="true"><img src="images/fels-sonne.svg" alt="" width="240" height="166" loading="lazy" /></div>
   </section>
 
   </main>
 
   <footer class="fuss dunkel">
-    <div class="fuss-kante" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" focusable="false"><path fill="#d9c6ab" d="M0 16 330 6 740 18 1110 8 1440 18V48H0z"/><path fill="#102a4c" d="M0 27 390 18 790 31 1160 20 1440 29V48H0z"/></svg></div>
-    <div class="hoehenlinien" aria-hidden="true"></div>
+    <div class="fuss-kante" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><path fill="#e9d8c1" d="M0 12 300 4 720 15 1090 5 1440 14V64H0z"/><path fill="#d9c6ab" d="M0 28 380 19 800 31 1150 21 1440 30V64H0z"/><path fill="#102a4c" d="M0 44 340 37 760 48 1120 39 1440 46V64H0z"/></svg></div>
     <div class="container fuss-raster">
       <div class="fuss-marke">
-        <a class="fuss-logo" href="index.html"><img src="images/logo-hell.svg" alt="Alltagsfels – zur Startseite" width="479" height="110" loading="lazy" /></a>
+        <a class="fuss-logo" href="index.html"><img src="images/logo-kurz-hell.svg" alt="Alltagsfels, zur Startseite" width="477" height="87" loading="lazy" /></a>
+        <p class="fuss-unterzeile">Betreuung im Alltag</p>
         <p>Alltagsbetreuung in Bottrop und Umgebung, im Umkreis von etwa <span class="zahl">20</span>&nbsp;km.</p>
         <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></address>
       </div>

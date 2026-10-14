@@ -21,9 +21,9 @@ Diese Punkte kann nur der Inhaber erledigen. Die Website selbst ist fertig.
     "trailingSlash": false
   }
   ```
-- [ ] **Telefonnummer eintragen**, sobald es sie gibt: in `kontakt.html` (Kasten „Telefon“, Text „Unsere Telefonnummer folgt bald …“ ersetzen), im Fußbereich aller Seiten (Liste „Kontakt“), in `index.html` im Google-Datenblock (`"telephone": "+49 …"`) und im Impressum.
-- [ ] **Hinweise auf den Start anpassen:** Die Leiste ganz oben auf allen Seiten („Wir starten im Januar 2027 …“) ändern oder entfernen. Außerdem „Ab Januar 2027 …“ in `index.html` (Ablauf, Schritt 3), `kontakt.html` („So geht es weiter“), `danke.html` (Schritt 3 für Kunden) und `fragen.html` (Frage „Ab wann kann die Betreuung beginnen?“, zweimal: sichtbar und im Google-Datenblock oben).
-- [ ] **Stellenangebot pflegen:** Sobald alle Stellen besetzt sind, den Link „Mitarbeiten“ im Fußbereich aller Seiten und den Kasten auf „Über uns“ entfernen. Stundenlohn und Fahrtkosten bei Bedarf auf `mitarbeiten.html` ergänzen, wenn sie entschieden sind. Zum Grundkurs (Kosten, Zuschuss, Frist) nichts versprechen, das wird im Gespräch geklärt. Auf der Jobs-Seite bewusst kein Startdatum für Bewerber (Julian, 12.10.2026).
+- [ ] **Telefonnummer eintragen**, sobald es sie gibt: in `kontakt.html` (Abschnitt „Rückruf“ in den Angaben neben dem Formular), im Fußbereich aller Seiten (Liste „Kontakt“), in `index.html` im Google-Datenblock (`"telephone": "+49 …"`) und im Impressum.
+- [ ] **Hinweise auf den Start anpassen:** Die Leiste ganz oben auf allen Seiten („Neu in Bottrop: Wir starten im Januar 2027 …“, auf `mitarbeiten.html` ohne Datum) ändern oder entfernen. Außerdem „Ab Januar 2027 …“ in `index.html` (Ablauf, Schritt 3), `kontakt.html` („So geht es weiter“) und in `fragen.html` (Frage „Ab wann kann die Betreuung beginnen?“, zweimal: sichtbar und im Google-Datenblock oben).
+- [ ] **Stellenangebot pflegen:** Sobald alle Stellen besetzt sind, den Link „Jobs“ im Hauptmenü und im Fußbereich aller Seiten und die Zeile „Wir suchen Verstärkung“ auf „Über uns“ entfernen. Stundenlohn und Fahrtkosten bei Bedarf auf `mitarbeiten.html` ergänzen, wenn sie entschieden sind. Zum Grundkurs (Kosten, Zuschuss, Frist) nichts versprechen, das wird im Gespräch geklärt. Auf der Jobs-Seite bewusst kein Startdatum für Bewerber (Julian, 12.10.2026).
 - [ ] **Kontaktformular testen:** Einmal selbst eine Nachricht senden, auch über das Bewerbungsformular auf `mitarbeiten.html`. Beim ersten Mal kommt von formsubmit.co eine Bestätigungs-E-Mail an `alltagsankerbetreuung@gmail.com`, die einmal bestätigt werden muss.
 - [ ] **Impressum und Datenschutz prüfen:** Stimmen alle Angaben (z. B. Handelsregister, Telefon)? Am besten rechtlich prüfen lassen.
 - [ ] **Bei Google anmelden:** In der [Google Search Console](https://search.google.com/search-console) die Domain bestätigen und `https://alltagsfels.de/sitemap.xml` einreichen. Empfehlenswert: ein kostenloses Google-Unternehmensprofil für Bottrop anlegen.
@@ -38,14 +38,14 @@ Diese Punkte kann nur der Inhaber erledigen. Die Website selbst ist fertig.
 - `kosten.html` – Kosten und Pflegekasse (Stand der Rechtslage regelmäßig prüfen)
 - `fragen.html` – Häufige Fragen (vor allem für Angehörige)
 - `kontakt.html` – Kontakt (inkl. Kontaktformular)
-- `mitarbeiten.html` – Stellenangebot Alltagsbegleitung (m/w/d) mit Bewerbungsformular; verlinkt im Fußbereich und auf „Über uns“, nicht im Hauptmenü
+- `mitarbeiten.html` – Stellenangebot Alltagsbegleitung (m/w/d) mit Bewerbungsformular; als „Jobs“ im Hauptmenü (zurückhaltend gesetzt), im Fußbereich und auf „Über uns“
 - `danke.html` – Bestätigungsseite nach Formularversand (nach einer Bewerbung, `danke.html?bewerbung`, erscheinen eigene Schritte für Bewerber)
 - `impressum.html`, `datenschutz.html` – Pflichtseiten
 - `404.html` – Seite für nicht gefundene Adressen
 - `style.css` – Gemeinsame Gestaltung (Farben, Schriften, Abstände)
-- `script.js` – Handy-Menü, sanftes Einblenden beim Scrollen, Jahreszahl
+- `script.js` – Menü, Schalter „Schrift größer“, Drucken (ganze Seite oder ein Abschnitt), Prüfung „Telefon oder E-Mail“ im Formular, Jahreszahl
 - `fonts/` – Schriften Fraunces (Überschriften) und Atkinson Hyperlegible Next (Text), beide als variable Schriften, liegen auf der eigenen Website, keine Verbindung zu Google
-- `images/` – Logo (`logo.svg`, `logo-hell.svg` für dunklen Hintergrund), `favicon.svg`, Zeichnungen, `vorschau.png` (Vorschaubild 1200 × 630 für WhatsApp, E-Mail und soziale Netzwerke) und `icon-192.png` / `icon-512.png` (Symbole für den Handy-Startbildschirm)
+- `images/` – Logo (`logo.svg`, `logo-hell.svg`, Kurzform `logo-kurz.svg` und `logo-kurz-hell.svg` für den dunklen Fußbereich), `favicon.svg`, eigene Zeichnungen (ohne Personen), `icons.svg` (kleine Symbole), `vorschau.png` (Vorschaubild 1200 × 630 für WhatsApp, E-Mail und soziale Netzwerke) und `icon-192.png` / `icon-512.png` (Symbole für den Handy-Startbildschirm)
 - `apple-touch-icon.png` und `site.webmanifest` – Symbol und Angaben für den Handy-Startbildschirm
 - `sitemap.xml` – Liste aller Seiten für Suchmaschinen (für https://alltagsfels.de, wird erst zum Start bei Google eingereicht)
 - `robots.txt` und `vercel.json` – sperren die Seite vorerst für Suchmaschinen (Disallow + Header „noindex“). Zum Start entfernen, siehe Checkliste unten.

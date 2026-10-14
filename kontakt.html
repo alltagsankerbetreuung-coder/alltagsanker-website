@@ -30,11 +30,16 @@
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <aside class="kopfleiste" aria-label="Hinweis">
-    <p id="kopfleiste-text"><span class="lang">Neu in Bottrop: Wir starten im <span class="plakette">Januar 2027</span>. <a href="kontakt.html">Lassen Sie sich schon jetzt vormerken.</a></span><span class="kurz">Start <span class="plakette">Januar 2027</span> · <a href="kontakt.html">Jetzt vormerken</a></span></p>
+    <a class="kopfleiste-link" href="kontakt.html"><span class="lang">Neu in Bottrop: Wir starten im <span class="datum">Januar <span class="zahl">2027</span></span>. <span class="unterstrichen">Lassen Sie sich schon jetzt vormerken.</span></span><span class="kurz">Start <span class="datum">Januar <span class="zahl">2027</span></span> · <span class="unterstrichen">Jetzt vormerken</span></span></a>
   </aside>
   <header class="kopf">
     <div class="container kopf-innen">
-      <a class="kopf-logo" href="index.html"><picture><source media="(min-width: 64em)" srcset="images/logo.svg" width="479" height="110" /><img src="images/logo-kurz.svg" alt="Alltagsfels – Betreuung im Alltag, zur Startseite" width="477" height="87" /></picture></a>
+      <a class="kopf-logo" href="index.html"><img src="images/logo-kurz.svg" alt="Alltagsfels, zur Startseite" width="477" height="87" /></a>
+      <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
+        <svg class="auf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="zu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Menü
+      </button>
       <nav class="hauptmenue" id="hauptmenue" aria-label="Hauptmenü">
         <ul class="menue-liste">
           <li><a href="leistungen.html">Leistungen</a></li>
@@ -45,72 +50,58 @@
           <li class="menue-jobs"><a href="mitarbeiten.html">Jobs</a></li>
         </ul>
         <div class="menue-extra">
-          <a class="btn" href="#anfrage">Kostenloses Erstgespräch anfragen</a>
+          <a class="btn" href="kontakt.html">Kostenloses Erstgespräch anfragen</a>
           <p>Oder per E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
         </div>
       </nav>
-      <div class="kopf-aktionen">
-        <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
-          <svg class="auf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg class="zu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          Menü
-        </button>
-        <a class="btn btn-klein btn-kopf" href="#anfrage">Erstgespräch</a>
-      </div>
+      <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
     </div>
   </header>
 
   <main id="inhalt">
 
-  <section class="page-hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Kontakt</h1>
-        <p>Wir freuen uns auf Ihre Nachricht. Unverbindlich und persönlich.</p>
+  <section class="seiten-kopf" aria-labelledby="seiten-titel">
+    <div class="container raster seiten-kopf-raster">
+      <div class="seiten-kopf-text">
+        <h1 id="seiten-titel">Lernen wir uns kennen</h1>
+        <p class="lead">Wir freuen uns auf Ihre Nachricht. Unverbindlich und persönlich.</p>
       </div>
-      <div class="hero-media">
-        <img src="images/kontakt.svg" alt="" width="320" height="260" />
-      </div>
+      <div class="seiten-kopf-bild"><img src="images/kontakt-tuer.svg" alt="" width="640" height="462" fetchpriority="high" /></div>
+    </div>
+    <div class="schichtkante kante-hero" aria-hidden="true">
+      <svg viewBox="0 0 1440 72" preserveAspectRatio="none" focusable="false">
+        <path class="band-1" fill="#d9c6ab" d="M0 10 360 2 780 14 1130 4 1440 12V72H0z"/>
+        <path class="band-2" fill="#e9d8c1" d="M0 30 320 38 720 26 1080 35 1440 27V72H0z"/>
+        <path class="band-3" fill="#fbf6ee" d="M0 52 420 45 840 56 1200 47 1440 53V72H0z"/>
+        <path class="kante-linie" pathLength="1" fill="none" stroke="#173a66" stroke-width="2" vector-effect="non-scaling-stroke" d="M0 10 360 2 780 14 1130 4 1440 12"/>
+      </svg>
     </div>
   </section>
-
-  <section>
+  <section class="folge flaeche-creme" aria-label="Kontakt">
     <div class="container contact-grid">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></div>
-          <div>
-            <h2>E-Mail</h2>
-            <p><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung<wbr />@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 3.5h2.6l1.5 4-2 1.3a11 11 0 0 0 6.5 6.5l1.3-2 4 1.5v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg></div>
-          <div>
-            <h2>Telefon</h2>
-            <p>Unsere Telefonnummer folgt bald. Sie möchten lieber telefonieren? Geben Sie im Formular Ihre Nummer an, dann rufen wir Sie an.</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></div>
-          <div>
-            <h2>Einsatzgebiet</h2>
-            <p>Bottrop und Umgebung, im Umkreis von etwa&nbsp;20&nbsp;km. Zum Beispiel Gladbeck, Gelsenkirchen oder Essen.</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon-circle blue"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 6h10M10 12h10M10 18h10"/><path d="m3.5 6 1.2 1.2L7 5M3.5 12l1.2 1.2L7 11M3.5 18l1.2 1.2L7 17"/></svg></div>
-          <div>
-            <h2>So geht es weiter</h2>
-            <ol class="mini-steps">
-              <li>Wir melden uns persönlich bei Ihnen, per E-Mail oder auf Wunsch telefonisch.</li>
-              <li>Wir besuchen Sie zu Hause und lernen uns kennen. Dieses Erstgespräch ist kostenlos.</li>
-              <li>Ab Januar 2027 kann die Betreuung beginnen.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
+      <ul class="kontakt-angaben">
+        <li>
+          <h2>E-Mail</h2>
+          <p><a class="mail-link" href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung<wbr />@gmail.com</a></p>
+        </li>
+        <li>
+          <h2>Rückruf</h2>
+          <p>Lieber telefonieren? Geben Sie im Formular Ihre Nummer an, dann rufen wir Sie an.</p>
+          <a class="pfeil-link" href="#rueckruf">Zum Feld für Ihre Telefonnummer <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+        </li>
+        <li>
+          <h2>Einsatzgebiet</h2>
+          <p>Bottrop und Umgebung, im Umkreis von etwa&nbsp;<span class="zahl">20</span>&nbsp;km. Zum Beispiel Gladbeck, Gelsenkirchen oder Essen.</p>
+        </li>
+        <li>
+          <h2>So geht es weiter</h2>
+          <ol>
+            <li>Wir melden uns persönlich bei Ihnen, per E-Mail oder auf Wunsch telefonisch.</li>
+            <li>Wir besuchen Sie zu Hause und lernen uns kennen. Dieses Erstgespräch ist kostenlos.</li>
+            <li>Ab Januar <span class="zahl">2027</span> kann die Betreuung beginnen.</li>
+          </ol>
+        </li>
+      </ul>
       <form class="contact-form" id="anfrage" action="https://formsubmit.co/alltagsankerbetreuung@gmail.com" method="POST">
         <h2 class="form-title">Schreiben Sie uns</h2>
         <p class="form-intro">Felder mit <span class="req">*</span> brauchen wir, um Ihnen zu antworten.</p>
@@ -120,28 +111,30 @@
         <input type="hidden" name="_replyto" value="" class="replyto" />
         <input type="hidden" name="_next" value="danke.html" id="next-url" />
         <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
         <div class="field">
           <label for="name">Ihr Name <span class="req" aria-hidden="true">*</span></label>
           <input type="text" id="name" name="Name" autocomplete="name" required />
         </div>
-        <div class="form-row">
-          <div class="field">
-            <label for="email">Ihre E-Mail-Adresse <span class="req" aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required />
-          </div>
+        <fieldset class="erreichbar" aria-describedby="erreichbar-hinweis">
+          <legend>Wie dürfen wir Sie erreichen?</legend>
+          <p class="feld-hinweis" id="erreichbar-hinweis">Bitte geben Sie Telefon oder E-Mail an. Eines von beiden reicht.</p>
+          <p class="feld-fehler erreichbar-fehler" role="alert" hidden>Bitte geben Sie Ihre Telefonnummer oder Ihre E-Mail-Adresse an.</p>
           <div class="field" id="rueckruf">
-            <label for="telefon">Ihre Telefonnummer <span class="optional">(freiwillig, für einen Rückruf)</span></label>
-            <input type="tel" id="telefon" name="Telefon" autocomplete="tel" inputmode="tel" />
+            <label for="telefon">Ihre Telefonnummer <span class="optional">(für einen Rückruf)</span></label>
+            <input type="tel" id="telefon" name="Telefon" autocomplete="tel" inputmode="tel" aria-describedby="erreichbar-hinweis" />
           </div>
-        </div>
+          <div class="field">
+            <label for="email">Ihre E-Mail-Adresse</label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" aria-describedby="erreichbar-hinweis" />
+          </div>
+        </fieldset>
         <div class="field">
           <label for="ort">Ihre Stadt <span class="optional">(freiwillig)</span></label>
           <input type="text" id="ort" name="Stadt" autocomplete="address-level2" placeholder="zum Beispiel Bottrop" />
         </div>
         <div class="field">
-          <label for="nachricht">Ihre Nachricht <span class="req" aria-hidden="true">*</span></label>
-          <textarea id="nachricht" name="Nachricht" rows="6" required placeholder="Zum Beispiel: Ich suche Unterstützung für meine Mutter in Gladbeck."></textarea>
+          <label for="nachricht">Ihre Nachricht <span class="optional">(freiwillig)</span></label>
+          <textarea id="nachricht" name="Nachricht" rows="6" placeholder="Zum Beispiel: Ich suche Unterstützung für meine Mutter in Gladbeck."></textarea>
         </div>
         <div class="form-hints">
           <p>Bitte schreiben Sie keine Angaben zur Gesundheit oder zum Pflegegrad in die Nachricht. Das besprechen wir lieber persönlich.</p>
@@ -156,11 +149,11 @@
   </main>
 
   <footer class="fuss dunkel">
-    <div class="fuss-kante" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" focusable="false"><path fill="#d9c6ab" d="M0 16 330 6 740 18 1110 8 1440 18V48H0z"/><path fill="#102a4c" d="M0 27 390 18 790 31 1160 20 1440 29V48H0z"/></svg></div>
-    <div class="hoehenlinien" aria-hidden="true"></div>
+    <div class="fuss-kante" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><path fill="#e9d8c1" d="M0 12 300 4 720 15 1090 5 1440 14V64H0z"/><path fill="#d9c6ab" d="M0 28 380 19 800 31 1150 21 1440 30V64H0z"/><path fill="#102a4c" d="M0 44 340 37 760 48 1120 39 1440 46V64H0z"/></svg></div>
     <div class="container fuss-raster">
       <div class="fuss-marke">
-        <a class="fuss-logo" href="index.html"><img src="images/logo-hell.svg" alt="Alltagsfels – zur Startseite" width="479" height="110" loading="lazy" /></a>
+        <a class="fuss-logo" href="index.html"><img src="images/logo-kurz-hell.svg" alt="Alltagsfels, zur Startseite" width="477" height="87" loading="lazy" /></a>
+        <p class="fuss-unterzeile">Betreuung im Alltag</p>
         <p>Alltagsbetreuung in Bottrop und Umgebung, im Umkreis von etwa <span class="zahl">20</span>&nbsp;km.</p>
         <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></address>
       </div>

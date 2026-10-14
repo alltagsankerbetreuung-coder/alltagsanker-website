@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 462" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<defs><clipPath id="fels"><path d="M28.0 452.0 76.6 344.0 163.0 268.4 249.4 225.2 314.2 160.4 411.4 144.2 497.8 198.2 562.6 284.6 611.2 452.0z"/></clipPath></defs>
+<circle cx="481.6" cy="128.0" r="102.6" fill="#e0874f"/>
+<g clip-path="url(#fels)">
+<path fill="#f3e7d6" d="M0 0h640v462H0z"/>
+<path fill="#e9d8c1" d="M0 430h640v462H0z"/>
+<path fill="#d9c6ab" stroke="#173a66" stroke-width="3" d="M150 360H500V372H150z"/>
+<path fill="#e9d8c1" d="M0 372h640v80H0z"/>
+<path fill="#ffffff" stroke="#173a66" stroke-width="3" d="M220 210h160v150H220z"/>
+<path fill="#f3e7d6" d="M220 210h160v18H220z"/>
+<path stroke="#173a66" stroke-width="2" d="M220 228h160"/>
+<g fill="#173a66"><circle cx="236" cy="219" r="3"/><circle cx="254" cy="219" r="3"/><circle cx="272" cy="219" r="3"/><circle cx="290" cy="219" r="3"/><circle cx="308" cy="219" r="3"/><circle cx="326" cy="219" r="3"/><circle cx="344" cy="219" r="3"/><circle cx="362" cy="219" r="3"/></g>
+<path stroke="#173a66" stroke-width="2" d="M240 256h112M240 280h96M240 304h120M240 328h70"/>
+<path stroke="#e0874f" stroke-width="3" d="M236 304h4M350 254l8 6 12-14"/>
+<path stroke="#173a66" stroke-width="2.5" d="M326 324c0-10 14-10 14-20a8 8 0 0 0-16-2M332 338v1"/>
+<path fill="#e0874f" stroke="#173a66" stroke-width="3" d="M398 352l60-104 12 7-60 104-14 5z"/>
+<path stroke="#173a66" stroke-width="2" d="M455 253l12 7"/>
+<path fill="#e3e8d6" stroke="#173a66" stroke-width="3" d="M168 312h40v20q0 20-20 20t-20-20z"/>
+<path stroke="#173a66" stroke-width="3" d="M208 318h6a7 7 0 0 1 0 14h-7"/>
+<path stroke="#173a66" stroke-width="1.5" d="M182 302q-4-5 0-10t0-10M194 302q-4-5 0-10t0-10"/>
+<path fill="#fbf6ee" stroke="#173a66" stroke-width="3" d="M430 196h66v50h-66z"/>
+<circle cx="474" cy="216" r="9" fill="#e0874f"/>
+<path stroke="#173a66" stroke-width="1.5" d="M436 236c14-8 26-8 36-2s20 4 24 0"/>
+<path stroke="#173a66" stroke-width="3" d="M0 430h640"/>
+</g>
+<path stroke="#173a66" stroke-width="3.5" d="M28.0 452.0 76.6 344.0 163.0 268.4 249.4 225.2 314.2 160.4 411.4 144.2 497.8 198.2 562.6 284.6 611.2 452.0z"/>
+<path stroke="#173a66" stroke-width="3.5" d="M6 452h628"/>
+</svg>

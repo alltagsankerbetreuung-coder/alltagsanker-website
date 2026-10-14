@@ -10,31 +10,57 @@ document.querySelectorAll(".year").forEach(function (el) {
   el.textContent = new Date().getFullYear();
 });
 
-// Menü unter 1024 px auf- und zuklappen
+// Menü auf- und zuklappen (solange die volle Navigation nicht in eine Zeile passt)
+var kopf = document.querySelector(".kopf");
 var menueKnopf = document.querySelector(".menue-knopf");
 var menue = document.getElementById("hauptmenue");
-function menueSetzen(offen) {
+function menueIstOffen() {
+  return !!menueKnopf && menueKnopf.getAttribute("aria-expanded") === "true";
+}
+function menueSetzen(offen, fokusZurueck) {
   if (!menueKnopf || !menue) return;
+  if (offen && kopf) {
+    // Die Fläche beginnt direkt unter dem Kopf und reicht bis zum unteren Rand
+    var unten = Math.max(0, Math.round(kopf.getBoundingClientRect().bottom));
+    document.documentElement.style.setProperty("--menue-oben", unten + "px");
+  }
   menueKnopf.setAttribute("aria-expanded", String(offen));
   menue.classList.toggle("ist-offen", offen);
+  document.documentElement.classList.toggle("menue-offen", offen);
+  if (offen) {
+    var erster = menue.querySelector("a");
+    if (erster) erster.focus();
+  } else if (fokusZurueck) {
+    menueKnopf.focus();
+  }
 }
 if (menueKnopf && menue) {
   menueKnopf.addEventListener("click", function () {
-    menueSetzen(menueKnopf.getAttribute("aria-expanded") !== "true");
+    menueSetzen(!menueIstOffen(), false);
   });
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && menueKnopf.getAttribute("aria-expanded") === "true") {
-      menueSetzen(false);
-      menueKnopf.focus();
+    if (event.key === "Escape" && menueIstOffen()) {
+      menueSetzen(false, true);
     }
   });
   menue.addEventListener("click", function (event) {
-    if (event.target.closest("a")) menueSetzen(false);
+    if (event.target.closest("a")) menueSetzen(false, false);
+  });
+  // Verlässt der Fokus Menü und Menü-Knopf, schließt das Menü
+  [menue, menueKnopf].forEach(function (el) {
+    el.addEventListener("focusout", function (event) {
+      var ziel = event.relatedTarget;
+      if (!menueIstOffen() || !ziel) return;
+      if (!menue.contains(ziel) && ziel !== menueKnopf) menueSetzen(false, false);
+    });
+  });
+  // Wird der Knopf unsichtbar (breiteres Fenster), Menü schließen
+  window.addEventListener("resize", function () {
+    if (menueIstOffen() && menueKnopf.offsetParent === null) menueSetzen(false, false);
   });
 }
 
 // Kopf beim Scrollen schmaler, mit Haarlinie
-var kopf = document.querySelector(".kopf");
 if (kopf) {
   var kopfPruefen = function () {
     kopf.classList.toggle("ist-klein", window.scrollY > 48);
@@ -52,6 +78,7 @@ function schriftSetzen(stufe) {
   schriftKnoepfe.forEach(function (knopf) {
     knopf.setAttribute("aria-pressed", String(knopf.getAttribute("data-schrift") === stufe));
   });
+  if (menueIstOffen() && menueKnopf.offsetParent === null) menueSetzen(false, false);
 }
 if (schriftKnoepfe.length) {
   var gespeichert = "1";
@@ -70,12 +97,28 @@ if (schriftKnoepfe.length) {
   });
 }
 
-// „Seite ausdrucken“
+// „Seite ausdrucken“ – mit data-drucken="id" nur dieser Abschnitt (plus Kontakt im Fuß)
+var druckZiel = null;
+function druckTeilAufheben() {
+  document.documentElement.classList.remove("druck-teil");
+  if (druckZiel) druckZiel.classList.remove("druck-ziel");
+  druckZiel = null;
+}
 document.querySelectorAll("[data-drucken]").forEach(function (knopf) {
   knopf.addEventListener("click", function () {
+    var id = knopf.getAttribute("data-drucken");
+    var abschnitt = id ? document.getElementById(id) : null;
+    if (abschnitt) {
+      druckZiel = abschnitt;
+      abschnitt.classList.add("druck-ziel");
+      document.documentElement.classList.add("druck-teil");
+    }
     window.print();
+    // Manche Browser feuern „afterprint“ nicht zuverlässig
+    setTimeout(druckTeilAufheben, 1000);
   });
 });
+window.addEventListener("afterprint", druckTeilAufheben);
 
 // Beim Drucken alle Antworten der Fragen zeigen, danach wie vorher
 var geschlosseneFragen = [];
@@ -90,10 +133,34 @@ window.addEventListener("afterprint", function () {
   geschlosseneFragen = [];
 });
 
-// Formulare: Antwort-Adresse setzen und doppeltes Absenden verhindern
+// Formulare: Telefon oder E-Mail prüfen, Antwort-Adresse setzen, doppeltes Absenden verhindern
 document.querySelectorAll("form.contact-form").forEach(function (form) {
-  form.addEventListener("submit", function () {
-    var mail = form.querySelector('input[type="email"]');
+  var mail = form.querySelector('input[type="email"]');
+  var telefon = form.querySelector('input[type="tel"]');
+  var fehler = form.querySelector(".erreichbar-fehler");
+
+  function erreichbarPruefen() {
+    if (!mail || !telefon || !fehler) return true;
+    var ok = mail.value.trim() !== "" || telefon.value.trim() !== "";
+    fehler.hidden = ok;
+    [mail, telefon].forEach(function (feld) {
+      if (ok) feld.removeAttribute("aria-invalid");
+      else feld.setAttribute("aria-invalid", "true");
+    });
+    return ok;
+  }
+  [mail, telefon].forEach(function (feld) {
+    if (feld) feld.addEventListener("input", function () {
+      if (fehler && !fehler.hidden) erreichbarPruefen();
+    });
+  });
+
+  form.addEventListener("submit", function (event) {
+    if (!erreichbarPruefen()) {
+      event.preventDefault();
+      (telefon || mail).focus();
+      return;
+    }
     var replyto = form.querySelector(".replyto");
     if (mail && replyto) {
       replyto.value = mail.value;

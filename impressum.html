@@ -30,11 +30,16 @@
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <aside class="kopfleiste" aria-label="Hinweis">
-    <p id="kopfleiste-text"><span class="lang">Neu in Bottrop: Wir starten im <span class="plakette">Januar 2027</span>. <a href="kontakt.html">Lassen Sie sich schon jetzt vormerken.</a></span><span class="kurz">Start <span class="plakette">Januar 2027</span> · <a href="kontakt.html">Jetzt vormerken</a></span></p>
+    <a class="kopfleiste-link" href="kontakt.html"><span class="lang">Neu in Bottrop: Wir starten im <span class="datum">Januar <span class="zahl">2027</span></span>. <span class="unterstrichen">Lassen Sie sich schon jetzt vormerken.</span></span><span class="kurz">Start <span class="datum">Januar <span class="zahl">2027</span></span> · <span class="unterstrichen">Jetzt vormerken</span></span></a>
   </aside>
   <header class="kopf">
     <div class="container kopf-innen">
-      <a class="kopf-logo" href="index.html"><picture><source media="(min-width: 64em)" srcset="images/logo.svg" width="479" height="110" /><img src="images/logo-kurz.svg" alt="Alltagsfels – Betreuung im Alltag, zur Startseite" width="477" height="87" /></picture></a>
+      <a class="kopf-logo" href="index.html"><img src="images/logo-kurz.svg" alt="Alltagsfels, zur Startseite" width="477" height="87" /></a>
+      <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
+        <svg class="auf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="zu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Menü
+      </button>
       <nav class="hauptmenue" id="hauptmenue" aria-label="Hauptmenü">
         <ul class="menue-liste">
           <li><a href="leistungen.html">Leistungen</a></li>
@@ -49,23 +54,26 @@
           <p>Oder per E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
         </div>
       </nav>
-      <div class="kopf-aktionen">
-        <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
-          <svg class="auf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg class="zu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          Menü
-        </button>
-        <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
-      </div>
+      <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
     </div>
   </header>
 
   <main id="inhalt">
 
-  <section class="page-hero">
-    <div class="container">
-        <h1>Impressum</h1>
+  <section class="seiten-kopf ohne-bild" aria-labelledby="seiten-titel">
+    <div class="container raster seiten-kopf-raster">
+      <div class="seiten-kopf-text">
+        <h1 id="seiten-titel">Impressum</h1>
       </div>
+    </div>
+    <div class="schichtkante kante-hero" aria-hidden="true">
+      <svg viewBox="0 0 1440 72" preserveAspectRatio="none" focusable="false">
+        <path class="band-1" fill="#d9c6ab" d="M0 10 360 2 780 14 1130 4 1440 12V72H0z"/>
+        <path class="band-2" fill="#e9d8c1" d="M0 30 320 38 720 26 1080 35 1440 27V72H0z"/>
+        <path class="band-3" fill="#fbf6ee" d="M0 52 420 45 840 56 1200 47 1440 53V72H0z"/>
+        <path class="kante-linie" pathLength="1" fill="none" stroke="#173a66" stroke-width="2" vector-effect="non-scaling-stroke" d="M0 10 360 2 780 14 1130 4 1440 12"/>
+      </svg>
+    </div>
   </section>
 
   <section>
@@ -99,11 +107,11 @@
   </main>
 
   <footer class="fuss dunkel">
-    <div class="fuss-kante" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" focusable="false"><path fill="#d9c6ab" d="M0 16 330 6 740 18 1110 8 1440 18V48H0z"/><path fill="#102a4c" d="M0 27 390 18 790 31 1160 20 1440 29V48H0z"/></svg></div>
-    <div class="hoehenlinien" aria-hidden="true"></div>
+    <div class="fuss-kante" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><path fill="#e9d8c1" d="M0 12 300 4 720 15 1090 5 1440 14V64H0z"/><path fill="#d9c6ab" d="M0 28 380 19 800 31 1150 21 1440 30V64H0z"/><path fill="#102a4c" d="M0 44 340 37 760 48 1120 39 1440 46V64H0z"/></svg></div>
     <div class="container fuss-raster">
       <div class="fuss-marke">
-        <a class="fuss-logo" href="index.html"><img src="images/logo-hell.svg" alt="Alltagsfels – zur Startseite" width="479" height="110" loading="lazy" /></a>
+        <a class="fuss-logo" href="index.html"><img src="images/logo-kurz-hell.svg" alt="Alltagsfels, zur Startseite" width="477" height="87" loading="lazy" /></a>
+        <p class="fuss-unterzeile">Betreuung im Alltag</p>
         <p>Alltagsbetreuung in Bottrop und Umgebung, im Umkreis von etwa <span class="zahl">20</span>&nbsp;km.</p>
         <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></address>
       </div>

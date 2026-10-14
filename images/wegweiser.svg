@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 462" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<defs><clipPath id="fels"><path d="M28.0 452.0 76.6 344.0 163.0 268.4 249.4 225.2 314.2 160.4 411.4 144.2 497.8 198.2 562.6 284.6 611.2 452.0z"/></clipPath></defs>
+<circle cx="481.6" cy="128.0" r="102.6" fill="#e0874f"/>
+<g clip-path="url(#fels)">
+<path fill="#fbf6ee" d="M0 0h640v462H0z"/>
+<path fill="#e3e8d6" d="M0 452h640v462H0z"/>
+<path fill="#fbf6ee" d="M0 0h640v360H0z"/>
+<path fill="#e3e8d6" stroke="#173a66" stroke-width="2" d="M0 360C160 350 300 366 420 356S580 350 640 358V470H0z"/>
+<path fill="#d9c6ab" stroke="#173a66" stroke-width="2" d="M360 360C400 330 440 322 480 330S560 344 600 360z"/>
+<path fill="#d9c6ab" stroke="#173a66" stroke-width="3" d="M262 452V226h14v226z"/>
+<path fill="#ffffff" stroke="#173a66" stroke-width="3" d="M276 236h112l18 18-18 18H276z"/>
+<path fill="#ffffff" stroke="#173a66" stroke-width="3" d="M262 290H160l-18 18 18 18h102z"/>
+<path stroke="#173a66" stroke-width="2" d="M296 254h70M176 308h66"/>
+<circle cx="269" cy="222" r="9" fill="#e0874f" stroke="#173a66" stroke-width="3"/>
+<path stroke="#173a66" stroke-width="2" d="M120 452C170 420 230 400 300 392S420 380 480 368"/>
+<path stroke="#173a66" stroke-width="2" d="M180 452C220 426 270 410 330 404"/>
+<path stroke="#173a66" stroke-width="3" d="M0 452h640"/>
+</g>
+<path stroke="#173a66" stroke-width="3.5" d="M28.0 452.0 76.6 344.0 163.0 268.4 249.4 225.2 314.2 160.4 411.4 144.2 497.8 198.2 562.6 284.6 611.2 452.0z"/>
+<path stroke="#173a66" stroke-width="3.5" d="M6 452h628"/>
+</svg>

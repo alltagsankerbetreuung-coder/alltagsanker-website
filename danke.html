@@ -22,12 +22,14 @@
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-  <aside class="kopfleiste" aria-label="Hinweis">
-    <p id="kopfleiste-text"><span class="lang">Neu in Bottrop: Wir starten im <span class="plakette">Januar 2027</span>. <a href="kontakt.html">Lassen Sie sich schon jetzt vormerken.</a></span><span class="kurz">Start <span class="plakette">Januar 2027</span> · <a href="kontakt.html">Jetzt vormerken</a></span></p>
-  </aside>
   <header class="kopf">
     <div class="container kopf-innen">
-      <a class="kopf-logo" href="index.html"><picture><source media="(min-width: 64em)" srcset="images/logo.svg" width="479" height="110" /><img src="images/logo-kurz.svg" alt="Alltagsfels – Betreuung im Alltag, zur Startseite" width="477" height="87" /></picture></a>
+      <a class="kopf-logo" href="index.html"><img src="images/logo-kurz.svg" alt="Alltagsfels, zur Startseite" width="477" height="87" /></a>
+      <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
+        <svg class="auf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="zu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Menü
+      </button>
       <nav class="hauptmenue" id="hauptmenue" aria-label="Hauptmenü">
         <ul class="menue-liste">
           <li><a href="leistungen.html">Leistungen</a></li>
@@ -42,59 +44,62 @@
           <p>Oder per E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
         </div>
       </nav>
-      <div class="kopf-aktionen">
-        <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
-          <svg class="auf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg class="zu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          Menü
-        </button>
-        <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
-      </div>
+      <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
     </div>
   </header>
 
   <main id="inhalt">
 
-  <section class="page-hero">
-    <div class="container">
-        <h1>Vielen Dank.</h1>
-        <p>Ihre Nachricht ist bei uns angekommen.</p>
-        <a href="index.html" class="btn btn-outline">Zurück zur Startseite</a>
+  <section class="seiten-kopf" aria-labelledby="seiten-titel">
+    <div class="container raster seiten-kopf-raster">
+      <div class="seiten-kopf-text">
+        <h1 id="seiten-titel">Vielen Dank.</h1>
+        <p class="lead">Ihre Nachricht ist bei uns angekommen.</p>
+        <div class="knopf-reihe"><a href="index.html" class="btn btn-zweit">Zurück zur Startseite</a></div>
       </div>
+      <div class="seiten-kopf-bild"><img src="images/danke-sonne.svg" alt="" width="640" height="462" fetchpriority="high" /></div>
+    </div>
+    <div class="schichtkante kante-hero" aria-hidden="true">
+      <svg viewBox="0 0 1440 72" preserveAspectRatio="none" focusable="false">
+        <path class="band-1" fill="#d9c6ab" d="M0 10 360 2 780 14 1130 4 1440 12V72H0z"/>
+        <path class="band-2" fill="#e9d8c1" d="M0 30 320 38 720 26 1080 35 1440 27V72H0z"/>
+        <path class="band-3" fill="#fbf6ee" d="M0 52 420 45 840 56 1200 47 1440 53V72H0z"/>
+        <path class="kante-linie" pathLength="1" fill="none" stroke="#173a66" stroke-width="2" vector-effect="non-scaling-stroke" d="M0 10 360 2 780 14 1130 4 1440 12"/>
+      </svg>
+    </div>
   </section>
-
-  <section id="weiter-kunden">
-    <div class="container narrow">
-      <h2>So geht es weiter</h2>
-      <ol class="steps steps-vertical">
-        <li><span class="step-num" aria-hidden="true">1</span><h3>Wir melden uns</h3><p>Julian Wehner meldet sich persönlich bei Ihnen.</p></li>
-        <li><span class="step-num" aria-hidden="true">2</span><h3>Wir lernen uns kennen</h3><p>Wir besuchen Sie zu Hause. Dieses Erstgespräch ist kostenlos.</p></li>
-        <li><span class="step-num" aria-hidden="true">3</span><h3>Die Betreuung beginnt</h3><p>Ab Januar 2027 kann es losgehen.</p></li>
+  <section class="folge flaeche-creme" id="weiter-kunden" aria-labelledby="weiter-titel">
+    <div class="container">
+      <div class="kopf-block"><h2 id="weiter-titel">So geht es weiter</h2></div>
+      <ol class="schritte">
+        <li><span class="schritt-ziffer" aria-hidden="true">1</span><h3><span class="nur-vorlesen">Schritt 1: </span>Wir melden uns</h3><p>Wir melden uns persönlich bei Ihnen, per E-Mail oder auf Wunsch telefonisch.</p></li>
+        <li><span class="schritt-ziffer" aria-hidden="true">2</span><h3><span class="nur-vorlesen">Schritt 2: </span>Wir lernen uns kennen</h3><p>Wir besuchen Sie zu Hause. Dieses Erstgespräch ist kostenlos.</p></li>
+        <li><span class="schritt-ziffer" aria-hidden="true">3</span><h3><span class="nur-vorlesen">Schritt 3: </span>Sie entscheiden in Ruhe</h3><p>Wenn es passt, vereinbaren wir feste Zeiten, und Sie bekommen einen schriftlichen Vertrag.</p></li>
       </ol>
-      <p class="section-foot">In der Zwischenzeit: <a class="text-link" href="fragen.html">Häufige Fragen lesen</a></p>
+      <p class="danke-fuss"><a class="pfeil-link" href="fragen.html">In der Zwischenzeit: Fragen und Antworten lesen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a></p>
     </div>
   </section>
 
-  <section id="weiter-bewerbung" hidden>
-    <div class="container narrow">
-      <h2>So geht es weiter</h2>
-      <ol class="steps steps-vertical">
-        <li><span class="step-num" aria-hidden="true">1</span><h3>Wir lesen Ihre Bewerbung</h3><p>Wir lesen Ihre Bewerbung in Ruhe und melden uns bei Ihnen.</p></li>
-        <li><span class="step-num" aria-hidden="true">2</span><h3>Wir lernen uns kennen</h3><p>In einem Gespräch erzählen wir Ihnen alles über die Arbeit bei uns.</p></li>
-        <li><span class="step-num" aria-hidden="true">3</span><h3>Sie fangen an</h3><p>Wann Sie anfangen können, stimmen wir gemeinsam ab.</p></li>
+  <section class="folge flaeche-creme" id="weiter-bewerbung" aria-labelledby="weiter-titel-b" hidden>
+    <div class="container">
+      <div class="kopf-block"><h2 id="weiter-titel-b">So geht es weiter</h2></div>
+      <ol class="schritte">
+        <li><span class="schritt-ziffer" aria-hidden="true">1</span><h3><span class="nur-vorlesen">Schritt 1: </span>Wir lesen Ihre Bewerbung</h3><p>Wir lesen Ihre Bewerbung in Ruhe und melden uns bei Ihnen.</p></li>
+        <li><span class="schritt-ziffer" aria-hidden="true">2</span><h3><span class="nur-vorlesen">Schritt 2: </span>Wir lernen uns kennen</h3><p>In einem Gespräch erzählen wir Ihnen alles über die Arbeit bei uns.</p></li>
+        <li><span class="schritt-ziffer" aria-hidden="true">3</span><h3><span class="nur-vorlesen">Schritt 3: </span>Sie fangen an</h3><p>Wann Sie anfangen können, stimmen wir gemeinsam ab.</p></li>
       </ol>
-      <p class="section-foot">Ihren Lebenslauf können Sie uns gern per E-Mail schicken: <a href="mailto:alltagsankerbetreuung@gmail.com?subject=Bewerbung%20Alltagsbegleitung">alltagsankerbetreuung<wbr />@gmail.com</a></p>
+      <p class="danke-fuss">Ihren Lebenslauf können Sie uns gern per E-Mail schicken: <a class="mail-link" href="mailto:alltagsankerbetreuung@gmail.com?subject=Bewerbung%20Alltagsbegleitung">alltagsankerbetreuung@gmail.com</a></p>
     </div>
   </section>
 
   </main>
 
   <footer class="fuss dunkel">
-    <div class="fuss-kante" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" focusable="false"><path fill="#d9c6ab" d="M0 16 330 6 740 18 1110 8 1440 18V48H0z"/><path fill="#102a4c" d="M0 27 390 18 790 31 1160 20 1440 29V48H0z"/></svg></div>
-    <div class="hoehenlinien" aria-hidden="true"></div>
+    <div class="fuss-kante" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><path fill="#e9d8c1" d="M0 12 300 4 720 15 1090 5 1440 14V64H0z"/><path fill="#d9c6ab" d="M0 28 380 19 800 31 1150 21 1440 30V64H0z"/><path fill="#102a4c" d="M0 44 340 37 760 48 1120 39 1440 46V64H0z"/></svg></div>
     <div class="container fuss-raster">
       <div class="fuss-marke">
-        <a class="fuss-logo" href="index.html"><img src="images/logo-hell.svg" alt="Alltagsfels – zur Startseite" width="479" height="110" loading="lazy" /></a>
+        <a class="fuss-logo" href="index.html"><img src="images/logo-kurz-hell.svg" alt="Alltagsfels, zur Startseite" width="477" height="87" loading="lazy" /></a>
+        <p class="fuss-unterzeile">Betreuung im Alltag</p>
         <p>Alltagsbetreuung in Bottrop und Umgebung, im Umkreis von etwa <span class="zahl">20</span>&nbsp;km.</p>
         <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></address>
       </div>
@@ -141,11 +146,6 @@
     if (/bewerbung/.test(window.location.search)) {
       document.getElementById("weiter-kunden").hidden = true;
       document.getElementById("weiter-bewerbung").hidden = false;
-      // Kopfleiste ohne Starttermin für Bewerberinnen und Bewerber
-      var kopfleiste = document.getElementById("kopfleiste-text");
-      if (kopfleiste) {
-        kopfleiste.textContent = "Wir suchen Alltagsbegleiterinnen und Alltagsbegleiter in Bottrop und Umgebung.";
-      }
     }
   </script>
 </body>
