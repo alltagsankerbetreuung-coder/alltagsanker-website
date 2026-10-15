@@ -4,34 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alltagsbetreuung in Bottrop und Umgebung – Alltagsfels</title>
-  <meta name="description" content="Betreuung und Hilfe im Alltag, vor allem für ältere Menschen. In Bottrop und Umgebung, zum Beispiel Gladbeck, Gelsenkirchen und Essen. Erstgespräch kostenlos." />
+  <meta name="description" content="Alltagsbetreuung in Bottrop und Umgebung: feste Zeiten, Pflegefachkraft im Team. Ab Pflegegrad 2 über die Pflegekasse oder privat. Erstgespräch kostenlos." />
   <link rel="canonical" href="https://alltagsfels.de/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Alltagsfels" />
   <meta property="og:url" content="https://alltagsfels.de/" />
   <meta property="og:title" content="Alltagsbetreuung in Bottrop und Umgebung – Alltagsfels" />
-  <meta property="og:description" content="Betreuung und Hilfe im Alltag, vor allem für ältere Menschen. In Bottrop und Umgebung, zum Beispiel Gladbeck, Gelsenkirchen und Essen. Erstgespräch kostenlos." />
+  <meta property="og:description" content="Alltagsbetreuung in Bottrop und Umgebung: feste Zeiten, Pflegefachkraft im Team. Ab Pflegegrad 2 über die Pflegekasse oder privat. Erstgespräch kostenlos." />
   <meta property="og:image" content="https://alltagsfels.de/images/vorschau.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Alltagsfels: Zeit für Sie. Hilfe im Alltag." />
+  <meta property="og:image:alt" content="Alltagsfels: Jemand, auf den Verlass ist. Alltagsbetreuung in Bottrop und Umgebung." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#173a66" />
+  <meta name="theme-color" content="#2b3328" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="preload" href="fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
-  <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.alltagsfelsBereit)document.documentElement.classList.remove("js")},3000);</script>
+  <script>(function(d){d.classList.add("js");try{var s=localStorage.getItem("alltagsfels-schrift");if(s==="2"||s==="3")d.classList.add("schrift-"+s)}catch(e){}setTimeout(function(){if(!window.alltagsfelsBereit)d.classList.remove("js")},3000)})(document.documentElement);</script>
   <script src="script.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Alltagsfels",
-    "description": "Alltagsbetreuung in Bottrop und Umgebung (etwa 20 km), zum Beispiel Gladbeck, Gelsenkirchen und Essen, vor allem für ältere Menschen",
+    "description": "Alltagsbetreuung für ältere Menschen in Bottrop und Umgebung (etwa 20 km), zum Beispiel Gladbeck, Gelsenkirchen und Essen. Ab Pflegegrad 2 über die Pflegekasse oder privat.",
     "url": "https://alltagsfels.de/",
     "logo": "https://alltagsfels.de/images/icon-512.png",
     "image": "https://alltagsfels.de/images/vorschau.png",
@@ -53,313 +54,502 @@
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-  <aside class="topbar" aria-label="Hinweis">
-    <p>Wir starten im Januar 2027. <a href="kontakt.html">Lassen Sie sich schon jetzt vormerken.</a></p>
+  <aside class="kopfleiste" aria-label="Hinweis">
+    <a class="kopfleiste-link" href="kontakt.html"><span class="lang">Neu in Bottrop: Wir starten im <span class="datum">Januar <span class="zahl">2027</span></span>. <span class="unterstrichen">Lassen Sie sich schon jetzt vormerken.</span></span><span class="kurz">Start <span class="datum">Januar <span class="zahl">2027</span></span> · <span class="unterstrichen">Jetzt vormerken</span></span></a>
   </aside>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="logo" href="index.html"><img src="images/logo.svg" alt="Alltagsfels – Betreuung im Alltag, zur Startseite" width="479" height="110" /></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptmenue">
-        <svg class="icon-svg icon-open" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        <svg class="icon-svg icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  <header class="kopf">
+    <div class="container kopf-innen">
+      <a class="kopf-logo" href="index.html"><img src="images/logo-kurz.svg" alt="Alltagsfels, zur Startseite" width="586" height="143" /></a>
+      <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="hauptmenue">
+        <svg class="auf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="zu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         Menü
       </button>
-      <nav class="main-nav" id="hauptmenue" aria-label="Hauptmenü">
-        <ul>
-          <li><a href="index.html" aria-current="page">Startseite</a></li>
+      <nav class="hauptmenue" id="hauptmenue" aria-label="Hauptmenü">
+        <ul class="menue-liste">
           <li><a href="leistungen.html">Leistungen</a></li>
           <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="kosten.html">Kosten</a></li>
-          <li><a href="fragen.html">Häufige Fragen</a></li>
-          <li><a href="mitarbeiten.html">Jobs</a></li>
+          <li><a href="fragen.html">Fragen</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
+          <li class="menue-jobs"><a href="mitarbeiten.html">Jobs</a></li>
         </ul>
+        <div class="menue-extra">
+          <a class="btn" href="kontakt.html">Kostenloses Erstgespräch anfragen</a>
+          <p>Oder per E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+        </div>
       </nav>
-      <a class="btn btn-small header-cta" href="kontakt.html">Kostenloses Erstgespräch</a>
+      <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
     </div>
   </header>
 
   <main id="inhalt">
 
-  <section class="hero">
-    <div class="container hero-grid">
+  <!-- Hero: Gefühl und Orientierung -->
+  <section class="hero" aria-labelledby="hero-titel">
+    <div class="container raster hero-raster">
       <div class="hero-text">
-        <h1><span class="eyebrow">Alltagsbetreuung in Bottrop und Umgebung</span> <span class="h1-main">Zeit für Sie.<br /> Hilfe im Alltag.</span></h1>
-        <p>Wir begleiten Menschen zu Hause, die im Alltag Hilfe brauchen. Vor allem ältere Menschen, aber nicht nur. Mit Gesellschaft, Begleitung zu Terminen und Hilfe im Haushalt. Persönlich, verlässlich und ohne Hektik.</p>
-        <ul class="checklist">
-          <li><span class="check"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5 10 17.5 19.5 7"/></svg></span> Mit oder ohne Pflegegrad</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5 10 17.5 19.5 7"/></svg></span> Auch bei Demenz</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5 10 17.5 19.5 7"/></svg></span> Erstgespräch bei Ihnen zu Hause: kostenlos</li>
+        <h1 class="display" id="hero-titel"><span class="dachzeile">Alltagsbetreuung in Bottrop und Umgebung</span> <span class="h1-haupt">Jemand, auf&nbsp;den <em class="akzent">Verlass</em> ist.</span></h1>
+        <p class="lead hero-lead">Alltagsbetreuung für ältere Menschen in Bottrop und Umgebung. Wir kommen zu festen Zeiten, machen die Dinge gemeinsam mit Ihnen und haben eine examinierte Pflegefachkraft im Team.</p>
+        <div class="knopf-reihe">
+          <a class="btn" href="kontakt.html">Kostenloses Erstgespräch anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+          <a class="pfeil-link" href="kontakt.html#rueckruf">Lieber zurückrufen lassen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+        </div>
+        <ul class="fakten">
+          <li>Ab Pflegegrad 2 über die Pflegekasse oder privat</li>
+          <li>Auch bei Demenz</li>
+          <li>Erstgespräch bei Ihnen zu Hause: kostenlos</li>
         </ul>
-        <div class="btn-row">
-          <a href="kontakt.html" class="btn">Kostenloses Erstgespräch anfragen</a>
-          <a href="fragen.html" class="btn btn-outline">Häufige Fragen</a>
-        </div>
       </div>
-      <div class="hero-media">
-        <img src="images/hero-begleitung.svg" alt="Eine Betreuungsperson geht Hand in Hand mit einer älteren Dame spazieren" width="480" height="390" />
+      <div class="hero-bild">
+        <div class="hoehenlinien" aria-hidden="true"></div>
+        <img src="images/hero-kueche.svg" alt="Zeichnung: Eine ältere Dame und eine Alltagsbegleiterin sitzen zusammen am Küchentisch und trinken Kaffee. Durch das Fenster sieht man die Halde mit dem Tetraeder." width="640" height="462" fetchpriority="high" />
       </div>
+    </div>
+    <div class="schichtkante kante-hero" aria-hidden="true">
+      <svg viewBox="0 0 1440 72" preserveAspectRatio="none" focusable="false">
+        <path class="band-1" fill="#d9c6ab" d="M0 10 360 2 780 14 1130 4 1440 12V72H0z"/>
+        <path class="band-2" fill="#e9d8c1" d="M0 30 320 38 720 26 1080 35 1440 27V72H0z"/>
+        <path class="band-3" fill="#fbf6ee" d="M0 52 420 45 840 56 1200 47 1440 53V72H0z"/>
+        <path class="kante-linie" pathLength="1" fill="none" stroke="#2b3328" stroke-width="2" vector-effect="non-scaling-stroke" d="M0 10 360 2 780 14 1130 4 1440 12"/>
+      </svg>
     </div>
   </section>
 
-  <section class="trust">
+  <!-- Weiche: Für wen suchen Sie Hilfe? -->
+  <section class="weiche flaeche-creme" aria-labelledby="weiche-titel">
     <div class="container">
-      <h2 class="nur-vorlesen">Darauf können Sie sich verlassen</h2>
-      <div class="trust-grid reveal">
-        <div class="trust-item">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2 19 6v5.6c0 4.3-2.9 7.6-7 9.2-4.1-1.6-7-4.9-7-9.2V6l7-2.8z"/><path d="M12 8.5v6M9 11.5h6"/></svg></div>
-          <div><h3>Fachkraft im Team</h3><p>Eine examinierte Pflegefachkraft gehört zu unserem Team.</p></div>
-        </div>
-        <div class="trust-item">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2.5"/></svg></div>
-          <div><h3>Feste Termine</h3><p>Wir kommen zu festen Zeiten, nach Absprache mit Ihnen.</p></div>
-        </div>
-        <div class="trust-item">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></div>
-          <div><h3>Aus der Region</h3><p>Unser Sitz ist in Bottrop. Wir kennen uns hier aus.</p></div>
-        </div>
-        <div class="trust-item">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></svg></div>
-          <div><h3>Schweigepflicht</h3><p>Was Sie uns anvertrauen, bleibt bei uns.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Unsere Leistungen</p>
-        <h2>Wie wir helfen</h2>
-        <p class="lead">Wir machen die Dinge gemeinsam mit Ihnen, in Ihrem Tempo.</p>
-      </div>
-      <div class="grid grid-2">
-        <div class="card row-card reveal">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg></div>
-          <div>
-            <h3>Gesellschaft leisten</h3>
-            <p>Wir reden, hören zu, lesen vor, spielen und machen Gedächtnistraining. Wir gehen mit Ihnen spazieren.</p>
-          </div>
-        </div>
-        <div class="card row-card reveal reveal-d1">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="8.5" cy="7.5" r="3"/><path d="M3 20v-1.5A4.5 4.5 0 0 1 7.5 14h2a4.5 4.5 0 0 1 4.5 4.5V20"/><circle cx="16.5" cy="8.5" r="2.5"/><path d="M16 13.5h1a4 4 0 0 1 4 4V20"/></svg></div>
-          <div>
-            <h3>Begleiten</h3>
-            <p>Wir begleiten Sie zum Arzt, zu Ämtern, zur Bank, zum Friseur oder zum Einkaufen.</p>
-          </div>
-        </div>
-        <div class="card row-card reveal">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg></div>
-          <div>
-            <h3>Im Haushalt mithelfen</h3>
-            <p>Gemeinsam mit Ihnen: einkaufen, aufräumen, leichte Hausarbeit und kleine Mahlzeiten kochen.</p>
-          </div>
-        </div>
-        <div class="card row-card reveal reveal-d1">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div>
-          <div>
-            <h3>Den Alltag ordnen</h3>
-            <p>Wir helfen bei Terminen und Post. Und beim Kontakt zu Familie und Freunden.</p>
-          </div>
-        </div>
-      </div>
-      <p class="section-foot"><a class="text-link" href="leistungen.html">Alle Leistungen ansehen</a></p>
-    </div>
-  </section>
-
-  <section class="section-white" id="einsatzgebiet">
-    <div class="container area">
-      <div class="area-map reveal">
-          <svg viewBox="0 0 560 440" role="img" aria-labelledby="karte-titel">
-            <title id="karte-titel">Schematische Karte: Umkreis von etwa&nbsp;20&nbsp;km um Bottrop, mit Gladbeck, Gelsenkirchen und Essen als Beispiele</title>
-            <rect width="560" height="440" rx="22" fill="#fbf6ee"/>
-            <circle cx="270" cy="220" r="190" fill="#e3e8d6"/>
-            <circle cx="270" cy="220" r="190" fill="none" stroke="#86a86f" stroke-width="3" stroke-dasharray="10 9"/>
-            <path d="M0 300 C 90 280, 150 318, 240 300 S 400 270, 560 296" fill="none" stroke="#bcd0e6" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
-            <g stroke="#a33a27" stroke-width="2.5" fill="none" stroke-linecap="round">
-              <path d="M270 220 L 92 220" stroke-dasharray="6 6"/>
-              <path d="M84 220 l12 -7 M84 220 l12 7"/>
-            </g>
-            <rect x="122" y="196" width="104" height="30" rx="15" fill="#fff"/>
-            <text x="174" y="217" font-size="18" fill="#a33a27" text-anchor="middle">ca. 20 km</text>
-            <g>
-              <circle cx="318" cy="118" r="13" fill="#2b5487"/><circle cx="318" cy="118" r="5" fill="#fff"/>
-              <text x="338" y="125" font-size="21" fill="#173a66">Gladbeck</text>
-              <circle cx="408" cy="236" r="13" fill="#2b5487"/><circle cx="408" cy="236" r="5" fill="#fff"/>
-              <text x="352" y="274" font-size="21" fill="#173a66">Gelsenkirchen</text>
-              <circle cx="306" cy="318" r="13" fill="#2b5487"/><circle cx="306" cy="318" r="5" fill="#fff"/>
-              <text x="326" y="325" font-size="21" fill="#173a66">Essen</text>
-            </g>
-            <g>
-              <circle cx="270" cy="220" r="40" fill="#a33a27" opacity="0.14"/>
-              <circle cx="270" cy="220" r="23" fill="#a33a27"/>
-              <path d="M258 230 l5-9 5-4 4-5 6-1 4 4 4 8 2 7z" fill="#fff"/>
-              <text x="270" y="170" font-size="26" fill="#173a66" text-anchor="middle">Bottrop</text>
-            </g>
-          </svg>
-      </div>
-      <div class="reveal reveal-d1">
-        <p class="eyebrow">Hier sind wir für Sie da</p>
-        <h2>Unser Einsatzgebiet</h2>
-        <p class="lead">Wir kommen zu Ihnen nach Hause: in Bottrop und im Umkreis von etwa&nbsp;20&nbsp;km. Zum Beispiel in diese Städte:</p>
-          <ul class="city-list">
-            <li><span class="pin"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span><span>Bottrop<small>Hier ist unser Sitz</small></span></li>
-            <li><span class="pin"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span><span>Gladbeck</span></li>
-            <li><span class="pin"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span><span>Gelsenkirchen</span></li>
-            <li><span class="pin"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span><span>Essen</span></li>
-          </ul>
-        <p class="area-note">Ihr Ort ist nicht dabei? Fragen Sie uns einfach. Wir sagen Ihnen gern, ob wir zu Ihnen kommen.</p>
-        <a href="kontakt.html" class="btn">Jetzt anfragen</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-head center reveal">
-        <p class="eyebrow">Der Ablauf</p>
-        <h2>So einfach geht es los</h2>
-      </div>
-      <ol class="steps">
-        <li class="reveal">
-          <span class="step-num" aria-hidden="true">1</span>
-          <h3>Sie melden sich</h3>
-          <p>Schreiben Sie uns über das Kontaktformular oder per E-Mail. Gern rufen wir Sie auch zurück.</p>
+      <h2 id="weiche-titel">Für wen suchen Sie Hilfe?</h2>
+      <ul class="weiche-liste">
+        <li>
+          <a class="weiche-karte" href="#leistungen">
+            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-tasse"/></svg>
+            <span class="weiche-titel">Für mich selbst</span>
+            <span class="weiche-text">Was wir gemeinsam mit Ihnen machen</span>
+            <svg class="icon weiche-pfeil" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg>
+          </a>
         </li>
-        <li class="reveal reveal-d1">
-          <span class="step-num" aria-hidden="true">2</span>
-          <h3>Wir lernen uns kennen</h3>
-          <p>Wir besuchen Sie zu Hause und besprechen, was Sie sich wünschen. Dieses Erstgespräch ist kostenlos und unverbindlich.</p>
+        <li>
+          <a class="weiche-karte" href="#angehoerige">
+            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haus"/></svg>
+            <span class="weiche-titel">Für meine Angehörigen</span>
+            <span class="weiche-text">Wie wir Ihre Angehörigen begleiten</span>
+            <svg class="icon weiche-pfeil" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg>
+          </a>
         </li>
-        <li class="reveal reveal-d2">
-          <span class="step-num" aria-hidden="true">3</span>
-          <h3>Wir vereinbaren feste Termine</h3>
-          <p>Sie bekommen einen schriftlichen Vertrag. Ab Januar 2027 kann es losgehen.</p>
+        <li>
+          <a class="weiche-karte" href="#fachstellen">
+            <svg class="icon icon-gross" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-klemmbrett"/></svg>
+            <span class="weiche-titel">Ich arbeite in Pflege, Praxis oder Beratung</span>
+            <span class="weiche-text">Kurz-Info für Fachstellen</span>
+            <svg class="icon weiche-pfeil" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Zusagen (das einzige Bento) -->
+  <section class="kapitel flaeche-sand zusagen" id="zusagen" aria-labelledby="zusagen-titel">
+    <div class="container">
+      <div class="kopf-block">
+        <h2 class="kapitel-titel" id="zusagen-titel">Was wir Ihnen zusagen</h2>
+        <p>Und was das im Alltag für Sie heißt.</p>
+      </div>
+      <ul class="bento">
+        <li class="bento-gross">
+          <article class="kachel">
+            <div class="kachel-haupt">
+              <h3>Gemeinsam. Und Sie entscheiden.</h3>
+              <p>Wir machen die Dinge mit Ihnen, nicht über Ihren Kopf hinweg. Was wir tun und in welchem Tempo, bestimmen Sie.</p>
+            </div>
+            <div class="heisst">
+              <p class="heisst-titel">Das heißt für Sie:</p>
+              <ul class="heisst-liste">
+                <li>Wir kaufen gemeinsam ein.</li>
+                <li>Wir sortieren gemeinsam die Post.</li>
+                <li>Wir gehen in Ihrem Tempo spazieren.</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="kachel">
+            <h3>Eine Pflegefachkraft im Team.</h3>
+            <p>Wir pflegen nicht. Aber Dominik Vogel, examinierte Pflegefachkraft, ist unser fachlicher Ansprechpartner.</p>
+            <div class="heisst"><p class="heisst-titel">Das heißt für Sie:</p><p>Wird mehr Hilfe nötig, sprechen wir offen mit Ihnen darüber.</p></div>
+          </article>
+        </li>
+        <li>
+          <article class="kachel">
+            <h3>Feste Zeiten. Und Zeit, wenn wir da sind.</h3>
+            <p>Wir kommen zu festen Zeiten, die wir mit Ihnen absprechen. Dann haben wir Zeit und Ruhe für Sie.</p>
+            <div class="heisst"><p class="heisst-titel">Das heißt für Sie:</p><p>Ein Termin, auf den Sie sich freuen können.</p></div>
+          </article>
+        </li>
+        <li>
+          <article class="kachel">
+            <h3>Wir kümmern uns um die Abrechnung.</h3>
+            <p>Ab Pflegegrad 2 rechnen wir auf Wunsch direkt mit Ihrer Pflegekasse ab.</p>
+            <div class="heisst"><p class="heisst-titel">Das heißt für Sie:</p><p>Weniger Papierkram. Und Sie behalten den Überblick.</p></div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Leistungen und Abgrenzung -->
+  <section class="folge flaeche-creme" id="leistungen" aria-labelledby="leistungen-titel">
+    <div class="container">
+      <div class="raster leistungen-raster">
+        <div class="leistungen-kopf">
+          <p class="marke">Für Sie selbst</p>
+          <h2 id="leistungen-titel">Was wir gemeinsam mit Ihnen machen</h2>
+          <p class="intro">Wir machen die Dinge gemeinsam mit Ihnen, in Ihrem Tempo.</p>
+        </div>
+        <ul class="leistungen-liste">
+          <li>
+            <img src="images/spot-gesellschaft.svg" alt="" width="640" height="462" loading="lazy" />
+            <div>
+              <h3>Gesellschaft leisten</h3>
+              <p>Wir reden, hören zu, lesen vor, spielen und machen Gedächtnistraining. Wir gehen mit Ihnen spazieren.</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/spot-begleitung.svg" alt="" width="640" height="462" loading="lazy" />
+            <div>
+              <h3>Begleitung zu Terminen</h3>
+              <p>Wir begleiten Sie zum Arzt, zu Ämtern, zur Bank, zum Friseur oder zum Einkaufen.</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/spot-haushalt.svg" alt="" width="640" height="462" loading="lazy" />
+            <div>
+              <h3>Gemeinsam im Haushalt</h3>
+              <p>Gemeinsam mit Ihnen: einkaufen, aufräumen, leichte Hausarbeit und kleine Mahlzeiten kochen.</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/spot-ordnen.svg" alt="" width="640" height="462" loading="lazy" />
+            <div>
+              <h3>Den Alltag ordnen</h3>
+              <p>Wir helfen bei Terminen und Post. Und beim Kontakt zu Familie und Freunden.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="abgrenzung">
+        <h3>Wir sagen ehrlich, was wir nicht tun.</h3>
+        <div class="abgrenzung-raster">
+          <div class="abgrenzung-spalte">
+            <h4>Das machen wir</h4>
+            <ul class="liste-zeichen liste-ja">
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haken"/></svg>Gespräche, Vorlesen und Spaziergänge</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haken"/></svg>Begleitung zu Terminen</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haken"/></svg>Post und Termine gemeinsam ordnen</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-haken"/></svg>Einkaufen, Aufräumen und Kochen, gemeinsam mit Ihnen</li>
+            </ul>
+          </div>
+          <div class="abgrenzung-spalte">
+            <h4>Dafür ist ein Pflegedienst da</h4>
+            <ul class="liste-zeichen liste-nein">
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-kreuz"/></svg>Waschen und Körperpflege</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-kreuz"/></svg>Medikamente</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-kreuz"/></svg>Wundversorgung</li>
+            </ul>
+          </div>
+        </div>
+        <div class="abgrenzung-schluss">
+          <p>Beides passt gut zusammen: Wir ergänzen die Pflege.</p>
+          <a class="pfeil-link" href="leistungen.html">Was übernehmen Sie genau? <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beispielbesuch: eine Szene, eine ruhige Liste -->
+  <section class="folge flaeche-weiss mit-linie" aria-labelledby="besuch-titel">
+    <div class="container">
+      <div class="kopf-block">
+        <h2 id="besuch-titel">So kann ein Besuch aussehen</h2>
+        <p class="hinweis-beispiel"><strong>Ein Beispiel.</strong> Wie oft und wie lange wir kommen, besprechen wir mit Ihnen.</p>
+      </div>
+      <div class="raster besuch-raster">
+        <div class="besuch-bild">
+          <img src="images/besuch-tuer.svg" alt="" width="640" height="400" loading="lazy" />
+        </div>
+        <ol class="besuch-liste">
+          <li><span class="besuch-nr" aria-hidden="true">1</span><p>Wir klingeln zur verabredeten Zeit.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">2</span><p>Erst einmal ankommen: ein Kaffee, ein paar Worte, wie es Ihnen geht.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">3</span><p>Gemeinsam die Post durchsehen. Ein Brief von der Krankenkasse? Wir lesen ihn zusammen.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">4</span><p>Zu Fuß zur Bank und auf dem Rückweg zum Einkaufen.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">5</span><p>Zu Hause räumen wir den Einkauf zusammen ein.</p></li>
+          <li><span class="besuch-nr" aria-hidden="true">6</span><p>Zum Schluss steht der nächste Termin im Kalender.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Angehörige -->
+  <section class="folge flaeche-creme" id="angehoerige" aria-labelledby="angehoerige-titel">
+    <div class="container raster angehoerige-raster">
+      <div class="angehoerige-text">
+        <p class="marke">Für Töchter, Söhne und Enkel</p>
+        <h2 id="angehoerige-titel">Für Ihre Angehörigen da, auch wenn Sie es nicht immer sein können.</h2>
+        <p>Vielleicht wohnen Sie weiter&nbsp;weg. Vielleicht arbeiten Sie und schaffen es nicht mehr, zu jedem Arzttermin mitzugehen.</p>
+        <p>Dann sind wir für Ihre Angehörigen da: zu festen Zeiten, mit Zeit und Ruhe, und mit einer examinierten Pflegefachkraft im Team.</p>
+        <p>Und während wir bei Ihren Angehörigen sind, haben Sie Zeit für sich.</p>
+        <div class="knopf-reihe">
+          <a class="btn" href="kontakt.html">Erstgespräch für Angehörige anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+          <a class="pfeil-link" href="fragen.html">Fragen von Angehörigen lesen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+        </div>
+      </div>
+      <div class="angehoerige-satz">
+        <h3>Wenn es heißt: <span class="satz-zitat">„Ich brauche keine Hilfe.“</span></h3>
+        <p>Das ist verständlich. Niemand gibt gern zu, dass etwas schwerer wird. Oft hilft es, klein anzufangen, zum Beispiel mit einem Spaziergang oder der Begleitung zu einem Arzttermin.</p>
+        <p>Beim Erstgespräch lernt die Person, um die es geht, uns in Ruhe kennen. Ob sie es möchte, entscheidet sie selbst.</p>
+        <button class="knopf-text nur-js" type="button" data-drucken="angehoerige"><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-drucker"/></svg>Diesen Abschnitt ausdrucken</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="schichtkante kante-band" aria-hidden="true">
+    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><path fill="#e9d8c1" d="M0 12 340 4 760 16 1140 6 1440 14V64H0z"/><path fill="#d9c6ab" d="M0 28 300 36 700 24 1100 33 1440 25V64H0z"/><path fill="#2b3328" d="M0 46 380 39 800 50 1180 41 1440 47V64H0z"/></svg>
+  </div>
+
+  <!-- Das eine Navy-Band: Menschen -->
+  <section class="kapitel flaeche-navy band dunkel" id="team" aria-labelledby="team-titel">
+    <div class="container raster band-raster">
+      <div class="band-kopf">
+        <p class="marke">Unser Team</p>
+        <h2 class="kapitel-titel" id="team-titel">Wer hinter Alltagsfels steht</h2>
+        <p class="band-lead">Ein kleines Team aus Bottrop. Feste Ansprechpartner, vertraute Gesichter.</p>
+        <p>Verschwiegen: Was Sie uns anvertrauen, bleibt unter uns.</p>
+        <ul class="personen">
+          <li class="person-eintrag">
+            <div>
+              <h3>Julian Wehner</h3>
+              <p class="person-rolle">Geschäftsführer, geschult in Alltagsbetreuung</p>
+              <p>Er ist Ihr Ansprechpartner für alle Fragen rund um die Betreuung.</p>
+            </div>
+          </li>
+          <li class="person-eintrag">
+            <div>
+              <h3>Dominik Vogel</h3>
+              <p class="person-rolle">Examinierte Pflegefachkraft</p>
+              <p>Er bringt viele Jahre Erfahrung aus der Pflege mit und ist unser fachlicher Ansprechpartner.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="band-geschichte">
+        <p class="geschichte-quelle">Aus unserer Gründungsgeschichte</p>
+        <p class="geschichte-text">Dominik Vogel arbeitet seit vielen Jahren als Pflegefachkraft. Er erlebt immer wieder, dass ältere Menschen zu Hause mehr brauchen als Pflege: jemanden, der Zeit mitbringt, zuhört, mit ihnen spazieren geht oder sie zum Arzt begleitet.</p>
+        <p class="leitsatz">Im Pflegealltag ist dafür meist keine Zeit.</p>
+        <p class="leitsatz-folge">Das möchten wir ändern.</p>
+        <p class="band-fuss"><a class="pfeil-link" href="ueber-uns.html">Warum es uns gibt <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wer bezahlt die Betreuung? -->
+  <section class="folge flaeche-sand" id="kosten" aria-labelledby="kosten-titel">
+    <div class="container">
+      <div class="kopf-block">
+        <h2 id="kosten-titel">Wer bezahlt die Betreuung?</h2>
+        <p>Es gibt zwei Wege. Wir erklären Ihnen beide in Ruhe.</p>
+      </div>
+      <ul class="zwei-wege">
+        <li>
+          <h3>Mit Pflegegrad 2 oder höher</h3>
+          <p>Wir rechnen auf Wunsch direkt mit Ihrer Pflegekasse ab. Bevor Sie etwas unterschreiben, erklären wir Ihnen, welche Leistung der Pflegekasse wir dafür nutzen.</p>
+        </li>
+        <li>
+          <h3>Ohne Pflegegrad</h3>
+          <p>Sie bezahlen privat per Rechnung. Auch Angehörige können die Betreuung bezahlen.</p>
+        </li>
+      </ul>
+      <div class="preis-zeile">
+        <p>Unsere Preise nennen wir Ihnen persönlich im kostenlosen Erstgespräch. Vor dem Vertrag bekommen Sie alles schriftlich.</p>
+        <a class="pfeil-link" href="kosten.html">Wer bezahlt das genau? <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Einstieg: So fangen wir an, mit Einsatzgebiet -->
+  <section class="folge flaeche-creme" id="ablauf" aria-labelledby="ablauf-titel">
+    <div class="container">
+      <div class="kopf-block">
+        <h2 id="ablauf-titel">So fangen wir an</h2>
+      </div>
+      <ol class="schritte">
+        <li>
+          <span class="schritt-ziffer" aria-hidden="true">1</span>
+          <h3><span class="nur-vorlesen">Schritt 1: </span>Melden Sie sich</h3>
+          <p>Über das Formular oder per E&#8209;Mail. Gern rufen wir Sie zurück.</p>
+        </li>
+        <li>
+          <span class="schritt-ziffer" aria-hidden="true">2</span>
+          <h3><span class="nur-vorlesen">Schritt 2: </span>Wir besuchen Sie zu Hause</h3>
+          <p>In Ruhe am Küchentisch. Sie erzählen, was Ihnen schwerfällt und was Ihnen Freude macht. Das Erstgespräch ist kostenlos und unverbindlich.</p>
+        </li>
+        <li>
+          <span class="schritt-ziffer" aria-hidden="true">3</span>
+          <h3><span class="nur-vorlesen">Schritt 3: </span>Sie entscheiden in Ruhe</h3>
+          <p>Wenn es passt, vereinbaren wir feste Zeiten, und Sie bekommen einen schriftlichen Vertrag. Ab Januar <span class="zahl">2027</span> kann es losgehen.</p>
         </li>
       </ol>
+
+      <div class="bereitlegen">
+        <h3>Was Sie zum Erstgespräch bereitlegen können</h3>
+        <ul class="bereitlegen-liste">
+          <li>Ihren Pflegegrad-Bescheid, falls vorhanden</li>
+          <li>Den Namen Ihrer Pflegekasse</li>
+          <li>Termine, die anstehen</li>
+          <li>Ihre Fragen</li>
+        </ul>
+        <p>Gern kann auch jemand aus Ihrer Familie dabei sein.</p>
+      </div>
+
+      <div class="raster einsatz" id="einsatzgebiet">
+        <figure class="karte">
+          <img src="images/karte.svg" alt="Karte des Einsatzgebiets: Bottrop mit Kirchhellen in der Mitte, darum ein Kreis mit etwa 20 Kilometern Radius. Darin liegen Dorsten im Norden, Gladbeck im Nordosten, Gelsenkirchen im Osten, Essen im Süden, Oberhausen im Südwesten und Dinslaken im Westen." width="600" height="540" loading="lazy" />
+          <ul class="karte-orte" aria-hidden="true">
+            <li class="ort-bottrop links">Bottrop</li>
+            <li class="ort-kirchhellen">Kirchhellen</li>
+            <li class="ort-dorsten">Dorsten</li>
+            <li class="ort-gladbeck">Gladbeck</li>
+            <li class="ort-gelsenkirchen">Gelsenkirchen</li>
+            <li class="ort-essen">Essen</li>
+            <li class="ort-oberhausen links">Oberhausen</li>
+            <li class="ort-dinslaken">Dinslaken</li>
+            <li class="ort-radius">etwa <span class="zahl">20</span>&nbsp;km</li>
+          </ul>
+        </figure>
+        <div class="einsatz-text">
+          <h3>Hier sind wir für Sie da</h3>
+          <p>Wir kommen zu Ihnen nach Hause: in Bottrop und im Umkreis von etwa <span class="zahl">20</span>&nbsp;km, zum Beispiel nach Gladbeck, Gelsenkirchen und Essen.</p>
+          <p>Ihr Ort ist nicht dabei? Fragen Sie uns einfach.</p>
+          <a class="btn" href="kontakt.html">Erstgespräch anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section-sand">
+  <!-- Fragen -->
+  <section class="folge flaeche-weiss mit-linie" aria-labelledby="fragen-titel">
+    <div class="container raster fragen-raster">
+      <div class="fragen-kopf">
+        <h2 id="fragen-titel">Was viele vorher wissen möchten</h2>
+        <p class="fragen-fuss"><a class="pfeil-link" href="fragen.html">Alle Fragen ansehen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a></p>
+      </div>
+      <div class="fragen-liste">
+        <details>
+          <summary>Wie läuft das Erstgespräch ab?</summary>
+          <div class="antwort"><p>Wir besuchen Sie zu Hause, in Ruhe am Küchentisch. Sie erzählen, was Ihnen schwerfällt und was Ihnen Freude macht. Gern kann auch jemand aus Ihrer Familie dabei sein. Das Erstgespräch ist kostenlos und unverbindlich.</p></div>
+        </details>
+        <details>
+          <summary>Was ist der Unterschied zu einem Pflegedienst?</summary>
+          <div class="antwort"><p>Ein Pflegedienst übernimmt Pflege, zum Beispiel Waschen oder Medikamente. Wir sind für den Alltag da: Gesellschaft, Begleitung, gemeinsamer Haushalt, Post und Termine. Beides passt gut zusammen.</p></div>
+        </details>
+        <details>
+          <summary>Wer bezahlt: die Pflegekasse oder ich?</summary>
+          <div class="antwort"><p>Ab Pflegegrad 2 rechnen wir auf Wunsch direkt mit Ihrer Pflegekasse ab. Ohne Pflegegrad bezahlen Sie privat per Rechnung. Unsere Preise nennen wir Ihnen persönlich im kostenlosen Erstgespräch. <a href="kosten.html">Mehr zu Kosten und Pflegekasse</a></p></div>
+        </details>
+        <details>
+          <summary>Können Sie auch Menschen mit Demenz begleiten?</summary>
+          <div class="antwort"><p>Ja. Wir begleiten auch Menschen mit Demenz oder starker Vergesslichkeit. Gerade dann helfen feste Zeiten und vertraute Abläufe. Was dabei wichtig ist, besprechen wir in Ruhe im Erstgespräch.</p></div>
+        </details>
+        <details>
+          <summary>Bin ich nach dem Erstgespräch zu etwas verpflichtet?</summary>
+          <div class="antwort"><p>Nein. Das Erstgespräch ist kostenlos und unverbindlich. Sie entscheiden in Ruhe. Vor dem Vertrag bekommen Sie alles schriftlich.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Für Fachstellen -->
+  <section class="folge flaeche-creme" id="fachstellen" aria-labelledby="fachstellen-titel">
     <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Kosten</p>
-        <h2>Wer bezahlt die Betreuung?</h2>
-        <p class="lead">Ob mit oder ohne Pflegegrad: Wir machen es Ihnen einfach.</p>
-      </div>
-      <div class="pay-grid">
-        <div class="pay-card reveal">
-          <div class="icon-circle blue"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></div>
-          <h3>Mit Pflegegrad</h3>
-          <p>Mit Pflegegrad kümmern wir uns um die Abrechnung mit der Pflegekasse.</p>
+      <div class="fachstellen">
+        <h2 id="fachstellen-titel">Für Pflegedienste, Praxen und Beratungsstellen</h2>
+        <div class="fachstellen-text">
+          <p>Wir ergänzen die Pflege im Alltag: Gesellschaft, Begleitung zu Terminen, gemeinsame Hilfe im Haushalt. Pflege und Medikamente übernehmen wir nicht. Ab Pflegegrad 2 rechnen wir über die Pflegekasse ab, ohne Pflegegrad privat.</p>
+          <p>Schreiben Sie uns, wir schicken Ihnen gern unser Infoblatt.</p>
+          <ul class="link-liste">
+            <li><a class="pfeil-link" href="kontakt.html">Infoblatt anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a></li>
+            <li>E-Mail: <a class="mail-link" href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></li>
+          </ul>
         </div>
-        <div class="pay-card warm reveal reveal-d1">
-          <div class="icon-circle"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10.5h18M16 14.5h2"/></svg></div>
-          <h3>Ohne Pflegegrad</h3>
-          <p>Auch für Selbstzahler ohne Pflegegrad.</p>
-        </div>
-      </div>
-      <div class="price-note reveal">
-        <div class="icon-circle blue"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg></div>
-        <p>Unsere Preise nennen wir Ihnen persönlich im kostenlosen Erstgespräch.</p>
-      </div>
-      <a href="kosten.html" class="text-link">Mehr zu Kosten und Pflegekasse</a>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Unser Team</p>
-        <h2>Wer hinter Alltagsfels steht</h2>
-        <p class="lead">Wir sind ein kleines Team aus Bottrop und stellen uns gern persönlich vor.</p>
-      </div>
-      <div class="team-grid">
-        <div class="person reveal">
-          <div class="avatar" aria-hidden="true">DV</div>
-          <div>
-            <h3>Dominik Vogel</h3>
-            <p class="role">Examinierte Pflegefachkraft</p>
-            <p>Er bringt viele Jahre Erfahrung aus der Pflege mit und ist unser fachlicher Ansprechpartner.</p>
-          </div>
-        </div>
-        <div class="person reveal reveal-d1">
-          <div class="avatar warm" aria-hidden="true">JW</div>
-          <div>
-            <h3>Julian Wehner</h3>
-            <p class="role">Geschäftsführer, geschult in Alltagsbetreuung</p>
-            <p>Er ist Ihr Ansprechpartner für alle Fragen rund um die Betreuung.</p>
-          </div>
-        </div>
-      </div>
-      <p class="section-foot"><a class="text-link" href="ueber-uns.html">Mehr über uns</a></p>
-    </div>
-  </section>
-
-  <section class="section-white">
-    <div class="container split">
-      <div class="reveal">
-        <p class="eyebrow">Für Angehörige</p>
-        <h2>Sie suchen Hilfe für einen Angehörigen?</h2>
-        <p class="lead">Viele Anfragen kommen von Töchtern, Söhnen oder Enkeln. Wir beraten Sie in Ruhe und beantworten Ihre Fragen. Wichtig ist uns, dass Ihr Angehöriger mit der Betreuung einverstanden ist.</p>
-        <div class="btn-row">
-          <a href="fragen.html" class="btn btn-outline">Häufige Fragen lesen</a>
-          <a href="kontakt.html" class="btn">Kontakt aufnehmen</a>
-        </div>
-      </div>
-      <div class="split-media reveal reveal-d1">
-        <img src="images/ueber-uns.svg" alt="Zwei Kaffeetassen, aus denen ein Herz aufsteigt: Zeit füreinander" width="520" height="446" loading="lazy" />
       </div>
     </div>
   </section>
 
-
-  <section class="cta-band">
-    <div class="container">
-      <div class="cta-inner reveal">
-        <div>
-          <h2>Lernen wir uns kennen</h2>
-          <p>Ob für Sie selbst oder für einen Angehörigen: Melden Sie sich gern, auch wenn Sie noch unsicher sind. Das Erstgespräch bei Ihnen zu Hause ist kostenlos und unverbindlich.</p>
+  <!-- Abschluss -->
+  <section class="kapitel flaeche-salbei abschluss" aria-labelledby="abschluss-titel">
+    <div class="container abschluss-raster">
+      <div class="abschluss-inhalt">
+        <p class="marke">Halt im Alltag</p>
+        <h2 class="kapitel-titel" id="abschluss-titel">Lernen wir uns kennen</h2>
+        <p class="abschluss-unterzeile">Sie müssen das nicht allein organisieren.</p>
+        <p>Ob für Sie selbst oder für einen Angehörigen: Melden Sie sich gern, auch wenn Sie noch unsicher sind.</p>
+        <div class="knopf-reihe">
+          <a class="btn" href="kontakt.html">Erstgespräch anfragen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
+          <a class="pfeil-link" href="kontakt.html#rueckruf">Lieber zurückrufen lassen <svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-pfeil"/></svg></a>
         </div>
-        <div class="cta-actions">
-          <a href="kontakt.html" class="btn btn-light">Erstgespräch anfragen</a>
-          <a href="mailto:alltagsankerbetreuung@gmail.com" class="btn btn-ghost-light">E-Mail schreiben</a>
-        </div>
+        <p class="abschluss-mail">Lieber per E-Mail? Schreiben Sie an <a class="mail-link" href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
       </div>
+      <div class="abschluss-fels" aria-hidden="true"><img src="images/fels-sonne.svg" alt="" width="240" height="145" loading="lazy" /></div>
     </div>
   </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="footer-logo" href="index.html"><img src="images/logo-hell.svg" alt="Alltagsfels – zur Startseite" width="479" height="110" loading="lazy" /></a>
-        <p>Betreuung im Alltag in Bottrop und Umgebung, im Umkreis von etwa&nbsp;20&nbsp;km. Vor allem für ältere Menschen und für alle, die im Alltag Unterstützung brauchen.</p>
+  <footer class="fuss dunkel">
+    <div class="fuss-kante" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><path fill="#e9d8c1" d="M0 12 300 4 720 15 1090 5 1440 14V64H0z"/><path fill="#d9c6ab" d="M0 28 380 19 800 31 1150 21 1440 30V64H0z"/><path fill="#1f2a1e" d="M0 44 340 37 760 48 1120 39 1440 46V64H0z"/></svg></div>
+    <div class="container fuss-raster">
+      <div class="fuss-marke">
+        <a class="fuss-logo" href="index.html"><img src="images/logo-kurz-hell.svg" alt="Alltagsfels, zur Startseite" width="328" height="94" loading="lazy" /></a>
+        <p>Alltagsbetreuung in Bottrop und Umgebung, im Umkreis von etwa <span class="zahl">20</span>&nbsp;km.</p>
+        <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></address>
       </div>
       <div>
-        <h2>Seiten</h2>
+        <h2>Für Sie und Ihre Familie</h2>
         <ul>
           <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="kosten.html">Kosten und Pflegekasse</a></li>
-          <li><a href="fragen.html">Häufige Fragen</a></li>
-          <li><a href="mitarbeiten.html">Mitarbeiten</a></li>
+          <li><a href="fragen.html">Fragen und Antworten</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
           <li><a href="index.html#einsatzgebiet">Unser Einsatzgebiet</a></li>
+          <li><a href="kontakt.html">Kostenloses Erstgespräch</a></li>
         </ul>
       </div>
       <div>
-        <h2>Kontakt</h2>
+        <h2>Für Pflegedienste und Praxen</h2>
         <ul>
-          <li><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung<wbr />@gmail.com</a></li>
-          <li><a href="kontakt.html">Zum Kontaktformular</a></li>
-          <li>Batenbrockstraße 66<br />46238 Bottrop</li>
+          <li><a href="index.html#fachstellen">Kurz-Info für Fachstellen</a></li>
+          <li><a href="leistungen.html">Was wir übernehmen</a></li>
+          <li><a href="kosten.html">Abrechnung mit der Pflegekasse</a></li>
+          <li><a href="kontakt.html">Infoblatt anfragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Jobs</h2>
+        <p>Wir suchen Alltagsbegleiterinnen und Alltagsbegleiter (m/w/d).</p>
+        <ul>
+          <li><a href="mitarbeiten.html">Jobs bei Alltagsfels</a></li>
         </ul>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; <span class="year">2026</span> Alltagsfels</p>
-      <p><a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a></p>
+    <div class="container fuss-leiste">
+      <p>&copy; <span class="zahl year">2026</span> Alltagsfels</p>
+      <ul class="fuss-werkzeuge">
+        <li class="nur-js"><button class="knopf-text" type="button" data-drucken><svg class="icon" aria-hidden="true" focusable="false"><use href="images/icons.svg#i-drucker"/></svg>Seite ausdrucken</button></li>
+        <li class="nur-js"><div class="schrift-schalter" role="group" aria-labelledby="schrift-titel"><span id="schrift-titel">Schrift größer:</span><button type="button" data-schrift="1" aria-pressed="true">A<span class="nur-vorlesen"> normal</span></button><button type="button" data-schrift="2" aria-pressed="false">A+<span class="nur-vorlesen"> größer</span></button><button type="button" data-schrift="3" aria-pressed="false">A++<span class="nur-vorlesen"> am größten</span></button></div></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
     </div>
   </footer>
 </body>
