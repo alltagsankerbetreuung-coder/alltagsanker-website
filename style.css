@@ -917,32 +917,27 @@ main > section { overflow-x: clip; }
   }
 }
 
-/* Leistungen als redaktionelle Liste */
-.leistungen-raster { row-gap: 2.5rem; }
-@media (min-width: 64em) {
-  .leistungen-kopf { grid-column: 1 / span 5; align-self: start; position: sticky; top: 7rem; }
-  .leistungen-liste { grid-column: 7 / span 6; }
-}
+/* Leistungen: vier Szenen mit Titel und Text */
+.leistungen-raster { row-gap: 2.25rem; }
+.leistungen-kopf { grid-column: 1 / -1; max-width: 42rem; }
 .leistungen-liste {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.75rem var(--spalte-gap);
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--line);
 }
-.leistungen-liste li {
-  display: grid;
-  grid-template-columns: 6.5rem minmax(0, 1fr);
-  gap: 1.25rem;
-  align-items: center;
-  margin: 0;
-  padding-block: 1.5rem;
-  border-bottom: 1px solid var(--line);
+@media (min-width: 40em) {
+  .leistungen-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-@media (min-width: 30em) {
-  .leistungen-liste li { grid-template-columns: 9rem minmax(0, 1fr); gap: 1.75rem; }
+@media (min-width: 64em) {
+  .leistungen-liste { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
-.leistungen-liste img { width: 100%; height: auto; }
-.leistungen-liste h3 { margin-bottom: 0.3rem; }
+.leistungen-liste li { margin: 0; }
+.leistungen-liste img { display: block; width: 100%; max-width: 20rem; height: auto; margin-bottom: 1.1rem; }
+.leistungen-liste h3 { margin-bottom: 0.35rem; }
 .leistungen-liste p { margin: 0; }
 
 /* Abgrenzung „Das machen wir / Dafür ist ein Pflegedienst da“ */
@@ -1486,21 +1481,21 @@ legend { padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
 .schrift-schalter button:nth-of-type(3) { font-size: 1.25rem; }
 .schrift-schalter button[aria-pressed="true"] { background: var(--creme); color: var(--navy-dark); }
 
-/* Ortsnamen der Karte: Punkt links, Name rechts; Lage in Prozent des Bildes (600 × 540) */
+/* Ortsnamen der Karte: Lage in Prozent des Bildes (600 × 540), Punkte liegen nach echten Koordinaten */
 .karte-orte li { text-shadow: 0 0 2px var(--salbei), 0 0 4px var(--salbei), 0 0 6px var(--salbei); }
-.karte-orte .ort-bottrop { left: 50.5%; top: 46%; }
-.karte-orte .ort-kirchhellen { left: 45.9%; top: 30.7%; }
-.karte-orte .ort-dorsten { left: 51.5%; top: 17.8%; }
-.karte-orte .ort-gladbeck { left: 54.6%; top: 39.1%; }
-.karte-orte .ort-gelsenkirchen { left: 68.9%; top: 53%; }
-.karte-orte .ort-essen { left: 57.8%; top: 66.1%; }
-.karte-orte .ort-oberhausen { left: 38%; top: 57.2%; }
-.karte-orte .ort-dinslaken { left: 22%; top: 40.7%; }
-.karte-orte .ort-radius { left: 10%; top: 54%; }
+.karte-orte .links { transform: translate(-100%, -50%); }
+.karte-orte .ort-bottrop { left: 41.5%; top: 50%; }
+.karte-orte .ort-kirchhellen { left: 46%; top: 30.8%; }
+.karte-orte .ort-dorsten { left: 51.8%; top: 17.6%; }
+.karte-orte .ort-gladbeck { left: 54.6%; top: 38.9%; }
+.karte-orte .ort-gelsenkirchen { left: 65.8%; top: 53.4%; transform: translate(-50%, 0); }
+.karte-orte .ort-essen { left: 58%; top: 66.1%; }
+.karte-orte .ort-oberhausen { left: 32.8%; top: 62.8%; }
+.karte-orte .ort-dinslaken { left: 22.4%; top: 40.8%; }
+.karte-orte .ort-radius { left: 46.8%; top: 78%; text-shadow: none; }
 @media (max-width: 29.99em) {
   .karte-orte li { font-size: 1rem; }
   .karte-orte .ort-bottrop { font-size: 1.25rem; }
-  .karte-orte .ort-gelsenkirchen { left: 66%; top: 56.5%; }
 }
 
 

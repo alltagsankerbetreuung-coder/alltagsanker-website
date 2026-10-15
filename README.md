@@ -45,11 +45,11 @@ Diese Punkte kann nur der Inhaber erledigen. Die Website selbst ist fertig.
 - `style.css` – Gemeinsame Gestaltung (Farben, Schriften, Abstände)
 - `script.js` – Menü, Schalter „Schrift größer“, Drucken (ganze Seite oder ein Abschnitt), Prüfung „Telefon oder E-Mail“ im Formular, Jahreszahl
 - `fonts/` – Schriften Fraunces (Überschriften) und Atkinson Hyperlegible Next (Text), beide als variable Schriften, liegen auf der eigenen Website, keine Verbindung zu Google
-- `images/` – Logo (`logo.svg`, `logo-hell.svg`, Kurzform `logo-kurz.svg` und `logo-kurz-hell.svg` für den dunklen Fußbereich), `favicon.svg`, eigene Zeichnungen (ohne Personen), `icons.svg` (kleine Symbole), `vorschau.png` (Vorschaubild 1200 × 630 für WhatsApp, E-Mail und soziale Netzwerke) und `icon-192.png` / `icon-512.png` (Symbole für den Handy-Startbildschirm)
+- `images/` – Logo (`logo.svg`, `logo-hell.svg`, Kurzform `logo-kurz.svg` und `logo-kurz-hell.svg` für den dunklen Fußbereich), `favicon.svg`, eigene Zeichnungen mit Alltagsszenen (Quelltext und Anleitung in `zeichnungen/`), `icons.svg` (kleine Symbole), `vorschau.png` (Vorschaubild 1200 × 630 für WhatsApp, E-Mail und soziale Netzwerke) und `icon-192.png` / `icon-512.png` (Symbole für den Handy-Startbildschirm)
 - `apple-touch-icon.png` und `site.webmanifest` – Symbol und Angaben für den Handy-Startbildschirm
 - `sitemap.xml` – Liste aller Seiten für Suchmaschinen (für https://alltagsfels.de, wird erst zum Start bei Google eingereicht)
 - `robots.txt` und `vercel.json` – sperren die Seite vorerst für Suchmaschinen (Disallow + Header „noindex“). Zum Start entfernen, siehe Checkliste unten.
-- `.vercelignore` – Dateien, die nicht auf der Website erscheinen sollen (z. B. `druckvorlagen/`)
+- `.vercelignore` – Dateien, die nicht auf der Website erscheinen sollen (z. B. `druckvorlagen/` und `zeichnungen/`)
 
 ## Kontaktformular
 
