@@ -22,7 +22,7 @@ LINIE = HIER / "word" / "_falzmarke.png"
 
 SCHRIFT = "Atkinson Hyperlegible"
 TEXT = RGBColor(0x26, 0x22, 0x1E)
-BLAU = RGBColor(0x17, 0x3A, 0x66)
+BLAU = RGBColor(0x2B, 0x33, 0x28)
 GRAU = RGBColor(0x5A, 0x52, 0x4A)
 EMU_MM = 36000
 
