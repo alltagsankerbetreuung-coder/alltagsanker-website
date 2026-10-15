@@ -1,14 +1,14 @@
 """Zeichen-Baukasten für die Alltagsfels-Illustrationen.
 Flächiger Stil ohne Umrisslinien (wie das Logo), Navy nur als Farbe und für feine Details."""
 
-NAVY = '#173a66'
-NAVY_D = '#102a4c'
-BLUE = '#2b5487'
-BLUE_D = '#223f69'
-ROST = '#a33a27'
-ROST_D = '#85301f'
-SONNE = '#e0874f'
-SONNE_D = '#c96f3a'
+NAVY = '#2b3328'   # Dunkelgrün aus dem Logo
+NAVY_D = '#1f2a1e'
+BLUE = '#5a6152'   # Stein
+BLUE_D = '#474d40'
+ROST = '#9c5b3b'   # Ziegel, gedeckt
+ROST_D = '#7f4a30'
+SONNE = '#d6ac7a'  # Sonne im Logo
+SONNE_D = '#b98547'  # Ocker
 CREME = '#fbf6ee'
 SAND = '#f3e7d6'
 SAND_D = '#e9d8c1'
@@ -19,12 +19,12 @@ SALBEI_M = '#c9d4b8'
 SALBEI_D = '#a7b78f'
 SALBEI_DD = '#8a9c72'
 WEISS = '#ffffff'
-TINTE = '#1d2a3a'  # Augen, Brauen
+TINTE = '#1f2a1e'  # Augen, Brauen
 
 SKIN = {'hell': ('#f6d8c2', '#e7bfa3'), 'mittel': ('#d9a37f', '#c38c68'), 'dunkel': ('#9a6748', '#845539')}
 HAIR = {'weiss': ('#f5f2ec', '#dcd6cc'), 'grau': ('#cdc8bf', '#b4aea4'), 'braun': ('#6e4b36', '#583a29'),
         'dunkel': ('#33251f', '#251a15'), 'blond': ('#d9b571', '#c49c55')}
-SHADE = {SONNE_D: '#ad5b2b', NAVY: NAVY_D, BLUE: BLUE_D, ROST: ROST_D, SONNE: SONNE_D, SAND_D: HALDE, HALDE: HALDE_D,
+SHADE = {SONNE_D: '#9a6c35', NAVY: NAVY_D, BLUE: BLUE_D, ROST: ROST_D, SONNE: SONNE_D, SAND_D: HALDE, HALDE: HALDE_D,
          SALBEI_M: SALBEI_D, SALBEI_D: SALBEI_DD, CREME: SAND_D, SAND: SAND_D, WEISS: SAND}
 
 

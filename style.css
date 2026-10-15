@@ -61,13 +61,13 @@
 
 :root {
   /* Farben (Kontraste im Briefing nachgerechnet) */
-  --navy: #173a66;          /* Überschriften, Icons, Fokus, ein dunkles Band */
-  --navy-dark: #102a4c;     /* Fuß, Text auf Sonnenfläche */
-  --blue: #2b5487;          /* Illustration, Nebenakzent */
-  --rost: #a33a27;          /* nur Handlung: Hauptknopf, Links, ein Akzentwort */
-  --rost-dark: #85301f;     /* Hover des Hauptknopfs */
-  --sonne: #e0874f;         /* nur Grafik, nie Text auf Hell */
-  --sonne-tinte: #9e4f1c;   /* Text in der Sonnenfamilie, z. B. Schrittziffern */
+  --navy: #2b3328;          /* Dunkelgrün aus dem Logo: Überschriften, Icons, Fokus, dunkle Bänder */
+  --navy-dark: #1f2a1e;     /* Logo-Schrift: Fuß, Text auf Ockerfläche */
+  --blue: #5a6152;          /* Stein: Illustration, Nebenakzent */
+  --rost: #80561f;          /* Text-Ocker, etwas dunkler für Lesbarkeit: Hauptknopf, Links, Akzentwort */
+  --rost-dark: #66441a;     /* Hover des Hauptknopfs */
+  --sonne: #b98547;         /* Ocker aus dem Logo: nur Grafik, nie Text auf Hell */
+  --sonne-tinte: #8f5f28;   /* Text-Ocker, z. B. Schrittziffern */
   --creme: #fbf6ee;         /* Grundfläche */
   --sand: #f3e7d6;
   --sand-dark: #e9d8c1;
@@ -79,8 +79,8 @@
   --line: #e6dccd;          /* Haarlinien, nur Schmuck */
   --field: #857560;         /* Feldrahmen und Grenzen von Bedienelementen */
   --neutral: #6f665c;       /* Kreuze „machen wir nicht“ */
-  --visited: #6b3a5a;
-  --band-text: #e9d8c1;     /* Nebentext auf Navy (8,2 : 1) */
+  --visited: #5c4a6b;
+  --band-text: #e9d8c1;     /* Nebentext auf Dunkelgrün (9,4 : 1) */
 
   /* Schriften */
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -506,9 +506,9 @@ main > section { overflow-x: clip; }
   margin-right: auto;
   border-radius: 6px;
 }
-.kopf-logo img { width: auto; height: 1.75rem; }
+.kopf-logo img { width: auto; height: 2.4rem; }
 @media (min-width: 30em) {
-  .kopf-logo img { height: 2.25rem; }
+  .kopf-logo img { height: 3rem; }
 }
 
 /* Knopf „Menü“ (nur mit JavaScript und nur, solange die Navigation nicht passt) */
@@ -606,7 +606,7 @@ main > section { overflow-x: clip; }
 
 .btn-kopf { order: 2; padding-inline: 0.8rem; white-space: nowrap; }
 @media (max-width: 23.4375em) {
-  .kopf-logo img { height: 1.45rem; }
+  .kopf-logo img { height: 2.1rem; }
   .btn-kopf { font-size: 1rem; padding-inline: 0.65rem; }
 }
 @media (min-width: 30em) {
@@ -616,7 +616,7 @@ main > section { overflow-x: clip; }
 /* Volle Navigation in einer Zeile: ab 1024 px, bei größerer Schrift erst ab 1280 px */
 @media (min-width: 64em) {
   html:not(.schrift-2):not(.schrift-3) .kopf-innen { min-height: 5.5rem; gap: 1rem; flex-wrap: nowrap; }
-  html:not(.schrift-2):not(.schrift-3) .kopf-logo img { height: 2.6rem; }
+  html:not(.schrift-2):not(.schrift-3) .kopf-logo img { height: 3.4rem; }
   html:not(.schrift-2):not(.schrift-3) .hauptmenue { display: block; position: static; order: 0; flex-basis: auto; margin-inline: auto; padding: 0; border: 0; background: none; overflow: visible; }
   html:not(.schrift-2):not(.schrift-3) .menue-liste { display: flex; flex-wrap: nowrap; gap: 0 clamp(0.9rem, 1.7vw, 1.9rem); align-items: center; max-width: none; }
   html:not(.schrift-2):not(.schrift-3) .menue-liste li { border: 0; }
@@ -628,7 +628,7 @@ main > section { overflow-x: clip; }
 }
 @media (min-width: 80em) {
   :is(.schrift-2, .schrift-3) .kopf-innen { min-height: 5.5rem; gap: 1rem; flex-wrap: nowrap; }
-  :is(.schrift-2, .schrift-3) .kopf-logo img { height: 2.4rem; }
+  :is(.schrift-2, .schrift-3) .kopf-logo img { height: 3.1rem; }
   :is(.schrift-2, .schrift-3) .hauptmenue { display: block; position: static; order: 0; flex-basis: auto; margin-inline: auto; padding: 0; border: 0; background: none; overflow: visible; }
   :is(.schrift-2, .schrift-3) .menue-liste { display: flex; flex-wrap: nowrap; gap: 0 clamp(0.75rem, 1.3vw, 1.6rem); align-items: center; max-width: none; }
   :is(.schrift-2, .schrift-3) .menue-liste li { border: 0; }
@@ -1632,10 +1632,10 @@ ul.crosses li::after {
   .personen-hell { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--spalte-gap); }
 }
 
-/* Navy-Band der Unterseite Über uns: der Name */
+/* Sandfläche der Unterseite Über uns: der Name mit dem Bildzeichen aus dem Logo */
 .name-band { row-gap: 2rem; align-items: center; }
 .name-band .name-zeichen { width: min(100%, 18rem); }
-.name-band h2 { color: var(--creme); }
+.name-band h2 { color: var(--navy); }
 .name-band p { font-size: var(--fs-lead); line-height: 1.5; max-width: 32ch; }
 @media (min-width: 64em) {
   .name-band .name-zeichen { grid-column: 1 / span 4; }
@@ -1843,7 +1843,7 @@ main > section:not([class]) { padding-block: var(--folge); }
 
   .kopf { position: static; border: 0; }
   .kopf-innen { min-height: 0; padding: 0 0 6mm; }
-  .kopf-logo img { height: 10mm !important; }
+  .kopf-logo img { height: 14mm !important; }
 
   h1, h2, h3, h4, .marke, .lead, .weiche-titel, .leitsatz, .leitsatz-folge, summary,
   .person-rolle, .geschichte-quelle, .heisst-titel, .fuss-unterzeile, figcaption { color: #000 !important; }
