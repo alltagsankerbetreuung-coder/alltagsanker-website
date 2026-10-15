@@ -1,6 +1,6 @@
 # Alltagsfels – Druckvorlagen
 
-Alle Vorlagen nutzen das neue Logo (Fels mit Sonne), die Farben und die Schriften der Website.
+Alle Vorlagen nutzen das Logo „Hand reichen auf dem Fels“ (seit 15.10.2026) mit Dunkelgrün und Ocker.
 Dieser Ordner erscheint **nicht** auf der Website (siehe `.vercelignore` im Hauptordner).
 
 ## Vor dem Druck: gelbe Platzhalter ersetzen
@@ -49,14 +49,17 @@ Fragt die Druckerei nach einem „Druckbogen“ oder „A4 auf A5 gefalzt“, ne
 
 | Datei | Wofür? |
 |---|---|
-| `alltagsfels-logo.svg` / `.png` | Hauptlogo für helle Hintergründe (SVG für Druckereien und Grafiker, PNG für Word, Office usw.) |
-| `alltagsfels-logo-weisser-hintergrund.png` | Hauptlogo mit weißem Hintergrund (für Programme ohne Transparenz) |
-| `alltagsfels-logo-hell.svg` / `.png` | Logo für dunkle Hintergründe (weiße Schrift) |
-| `alltagsfels-zeichen.svg` / `.png` | Nur das Zeichen (Fels mit Sonne), z. B. für Stempel, Profilbilder |
-| `alltagsfels-zeichen-hell.svg` / `.png` | Zeichen für dunkle Hintergründe |
+| `alltagsfels-logo.svg` / `.png` | Hauptlogo quer: Bild links, Name rechts (SVG für Druckereien und Grafiker, PNG für Word, Office usw.) |
+| `alltagsfels-logo-weisser-hintergrund.png` | Hauptlogo quer mit weißem Hintergrund (für Programme ohne Transparenz) |
+| `alltagsfels-logo-stehend.svg` / `.png` | Logo stehend mit Spruch „Zusammen. Sicher. Im Alltag.“, z. B. Rückseite Visitenkarte, Schilder |
+| `alltagsfels-zeichen.svg` / `.png` | Nur das Bild (Fels, zwei Menschen, Sonne), z. B. Stempel, Profilbilder |
+| `alltagsfels-zeichen-klein.svg` / `.png` | Vereinfachtes Bild für sehr kleine Größen |
+| `alltagsfels-app-symbol.svg` / `.png`, `favicon.ico` | Symbol für Handy und Browser |
 | `alltagsfels-logo-email.png` | Kleines Logo für E-Mails |
 
-**Farben:** Blau `#173A66` · Rot `#A33A27` · Sonne `#E0874F` · Sand `#F3E7D6` · Creme `#FBF6EE`
+Auf dunklem Hintergrund das Logo immer auf eine helle Fläche setzen; eine helle Fassung gibt es bewusst nicht, weil der Fels auf Dunkel verschwindet.
+
+**Farben:** Dunkelgrün `#2B3328` · Schrift im Logo `#1F2A1E` · Ocker `#B98547` · dunkles Ocker (Text) `#8F5F28` · Stein `#5A6152` · Sand `#F3E7D6` · Creme `#FBF6EE`
 **Schriften:** Fraunces (Überschriften) und Atkinson Hyperlegible (Text) – beide kostenlos (SIL Open Font License).
 
 ## Vorschau – Ordner `vorschau/`
