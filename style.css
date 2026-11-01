@@ -188,6 +188,7 @@ a:visited { color: var(--visited); text-decoration-style: dotted; }
 
 /* E-Mail-Adresse im Fließtext: größere Klickfläche, ohne die Zeile zu verschieben */
 .mail-link { padding-block: 0.75em; overflow-wrap: anywhere; }
+.tel-link { padding-block: 0.75em; white-space: nowrap; }
 
 /* Fokus: Navy mit Creme-Halo, nie in Sonnenfarbe */
 :focus { outline: none; }
@@ -1359,6 +1360,20 @@ legend { padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
 .erreichbar legend + * { clear: both; }
 .erreichbar > .feld-hinweis { margin-bottom: 1.25rem; }
 .erreichbar .feld-fehler { margin-bottom: 1rem; }
+
+/* Senden hat nicht geklappt: deutlicher Kasten mit E-Mail als Ausweg */
+.senden-fehler {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--rost);
+  border-radius: 10px;
+  background: var(--creme);
+}
+.senden-fehler p { margin: 0 0 0.5rem; }
+.senden-fehler p:last-child { margin-bottom: 0; }
+.senden-fehler a { overflow-wrap: anywhere; }
+.senden-fehler:focus { outline: 3px solid var(--navy); outline-offset: 3px; }
+.senden-fehler[hidden] { display: none; }
 
 /* Rückruf: Sprungziel hervorheben */
 :target.field, :target.feld { outline: 3px solid var(--sonne); outline-offset: 8px; border-radius: 6px; }

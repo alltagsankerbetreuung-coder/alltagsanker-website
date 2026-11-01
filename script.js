@@ -133,11 +133,33 @@ window.addEventListener("afterprint", function () {
   geschlosseneFragen = [];
 });
 
-// Formulare: Telefon oder E-Mail prüfen, Antwort-Adresse setzen, doppeltes Absenden verhindern
+// Formulare: Telefon oder E-Mail prüfen, Nachricht senden, doppeltes Absenden verhindern.
+// Die Nachricht geht an das eigene Website-Formular im Google-Konto der Firma
+// (Adresse steht im action-Attribut, Anleitung in werkzeuge/website-formular/).
+// Ohne JavaScript schickt der Browser das Formular ganz normal ab.
+var FORMULAR_FEHLT = "FORMULAR-NOCH-NICHT-EINGERICHTET";
+
+function knopfSetzen(button, wartet) {
+  if (!button) return;
+  if (wartet) {
+    if (!button.dataset.label) button.dataset.label = button.lastChild.textContent;
+    button.disabled = true;
+    button.setAttribute("aria-busy", "true");
+    button.lastChild.textContent = " Wird gesendet …";
+  } else {
+    button.disabled = false;
+    button.removeAttribute("aria-busy");
+    if (button.dataset.label) button.lastChild.textContent = button.dataset.label;
+  }
+}
+
 document.querySelectorAll("form.contact-form").forEach(function (form) {
   var mail = form.querySelector('input[type="email"]');
   var telefon = form.querySelector('input[type="tel"]');
   var fehler = form.querySelector(".erreichbar-fehler");
+  var sendeFehler = form.querySelector(".senden-fehler");
+  var sendeGrund = form.querySelector(".senden-grund");
+  var button = form.querySelector('button[type="submit"]');
 
   function erreichbarPruefen() {
     if (!mail || !telefon || !fehler) return true;
@@ -155,32 +177,71 @@ document.querySelectorAll("form.contact-form").forEach(function (form) {
     });
   });
 
+  function sendenFehlgeschlagen(grund) {
+    knopfSetzen(button, false);
+    if (!sendeFehler) return;
+    if (sendeGrund) sendeGrund.textContent = grund || "";
+    sendeFehler.hidden = false;
+    sendeFehler.focus();
+  }
+
   form.addEventListener("submit", function (event) {
     if (!erreichbarPruefen()) {
       event.preventDefault();
       (telefon || mail).focus();
       return;
     }
-    var replyto = form.querySelector(".replyto");
-    if (mail && replyto) {
-      replyto.value = mail.value;
+    if (button && button.disabled) {
+      event.preventDefault();
+      return;
     }
-    var button = form.querySelector('button[type="submit"]');
-    if (button) {
-      button.dataset.label = button.lastChild.textContent;
-      button.disabled = true;
-      button.setAttribute("aria-busy", "true");
-      button.lastChild.textContent = " Wird gesendet …";
+    if (sendeFehler) sendeFehler.hidden = true;
+    // Sehr alte Browser: normal absenden, das Formular-Programm zeigt dann selbst eine Danke-Seite
+    if (!window.fetch || !window.URLSearchParams || !window.FormData) {
+      knopfSetzen(button, true);
+      return;
     }
+    event.preventDefault();
+    knopfSetzen(button, true);
+    if (form.action.indexOf(FORMULAR_FEHLT) !== -1) {
+      sendenFehlgeschlagen("Das Formular wird gerade eingerichtet.");
+      return;
+    }
+    var daten = new URLSearchParams(new FormData(form));
+    daten.set("antwort", "json");
+    fetch(form.action, { method: "POST", body: daten, credentials: "omit", referrerPolicy: "origin" })
+      .then(function (antwort) {
+        if (!antwort.ok) throw new Error("HTTP " + antwort.status);
+        return antwort.json();
+      })
+      .then(function (ergebnis) {
+        if (ergebnis && ergebnis.ok === true) {
+          window.location.href = new URL(form.getAttribute("data-danke") || "danke.html", window.location.href).href;
+        } else {
+          sendenFehlgeschlagen(ergebnis && typeof ergebnis.fehler === "string" ? ergebnis.fehler : "");
+        }
+      })
+      .catch(function () {
+        sendenFehlgeschlagen("");
+      });
   });
 });
 
 // Nach dem Zurückblättern den Senden-Knopf wieder freigeben
 window.addEventListener("pageshow", function (event) {
   if (!event.persisted) return;
-  document.querySelectorAll("form.contact-form button[disabled]").forEach(function (button) {
-    button.disabled = false;
-    button.removeAttribute("aria-busy");
-    button.lastChild.textContent = button.dataset.label || button.lastChild.textContent;
+  document.querySelectorAll("form.contact-form button[type=\"submit\"]").forEach(function (button) {
+    knopfSetzen(button, false);
   });
 });
+
+// Danke-Seite: Nach einer Bewerbung (danke.html?bewerbung) die passenden Schritte zeigen
+(function () {
+  var kunden = document.getElementById("weiter-kunden");
+  var bewerbung = document.getElementById("weiter-bewerbung");
+  if (!kunden || !bewerbung) return;
+  if (/(^|[?&])bewerbung(=|&|$)/.test(window.location.search)) {
+    kunden.hidden = true;
+    bewerbung.hidden = false;
+  }
+})();

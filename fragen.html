@@ -25,7 +25,7 @@
   <link rel="preload" href="fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
-  <script>(function(d){d.classList.add("js");try{var s=localStorage.getItem("alltagsfels-schrift");if(s==="2"||s==="3")d.classList.add("schrift-"+s)}catch(e){}setTimeout(function(){if(!window.alltagsfelsBereit)d.classList.remove("js")},3000)})(document.documentElement);</script>
+  <script src="kopf.js"></script>
   <script src="script.js" defer></script>
   <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "name": "Ist Alltagsfels nur für Senioren da?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. Senioren sind unser Schwerpunkt. Wir helfen aber allen, die im Alltag Unterstützung brauchen. Sprechen Sie uns einfach an."
+        "text": "Nein. Senioren sind unser Schwerpunkt. Wir begleiten aber auch jüngere Erwachsene, die im Alltag Unterstützung brauchen. Sprechen Sie uns einfach an."
       }
     },
     {
@@ -125,6 +125,7 @@
         <div class="menue-extra">
           <a class="btn" href="kontakt.html">Kostenloses Erstgespräch anfragen</a>
           <p>Oder per E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+          <!--TELEFON<p>Oder anrufen: <a href="tel:TELEFON_LINK">TELEFON_ANZEIGE</a></p>TELEFON-->
         </div>
       </nav>
       <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
@@ -153,10 +154,12 @@
   </section>
   <section class="folge flaeche-creme" aria-label="Fragen">
     <div class="container schmal">
-      <ul class="faq-sprung" aria-label="Themen">
-        <li><a href="#ablauf">Ablauf und Kosten</a></li>
-        <li><a href="#angebot">Unser Angebot</a></li>
-      </ul>
+      <nav class="faq-sprung-nav" aria-label="Themen">
+        <ul class="faq-sprung">
+          <li><a href="#ablauf">Ablauf und Kosten</a></li>
+          <li><a href="#angebot">Unser Angebot</a></li>
+        </ul>
+      </nav>
       <div class="faq-group" id="ablauf">
         <h2>Ablauf und Kosten</h2>
         <details>
@@ -180,7 +183,7 @@
         <h2>Unser Angebot</h2>
         <details>
           <summary>Ist Alltagsfels nur für Senioren da?</summary>
-          <div class="faq-answer"><p>Nein. Senioren sind unser Schwerpunkt. Wir helfen aber allen, die im Alltag Unterstützung brauchen. Sprechen Sie uns einfach an.</p></div>
+          <div class="faq-answer"><p>Nein. Senioren sind unser Schwerpunkt. Wir begleiten aber auch jüngere Erwachsene, die im Alltag Unterstützung brauchen. Sprechen Sie uns einfach an.</p></div>
         </details>
         <details>
           <summary>Was gehört nicht dazu?</summary>
@@ -219,7 +222,7 @@
       <div class="fuss-marke">
         <a class="fuss-logo" href="index.html"><img src="images/logo-kurz-hell.svg" alt="Alltagsfels, zur Startseite" width="328" height="94" loading="lazy" /></a>
         <p>Alltagsbetreuung in Bottrop und Umgebung, im Umkreis von etwa <span class="zahl">20</span>&nbsp;km.</p>
-        <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></address>
+        <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a><!--TELEFON<br /><a href="tel:TELEFON_LINK">TELEFON_ANZEIGE</a>TELEFON--></address>
       </div>
       <div>
         <h2>Für Sie und Ihre Familie</h2>

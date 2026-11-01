@@ -25,7 +25,7 @@
   <link rel="preload" href="fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
-  <script>(function(d){d.classList.add("js");try{var s=localStorage.getItem("alltagsfels-schrift");if(s==="2"||s==="3")d.classList.add("schrift-"+s)}catch(e){}setTimeout(function(){if(!window.alltagsfelsBereit)d.classList.remove("js")},3000)})(document.documentElement);</script>
+  <script src="kopf.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -53,6 +53,7 @@
         <div class="menue-extra">
           <a class="btn" href="kontakt.html">Kostenloses Erstgespräch anfragen</a>
           <p>Oder per E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+          <!--TELEFON<p>Oder anrufen: <a href="tel:TELEFON_LINK">TELEFON_ANZEIGE</a></p>TELEFON-->
         </div>
       </nav>
       <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
@@ -80,27 +81,44 @@
 
   <section>
     <div class="container text-page legal">
-      <h2>1. Wer ist verantwortlich?</h2>
+      <p>Wir gehen sorgsam mit Ihren Daten um. Auf dieser Website gibt es keine Cookies, keine Werbung und keine Werkzeuge, die Ihr Verhalten auswerten. Hier lesen Sie genau, welche Daten trotzdem anfallen.</p>
+
+      <h2 id="verantwortlich">1. Wer ist verantwortlich?</h2>
       <p>Alltagsfels UG (haftungsbeschränkt), im Handelsregister derzeit noch als Alltagsanker UG (haftungsbeschränkt) eingetragen, vertreten durch den Geschäftsführer Julian Wehner<br />
       Batenbrockstraße 66, 46238 Bottrop<br />
-      E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+      E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a><!--TELEFON<br />
+      Telefon: <a href="tel:TELEFON_LINK">TELEFON_ANZEIGE</a>TELEFON--></p>
+      <p>Bei Fragen zum Datenschutz schreiben Sie uns einfach.</p>
 
-      <h2>2. Besuch der Website</h2>
-      <p>Diese Website liegt bei dem Anbieter Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA. Wenn Sie die Seite aufrufen, verarbeitet Vercel technisch nötige Daten, zum Beispiel Ihre IP-Adresse, Datum und Uhrzeit sowie die aufgerufene Seite. Das ist nötig, damit die Website funktioniert und sicher bleibt (Art. 6 Abs. 1 lit. f DSGVO).</p>
-      <p>Dabei können Daten in die USA übertragen werden. Vercel ist nach dem EU-US Data Privacy Framework zertifiziert. Mit Vercel besteht ein Vertrag zur Auftragsverarbeitung.</p>
-      <p>Wir setzen keine Cookies, keine Analyse-Werkzeuge und keine Werbung ein.</p>
+      <h2 id="hosting">2. Besuch der Website</h2>
+      <p>Diese Website liegt bei Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Wenn Sie die Seite aufrufen, verarbeitet Cloudflare technisch nötige Daten: Ihre IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite und Angaben zu Ihrem Browser. Ohne diese Daten kann die Seite nicht ausgeliefert und nicht gegen Angriffe geschützt werden. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren, funktionierenden Website (Art. 6 Abs. 1 lit. f DSGVO).</p>
+      <p>Mit Cloudflare besteht ein Vertrag zur Auftragsverarbeitung. Dabei können Daten in die USA übertragen werden. Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert. Für Unternehmen mit dieser Zertifizierung hat die EU-Kommission ein angemessenes Datenschutzniveau festgestellt (Art. 45 DSGVO).</p>
+      <p>Die Verbindung zu dieser Website ist verschlüsselt. Das erkennen Sie an „https“ und dem Schloss in der Adresszeile.</p>
 
-      <h2>3. Kontakt per E-Mail</h2>
-      <p>Wenn Sie uns eine E-Mail schreiben, nutzen wir Ihre Angaben nur, um Ihre Anfrage zu beantworten (Art. 6 Abs. 1 lit. b DSGVO). Unser E-Mail-Postfach liegt bei Google (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland).</p>
+      <h2 id="speicherung">3. Schriftgröße auf Ihrem Gerät</h2>
+      <p>Wenn Sie unten auf der Seite den Schalter „Schrift größer“ benutzen, merkt sich Ihr Browser Ihre Wahl auf Ihrem Gerät (im sogenannten lokalen Speicher). So bleibt die Schrift auf jeder Seite so groß, wie Sie es möchten. Diese Angabe wird nicht an uns oder andere übertragen. Sie ist für diese von Ihnen gewünschte Funktion unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Sie können sie jederzeit in Ihrem Browser löschen.</p>
+      <p>Sonst speichern wir nichts auf Ihrem Gerät. Schriften und Bilder liegen auf unserer eigenen Website. Es werden keine Inhalte anderer Anbieter geladen, zum Beispiel keine Karten und keine Videos.</p>
 
-      <h2>4. Kontaktformular</h2>
-      <p>Für das Kontaktformular nutzen wir den Dienst FormSubmit (formsubmit.co). FormSubmit leitet Ihre Angaben per E-Mail an uns weiter. Dabei werden Name, E-Mail-Adresse, Telefonnummer (falls angegeben), Stadt und Ihre Nachricht übermittelt. Die Daten können dabei in die USA übertragen werden.</p>
-      <p>Wir nutzen die Angaben nur, um Ihre Anfrage zu beantworten (Art. 6 Abs. 1 lit. b DSGVO). Bitte schreiben Sie keine Angaben zur Gesundheit in das Formular. Sie können uns auch direkt per E-Mail schreiben.</p>
+      <h2 id="email">4. Kontakt per E-Mail</h2>
+      <p>Wenn Sie uns eine E-Mail schreiben, nutzen wir Ihre Angaben nur, um Ihre Anfrage zu bearbeiten. Geht es um eine Betreuung oder einen Vertrag, ist die Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO. Bei allen anderen Anfragen ist es unser berechtigtes Interesse, Ihnen zu antworten (Art. 6 Abs. 1 lit. f DSGVO).</p>
+      <p>Unser E-Mail-Postfach liegt bei Google Workspace. Anbieter ist Google Cloud EMEA Limited, 70 Sir John Rogerson’s Quay, Dublin 2, Irland. Mit Google besteht ein Vertrag zur Auftragsverarbeitung. Dabei können Daten in die USA übertragen werden. Google ist nach dem EU-US Data Privacy Framework zertifiziert (Art. 45 DSGVO).</p>
 
-      <h2>5. Wie lange speichern wir Ihre Daten?</h2>
-      <p>Wir löschen Ihre Anfrage, wenn sie erledigt ist. Wird daraus ein Betreuungsvertrag, bewahren wir die Daten so lange auf, wie es das Gesetz verlangt, zum Beispiel für Rechnungen.</p>
+      <h2 id="formular">5. Kontaktformular</h2>
+      <p>Wenn Sie uns über das Formular schreiben, schickt Ihr Browser Ihre Angaben verschlüsselt an ein kleines Programm in unserem Google-Workspace-Konto (Google Apps Script). Es leitet die Angaben als E-Mail in unser Postfach weiter. Darüber hinaus speichert es nichts. Übermittelt werden Ihr Name, Ihre Telefonnummer und Ihre E-Mail-Adresse (soweit angegeben), Ihre Stadt und Ihre Nachricht. Beim Absenden sieht Google außerdem Ihre IP-Adresse.</p>
+      <p>Anbieter, Vertrag und Übertragung in die USA: wie bei Nummer 4. Rechtsgrundlage ist ebenfalls Art. 6 Abs. 1 lit. b DSGVO, bei sonstigen Anfragen Art. 6 Abs. 1 lit. f DSGVO.</p>
+      <p>Ihren Namen und eine Telefonnummer oder E-Mail-Adresse brauchen wir, um Ihnen zu antworten. Alle anderen Angaben sind freiwillig. Bitte schreiben Sie keine Angaben zur Gesundheit oder zum Pflegegrad in das Formular. Das besprechen wir lieber persönlich.</p>
 
-      <h2>6. Ihre Rechte</h2>
+      <h2 id="bewerbungen">6. Bewerbungen</h2>
+      <p>Wenn Sie sich bei uns bewerben, über das Formular auf der Seite „Jobs“ oder per E-Mail, nutzen wir Ihre Angaben, um über Ihre Bewerbung zu entscheiden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Arbeitsverhältnisses). Das Formular funktioniert wie bei Nummer 5 beschrieben.</p>
+      <p>Wird nichts aus der Zusammenarbeit, löschen wir Ihre Unterlagen spätestens sechs Monate nach unserer Absage. Länger bewahren wir sie nur auf, wenn Sie zustimmen. Fangen Sie bei uns an, kommen Ihre Angaben in Ihre Personalakte.</p>
+
+      <h2 id="dauer">7. Wie lange speichern wir Ihre Daten?</h2>
+      <p>Wir löschen Ihre Anfrage, wenn sie erledigt ist. Wird daraus ein Betreuungsvertrag, bewahren wir die Daten so lange auf, wie es Handels- und Steuerrecht verlangen, in der Regel sechs bis zehn Jahre. Für Bewerbungen gilt Nummer 6.</p>
+
+      <h2 id="empfaenger">8. Wer bekommt Ihre Daten?</h2>
+      <p>Ihre Angaben sehen nur wir und die oben genannten Dienstleister, die in unserem Auftrag arbeiten. Wir verkaufen keine Daten und geben sie nicht für Werbung weiter. Wir treffen keine automatischen Entscheidungen über Sie und erstellen keine Profile.</p>
+
+      <h2 id="rechte">9. Ihre Rechte</h2>
       <p>Sie haben das Recht auf:</p>
       <ul>
         <li>Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO),</li>
@@ -109,10 +127,11 @@
         <li>Datenübertragbarkeit (Art. 20 DSGVO),</li>
         <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO).</li>
       </ul>
+      <p><strong>Widerspruch:</strong> Verarbeiten wir Daten aufgrund unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO), können Sie dem jederzeit widersprechen, wenn sich das aus Ihrer besonderen Situation ergibt.</p>
       <p>Schreiben Sie uns dazu einfach eine E-Mail.</p>
       <p>Sie können sich auch bei einer Datenschutz-Aufsichtsbehörde beschweren. Für uns ist zuständig: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213 Düsseldorf, <a href="https://www.ldi.nrw.de">www.ldi.nrw.de</a>.</p>
 
-      <p class="note">Stand: Oktober 2026</p>
+      <p class="note">Stand: November <span class="zahl">2026</span></p>
     </div>
   </section>
 
@@ -124,7 +143,7 @@
       <div class="fuss-marke">
         <a class="fuss-logo" href="index.html"><img src="images/logo-kurz-hell.svg" alt="Alltagsfels, zur Startseite" width="328" height="94" loading="lazy" /></a>
         <p>Alltagsbetreuung in Bottrop und Umgebung, im Umkreis von etwa <span class="zahl">20</span>&nbsp;km.</p>
-        <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></address>
+        <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a><!--TELEFON<br /><a href="tel:TELEFON_LINK">TELEFON_ANZEIGE</a>TELEFON--></address>
       </div>
       <div>
         <h2>Für Sie und Ihre Familie</h2>

@@ -25,7 +25,7 @@
   <link rel="preload" href="fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
-  <script>(function(d){d.classList.add("js");try{var s=localStorage.getItem("alltagsfels-schrift");if(s==="2"||s==="3")d.classList.add("schrift-"+s)}catch(e){}setTimeout(function(){if(!window.alltagsfelsBereit)d.classList.remove("js")},3000)})(document.documentElement);</script>
+  <script src="kopf.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -53,6 +53,7 @@
         <div class="menue-extra">
           <a class="btn" href="kontakt.html">Kostenloses Erstgespräch anfragen</a>
           <p>Oder per E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+          <!--TELEFON<p>Oder anrufen: <a href="tel:TELEFON_LINK">TELEFON_ANZEIGE</a></p>TELEFON-->
         </div>
       </nav>
       <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
@@ -156,18 +157,14 @@
           </li>
         </ul>
       </div>
-      <form class="contact-form" action="https://formsubmit.co/alltagsankerbetreuung@gmail.com" method="POST">
+      <form class="contact-form" id="bewerbung" action="https://script.google.com/macros/s/FORMULAR-NOCH-NICHT-EINGERICHTET/exec" method="POST" accept-charset="UTF-8" data-danke="danke.html?bewerbung">
         <h2 class="form-title">Kurz bewerben</h2>
         <p class="form-intro">Felder mit <span class="req">*</span> brauchen wir, um Ihnen zu antworten.</p>
-        <input type="hidden" name="_subject" value="Bewerbung über die Website" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_replyto" value="" class="replyto" />
-        <input type="hidden" name="_next" value="danke.html?bewerbung" id="next-url" />
+        <input type="hidden" name="art" value="bewerbung" />
         <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <div class="field">
           <label for="name">Ihr Name <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="name" name="Name" autocomplete="name" required />
+          <input type="text" id="name" name="Name" autocomplete="name" maxlength="120" required />
         </div>
         <fieldset class="erreichbar" aria-describedby="erreichbar-hinweis">
           <legend>Wie dürfen wir Sie erreichen?</legend>
@@ -175,24 +172,28 @@
           <p class="feld-fehler erreichbar-fehler" role="alert" hidden>Bitte geben Sie Ihre Telefonnummer oder Ihre E-Mail-Adresse an.</p>
           <div class="field" id="rueckruf">
             <label for="telefon">Ihre Telefonnummer</label>
-            <input type="tel" id="telefon" name="Telefon" autocomplete="tel" inputmode="tel" aria-describedby="erreichbar-hinweis" />
+            <input type="tel" id="telefon" name="Telefon" autocomplete="tel" inputmode="tel" maxlength="40" aria-describedby="erreichbar-hinweis" />
           </div>
           <div class="field">
             <label for="email">Ihre E-Mail-Adresse</label>
-            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" aria-describedby="erreichbar-hinweis" />
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="254" aria-describedby="erreichbar-hinweis" />
           </div>
         </fieldset>
         <div class="field">
           <label for="ort">Ihr Wohnort <span class="optional">(freiwillig)</span></label>
-          <input type="text" id="ort" name="Wohnort" autocomplete="address-level2" placeholder="zum Beispiel Bottrop" />
+          <input type="text" id="ort" name="Wohnort" autocomplete="address-level2" maxlength="80" placeholder="zum Beispiel Bottrop" />
         </div>
         <div class="field">
           <label for="nachricht">Ein paar Sätze über Sie <span class="req" aria-hidden="true">*</span></label>
-          <textarea id="nachricht" name="Nachricht" rows="6" required placeholder="Zum Beispiel: Wie viele Stunden möchten Sie arbeiten? Was haben Sie bisher gemacht?"></textarea>
+          <textarea id="nachricht" name="Nachricht" rows="6" maxlength="4000" required placeholder="Zum Beispiel: Wie viele Stunden möchten Sie arbeiten? Was haben Sie bisher gemacht?"></textarea>
         </div>
         <div class="form-hints">
           <p>Ihren Lebenslauf können Sie uns gern per E-Mail schicken.</p>
-          <p>Mit dem Absenden werden Ihre Angaben an uns übermittelt. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+          <p>Mit dem Absenden werden Ihre Angaben an uns übermittelt. Mehr dazu in unserer <a href="datenschutz.html#bewerbungen">Datenschutzerklärung</a>.</p>
+        </div>
+        <div class="senden-fehler" role="alert" tabindex="-1" hidden>
+          <p><strong>Ihre Bewerbung ist leider noch nicht bei uns angekommen.</strong> <span class="senden-grund"></span></p>
+          <p>Bitte versuchen Sie es gleich noch einmal. Oder schreiben Sie uns eine E-Mail an <a class="mail-link" href="mailto:alltagsankerbetreuung@gmail.com?subject=Bewerbung%20Alltagsbegleitung">alltagsankerbetreuung<wbr />@gmail.com</a>.</p>
         </div>
         <button type="submit" class="btn"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 3 10 14"/><path d="M21 3 14.5 21l-4.5-7-7-4.5z"/></svg> Bewerbung senden</button>
         <p class="form-safe"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></svg> Unverbindlich und vertraulich</p>
@@ -208,7 +209,7 @@
       <div class="fuss-marke">
         <a class="fuss-logo" href="index.html"><img src="images/logo-kurz-hell.svg" alt="Alltagsfels, zur Startseite" width="328" height="94" loading="lazy" /></a>
         <p>Alltagsbetreuung in Bottrop und Umgebung, im Umkreis von etwa <span class="zahl">20</span>&nbsp;km.</p>
-        <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></address>
+        <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a><!--TELEFON<br /><a href="tel:TELEFON_LINK">TELEFON_ANZEIGE</a>TELEFON--></address>
       </div>
       <div>
         <h2>Für Sie und Ihre Familie</h2>
@@ -248,9 +249,5 @@
       </ul>
     </div>
   </footer>
-  <script>
-    // formsubmit.co braucht eine vollständige Adresse für die Weiterleitung
-    document.getElementById("next-url").value = new URL("danke.html?bewerbung", window.location.href).href;
-  </script>
 </body>
 </html>

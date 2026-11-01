@@ -18,7 +18,7 @@
   <link rel="preload" href="fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
-  <script>(function(d){d.classList.add("js");try{var s=localStorage.getItem("alltagsfels-schrift");if(s==="2"||s==="3")d.classList.add("schrift-"+s)}catch(e){}setTimeout(function(){if(!window.alltagsfelsBereit)d.classList.remove("js")},3000)})(document.documentElement);</script>
+  <script src="kopf.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -43,6 +43,7 @@
         <div class="menue-extra">
           <a class="btn" href="kontakt.html">Kostenloses Erstgespräch anfragen</a>
           <p>Oder per E-Mail: <a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></p>
+          <!--TELEFON<p>Oder anrufen: <a href="tel:TELEFON_LINK">TELEFON_ANZEIGE</a></p>TELEFON-->
         </div>
       </nav>
       <a class="btn btn-klein btn-kopf" href="kontakt.html">Erstgespräch</a>
@@ -71,7 +72,7 @@
   </section>
   <section class="folge flaeche-creme" id="weiter-kunden" aria-labelledby="weiter-titel">
     <div class="container">
-      <div class="kopf-block"><h2 id="weiter-titel">So geht es weiter</h2></div>
+      <div class="kopf-block"><h2 id="weiter-titel">So geht es weiter<span class="nur-vorlesen"> nach Ihrer Anfrage</span></h2></div>
       <ol class="schritte">
         <li><span class="schritt-ziffer" aria-hidden="true">1</span><h3><span class="nur-vorlesen">Schritt 1: </span>Wir melden uns</h3><p>Wir melden uns persönlich bei Ihnen, per E-Mail oder auf Wunsch telefonisch.</p></li>
         <li><span class="schritt-ziffer" aria-hidden="true">2</span><h3><span class="nur-vorlesen">Schritt 2: </span>Wir lernen uns kennen</h3><p>Wir besuchen Sie zu Hause. Dieses Erstgespräch ist kostenlos.</p></li>
@@ -83,7 +84,7 @@
 
   <section class="folge flaeche-creme" id="weiter-bewerbung" aria-labelledby="weiter-titel-b" hidden>
     <div class="container">
-      <div class="kopf-block"><h2 id="weiter-titel-b">So geht es weiter</h2></div>
+      <div class="kopf-block"><h2 id="weiter-titel-b">So geht es weiter<span class="nur-vorlesen"> nach Ihrer Bewerbung</span></h2></div>
       <ol class="schritte">
         <li><span class="schritt-ziffer" aria-hidden="true">1</span><h3><span class="nur-vorlesen">Schritt 1: </span>Wir lesen Ihre Bewerbung</h3><p>Wir lesen Ihre Bewerbung in Ruhe und melden uns bei Ihnen.</p></li>
         <li><span class="schritt-ziffer" aria-hidden="true">2</span><h3><span class="nur-vorlesen">Schritt 2: </span>Wir lernen uns kennen</h3><p>In einem Gespräch erzählen wir Ihnen alles über die Arbeit bei uns.</p></li>
@@ -101,7 +102,7 @@
       <div class="fuss-marke">
         <a class="fuss-logo" href="index.html"><img src="images/logo-kurz-hell.svg" alt="Alltagsfels, zur Startseite" width="328" height="94" loading="lazy" /></a>
         <p>Alltagsbetreuung in Bottrop und Umgebung, im Umkreis von etwa <span class="zahl">20</span>&nbsp;km.</p>
-        <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a></address>
+        <address class="fuss-adresse">Alltagsfels<br />Batenbrockstraße 66<br />46238 Bottrop<br /><a href="mailto:alltagsankerbetreuung@gmail.com">alltagsankerbetreuung@gmail.com</a><!--TELEFON<br /><a href="tel:TELEFON_LINK">TELEFON_ANZEIGE</a>TELEFON--></address>
       </div>
       <div>
         <h2>Für Sie und Ihre Familie</h2>
@@ -141,12 +142,5 @@
       </ul>
     </div>
   </footer>
-  <script>
-    // Nach einer Bewerbung (danke.html?bewerbung) die passenden Schritte zeigen
-    if (/bewerbung/.test(window.location.search)) {
-      document.getElementById("weiter-kunden").hidden = true;
-      document.getElementById("weiter-bewerbung").hidden = false;
-    }
-  </script>
 </body>
 </html>
