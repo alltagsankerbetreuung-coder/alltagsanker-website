@@ -59,7 +59,7 @@ neue Adresse erzeugen, die dann auf der Website neu eingetragen werden muss.
 - Schutz: unsichtbares Fallen-Feld `_honey` (wird es ausgefüllt, wird nichts
   gesendet), Längengrenzen je Feld, Pflichtfelder, höchstens 30 Nachrichten pro
   Stunde, Mails nur an das eigene Postfach.
-- Die Sicherheitsregeln der Website (`vercel.json`, `_headers`) erlauben
+- Die Sicherheitsregeln der Website (`vercel.json`) erlauben
   `script.google.com` und `script.googleusercontent.com` (Google leitet die
   Antwort dorthin weiter).
 

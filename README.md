@@ -16,14 +16,14 @@ Die Anleitung für den Inhaber (ohne Technik) liegt in den Projektunterlagen: �
 
 Der Ablauf ist in der Anleitung für den Inhaber beschrieben. Technisch:
 
-1. **Hosting:** Empfohlen Cloudflare Pages (kostenlos, gewerblich erlaubt, Datenschutzvertrag in den Bedingungen). Der kostenlose Vercel-Tarif ist nur für nicht gewerbliche Seiten erlaubt und hat keinen Datenschutzvertrag. Cloudflare-Einstellungen: Production branch `main`, Framework preset `None`, Build command `sh werkzeuge/bauen.sh`, Build output directory `dist`. In der Zone „Email Address Obfuscation“ aus, „Bot Fight Mode“ aus, keine Web Analytics, „Always Use HTTPS“ an. Bleibt es bei Vercel (dann Pro), Abschnitt 2 in `datenschutz.html` auf Vercel umschreiben.
+1. **Hosting bleibt Vercel, mit Pro-Tarif** (Entscheidung Julian, 01.11.2026). Der kostenlose Hobby-Tarif ist nur für nicht gewerbliche Seiten erlaubt und hat keinen Datenschutzvertrag. Spätestens zum Start Pro buchen. Dann Domain `alltagsfels.de` verbinden (www leitet auf die Adresse ohne www weiter) und unter *Settings → Deployment Protection* von „All Deployments“ auf „Standard Protection“ umstellen: Vorschauen bleiben geschützt, alltagsfels.de wird öffentlich.
 2. **Formular:** Google-Apps-Script im Firmenkonto bereitstellen, siehe `werkzeuge/website-formular/LIESMICH.md`. Dann `python3 werkzeuge/angaben-eintragen.py --formular https://script.google.com/macros/s/…/exec`.
 3. **Angaben:** `python3 werkzeuge/angaben-eintragen.py --telefon "02041 …" --email kontakt@alltagsfels.de`. Das trägt Telefon und E-Mail auf allen Seiten ein (auch im Google-Datenblock der Startseite).
 4. **Handelsregister:** Sobald Alltagsfels eingetragen ist, den Satz zum alten Namen aus `impressum.html` und `datenschutz.html` entfernen.
-5. **Google-Sperre aufheben:** `python3 werkzeuge/angaben-eintragen.py --google-freigeben` (ändert `robots.txt`, `vercel.json`, `_headers`; die Ersatzadressen `….pages.dev` bleiben gesperrt).
-6. `python3 werkzeuge/pruefen.py --start` muss „bereit zum Start“ melden. Ohne Telefonnummer darf es losgehen.
+5. **Google-Sperre aufheben:** `python3 werkzeuge/angaben-eintragen.py --google-freigeben` (ändert `robots.txt` und `vercel.json`).
+6. `python3 werkzeuge/pruefen.py --start` muss „bereit zum Start“ melden. Ohne Telefonnummer darf es losgehen. Von Hand: Vercel Pro gebucht? Steht Vercel Inc. auf https://www.dataprivacyframework.gov/list als „Active“? (Die Datenschutzerklärung nennt die Zertifizierung nur „nach eigenen Angaben“; bestätigt, kann das entfallen.)
 7. Nach dem Start prüfen: alle Seiten unter https://alltagsfels.de, `www.` leitet auf die Adresse ohne www weiter, Formular mit Testdaten (Anfrage und Bewerbung), Sicherheitsregeln (z. B. securityheaders.com), Vorschaubild in WhatsApp.
-8. Danach: Google Search Console (Sitemap `https://alltagsfels.de/sitemap.xml` einreichen), Google-Unternehmensprofil, Vercel-Projekt löschen.
+8. Danach: Google Search Console (Sitemap `https://alltagsfels.de/sitemap.xml` einreichen), Google-Unternehmensprofil.
 
 Später:
 
@@ -42,18 +42,17 @@ Später:
 - `style.css`: Gestaltung (Farben, Schriften, Abstände, Druckansicht)
 - `kopf.js`: im Kopf jeder Seite, setzt die gespeicherte Schriftgröße vor dem Anzeigen (keine Sprünge)
 - `script.js`: Menü, „Schrift größer“, Drucken, Formulare (Prüfung „Telefon oder E-Mail“, Senden, Fehlerkasten), Jahreszahl
-- `fonts/`: Fraunces und Atkinson Hyperlegible Next, lokal
+- `fonts/`: Atkinson Hyperlegible Next (Text und Überschriften) und die Ziffern 0–9 aus Inter (Null ohne Strich), lokal
 - `images/`: Logo (`logo-kurz.svg` im Kopf, `logo-kurz-hell.svg` im Fuß, `fels-sonne.svg` Bildzeichen, `logo.svg` für Druckvorlagen), Zeichnungen (Quelltext in `zeichnungen/`), `icons.svg`, `vorschau.png` (1200 × 630 für WhatsApp und E-Mail), App-Symbole
 - `sitemap.xml`, `robots.txt`, `site.webmanifest`, `favicon.ico`, `apple-touch-icon.png`
-- `vercel.json` (Vercel) und `_headers` (Cloudflare): gleiche Sicherheitsregeln und bis zum Start die Google-Sperre. `pruefen.py` meldet, wenn die beiden voneinander abweichen.
-- `.vercelignore`: was Vercel nicht ausliefern soll (Druckvorlagen, Zeichnungen, Werkzeuge, README, `_headers`)
+- `vercel.json`: saubere Adressen ohne `.html`, Sicherheitsregeln (CSP und weitere Kopfzeilen) und bis zum Start die Google-Sperre
+- `.vercelignore`: was Vercel nicht ausliefern soll (Druckvorlagen, Zeichnungen, Werkzeuge, README)
 - `druckvorlagen/`, `zeichnungen/`: Quelltexte für Druck und Bilder, nicht Teil der Website
 
 ## Werkzeuge (`werkzeuge/`)
 
 - `pruefen.py`: prüft alle Seiten (Links, Dateien, Pflichtangaben, gleicher Kopf und Fuß, Sicherheitsregeln, Werberegeln, Seitenliste) und listet, was zum Start noch offen ist. Nur Python 3, keine Zusatzpakete.
 - `angaben-eintragen.py`: Telefon, E-Mail, Formular-Adresse eintragen und die Google-Sperre aufheben. Mit `--probe` wird nur angezeigt, was sich ändern würde.
-- `bauen.sh`: baut für Cloudflare den Ordner `dist/` (nur Website-Dateien) und bricht ab, wenn `pruefen.py` einen Fehler findet.
 - `website-formular/`: das Programm für die Formulare (Google Apps Script) mit Anleitung und Tests (`node werkzeuge/website-formular/test.js`).
 
 ## Formulare
@@ -66,4 +65,4 @@ Beide Formulare schicken per `fetch` an die eigene Web-App (Google Apps Script i
 python3 -m http.server 8000
 ```
 
-Danach im Browser `http://localhost:8000` öffnen. Saubere Adressen ohne `.html` gibt es nur bei Vercel und Cloudflare.
+Danach im Browser `http://localhost:8000` öffnen. Saubere Adressen ohne `.html` gibt es nur bei Vercel.

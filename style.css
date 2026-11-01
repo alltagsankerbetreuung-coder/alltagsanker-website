@@ -1,6 +1,6 @@
 /* =====================================================================
    Alltagsfels – Gestaltung „Schichten“ (Richtung A)
-   Ruhiges Editorial aus Gestein und Horizont: große, leichte Serif,
+   Ruhiges Editorial aus Gestein und Horizont: kräftige, klare Überschriften,
    Schichtkanten zwischen den Kapiteln, Höhenlinien als stille Textur,
    die Sonne als einziger warmer Punkt.
 
@@ -24,25 +24,16 @@
 
 /* ---------- 1. Schriften (lokal, aus den npm-Paketen von Fontsource) ---------- */
 
+/* Nur die Ziffern 0–9 aus Inter: Atkinson zeichnet die Null mit Strich (Ø),
+   das liest sich in Jahreszahlen und Telefonnummern schlecht. */
 @font-face {
-  font-family: "Fraunces";
-  src: url("fonts/fraunces-latin-opsz-normal.woff2") format("woff2-variations"),
-       url("fonts/fraunces-latin-opsz-normal.woff2") format("woff2");
+  font-family: "Alltagsfels Ziffern";
+  src: url("fonts/inter-ziffern-wght.woff2") format("woff2-variations"),
+       url("fonts/inter-ziffern-wght.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* Kursiv nur für das eine Akzentwort und das Zitat */
-@font-face {
-  font-family: "Fraunces";
-  src: url("fonts/fraunces-latin-opsz-italic.woff2") format("woff2-variations"),
-       url("fonts/fraunces-latin-opsz-italic.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range: U+0030-0039;
 }
 
 @font-face {
@@ -83,12 +74,13 @@
   --band-text: #e9d8c1;     /* Nebentext auf Dunkelgrün (9,4 : 1) */
 
   /* Schriften */
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", Verdana, system-ui, sans-serif;
+  /* Eine Schrift für alles: Atkinson Hyperlegible Next, Überschriften fett */
+  --sans: "Alltagsfels Ziffern", "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", Verdana, system-ui, sans-serif;
+  --titel: var(--sans);
 
-  /* Zwei Gewichte für Fraunces: leicht für Display und H2, kräftiger für H3 */
-  --w-leicht: 440;
-  --w-h3: 520;
+  /* Zwei Gewichte für Überschriften: Display und H2, H3 etwas kräftiger */
+  --w-leicht: 680;
+  --w-h3: 700;
 
   /* Schriftgrößen (Handy → Desktop) */
   --fs-display: clamp(2.75rem, 1.6rem + 4.8vw, 5.25rem);
@@ -149,13 +141,12 @@ body {
 
 h1, h2, h3, h4 {
   margin: 0 0 0.5em;
-  font-family: var(--serif);
-  font-optical-sizing: auto;
+  font-family: var(--titel);
   color: var(--navy);
   text-wrap: balance;
 }
-h1 { font-size: var(--fs-h1); font-weight: var(--w-leicht); line-height: 1.05; letter-spacing: -0.015em; }
-h2 { font-size: var(--fs-h2); font-weight: var(--w-leicht); line-height: 1.1; letter-spacing: -0.01em; }
+h1 { font-size: var(--fs-h1); font-weight: var(--w-leicht); line-height: 1.08; letter-spacing: -0.015em; }
+h2 { font-size: var(--fs-h2); font-weight: var(--w-leicht); line-height: 1.12; letter-spacing: -0.015em; }
 h3 { font-size: var(--fs-h3); font-weight: var(--w-h3); line-height: 1.2; }
 h4 { font-size: 1.25rem; font-weight: var(--w-h3); line-height: 1.3; }
 
@@ -231,16 +222,8 @@ a:visited { color: var(--visited); text-decoration-style: dotted; }
   border: 0;
 }
 
-/* Ziffern mit 0 in Fraunces (Atkinson zeichnet die Null gestrichen).
-   Nur die Ziffern stehen in .zahl, nie das Wort davor. */
-.zahl {
-  font-family: var(--serif);
-  font-size: 1.06em;
-  font-weight: 500;
-  font-variant-numeric: lining-nums proportional-nums;
-  line-height: 1;
-}
-:is(h1, h2, h3, .datum) .zahl { font-size: 1em; font-weight: inherit; }
+/* Jahreszahlen: gleichmäßige Ziffern (die Schrift dafür steht in --sans) */
+.zahl { font-variant-numeric: lining-nums proportional-nums; }
 
 [hidden] { display: none !important; }
 
@@ -328,9 +311,9 @@ main > section { overflow-x: clip; }
 .kopf-block { margin-bottom: clamp(2.5rem, 5vw, 3.5rem); max-width: 46rem; }
 .kopf-block h2 { margin-bottom: 0.4em; }
 
-/* Kursives Akzentwort in Rost (höchstens eines pro Seite) */
+/* Akzentwort in Rost, aufrecht (höchstens eines pro Seite) */
 .akzent {
-  font-style: italic;
+  font-style: normal;
   font-weight: inherit;
   color: var(--rost);
 }
@@ -470,11 +453,10 @@ main > section { overflow-x: clip; }
   .kopfleiste .kurz { display: none; }
   .kopfleiste .lang { display: inline; }
 }
-/* Datum in Fraunces, ohne Plakette */
+/* Datum fett, ohne Plakette */
 .datum {
-  font-family: var(--serif);
-  font-size: 1.08em;
-  font-weight: 600;
+  font-family: var(--titel);
+  font-weight: 700;
   font-variant-numeric: lining-nums;
   white-space: nowrap;
 }
@@ -705,8 +687,8 @@ main > section { overflow-x: clip; }
   margin: 0 0 1.5rem;
   font-size: var(--fs-display);
   font-weight: var(--w-leicht);
-  line-height: 1.03;
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
 }
 .dachzeile {
   display: block;
@@ -829,7 +811,7 @@ main > section { overflow-x: clip; }
 .weiche-karte:hover::after { transform: scaleX(1); }
 .weiche-karte .icon-gross { grid-row: 1 / span 2; align-self: start; margin-top: 0.15rem; }
 .weiche-titel {
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: 1.5rem;
   font-weight: var(--w-h3);
   line-height: 1.2;
@@ -979,7 +961,7 @@ main > section { overflow-x: clip; }
 }
 .abgrenzung-schluss p {
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: var(--fs-h3);
   font-weight: var(--w-leicht);
   line-height: 1.3;
@@ -1010,7 +992,7 @@ main > section { overflow-x: clip; }
 }
 .besuch-liste p { margin: 0; }
 .besuch-nr {
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: 1.5rem;
   font-weight: var(--w-leicht);
   line-height: 1;
@@ -1059,10 +1041,9 @@ main > section { overflow-x: clip; }
   margin: 2rem 0 0;
   padding-top: 1.75rem;
   border-top: 1px solid var(--blue);
-  font-family: var(--serif);
-  font-optical-sizing: auto;
+  font-family: var(--titel);
   font-size: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
-  font-weight: 340;
+  font-weight: var(--w-leicht);
   line-height: 1.08;
   letter-spacing: -0.015em;
   color: var(--creme);
@@ -1071,7 +1052,7 @@ main > section { overflow-x: clip; }
 }
 .leitsatz-folge {
   margin-top: 1rem;
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
   font-weight: var(--w-leicht);
   line-height: 1.25;
@@ -1144,9 +1125,9 @@ main > section { overflow-x: clip; }
 .schritt-ziffer {
   display: block;
   margin-bottom: 0.75rem;
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: clamp(5rem, 4rem + 2vw, 6rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
   color: var(--sonne-tinte);
   font-variant-numeric: lining-nums;
@@ -1214,7 +1195,7 @@ main > section { overflow-x: clip; }
   white-space: nowrap;
   transform: translateY(-50%);
 }
-.karte-orte .ort-bottrop { font-family: var(--serif); font-size: 1.5rem; font-weight: var(--w-h3); }
+.karte-orte .ort-bottrop { font-family: var(--titel); font-size: 1.5rem; font-weight: var(--w-h3); }
 .karte-orte .ort-radius { font-weight: 400; color: var(--text-soft); }
 
 /* Fragen als aufklappbare Liste */
@@ -1232,7 +1213,7 @@ main > section { overflow-x: clip; }
   align-items: center;
   min-height: 4rem;
   padding: 1rem 3.5rem 1rem 0.25rem;
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.625rem);
   font-weight: var(--w-leicht);
   line-height: 1.3;
@@ -1279,7 +1260,7 @@ main > section { overflow-x: clip; }
 .abschluss h2 { font-size: var(--fs-h1); }
 .abschluss-unterzeile {
   margin-bottom: 1rem;
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: var(--fs-h3);
   font-weight: var(--w-leicht);
   line-height: 1.3;
@@ -1356,7 +1337,7 @@ legend { padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
   border-radius: 10px;
   background: var(--creme);
 }
-.erreichbar legend { float: left; width: 100%; margin-bottom: 0.25rem; font-family: var(--serif); font-size: 1.375rem; font-weight: var(--w-h3); color: var(--navy); }
+.erreichbar legend { float: left; width: 100%; margin-bottom: 0.25rem; font-family: var(--titel); font-size: 1.375rem; font-weight: var(--w-h3); color: var(--navy); }
 .erreichbar legend + * { clear: both; }
 .erreichbar > .feld-hinweis { margin-bottom: 1.25rem; }
 .erreichbar .feld-fehler { margin-bottom: 1rem; }
@@ -1413,7 +1394,7 @@ legend { padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
 .fuss p { max-width: 36ch; }
 .fuss h2 {
   margin: 0 0 0.9rem;
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: 1.375rem;
   font-weight: var(--w-h3);
   line-height: 1.25;
@@ -1425,7 +1406,7 @@ legend { padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
 .fuss-raster li a { display: inline-flex; align-items: center; min-height: 3rem; }
 .fuss-logo { display: inline-flex; align-items: center; min-height: 3rem; border-radius: 6px; }
 .fuss-logo img { width: 13.5rem; height: auto; }
-.fuss-unterzeile { margin: 0.1rem 0 1.25rem; font-family: var(--serif); font-size: 1.125rem; font-weight: var(--w-leicht); color: var(--band-text); }
+.fuss-unterzeile { margin: 0.1rem 0 1.25rem; font-family: var(--titel); font-size: 1.125rem; font-weight: var(--w-leicht); color: var(--band-text); }
 .fuss-adresse { margin-top: 1rem; }
 .fuss-adresse a { display: inline-flex; align-items: center; min-height: 3rem; overflow-wrap: anywhere; }
 
@@ -1472,7 +1453,7 @@ legend { padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
   border-radius: 999px;
   background: transparent;
   color: var(--creme);
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-weight: 600;
   line-height: 1;
   cursor: pointer;
@@ -1620,7 +1601,7 @@ ul.crosses li::after {
 }
 .nummern li::before {
   content: counter(nr);
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: 1.5rem;
   font-weight: var(--w-leicht);
   line-height: 1;
@@ -1747,7 +1728,7 @@ form.contact-form .btn { width: 100%; }
   align-items: center;
   min-height: 4rem;
   padding: 0.9rem 3rem 0.9rem 0;
-  font-family: var(--serif);
+  font-family: var(--titel);
   font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.625rem);
   font-weight: var(--w-leicht);
   line-height: 1.3;
@@ -1776,7 +1757,7 @@ form.contact-form .btn { width: 100%; }
 /* Große Linkzeilen (404) */
 .link-zeilen { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); max-width: 40rem; }
 .link-zeilen li { margin: 0; border-bottom: 1px solid var(--line); }
-.link-zeilen a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; font-size: 1.375rem; font-family: var(--serif); font-weight: var(--w-leicht); text-decoration-thickness: 1px; }
+.link-zeilen a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; font-size: 1.375rem; font-family: var(--titel); font-weight: var(--w-leicht); text-decoration-thickness: 1px; }
 .link-zeilen a:hover { text-decoration-thickness: 2px; }
 .link-zeilen .icon { width: 1.5rem; height: 1.5rem; }
 

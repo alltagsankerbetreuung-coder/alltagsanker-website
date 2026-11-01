@@ -82,8 +82,7 @@ def formular_pruefen(adresse):
 
 
 def google_freigeben(probe):
-    """Hebt die Google-Sperre auf: robots.txt, vercel.json, _headers.
-    Die Ersatzadresse bei Cloudflare (….pages.dev) bleibt gesperrt."""
+    """Hebt die Google-Sperre auf: robots.txt und vercel.json."""
     dateien = {}
     dateien["robots.txt"] = "User-agent: *\nAllow: /\n\nSitemap: https://alltagsfels.de/sitemap.xml\n"
 
@@ -95,20 +94,6 @@ def google_freigeben(probe):
     if any(k["key"] == "X-Robots-Tag" for r in cfg.get("headers", []) for k in r["headers"]):
         sys.exit("vercel.json: Google-Sperre nicht gefunden oder anders aufgebaut, bitte von Hand ändern.")
     dateien["vercel.json"] = neu
-
-    pfad = os.path.join(HAUPT, "_headers")
-    if os.path.isfile(pfad):
-        zeilen, regel = [], None
-        with open(pfad, encoding="utf-8") as d:
-            for z in d.read().splitlines(keepends=True):
-                if z.strip() and not z[0].isspace() and not z.startswith("#"):
-                    regel = z.strip()
-                if "Google-Sperre bis zum Start" in z:
-                    continue
-                if regel and regel.startswith("/") and z.strip().startswith("X-Robots-Tag:"):
-                    continue
-                zeilen.append(z)
-        dateien["_headers"] = "".join(zeilen)
 
     for name, inhalt in dateien.items():
         with open(os.path.join(HAUPT, name), encoding="utf-8") as d:
@@ -162,7 +147,7 @@ def main():
         # Sicherheitsregel: Formular-Adresse muss erlaubt sein (steht schon für script.google.com drin)
         with open(os.path.join(HAUPT, "vercel.json"), encoding="utf-8") as d:
             if "https://script.google.com" not in d.read():
-                print("Achtung: script.google.com fehlt in den Sicherheitsregeln (vercel.json / _headers).")
+                print("Achtung: script.google.com fehlt in den Sicherheitsregeln (vercel.json).")
     print(f"{geaendert} Seiten {'würden geändert' if a.probe else 'geändert'}. Jetzt prüfen: python3 werkzeuge/pruefen.py")
 
 

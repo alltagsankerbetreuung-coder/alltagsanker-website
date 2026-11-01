@@ -24,6 +24,7 @@ ERLAUBT_EXTERN = (
     DOMAIN + "/",
     DOMAIN,
     "https://www.ldi.nrw.de",
+    "https://vercel.com/legal/privacy-notice",
     "https://script.google.com/macros/s/",
     "https://script.google.com/a/macros/",
 )
@@ -244,23 +245,8 @@ def pruefe_seiten(start):
     return seiten
 
 
-def headers_regeln(text):
-    """Liest eine Cloudflare-Datei _headers: {Pfad: {Name: Wert}}."""
-    regeln, pfad = {}, None
-    for zeile in text.splitlines():
-        if not zeile.strip() or zeile.lstrip().startswith("#"):
-            continue
-        if not zeile[0].isspace():
-            pfad = zeile.strip()
-            regeln.setdefault(pfad, {})
-        elif pfad is not None:
-            name, _, wert = zeile.strip().partition(":")
-            regeln[pfad][name.strip()] = wert.strip()
-    return regeln
-
-
 def pruefe_dateien(seiten, start):
-    # vercel.json und _headers: gleiche Sicherheitsregeln
+    # vercel.json: Sicherheitsregeln und Google-Sperre
     try:
         cfg = json.loads(lies("vercel.json"))
     except ValueError as e:
@@ -280,29 +266,6 @@ def pruefe_dateien(seiten, start):
     csp = kopf.get("Content-Security-Policy", "")
     if "'unsafe-inline'" in csp or "'unsafe-eval'" in csp:
         melde("vercel.json", "CSP erlaubt eingebettete Skripte (unsafe-inline/unsafe-eval)")
-    if os.path.isfile(os.path.join(HAUPT, "_headers")):
-        # Cloudflare: gleiche Regeln je Pfad wie in vercel.json ("/(.*)" = "/*")
-        text = lies("_headers")
-        cf = headers_regeln(text)
-        vc = {}
-        for regel in cfg.get("headers", []):
-            pfad = regel["source"].replace("(.*)", "*")
-            for k in regel["headers"]:
-                vc.setdefault(pfad, {})[k["key"]] = k["value"]
-        eigene = {p: r for p, r in cf.items() if p.startswith("/")}
-        for pfad in sorted(set(vc) | set(eigene)):
-            a, b = vc.get(pfad, {}), eigene.get(pfad, {})
-            for k in sorted(set(a) | set(b)):
-                if a.get(k) != b.get(k):
-                    wo = "nur in vercel.json" if k not in b else "nur in _headers" if k not in a else "unterschiedlich"
-                    melde("_headers", f"Regel {k} für {pfad} {wo}")
-        if len(cf) > 100:
-            melde("_headers", "mehr als 100 Regeln (Cloudflare erlaubt 100)")
-        if any(len(z) > 2000 for z in text.splitlines()):
-            melde("_headers", "Zeile länger als 2000 Zeichen (Cloudflare erlaubt 2000)")
-        for pfad, r in cf.items():
-            if not pfad.startswith("/") and r.get("X-Robots-Tag", "").lower() != "noindex":
-                melde("_headers", f"{pfad}: Ersatzadresse muss für Google gesperrt bleiben")
 
     robots = lies("robots.txt")
     gesperrt = bool(re.search(r"Disallow:\s*/\s*$", robots, re.M))
@@ -367,6 +330,9 @@ def main():
             print("  ✗ " + f)
         sys.exit(1)
     print(f"Alles in Ordnung ({len(seiten)} Seiten geprüft{', bereit zum Start' if start else ''}).")
+    if start:
+        print("Von Hand prüfen: Vercel Pro gebucht (sonst gilt der Datenschutzvertrag nicht),")
+        print("Vercel Inc. auf dataprivacyframework.gov/list als „Active“ gelistet.")
 
 
 if __name__ == "__main__":
