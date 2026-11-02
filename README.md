@@ -1,93 +1,68 @@
 # Alltagsfels Website
 
-Statische Website für Alltagsfels – Alltagsbetreuung für Senioren in Bottrop und Umgebung (z. B. Gladbeck, Gelsenkirchen, Essen).
+Statische Website für Alltagsfels: Alltagsbetreuung für Senioren in Bottrop und Umgebung (z. B. Gladbeck, Gelsenkirchen, Essen). Reines HTML, CSS und etwas JavaScript, keine Fremddienste, keine Cookies.
 
-## Zum Start im Januar
+Die Anleitung für den Inhaber (ohne Technik) liegt in den Projektunterlagen: „Anleitung Website live schalten 2026-11-01.md“.
 
-Diese Punkte kann nur der Inhaber erledigen. Die Website selbst ist fertig.
+## Regeln für Änderungen
 
-- [ ] **Domain verbinden:** In Vercel unter *Settings → Domains* `alltagsfels.de` hinzufügen und die angezeigten DNS-Einträge beim Domain-Anbieter eintragen. Erst danach erscheint das Vorschaubild in WhatsApp und E-Mails, denn es liegt unter `https://alltagsfels.de/images/vorschau.png`.
-- [ ] **Suchmaschinen-Sperre entfernen (Teil 1):** Den Inhalt von `robots.txt` ersetzen durch:
-  ```
-  User-agent: *
-  Allow: /
+- Nichts in `main` übernehmen ohne ausdrückliches „übernehmen“ von Julian. Jede Änderung als eigener Zweig mit Änderungsvorschlag.
+- Vor jedem Änderungsvorschlag: `python3 werkzeuge/pruefen.py` (muss „Alles in Ordnung“ melden).
+- Werberegeln (prüft `pruefen.py` zum Teil automatisch): keine Preise oder Kassenbeträge, keine Umsatzsteuer, kein Wort zur Anerkennung (§ 45a), keine Wochentage, Uhrzeiten, Mindestdauern oder Absageregeln, keine Rückmeldezeiten, keine Vertretungsregel, Erfahrung nur als „viele Jahre“, keine Fotos (Zeichnungen ja), keine erfundenen Bewertungen, Zahlen oder Siegel, kein Fahrdienst, keine Zusagen zum Grundkurs, keine Stadtseiten, „Januar 2027“ nur für Kunden (Jobs-Seite ohne Startdatum), Pflegegrad 2+ und Selbstzahler, „Ihre Angehörigen“.
+- Nie eine Bankverbindung (IBAN) in dieses öffentliche Repo.
+- Nichts von fremden Servern laden (Schriften, Bilder, Skripte liegen hier). Keine eingebetteten Skripte oder Styles in den Seiten: Die Sicherheitsregeln (CSP) verbieten das.
 
-  Sitemap: https://alltagsfels.de/sitemap.xml
-  ```
-- [ ] **Suchmaschinen-Sperre entfernen (Teil 2):** In `vercel.json` den ganzen Block `"headers": [ … ]` mit `X-Robots-Tag` / `noindex, nofollow` löschen. Übrig bleibt:
-  ```json
-  {
-    "cleanUrls": true,
-    "trailingSlash": false
-  }
-  ```
-- [ ] **Telefonnummer eintragen**, sobald es sie gibt: in `kontakt.html` (Abschnitt „Rückruf“ in den Angaben neben dem Formular), im Fußbereich aller Seiten (Liste „Kontakt“), in `index.html` im Google-Datenblock (`"telephone": "+49 …"`) und im Impressum.
-- [ ] **Hinweise auf den Start anpassen:** Die Leiste ganz oben auf allen Seiten („Neu in Bottrop: Wir starten im Januar 2027 …“, auf `mitarbeiten.html` ohne Datum) ändern oder entfernen. Außerdem „Ab Januar 2027 …“ in `index.html` (Ablauf, Schritt 3), `kontakt.html` („So geht es weiter“) und in `fragen.html` (Frage „Ab wann kann die Betreuung beginnen?“, zweimal: sichtbar und im Google-Datenblock oben).
-- [ ] **Stellenangebot pflegen:** Sobald alle Stellen besetzt sind, den Link „Jobs“ im Hauptmenü und im Fußbereich aller Seiten und die Zeile „Wir suchen Verstärkung“ auf „Über uns“ entfernen. Stundenlohn und Fahrtkosten bei Bedarf auf `mitarbeiten.html` ergänzen, wenn sie entschieden sind. Zum Grundkurs (Kosten, Zuschuss, Frist) nichts versprechen, das wird im Gespräch geklärt. Auf der Jobs-Seite bewusst kein Startdatum für Bewerber (Julian, 12.10.2026).
-- [ ] **Kontaktformular testen:** Einmal selbst eine Nachricht senden, auch über das Bewerbungsformular auf `mitarbeiten.html`. Beim ersten Mal kommt von formsubmit.co eine Bestätigungs-E-Mail an `alltagsankerbetreuung@gmail.com`, die einmal bestätigt werden muss.
-- [ ] **Impressum und Datenschutz prüfen:** Stimmen alle Angaben (z. B. Handelsregister, Telefon)? Am besten rechtlich prüfen lassen.
-- [ ] **Bei Google anmelden:** In der [Google Search Console](https://search.google.com/search-console) die Domain bestätigen und `https://alltagsfels.de/sitemap.xml` einreichen. Empfehlenswert: ein kostenloses Google-Unternehmensprofil für Bottrop anlegen.
-- [ ] **Vorschau testen:** Den Link `https://alltagsfels.de` in WhatsApp an sich selbst schicken und prüfen, ob Bild und Text erscheinen.
-- [ ] *Freiwillig:* Eine E-Mail-Adresse mit eigener Domain (z. B. `kontakt@alltagsfels.de`) wirkt professioneller als eine Gmail-Adresse. Dann überall austauschen, auch im Formular (`kontakt.html`, `action=…`).
+## Zum Start
+
+Der Ablauf ist in der Anleitung für den Inhaber beschrieben. Technisch:
+
+1. **Hosting bleibt Vercel, mit Pro-Tarif** (Entscheidung Julian, 01.11.2026). Der kostenlose Hobby-Tarif ist nur für nicht gewerbliche Seiten erlaubt und hat keinen Datenschutzvertrag. Spätestens zum Start Pro buchen. Dann Domain `alltagsfels.de` verbinden (www leitet auf die Adresse ohne www weiter) und unter *Settings → Deployment Protection* von „All Deployments“ auf „Standard Protection“ umstellen: Vorschauen bleiben geschützt, alltagsfels.de wird öffentlich.
+2. **Formular:** Google-Apps-Script im Firmenkonto bereitstellen, siehe `werkzeuge/website-formular/LIESMICH.md`. Dann `python3 werkzeuge/angaben-eintragen.py --formular https://script.google.com/macros/s/…/exec`.
+3. **Angaben:** `python3 werkzeuge/angaben-eintragen.py --telefon "02041 …" --email kontakt@alltagsfels.de`. Das trägt Telefon und E-Mail auf allen Seiten ein (auch im Google-Datenblock der Startseite).
+4. **Handelsregister:** Sobald Alltagsfels eingetragen ist, den Satz zum alten Namen aus `impressum.html` und `datenschutz.html` entfernen.
+5. **Google-Sperre aufheben:** `python3 werkzeuge/angaben-eintragen.py --google-freigeben` (ändert `robots.txt` und `vercel.json`).
+6. `python3 werkzeuge/pruefen.py --start` muss „bereit zum Start“ melden. Ohne Telefonnummer darf es losgehen. Von Hand: Vercel Pro gebucht? Steht Vercel Inc. auf https://www.dataprivacyframework.gov/list als „Active“? (Die Datenschutzerklärung nennt die Zertifizierung nur „nach eigenen Angaben“; bestätigt, kann das entfallen.)
+7. Nach dem Start prüfen: alle Seiten unter https://alltagsfels.de, `www.` leitet auf die Adresse ohne www weiter, Formular mit Testdaten (Anfrage und Bewerbung), Sicherheitsregeln (z. B. securityheaders.com), Vorschaubild in WhatsApp.
+8. Danach: Google Search Console (Sitemap `https://alltagsfels.de/sitemap.xml` einreichen), Google-Unternehmensprofil.
+
+Später:
+
+- Ab Februar 2027 die Hinweise auf den Start anpassen: Leiste oben auf allen Seiten („Neu in Bottrop: Wir starten im Januar 2027 …“), „Ab Januar 2027 …“ in `index.html` (Ablauf, Schritt 3), `kontakt.html` („So geht es weiter“) und `fragen.html` (Frage „Ab wann kann die Betreuung beginnen?“, sichtbar und im Google-Datenblock).
+- `kosten.html` nach dem Bundesrat am 18.12.2026 (Pflegereform) prüfen, „Stand“ anpassen.
+- Wirtschafts-Identifikationsnummer ins Impressum, falls vergeben. Nach der Anerkennung von einer Fachperson klären lassen, ob die Behörde ins Impressum muss. Impressum und Datenschutz von einer Fachperson prüfen lassen.
+- Stellenangebot: Wenn alle Stellen besetzt sind, „Jobs“ aus Menü und Fußbereich und die Zeile „Wir suchen Verstärkung“ auf „Über uns“ nehmen.
 
 ## Struktur
 
-- `index.html` – Startseite (mit Abschnitt „Unser Einsatzgebiet“)
-- `leistungen.html` – Leistungen
-- `ueber-uns.html` – Über uns
-- `kosten.html` – Kosten und Pflegekasse (Stand der Rechtslage regelmäßig prüfen)
-- `fragen.html` – Häufige Fragen (vor allem für Angehörige)
-- `kontakt.html` – Kontakt (inkl. Kontaktformular)
-- `mitarbeiten.html` – Stellenangebot Alltagsbegleitung (m/w/d) mit Bewerbungsformular; als „Jobs“ im Hauptmenü (zurückhaltend gesetzt), im Fußbereich und auf „Über uns“
-- `danke.html` – Bestätigungsseite nach Formularversand (nach einer Bewerbung, `danke.html?bewerbung`, erscheinen eigene Schritte für Bewerber)
-- `impressum.html`, `datenschutz.html` – Pflichtseiten
-- `404.html` – Seite für nicht gefundene Adressen
-- `style.css` – Gemeinsame Gestaltung (Farben, Schriften, Abstände)
-- `script.js` – Menü, Schalter „Schrift größer“, Drucken (ganze Seite oder ein Abschnitt), Prüfung „Telefon oder E-Mail“ im Formular, Jahreszahl
-- `fonts/` – Schriften Fraunces (Überschriften) und Atkinson Hyperlegible Next (Text), beide als variable Schriften, liegen auf der eigenen Website, keine Verbindung zu Google
-- `images/` – Logo (`logo.svg` stehend, `logo-kurz.svg` quer für den Kopf, `logo-kurz-hell.svg` als heller Schriftzug für den dunklen Fußbereich, `fels-sonne.svg` als Bildzeichen; Vorlagen in den Projektunterlagen unter Logo-Entwürfe/final), `favicon.svg` und `/favicon.ico`, eigene Zeichnungen mit Alltagsszenen (Quelltext und Anleitung in `zeichnungen/`), `icons.svg` (kleine Symbole), `vorschau.png` (Vorschaubild 1200 × 630 für WhatsApp, E-Mail und soziale Netzwerke) und `icon-192.png` / `icon-512.png` (Symbole für den Handy-Startbildschirm)
-- `apple-touch-icon.png` und `site.webmanifest` – Symbol und Angaben für den Handy-Startbildschirm
-- `sitemap.xml` – Liste aller Seiten für Suchmaschinen (für https://alltagsfels.de, wird erst zum Start bei Google eingereicht)
-- `robots.txt` und `vercel.json` – sperren die Seite vorerst für Suchmaschinen (Disallow + Header „noindex“). Zum Start entfernen, siehe Checkliste unten.
-- `.vercelignore` – Dateien, die nicht auf der Website erscheinen sollen (z. B. `druckvorlagen/` und `zeichnungen/`)
+- `index.html`: Startseite (mit Einsatzgebiet und Google-Datenblock)
+- `leistungen.html`, `ueber-uns.html`, `kosten.html` (Rechtsstand regelmäßig prüfen), `fragen.html` (mit Google-Datenblock der Fragen)
+- `kontakt.html`: Kontaktformular; `mitarbeiten.html`: Stellenangebot mit Bewerbungsformular (als „Jobs“ verlinkt)
+- `danke.html`: nach dem Absenden (`danke.html?bewerbung` zeigt die Schritte für Bewerber)
+- `impressum.html`, `datenschutz.html`, `404.html`
+- `style.css`: Gestaltung (Farben, Schriften, Abstände, Druckansicht)
+- `kopf.js`: im Kopf jeder Seite, setzt die gespeicherte Schriftgröße vor dem Anzeigen (keine Sprünge)
+- `script.js`: Menü, „Schrift größer“, Drucken, Formulare (Prüfung „Telefon oder E-Mail“, Senden, Fehlerkasten), Jahreszahl
+- `fonts/`: Atkinson Hyperlegible Next (Text und Überschriften) und die Ziffern 0–9 aus Inter (Null ohne Strich), lokal
+- `images/`: Logo (`logo-kurz.svg` im Kopf, `logo-kurz-hell.svg` im Fuß, `fels-sonne.svg` Bildzeichen, `logo.svg` für Druckvorlagen), Zeichnungen (Quelltext in `zeichnungen/`), `icons.svg`, `vorschau.png` (1200 × 630 für WhatsApp und E-Mail), App-Symbole
+- `sitemap.xml`, `robots.txt`, `site.webmanifest`, `favicon.ico`, `apple-touch-icon.png`
+- `vercel.json`: saubere Adressen ohne `.html`, Sicherheitsregeln (CSP und weitere Kopfzeilen) und bis zum Start die Google-Sperre
+- `.vercelignore`: was Vercel nicht ausliefern soll (Druckvorlagen, Zeichnungen, Werkzeuge, README)
+- `druckvorlagen/`, `zeichnungen/`: Quelltexte für Druck und Bilder, nicht Teil der Website
 
-## Kontaktformular
+## Werkzeuge (`werkzeuge/`)
 
-Das Formular auf `kontakt.html` nutzt [formsubmit.co](https://formsubmit.co) – ein kostenloser Dienst, der Formulardaten ohne eigenes Backend per E-Mail an `alltagsankerbetreuung@gmail.com` weiterleitet.
+- `pruefen.py`: prüft alle Seiten (Links, Dateien, Pflichtangaben, gleicher Kopf und Fuß, Sicherheitsregeln, Werberegeln, Seitenliste) und listet, was zum Start noch offen ist. Nur Python 3, keine Zusatzpakete.
+- `angaben-eintragen.py`: Telefon, E-Mail, Formular-Adresse eintragen und die Google-Sperre aufheben. Mit `--probe` wird nur angezeigt, was sich ändern würde.
+- `website-formular/`: das Programm für die Formulare (Google Apps Script) mit Anleitung und Tests (`node werkzeuge/website-formular/test.js`).
 
-**Wichtig:** Beim allerersten Absenden schickt formsubmit.co eine Bestätigungs-E-Mail an `alltagsankerbetreuung@gmail.com`. Diese muss einmalig bestätigt werden, danach funktionieren alle weiteren Einsendungen automatisch.
+## Formulare
+
+Beide Formulare schicken per `fetch` an die eigene Web-App (Google Apps Script im Firmenkonto). Die Web-App prüft die Angaben und schickt sie als E-Mail ins eigene Postfach. Kein Fremddienst, nichts wird gespeichert. Bis die Adresse eingetragen ist, zeigt das Formular beim Absenden einen Hinweis mit der E-Mail-Adresse, und es verlässt nichts die Seite. Ohne JavaScript wird das Formular normal abgeschickt; dann zeigt Google eine einfache Bestätigungsseite.
 
 ## Lokal ansehen
-
-Einfach `index.html` im Browser öffnen, oder mit einem lokalen Server:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Danach im Browser: `http://localhost:8000`
-
-## Deployment auf GitHub + Vercel
-
-Siehe die Schritt-für-Schritt-Anleitung im Chat bzw. unten.
-
-### 1. GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: Alltagsfels Website"
-git branch -M main
-git remote add origin https://github.com/<dein-username>/alltagsanker-website.git
-git push -u origin main
-```
-
-### 2. Vercel
-
-1. Auf [vercel.com](https://vercel.com) einloggen (mit GitHub-Konto).
-2. "Add New… → Project" wählen.
-3. Das Repo `alltagsanker-website` importieren.
-4. Framework Preset: **Other** (statisches HTML), keine Build-Konfiguration nötig.
-5. "Deploy" klicken – nach ca. 30 Sekunden ist die Seite live.
-
-Jeder weitere `git push` auf `main` löst automatisch ein neues Deployment aus.
+Danach im Browser `http://localhost:8000` öffnen. Saubere Adressen ohne `.html` gibt es nur bei Vercel.
