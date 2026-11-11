@@ -171,8 +171,8 @@ def main():
     info = t.cell(0, 2).merge(t.cell(1, 2))
     zelle_leeren(info)
     absatz(info, [("Ihr Ansprechpartner: ", {"b": True, "f": BLAU}), ("Julian Wehner", {})], groesse=11, vor=14)
-    absatz(info, [("Telefon: ", {"b": True, "f": BLAU}), ("[TELEFON]", {"gelb": True, "b": True})], groesse=11)
-    absatz(info, [("E-Mail: ", {"b": True, "f": BLAU}), ("[E-MAIL]", {"gelb": True, "b": True})], groesse=11)
+    absatz(info, [("Telefon: ", {"b": True, "f": BLAU}), ("02041 7230741", {"b": True})], groesse=11)
+    absatz(info, [("E-Mail: ", {"b": True, "f": BLAU}), ("info@alltagsfels.de", {"b": True})], groesse=11)
     absatz(info, [("Internet: ", {"b": True, "f": BLAU}), ("www.alltagsfels.de", {})], groesse=11)
     absatz(info, [("Datum: ", {"b": True, "f": BLAU}), ("TT.MM.JJJJ", {})], groesse=11, vor=8)
 
@@ -196,7 +196,7 @@ def main():
         [("Alltagsfels UG", {"b": True, "f": BLAU}), ("(haftungsbeschränkt)", {"b": True, "f": BLAU}),
          ("Batenbrockstraße 66", {}), ("46238 Bottrop", {})],
         [("Geschäftsführer: Julian Wehner", {}), ("Amtsgericht Gelsenkirchen", {}), ("HRB 20165", {})],
-        [("Telefon ", {}, "[TELEFON]"), ("E-Mail ", {}, "[E-MAIL]"), ("www.alltagsfels.de", {})],
+        [("Telefon 02041 7230741", {}), ("E-Mail info@alltagsfels.de", {}), ("www.alltagsfels.de", {})],
         [("Bankverbindung", {}), ("IBAN ", {}, "[IBAN]")],
     ]
     for zelle, zeilen in zip(ft.rows[0].cells, spalten):

@@ -34,12 +34,11 @@ Das Logo wird beim Einfügen oft nicht mit übernommen. Dann sehen Sie dort ein 
 
 ## Schritt 4: Platzhalter ersetzen
 
-Gelb markiert sind die Angaben, die es noch nicht gibt: **[TELEFON]**, **[E-MAIL]** und **[IBAN]**.
+Telefon und E-Mail sind schon eingetragen. Gelb markiert ist nur noch **[IBAN]**.
 
-1. Markieren Sie zum Beispiel **[TELEFON]** und schreiben Sie die richtige Nummer hinein.
+1. Markieren Sie **[IBAN]** und schreiben Sie die richtige IBAN hinein.
 2. Markieren Sie die neue Nummer und klicken Sie auf **Formatierung entfernen**
    (das Symbol mit dem durchgestrichenen „T“). Dann ist die gelbe Farbe weg.
-3. Machen Sie das genauso für E-Mail und IBAN.
 
 Solange es die Angaben noch nicht gibt: Löschen Sie die gelben Zeilen lieber ganz,
 damit Ihre E-Mails nicht mit Platzhaltern verschickt werden.

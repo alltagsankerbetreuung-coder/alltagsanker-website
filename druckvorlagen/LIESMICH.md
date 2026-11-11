@@ -5,10 +5,9 @@ Dieser Ordner erscheint **nicht** auf der Website (siehe `.vercelignore` im Haup
 
 ## Vor dem Druck: gelbe Platzhalter ersetzen
 
+Telefon (02041 7230741) und E-Mail (info@alltagsfels.de) sind seit 11.11.2026 eingetragen.
 Gelb markiert sind Angaben, die es noch nicht gibt:
 
-- **[TELEFON]** – Telefonnummer
-- **[E-MAIL]** – E-Mail-Adresse
 - **[IBAN]** – Bankverbindung (nur Briefpapier und E-Mail-Signatur)
 - **[TEAM – noch offen]** – Kasten für Julian Wehner und Dominik Vogel (Flyer Seite 4 und Partner-Infoblatt)
 
