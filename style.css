@@ -1474,6 +1474,17 @@ legend { padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
 .karte-orte .ort-essen { left: 58%; top: 66.1%; }
 .karte-orte .ort-oberhausen { left: 32.8%; top: 62.8%; }
 .karte-orte .ort-dinslaken { left: 22.4%; top: 40.8%; }
+/* Schmale Bildschirme: Namen etwas kleiner, Dorsten und Oberhausen so legen, dass sie im Kreis bleiben */
+@media (max-width: 30rem) {
+  .karte-orte li { font-size: 1rem; }
+  .karte-orte .ort-bottrop { font-size: 1.3rem; }
+  .karte-orte .ort-dorsten { left: 47.8%; transform: translate(-100%, -50%); }
+  .karte-orte .ort-oberhausen { left: 31%; top: 65.6%; transform: translate(-50%, 0); }
+}
+@media (max-width: 22.5rem) {
+  .karte-orte li { font-size: 0.8rem; }
+  .karte-orte .ort-bottrop { font-size: 1.05rem; }
+}
 .karte-orte .ort-radius { left: 46.8%; top: 78%; text-shadow: none; }
 @media (max-width: 29.99em) {
   .karte-orte li { font-size: 1rem; }
