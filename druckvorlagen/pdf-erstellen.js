@@ -19,6 +19,8 @@ const ZIEL = path.join(__dirname, "pdf");
 const AUFTRAEGE = [
   ["flyer.html", "", "flyer-a5-einzelseiten.pdf", "154mm", "216mm"],
   ["flyer.html", "?bogen", "flyer-a4-quer-druckbogen.pdf", "303mm", "216mm"],
+  ["flyer-dinlang.html", "", "flyer-dinlang-wickelfalz-einzelseiten.pdf", "105mm", "216mm"],
+  ["flyer-dinlang.html", "?bogen", "flyer-dinlang-wickelfalz-druckbogen.pdf", "303mm", "216mm"],
   ["visitenkarten.html", "", "visitenkarte-julian-wehner.pdf", "91mm", "61mm", "1-2"],
   ["visitenkarten.html", "", "visitenkarte-dominik-vogel.pdf", "91mm", "61mm", "3-4"],
   ["briefpapier.html", "", "briefpapier-a4.pdf", "216mm", "303mm"],
