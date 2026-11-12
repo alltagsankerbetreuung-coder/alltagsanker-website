@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Alltagsfels – Flyer DIN lang 105 x 210, Mittelfalz, 4 Seiten</title>
+<link rel="stylesheet" href="druck.css" />
+<style>
+  /* Einzelseite 105 x 210 mm + 3 mm Beschnitt rundum = 111 x 216 mm */
+  .panel {
+    width: 111mm; height: 216mm;
+    padding: 11mm 11mm 11mm;
+    display: flex; flex-direction: column;
+    font-size: 11.5pt; line-height: 1.36;
+  }
+  /* Offener Bogen: 210 x 210 mm + 3 mm Beschnitt = 216 x 216 mm, zwei Felder je 105 mm */
+  .bogen .spread { width: 216mm; height: 216mm; display: flex; break-after: page; }
+  .bogen .spread:last-child { break-after: auto; }
+  .bogen .panel { width: 108mm; break-after: auto; }
+  .bogen .panel.links { padding-left: 11mm; padding-right: 8mm; }
+  .bogen .panel.rechts { padding-left: 8mm; padding-right: 11mm; }
+  .panel h2 { font-size: 17pt; margin-bottom: 4mm; }
+  .panel h3 { font-size: 13pt; margin-bottom: 0.8mm; }
+  .ic { width: 9mm; height: 9mm; flex: 0 0 9mm; }
+  .ic svg { width: 5mm; height: 5mm; }
+
+  /* Seite 1 Titel */
+  .titel { background: var(--sand); }
+  .titel::before { content: ""; position: absolute; width: 110mm; height: 110mm; right: -50mm; top: -50mm; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 70%); }
+  .titel > * { position: relative; }
+  .titel .logo { width: 62mm; margin-bottom: 8mm; }
+  .titel h1 { font-size: 24pt; line-height: 1.08; margin-bottom: 4mm; }
+  .titel .unter { font-size: 12.5pt; font-weight: 700; color: var(--text-soft); margin-bottom: 0; }
+  .titel .bild-zeile { display: flex; justify-content: center; margin: 6mm 0 4mm; }
+  .titel .bild-zeile img { width: 66mm; }
+  .titel .gebiet { display: flex; gap: 2.5mm; align-items: center; font-size: 11pt; font-weight: 700; color: var(--navy); margin-bottom: 4mm; }
+  .titel .anruf { margin-top: auto; background: var(--navy); color: #fff; border-radius: 4mm; padding: 5mm 5.5mm; }
+  .titel .anruf p { margin: 0; }
+  .titel .anruf .gross { font-family: var(--head); font-size: 12.5pt; line-height: 1.3; }
+  .titel .anruf .nummer { font-family: var(--head); font-size: 15pt; white-space: nowrap; margin-top: 0.5mm; }
+  .titel .anruf .klein { font-size: 10.5pt; color: #f3c9a8; font-weight: 700; margin-top: 2mm; }
+
+  /* Leistungen */
+  .leistung { display: flex; gap: 3.5mm; align-items: flex-start; margin-bottom: 6mm; }
+  .leistung p { margin: 0; }
+  .keine-pflege { margin-top: auto; display: flex; gap: 3.5mm; align-items: flex-start;
+    background: #fff; border: 0.5mm solid var(--red-soft); border-radius: 3.5mm; padding: 4mm; }
+  .keine-pflege h3 { color: var(--red); }
+  .keine-pflege p { margin: 0; }
+
+  /* Kosten */
+  .kosten-box { background: #fff; border-radius: 3.5mm; padding: 4.5mm 4.5mm; margin-bottom: 5mm; border-left: 1.4mm solid var(--red); }
+  .kosten-box .haken { margin-top: 2.5mm; }
+  .kosten-box .haken li:last-child { margin-bottom: 0; }
+  .zahlen h3 { font-size: 14pt; margin-bottom: 3mm; }
+  .zahl-karte { background: #fff; border-radius: 3.5mm; padding: 3.5mm 4.5mm; margin-bottom: 3.5mm; border-top: 1.2mm solid var(--navy); }
+  .zahl-karte.warm { border-top-color: var(--red); }
+  .zahl-karte h4 { margin: 0 0 1mm; font-size: 11.5pt; color: var(--navy); }
+  .zahl-karte p { margin: 0; }
+  .fussnote { margin-top: auto; font-weight: 700; color: var(--navy); display: flex; gap: 3mm; align-items: center; }
+
+  /* Verlass, Schritte, Kontakt */
+  .verlassen { margin-bottom: 4mm; }
+  .verlassen li { margin-bottom: 1.6mm; }
+  .zeiten { display: flex; gap: 3.5mm; align-items: center; background: #fff; border-radius: 3.5mm; padding: 4.5mm; margin-bottom: 6mm; }
+  .zeiten p { margin: 0; }
+  .schritte { list-style: none; padding: 0; margin: 2mm 0 5mm; }
+  .schritte li { display: flex; gap: 3mm; align-items: center; margin-bottom: 2.2mm; }
+  .schritte .nr { width: 7.5mm; height: 7.5mm; flex: 0 0 7.5mm; border-radius: 50%; background: var(--navy); color: #fff;
+    font-family: var(--head); font-size: 11.5pt; display: flex; align-items: center; justify-content: center; }
+  .rueck h3 { font-size: 13.5pt; margin-bottom: 1.5mm; }
+  .kontakt { margin-top: auto; background: var(--navy); color: #fff; border-radius: 4mm; padding: 4.5mm 5mm; font-size: 10.5pt; }
+  .kontakt p { margin: 0 0 1.2mm; }
+  .kontakt .label { color: #f3c9a8; font-weight: 700; }
+  .kontakt .ansprech { margin-bottom: 2.2mm; padding-bottom: 2.2mm; border-bottom: 0.3mm solid rgba(255,255,255,.3); }
+  .kontakt .firma { margin: 2.5mm 0 0; padding-top: 2.5mm; border-top: 0.3mm solid rgba(255,255,255,.3); font-size: 9.5pt; color: #ebe8e0; }
+  .rueck .logo { width: 62mm; margin: 2mm 0 8mm; }
+  .rueck .bild { width: 66mm; margin: 0 auto 8mm; border-radius: 4mm; }
+</style>
+</head>
+<body>
+<div class="flyer">
+
+  <!-- SEITE 1: Titel (außen rechts) -->
+  <section class="seite panel titel" data-seite="1">
+    <img class="logo" src="bilder/alltagsfels-logo.svg" alt="Alltagsfels" />
+    <h1>Zeit für Sie.<br />Hilfe im Alltag.</h1>
+    <p class="unter">Alltagsbetreuung für ältere Menschen bei Ihnen zu Hause</p>
+    <div class="bild-zeile"><img src="bilder/hero-begleitung.svg" alt="" /></div>
+    <p class="gebiet">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></svg></span>
+      <span>Für Sie da in Bottrop und Umgebung.</span>
+    </p>
+    <div class="anruf">
+      <p class="gross">Rufen Sie uns einfach an:</p>
+      <p class="nummer">02041 7230741</p>
+      <p class="klein">Das erste Gespräch ist kostenlos.</p>
+    </div>
+  </section>
+
+  <!-- SEITE 2: innen links -->
+  <section class="seite panel" data-seite="2">
+    <h2>Was wir für Sie tun</h2>
+    <div class="leistung">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg></span>
+      <div><h3>Gesellschaft leisten</h3><p>Wir reden, hören zu, lesen vor, spielen und machen Gedächtnistraining. Wir gehen mit Ihnen spazieren.</p></div>
+    </div>
+    <div class="leistung">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="8.5" cy="7.5" r="3"/><path d="M3 20v-1.5A4.5 4.5 0 0 1 7.5 14h2a4.5 4.5 0 0 1 4.5 4.5V20"/><circle cx="16.5" cy="8.5" r="2.5"/><path d="M16 13.5h1a4 4 0 0 1 4 4V20"/></svg></span>
+      <div><h3>Begleiten</h3><p>Wir begleiten Sie zum Arzt, zu Ämtern, zur Bank, zum Friseur oder zum Einkaufen. Wir sind an Ihrer Seite, auch auf dem Weg dorthin.</p></div>
+    </div>
+    <div class="leistung">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg></span>
+      <div><h3>Im Haushalt mithelfen</h3><p>Gemeinsam mit Ihnen: einkaufen, aufräumen, leichte Hausarbeit, kleine Mahlzeiten kochen.</p></div>
+    </div>
+    <div class="leistung">
+      <span class="ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
+      <div><h3>Den Alltag ordnen</h3><p>Wir helfen bei Terminen und Post. Und beim Kontakt zu Familie und Freunden.</p></div>
+    </div>
+    <div class="keine-pflege">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></svg></span>
+      <div><h3>Keine Pflege</h3><p>Waschen, Anziehen oder Medikamente gehören nicht dazu. Dafür nennen wir Ihnen gern einen Pflegedienst.</p></div>
+    </div>
+  </section>
+
+  <!-- SEITE 3: innen rechts -->
+  <section class="seite panel" data-seite="3">
+    <h2>Was kostet das?</h2>
+    <div class="kosten-box">
+      <p>Das erste Gespräch bei Ihnen zu Hause ist <strong>kostenlos und unverbindlich</strong>. Dabei besprechen wir in Ruhe, was Sie brauchen und was es kostet.</p>
+      <ul class="haken">
+        <li>Sie bezahlen nur die Zeit, die wir bei Ihnen sind.</li>
+      </ul>
+    </div>
+    <div class="zahlen">
+      <h3>So bezahlen Sie:</h3>
+      <div class="zahl-karte">
+        <h4>Mit Pflegegrad 2 oder höher:</h4>
+        <p>Die Pflegekasse kann die Kosten übernehmen. Wir rechnen direkt mit ihr ab. Sie müssen sich um nichts kümmern.</p>
+      </div>
+      <div class="zahl-karte warm">
+        <h4>Ohne Pflegegrad:</h4>
+        <p>Auch ohne Pflegegrad sind Sie bei uns herzlich willkommen. Sie bezahlen einfach per Rechnung.</p>
+      </div>
+    </div>
+    <p class="fussnote">
+      <span class="ic blau"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg></span>
+      <span>Alle Fragen zur Pflegekasse klären wir gern im ersten Gespräch.</span>
+    </p>
+  </section>
+
+  <!-- SEITE 4: Rückseite (außen links) -->
+  <section class="seite panel rueck" data-seite="4">
+    <h2>Darauf ist Verlass</h2>
+    <ul class="haken verlassen">
+      <li><strong>Feste Ansprechpartner,</strong> vertraute Gesichter</li>
+      <li><strong>Pflegefachkraft</strong> im Team</li>
+      <li><strong>Aus der Region,</strong> wir kennen uns aus</li>
+      <li><strong>Mit Zeit und Ruhe</strong> für Ihre Wünsche</li>
+      <li><strong>Verschwiegen:</strong> Es bleibt unter uns</li>
+    </ul>
+    <h3 class="los">So einfach geht es los:</h3>
+    <ol class="schritte">
+      <li><span class="nr">1</span><span>Sie rufen uns an.</span></li>
+      <li><span class="nr">2</span><span>Wir besuchen Sie zu Hause und lernen uns kennen.</span></li>
+      <li><span class="nr">3</span><span>Wir vereinbaren feste Termine.</span></li>
+    </ol>
+    <div class="kontakt">
+      <p class="ansprech"><span class="label">Ihre Ansprechpartner:</span><br />Julian Wehner (Geschäftsführer)<br />Dominik Vogel (Pflegefachkraft)</p>
+      <p><span class="label">Telefon:</span> 02041 7230741</p>
+      <p><span class="label">E-Mail:</span> info@alltagsfels.de</p>
+      <p><span class="label">Internet:</span> www.alltagsfels.de</p>
+      <p class="firma">Alltagsfels UG (haftungsbeschränkt), Batenbrockstraße 66, 46238 Bottrop</p>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  // "?bogen": offener Bogen 216 x 216 mm. Außen = Seite 4 | Seite 1, Innen = Seite 2 | Seite 3
+  if (location.search.indexOf("bogen") !== -1) {
+    var f = document.querySelector(".flyer"), p = {};
+    f.querySelectorAll(".panel").forEach(function (el) { p[el.dataset.seite] = el; });
+    document.body.classList.add("bogen");
+    [["4","1"],["2","3"]].forEach(function (paar) {
+      var s = document.createElement("div"); s.className = "spread";
+      p[paar[0]].classList.add("links"); p[paar[1]].classList.add("rechts");
+      s.appendChild(p[paar[0]]); s.appendChild(p[paar[1]]); f.appendChild(s);
+    });
+  }
+</script>
+</body>
+</html>
