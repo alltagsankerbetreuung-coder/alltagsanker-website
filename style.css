@@ -1898,3 +1898,7 @@ main > section:not([class]) { padding-block: var(--folge); }
   html.druck-teil main > :not(.druck-ziel) { display: none !important; }
   html.druck-teil .druck-ziel { padding-top: 0 !important; }
 }
+
+/* Telefonnummer oben auf der Startseite */
+.hero-anruf { margin: 1rem 0 0; font-size: 1.125rem; }
+.hero-anruf .tel-link { font-weight: 600; white-space: nowrap; }
